@@ -1,0 +1,47 @@
+@use "function" as f;
+
+.inspiration {
+    background: #C7E1FF;
+    padding: f.rem(66) f.rem(40);
+
+    &.bg-white {
+        background-color: #fff;
+        padding-top: f.rem(120);
+        padding-bottom: f.rem(120);
+    }
+
+    .title_block {
+        margin-bottom: f.rem(30);
+    }
+
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: f.rem(30);
+    }
+
+}
+
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width:1024px) and (max-width:1200px) {}
+
+@media screen and (max-width:1023px) {
+
+    .inspiration {
+        background: #C7E1FF;
+        padding: f.rem(66) f.rem(15);
+
+        &.bg-white {
+            padding-top: f.rem(66);
+            padding-bottom: f.rem(66);
+        }
+
+        &-list {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: f.rem(16);
+        }
+
+    }
+}

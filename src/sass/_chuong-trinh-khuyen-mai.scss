@@ -1,0 +1,109 @@
+@use "function" as f;
+
+.promotion {
+    &_wrap {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    &_banner {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1440/496;
+        line-height: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            -webkit-object-fit: cover;
+            object-fit: cover;
+        }
+    }
+
+    &_content {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        padding-left: f.rem(68);
+        padding-top: f.rem(60);
+    }
+
+    &_block {
+        position: relative;
+        width: f.rem(504);
+
+        .title_block {
+            text-align: center;
+            margin-bottom: f.rem(22);
+        }
+    }
+
+    &_list {
+        position: relative;
+        top: f.rem(60);
+        width: f.rem(836);
+
+        .swiper {
+            overflow: visible;
+        }
+
+        .swiper-slide {
+            padding-right: f.rem(20);
+        }
+    }
+
+    &_item {
+        width: 100%;
+        height: auto;
+        line-height: 0;
+        box-shadow: -2px 15px 53.4px 0px #00000040;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width:1024px) and (max-width:1200px) {}
+
+@media screen and (max-width:1023px) {
+
+    .promotion {
+        &_banner {
+            aspect-ratio: 375/496;
+        }
+
+        &_content {
+            padding: f.rem(66) 0 f.rem(50) 0;
+            flex-direction: column;
+        }
+
+        &_block {
+            padding: 0 f.rem(15);
+            width: 100%;
+
+            .title_block {
+                margin-bottom: f.rem(13);
+            }
+        }
+
+        &_list {
+            top: auto;
+            width: 100%;
+            margin-top: auto;
+            padding: 0 f.rem(15);
+
+            .swiper-slide {
+                padding-right: f.rem(15);
+            }
+        }
+
+    }
+}

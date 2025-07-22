@@ -1,0 +1,111 @@
+@use "function" as f;
+
+.subscribe {
+    position: relative;
+    width: 100%;
+    padding: f.rem(84) f.rem(54) f.rem(84) f.rem(160);
+    overflow: visible;
+
+    background: linear-gradient(180deg, #015AAB 0%, #82C3FF 109.43%), linear-gradient(0deg, #FFFFFF, #FFFFFF);
+
+    &_wrap {
+        display: flex;
+        width: 100%;
+
+    }
+
+    &_block {
+        color: #fff;
+        font-size: f.rem(16);
+        font-weight: 500;
+
+        h2 {
+            font-size: f.rem(24);
+            font-weight: 600;
+            margin-bottom: f.rem(20);
+        }
+    }
+
+    &_form {
+        width: f.rem(436);
+        height: f.rem(48);
+        display: flex;
+        margin-top: f.rem(35);
+
+        .subscribe-input {
+            flex-grow: 1;
+            background-color: #fff;
+            -webkit-border-radius: f.rem(8) 0 0 f.rem(8);
+            border-radius: f.rem(8) 0 0 f.rem(8);
+            color: #4D4A4F;
+            font-weight: 400;
+            padding: 0 f.rem(16);
+
+            border: 1px solid #D1D1D1;
+
+            &::placeholder {
+                color: #4D4A4F;
+            }
+        }
+
+        .link-but {
+            width: f.rem(56);
+            height: 100%;
+            -webkit-border-radius: 0 f.rem(8) f.rem(8) 0;
+            border-radius: 0 f.rem(8) f.rem(8) 0;
+        }
+    }
+
+    &_img {
+        position: absolute;
+        right: f.rem(54);
+        top: f.rem(-70);
+        width: f.rem(581);
+        line-height: 0;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+}
+
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width:1024px) and (max-width:1200px) {}
+
+@media screen and (max-width:1023px) {
+
+    .subscribe {
+        padding: f.rem(36) f.rem(15) 0 f.rem(15);
+
+        &_wrap {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        &_block {
+            font-size: f.rem(14);
+
+            h2 {
+                font-size: f.rem(20);
+            }
+        }
+
+        &_form {
+            width: 100%;
+            margin-bottom: f.rem(64);
+        }
+
+        &_img {
+            position: relative;
+            right: auto;
+            top: auto;
+            margin-bottom: -32%;
+            width: 93.733333333%;
+        }
+
+    }
+}

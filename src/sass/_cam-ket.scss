@@ -1,0 +1,136 @@
+@use "function" as f;
+
+.commit {
+    &_wrap {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    &_banner {
+        position: relative;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1440/660;
+        line-height: 0;
+
+        img,
+        video {
+            width: 100%;
+            height: 100%;
+            -webkit-object-fit: cover;
+            object-fit: cover;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            //background-color: rgba(1, 90, 171, 0.75);
+            background: #014682BF;
+        }
+    }
+
+    &_content {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        color: #fff;
+        padding-top: f.rem(60);
+        display: flex;
+        flex-direction: column;
+
+        .mini-logo {
+            display: block;
+            width: f.rem(276);
+            height: auto;
+            line-height: 0;
+            margin: 0 auto;
+            margin-bottom: f.rem(34);
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .mini-title {
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .commits {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: auto;
+
+            &-item {
+                border-left: 1px solid #fff;
+                border-top: 1px solid #fff;
+                text-align: center;
+                font-size: f.rem(24);
+                padding: f.rem(108) f.rem(30);
+
+                &:first-child {
+                    border-left: none;
+                }
+
+                .unit {
+                    font-size: f.rem(48);
+                    font-weight: 700;
+                    margin-bottom: f.rem(30)
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width:1024px) and (max-width:1200px) {}
+
+@media screen and (max-width:1023px) {
+
+    .commit {
+
+        &_banner {
+            aspect-ratio: 375/660;
+        }
+
+        &_content {
+            padding-top: f.rem(56);
+
+            .mini-logo {
+                width: f.rem(181);
+                margin-bottom: f.rem(30);
+            }
+
+            .mini-title {
+                padding: 0 f.rem(15);
+                margin-bottom: f.rem(42);
+            }
+
+            .commits {
+                grid-template-columns: repeat(1, 1fr);
+                margin-top: auto;
+
+                &-item {
+                    border-left: none;
+                    font-size: f.rem(14);
+                    padding: f.rem(25);
+
+                    .unit {
+                        font-size: f.rem(24);
+                        margin-bottom: f.rem(10)
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="google" content="notranslate">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Quy Phúc">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Quy Phúc | Home</title>
+    <meta name="description" content="Quy Phúc">
+    <meta name="keywords" content="Quy Phúc">
+    <meta name="theme-color" content="#fff">
+    <meta property="og:title" content="Quy Phúc">
+    <meta property="og:description" content="Quy Phúc">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/thumbnail.jpg">
+    <meta property="og:site_name" content="Quy Phúc">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Quy Phúc">
+    <link rel="icon" href="images/favicon.png">
+    <link href="css/index.css" rel="preload stylesheet" as="style">
+</head>
+
+<body data-page="home">
+    <div class="page">
+        <%= htmlWebpackPlugin.options.svg %>
+        <%= htmlWebpackPlugin.options.header %>
+        <%= htmlWebpackPlugin.options.home_banner %>
+        <%= htmlWebpackPlugin.options.danhmucsanpham %>
+        <%= htmlWebpackPlugin.options.gocbepthongminh %>
+        <%= htmlWebpackPlugin.options.sanphammoi %>
+        <%= htmlWebpackPlugin.options.bandanglamgi %>
+        <%= htmlWebpackPlugin.options.sanphamkhuyenmai %>
+        <%= htmlWebpackPlugin.options.chuongtrinhkhuyenmai %>
+        <%= htmlWebpackPlugin.options.camhung %>
+        <%= htmlWebpackPlugin.options.camket %>
+        <%= htmlWebpackPlugin.options.dichvu %>
+        <%= htmlWebpackPlugin.options.tuvanhotro %>
+        <%= htmlWebpackPlugin.options.dangkykhuyenmai %>
+        <%= htmlWebpackPlugin.options.footer %>
+    </div>
+    <!--Script-->
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+    <script defer src="js/main.js"></script>
+    <script defer src="js/common.js"></script>
+    <%= htmlWebpackPlugin.options.preload %>
+        <script>
+            function script(url) {
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.async = false;
+                s.src = url;
+                var x = document.getElementsByTagName('head')[0];
+                x.appendChild(s);
+            }
+            //window.onload = function () {
+                //setTimeout(function () {
+                    ['js/index.js'].forEach(function (src) {
+                        script(src);
+                    });
+                //}, 100);
+            //}
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+@function vwPc($value, $base: 1920) {
+    @return calc($value / $base) * 100vw;
+}
+
+@function vwSp($value, $base: 375) {
+    @return calc($value / $base) * 100vw;
+}
+
+@function rem($value, $base: 16) {
+    @return calc($value / $base) * 1rem;
+    //@return calc($value / $base) * 100vw;
+}
+
+@function remSp($value, $base: 375) {
+    @return calc($value / $base) * 100vw;
+    //@return calc($value / 1) * 1px;
+}
