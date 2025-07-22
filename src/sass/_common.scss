@@ -189,6 +189,20 @@ input::-webkit-inner-spin-button {
 }
 
 
+.zoom-img {
+  overflow: hidden;
+}
+
+.zoom-img img {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.zoom-img:hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 input[type="number"] {
   -moz-appearance: textfield;
 }
@@ -701,6 +715,7 @@ input[type="number"] {
 
   .product {
     padding: f.rem(20) f.rem(10);
+
     &-img {
       margin-top: f.rem(20);
       margin-bottom: f.rem(20);

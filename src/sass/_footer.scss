@@ -85,7 +85,8 @@
 
       &--icon {
         display: flex;
-        width: f.rem(20);
+        flex: 0 0 f.rem(20);
+        max-width: f.rem(20);
         height: f.rem(20);
 
         svg {

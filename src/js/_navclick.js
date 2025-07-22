@@ -17,35 +17,33 @@ export function navClick() {
   const nav = document.querySelector(".nav");
   if (nav) {
     nav.addEventListener("click", (e) => {
-      const target = e.target.closest(".nav-menu > li > span");
-      if (target) {
-        if (target.classList.contains('current')) {
-          target.classList.remove('current');
-        } else {
-          target.classList.add('current');
-        }
+      const item = e.target.closest(".nav-item");
+      if (item) {
+        item.classList.add('current');
       }
-      const target2 = e.target.closest(".sub-menu > span");
-      if(target2) {
-        if(document.querySelector('span.current')) {
-          document.querySelector('span.current').classList.remove('current');
+
+      //close
+      const target = e.target.closest(".c-btn--full");
+      if (target) {
+        if (document.querySelector('.nav-item.current')) {
+          document.querySelector('.nav-item.current').classList.remove('current');
         }
       }
     });
   }
   const body = document.querySelector('body');
-  if(body) {
+  if (body) {
     const page = body.getAttribute('data-page');
-    if(document.querySelector('.nav-menu li[data-page='+ page +'] > a')) {
-      document.querySelector('.nav-menu li[data-page='+ page +'] > a').classList.add('active');
+    if (document.querySelector('.nav-menu li[data-page=' + page + '] > a')) {
+      document.querySelector('.nav-menu li[data-page=' + page + '] > a').classList.add('current');
     }
-    if(document.querySelector('.sub-menu li[data-sub='+ page +'] > a')) {
-      document.querySelector('.sub-menu li[data-sub='+ page +'] > a').classList.add('active');
-      const nav = document.querySelector('.sub-menu li[data-sub='+ page +'] > a').closest(".nav-menu > li");
-      if(nav) {
-        nav.querySelector('span').classList.add('current');
-      }
-    }
+    // if(document.querySelector('.sub-menu li[data-sub='+ page +'] > a')) {
+    //   document.querySelector('.sub-menu li[data-sub='+ page +'] > a').classList.add('active');
+    //   const nav = document.querySelector('.sub-menu li[data-sub='+ page +'] > a').closest(".nav-menu > li");
+    //   if(nav) {
+    //     nav.querySelector('span').classList.add('current');
+    //   }
+    // }
   }
 
 }
