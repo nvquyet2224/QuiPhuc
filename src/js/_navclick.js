@@ -2,14 +2,14 @@ export function navClick() {
   // Toggle menu
   document.querySelector(".toggle-menu").addEventListener("click", () => {
     const menu = document.querySelector(".header");
-    const overlayHeader = document.querySelector(".header-overlay");
+    //const overlayHeader = document.querySelector(".header-overlay");
     if (menu && menu.classList.contains("open-menu")) {
       menu.classList.remove("open-menu");
       document.querySelector("html, body").classList.remove("no-scroll");
-      overlayHeader.classList.remove("open-overlay");
+      //overlayHeader.classList.remove("open-overlay");
     } else {
       document.querySelector("html, body").classList.add("no-scroll");
-      overlayHeader.classList.add("open-overlay");
+      //overlayHeader.classList.add("open-overlay");
       menu.classList.add("open-menu");
     }
   });

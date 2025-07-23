@@ -39,13 +39,15 @@ export function onScroll() {
 
       });
       var scrollTop = $(this).scrollTop();
-      if (scrollTop > lastScrollTop) {
-        if (scrollTop >= 200) {
+      //if (scrollTop > lastScrollTop) {
+        if (scrollTop > 50) {
           $('.header').addClass('sticky');
+        }else {
+          $('.header').removeClass('sticky');
         }
-      } else if (scrollTop < lastScrollTop) {
-        $('.header').removeClass('sticky');
-      }
+      //} else if (scrollTop < lastScrollTop) {
+        //$('.header').removeClass('sticky');
+      //}
       lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     }, 50);
   }
