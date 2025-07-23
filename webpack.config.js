@@ -27,6 +27,8 @@ const chuongtrinhkhuyenmai = fs.readFileSync(__dirname + "/src/_chuong-trinh-khu
 const dangkykhuyenmai = fs.readFileSync(__dirname + "/src/_dang-ky-khuyen-mai.html");
 const dichvu = fs.readFileSync(__dirname + "/src/_dich-vu.html");
 
+const thuonghieu = fs.readFileSync(__dirname + "/src/_thuong-hieu.html");
+
 
 //noErrorOnMissing: true
 
@@ -160,6 +162,7 @@ module.exports = {
       danhmucsanpham: danhmucsanpham,
       gocbepthongminh: gocbepthongminh,
       sanphammoi: sanphammoi,
+      thuonghieu: thuonghieu,
       bandanglamgi: bandanglamgi,
       sanphamkhuyenmai: sanphamkhuyenmai,
       camhung: camhung,
