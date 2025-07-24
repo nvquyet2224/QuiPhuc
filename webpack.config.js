@@ -53,11 +53,7 @@ module.exports = {
   entry: {
     main: ["./src/js/main.js"],
     index: ["./src/js/index.js"],
-<<<<<<< HEAD
-    productdetail:["./src/js/product-detail.js"],
-=======
     doanh_nghiep: ["./src/js/doanh_nghiep.js"],
->>>>>>> 6f0df82c89492557adc191761e7ae88d977da43b
   },
   output: {
     publicPath: "../",
