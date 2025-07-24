@@ -26,6 +26,8 @@ const camket = fs.readFileSync(__dirname + "/src/_cam-ket.html");
 const chuongtrinhkhuyenmai = fs.readFileSync(__dirname + "/src/_chuong-trinh-khuyen-mai.html");
 const dangkykhuyenmai = fs.readFileSync(__dirname + "/src/_dang-ky-khuyen-mai.html");
 const dichvu = fs.readFileSync(__dirname + "/src/_dich-vu.html");
+const productDetail = fs.readFileSync(__dirname +"/src/_product-detail.html");
+const breadcrumb = fs.readFileSync(__dirname +"/src/_breadcrumb-component.html");
 
 
 //noErrorOnMissing: true
@@ -49,6 +51,7 @@ module.exports = {
   entry: {
     main: ["./src/js/main.js"],
     index: ["./src/js/index.js"],
+    productdetail:["./src/js/product-detail.js"],
   },
   output: {
     publicPath: "../",
@@ -150,6 +153,32 @@ module.exports = {
       template: "src/index.html",
       minify: minify,
     }),
+    // product detail
+    new HtmlWebpackPlugin({
+      inject: false,
+      filename: "product-detail.html",
+      preload: preload,
+      svg: svg,
+      header: headerComponent,
+      productDetail: productDetail,
+      home_banner: homeBanner,
+      breadcrumb: breadcrumb,
+      danhmucsanpham: danhmucsanpham,
+      gocbepthongminh: gocbepthongminh,
+      sanphammoi: sanphammoi,
+      bandanglamgi: bandanglamgi,
+      sanphamkhuyenmai: sanphamkhuyenmai,
+      camhung: camhung,
+      camket: camket,
+      tuvanhotro: tuvanhotro,
+      chuongtrinhkhuyenmai: chuongtrinhkhuyenmai,
+      dangkykhuyenmai: dangkykhuyenmai,
+      dichvu: dichvu,
+      footer: footerComponent,
+      template: "src/product-detail.html",
+      minify: minify,
+    }),
+    
    
   ],
   performance: {
