@@ -2255,8 +2255,6 @@ button.swiper-pagination-bullet {
 }
 .banner_detail h1 {
   font-weight: 700;
-}
-.banner_detail h1 {
   margin-bottom: 1.9375rem;
 }
 .banner_detail .list-banner {
@@ -2293,13 +2291,26 @@ button.swiper-pagination-bullet {
     padding-right: 0.9375rem;
     padding-bottom: 2.375rem;
   }
-  .banner_detail .sub-title {
-    font-size: 0.875rem;
-    line-height: 1.6;
-  }
   .banner_detail .sub-title,
   .banner_detail h1 {
-    margin-bottom: 1.125rem;
+    font-size: 1.875rem;
+  }
+  .banner_detail h1 {
+    margin-bottom: 1.5rem;
+  }
+  .banner_detail .list-banner {
+    column-gap: 0.75rem;
+  }
+  .banner_detail .list-banner-item {
+    column-gap: 1px;
+  }
+  .banner_detail .list-banner-item svg {
+    width: 1.125rem;
+    height: 2.5rem;
+  }
+  .banner_detail .list-banner-item .title {
+    font-size: 0.75rem;
+    text-transform: none;
   }
 }
 .category {
@@ -2699,9 +2710,11 @@ button.swiper-pagination-bullet {
 .collection_product--item .products-list .product {
   flex: 0 0 50%;
   border-top: 1px solid rgba(0, 0, 0, 0.15);
-  border-left: 1px solid rgba(0, 0, 0, 0.15);
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   padding: 1.375rem 1.25rem;
+}
+.collection_product--item .products-list .product:not(:first-child) {
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
 }
 .collection_product--item .products-list .product-img {
   margin-bottom: 3.25rem;
@@ -2733,6 +2746,69 @@ button.swiper-pagination-bullet {
   height: 1rem;
 }
 
+@media screen and (max-width: 1023px) {
+  .collection {
+    padding: 3.75rem 0;
+  }
+  .collection_banner {
+    display: none;
+  }
+  .collection_content {
+    width: 100%;
+  }
+  .collection_content .title_block {
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+  }
+  .collection_product {
+    position: relative;
+  }
+  .collection_product--item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s linear;
+    transition: opacity 0.3s linear;
+  }
+  .collection_product--item.current {
+    position: relative;
+    left: auto;
+    top: auto;
+    opacity: 1;
+  }
+  .collection_product--item .products-list {
+    display: flex;
+  }
+  .collection_product--item .products-list .product {
+    padding: 0.75rem 0.5rem;
+  }
+  .collection_product--item .products-list .product-img {
+    margin-bottom: 2.5625rem;
+    margin-top: 1.375rem;
+    width: 7.4375rem;
+    height: 7.3125rem;
+  }
+  .collection_product--item .products-list .product .compare {
+    display: none;
+  }
+  .collection-nav {
+    padding: 0 1rem;
+    margin-bottom: 1.25rem;
+  }
+  .collection-nav .nav-prev,
+  .collection-nav .nav-next {
+    width: 1rem;
+    height: 1rem;
+  }
+  .collection-nav .nav-prev svg,
+  .collection-nav .nav-next svg {
+    width: 0.25rem;
+    height: 0.5rem;
+  }
+}
 .projects {
   padding: 0 2.5rem 7.5rem 2.5rem;
 }
@@ -2767,7 +2843,7 @@ button.swiper-pagination-bullet {
 }
 
 .brand {
-  padding-bottom: 7.5rem;
+  margin-bottom: 7.5rem;
 }
 .brand__personal {
   display: flex;
@@ -2862,7 +2938,7 @@ button.swiper-pagination-bullet {
 }
 .brand__certi-text .link-but {
   background-color: #fff;
-  color: #055CA5;
+  color: #055ca5;
   border: 1px solid rgba(16, 24, 40, 0.0509803922);
 }
 .brand__certi-marque {
@@ -2891,6 +2967,86 @@ button.swiper-pagination-bullet {
   height: auto;
 }
 
+@media screen and (max-width: 1023px) {
+  .brand {
+    margin-bottom: 3.75rem;
+  }
+  .brand__personal {
+    flex-direction: column;
+  }
+  .brand__personal-text {
+    width: 100%;
+    padding: 3.75rem 1rem;
+  }
+  .brand__personal-text .title_block {
+    margin-bottom: 1rem;
+  }
+  .brand__personal-accordion {
+    row-gap: 1rem;
+  }
+  .brand__personal-accordion .accordion-item {
+    padding-bottom: 1rem;
+  }
+  .brand__personal-accordion .accordion-item.current .title svg {
+    transform: rotate(0deg);
+  }
+  .brand__personal-accordion .accordion-item.current .text {
+    padding-top: 0.75rem;
+  }
+  .brand__personal-accordion .accordion-item .title {
+    font-size: 1rem;
+  }
+  .brand__personal-accordion .accordion-item .title svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  .brand__personal-accordion .accordion-item .text {
+    font-size: 0.875rem;
+  }
+  .brand__personal-thumb {
+    width: 100%;
+  }
+  .brand__certi {
+    flex-direction: column-reverse;
+  }
+  .brand__certi-text {
+    width: 100%;
+    padding: 3.75rem 1rem;
+  }
+  .brand__certi-text .title_block {
+    margin-bottom: 3.75rem;
+  }
+  .brand__certi-text .title_block p {
+    margin-top: 1.5rem;
+    margin-bottom: 2.625rem;
+    font-size: 0.875rem;
+  }
+  .brand__certi-marque {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  .brand__certi-marque .patter-thumb {
+    width: 18.75rem;
+    height: 9.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .brand__certi-thumb {
+    position: relative;
+    width: 50%;
+    aspect-ratio: 1/1;
+  }
+  .brand__certi-thumb img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+  }
+}
 .commit_wrap {
   position: relative;
   width: 100%;

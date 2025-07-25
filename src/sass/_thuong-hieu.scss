@@ -1,7 +1,7 @@
 @use "function" as f;
 
 .brand {
-  padding-bottom: f.rem(120);
+  margin-bottom: f.rem(120);
 
   &__personal {
     display: flex;
@@ -23,7 +23,7 @@
           transition: all 0.3s;
           padding-bottom: f.rem(20);
           &:not(:last-child) {
-            border-bottom: 1px solid #9A9A9A80;
+            border-bottom: 1px solid #9a9a9a80;
           }
           &.current {
             .title {
@@ -102,8 +102,8 @@
       }
       .link-but {
         background-color: #fff;
-        color: #055CA5;
-        border: 1px solid #1018280D;
+        color: #055ca5;
+        border: 1px solid #1018280d;
       }
     }
     &-marque {
@@ -141,5 +141,90 @@
 }
 
 @media screen and (max-width: 1023px) {
-  
+  .brand {
+    margin-bottom: f.rem(60);
+
+    &__personal {
+      flex-direction: column;
+      &-text {
+        width: 100%;
+        padding: f.rem(60) f.rem(16);
+        .title_block {
+          margin-bottom: f.rem(16);
+        }
+      }
+      &-accordion {
+        row-gap: f.rem(16);
+        .accordion {
+          &-item {
+            padding-bottom: f.rem(16);
+            &.current {
+              .title {
+                svg {
+                  transform: rotate(0deg);
+                }
+              }
+              .text {
+                padding-top: f.rem(12);
+              }
+            }
+            .title {
+              font-size: f.rem(16);
+              svg {
+                width: f.rem(20);
+                height: f.rem(20);
+              }
+            }
+            .text {
+              font-size: f.rem(14);
+            }
+          }
+        }
+      }
+      &-thumb {
+        width: 100%;
+      }
+    }
+
+    &__certi {
+      flex-direction: column-reverse;
+      &-text {
+        width: 100%;
+        padding: f.rem(60) f.rem(16);
+        .title_block {
+          margin-bottom: f.rem(60);
+          p {
+            margin-top: f.rem(24);
+            margin-bottom: f.rem(42);
+            font-size: f.rem(14);
+          }
+        }
+      }
+      &-marque {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        .patter-thumb {
+          width: f.rem(300);
+          height: f.rem(150);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      &-thumb {
+        position: relative;
+        width: 50%;
+        aspect-ratio: 1/1;
+        img {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
 }

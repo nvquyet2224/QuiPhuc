@@ -70,8 +70,6 @@
 
     h1 {
       font-weight: 700;
-    }
-    h1 {
       margin-bottom: f.rem(31);
     }
     .list-banner {
@@ -118,13 +116,26 @@
     }
 
     &_detail {
-      .sub-title {
-        font-size: f.rem(14);
-        line-height: 1.6;
-      }
       .sub-title,
       h1 {
-        margin-bottom: f.rem(18);
+        font-size: f.rem(30);
+      }
+      h1 {
+        margin-bottom: f.rem(24);
+      }
+      .list-banner {
+        column-gap: f.rem(12);
+        &-item {
+          column-gap: 1px;
+          svg {
+            width: f.rem(18);
+            height: f.rem(40);
+          }
+          .title {
+            font-size: f.rem(12);
+            text-transform: none;
+          }
+        }
       }
     }
   }
