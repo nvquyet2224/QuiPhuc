@@ -30,6 +30,8 @@ const productDetail = fs.readFileSync(__dirname +"/src/_product-detail.html");
 const breadcrumb = fs.readFileSync(__dirname +"/src/_breadcrumb-component.html");
 
 const thuonghieu = fs.readFileSync(__dirname + "/src/_thuong-hieu.html");
+const bosuutap = fs.readFileSync(__dirname + "/src/_bo-suu-tap.html");
+const cacduan = fs.readFileSync(__dirname + "/src/_cac-du-an.html");
 
 
 //noErrorOnMissing: true
@@ -164,11 +166,10 @@ module.exports = {
       home_banner: homeBanner,
       danhmucsanpham: danhmucsanpham,
       gocbepthongminh: gocbepthongminh,
-      sanphammoi: sanphammoi,
-      thuonghieu: thuonghieu,
-      bandanglamgi: bandanglamgi,
-      sanphamkhuyenmai: sanphamkhuyenmai,
-      camhung: camhung,
+      bosuutap,
+      sanphammoi,
+      thuonghieu,
+      cacduan,
       camket: camket,
       tuvanhotro: tuvanhotro,
       chuongtrinhkhuyenmai: chuongtrinhkhuyenmai,
