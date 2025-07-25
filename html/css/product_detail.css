@@ -765,6 +765,31 @@ input[type=number] {
     font-size: 3.2vw;
     padding: 2.6666666667vw 6.6666666667vw;
   }
+  .project-img {
+    width: 100%;
+    aspect-ratio: 343/220;
+    margin-bottom: 1.25rem;
+  }
+  .project-txt {
+    display: flex;
+    flex-direction: column;
+  }
+  .project-txt .name {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  .project-txt .text {
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+  }
+  .project-txt .but-link {
+    font-size: 0.875rem;
+  }
+  .project-txt .but-link svg {
+    width: 0.8125rem;
+    height: 0.5rem;
+    margin-left: 0.5rem;
+  }
 }
 @media screen and (max-width: 480px) {
   html {

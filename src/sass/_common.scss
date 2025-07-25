@@ -857,6 +857,35 @@ input[type="number"] {
   .page {
     //padding-top: f.vwSp(62);
   }
+  .project {
+    &-img {
+      width: 100%;
+      aspect-ratio: 343/220;
+      margin-bottom: f.rem(20);
+    }
+
+    &-txt {
+      display: flex;
+      flex-direction: column;
+
+      .name {
+        font-size: f.rem(20);
+        margin-bottom: f.rem(8);
+      }
+      .text {
+        font-size: f.rem(14);
+        margin-bottom: f.rem(24);
+      }
+      .but-link {
+        font-size: f.rem(14);
+        svg {
+          width: f.rem(13);
+          height: f.rem(8);
+          margin-left: f.rem(8);
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 480px) {

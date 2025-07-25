@@ -766,6 +766,31 @@ input[type=number] {
     font-size: 3.2vw;
     padding: 2.6666666667vw 6.6666666667vw;
   }
+  .project-img {
+    width: 100%;
+    aspect-ratio: 343/220;
+    margin-bottom: 1.25rem;
+  }
+  .project-txt {
+    display: flex;
+    flex-direction: column;
+  }
+  .project-txt .name {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  .project-txt .text {
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+  }
+  .project-txt .but-link {
+    font-size: 0.875rem;
+  }
+  .project-txt .but-link svg {
+    width: 0.8125rem;
+    height: 0.5rem;
+    margin-left: 0.5rem;
+  }
 }
 @media screen and (max-width: 480px) {
   html {
@@ -2842,6 +2867,30 @@ button.swiper-pagination-bullet {
   height: 1rem;
 }
 
+@media screen and (max-width: 1023px) {
+  .projects {
+    padding: 0 1rem 3.75rem 1rem;
+  }
+  .projects .title_block {
+    margin-bottom: 1.25rem;
+  }
+  .projects .swiper-wrapper .swiper-slide:nth-child(odd),
+  .projects .swiper-wrapper .swiper-slide:nth-child(even) {
+    width: 100% !important;
+  }
+  .projects .block-action {
+    column-gap: 0.25rem;
+  }
+  .projects .block-action .nav-prev,
+  .projects .block-action .nav-next {
+    border: 1px solid rgba(0, 0, 0, 0.36);
+  }
+  .projects .block-action .nav-prev svg,
+  .projects .block-action .nav-next svg {
+    width: 0.25rem;
+    height: 0.5rem;
+  }
+}
 .brand {
   margin-bottom: 7.5rem;
 }
@@ -2946,6 +2995,13 @@ button.swiper-pagination-bullet {
   left: 0;
   bottom: 0;
   right: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.brand__certi-marque--inner {
+  display: flex;
+  animation: scroll 5s linear infinite;
+  width: max-content;
 }
 .brand__certi-marque .patter-thumb {
   width: 18.75rem;
@@ -2953,6 +3009,10 @@ button.swiper-pagination-bullet {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.brand__certi-marque .patter-thumb img {
+  width: 13rem;
+  height: auto;
 }
 .brand__certi-thumb {
   position: relative;
@@ -2967,6 +3027,14 @@ button.swiper-pagination-bullet {
   height: auto;
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 @media screen and (max-width: 1023px) {
   .brand {
     margin-bottom: 3.75rem;
@@ -3014,37 +3082,23 @@ button.swiper-pagination-bullet {
     padding: 3.75rem 1rem;
   }
   .brand__certi-text .title_block {
-    margin-bottom: 3.75rem;
+    margin-bottom: 4.875rem;
   }
   .brand__certi-text .title_block p {
     margin-top: 1.5rem;
     margin-bottom: 2.625rem;
     font-size: 0.875rem;
   }
-  .brand__certi-marque {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
-  }
   .brand__certi-marque .patter-thumb {
-    width: 18.75rem;
-    height: 9.375rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 9.75rem;
+    height: 4.875rem;
+  }
+  .brand__certi-marque .patter-thumb img {
+    width: 6.75rem;
+    height: auto;
   }
   .brand__certi-thumb {
-    position: relative;
-    width: 50%;
-    aspect-ratio: 1/1;
-  }
-  .brand__certi-thumb img {
-    position: absolute;
-    left: 0;
-    top: 0;
     width: 100%;
-    height: auto;
   }
 }
 .commit_wrap {
