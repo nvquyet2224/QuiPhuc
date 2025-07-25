@@ -1,0 +1,131 @@
+@use "function" as f;
+
+.banner {
+  width: 100%;
+
+  &_wrap {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: relative;
+      display: block;
+      width: 100%;
+      height: auto;
+      padding-top: 52.569444444%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.4) 10.5%,
+          rgba(0, 0, 0, 0) 21.28%
+        ),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    }
+  }
+
+  img,
+  video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 0;
+    -webkit-object-fit: cover;
+    object-fit: cover;
+  }
+
+  &_content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: f.rem(40);
+    padding-bottom: f.rem(74);
+  }
+
+  &_detail {
+    width: f.rem(903);
+    text-align: center;
+    .sub-title,
+    h1 {
+      font-weight: 400;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: f.rem(36);
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-weight: 700;
+    }
+    h1 {
+      margin-bottom: f.rem(31);
+    }
+    .list-banner {
+      display: flex;
+      column-gap: f.rem(24);
+      justify-content: center;
+      &-item {
+        display: flex;
+        column-gap: 17px;
+        align-items: center;
+        svg {
+          width: f.rem(35);
+          height: f.rem(80);
+        }
+        .title {
+          font-size: f.rem(16);
+          font-weight: 700;
+          color: #fff;
+          line-height: 1.4;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+}
+
+@media screen and (max-width: 1023px) {
+  .banner {
+    width: 100%;
+
+    &_wrap {
+      &::before {
+        padding-top: 206.666666667%;
+      }
+    }
+
+    &_content {
+      padding-left: f.rem(15);
+      padding-right: f.rem(15);
+      padding-bottom: f.rem(38);
+    }
+
+    &_detail {
+      .sub-title {
+        font-size: f.rem(14);
+        line-height: 1.6;
+      }
+      .sub-title,
+      h1 {
+        margin-bottom: f.rem(18);
+      }
+    }
+  }
+}

@@ -32,6 +32,7 @@ const breadcrumb = fs.readFileSync(__dirname +"/src/_breadcrumb-component.html")
 const thuonghieu = fs.readFileSync(__dirname + "/src/_thuong-hieu.html");
 const bosuutap = fs.readFileSync(__dirname + "/src/_bo-suu-tap.html");
 const cacduan = fs.readFileSync(__dirname + "/src/_cac-du-an.html");
+const doanhnghiepbanner = fs.readFileSync(__dirname + "/src/_doanh-nghiep-banner.html");
 
 
 //noErrorOnMissing: true
@@ -163,7 +164,7 @@ module.exports = {
       preload: preload,
       svg: svg,
       header: headerComponent,
-      home_banner: homeBanner,
+      doanhnghiepbanner,
       danhmucsanpham: danhmucsanpham,
       gocbepthongminh: gocbepthongminh,
       bosuutap,

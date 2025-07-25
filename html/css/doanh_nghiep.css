@@ -2236,26 +2236,49 @@ button.swiper-pagination-bullet {
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
   padding-left: 2.5rem;
   padding-bottom: 4.625rem;
 }
 .banner_detail {
   width: 56.4375rem;
-}
-.banner_detail .sub-title {
-  font-weight: 400;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-.banner_detail h1 {
-  color: #fff;
+  text-align: center;
 }
 .banner_detail .sub-title,
 .banner_detail h1 {
-  margin-bottom: 2rem;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2.25rem;
+  line-height: 1.2;
+}
+.banner_detail h1 {
+  font-weight: 700;
+}
+.banner_detail h1 {
+  margin-bottom: 1.9375rem;
+}
+.banner_detail .list-banner {
+  display: flex;
+  column-gap: 1.5rem;
+  justify-content: center;
+}
+.banner_detail .list-banner-item {
+  display: flex;
+  column-gap: 17px;
+  align-items: center;
+}
+.banner_detail .list-banner-item svg {
+  width: 2.1875rem;
+  height: 5rem;
+}
+.banner_detail .list-banner-item .title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.4;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 1023px) {
