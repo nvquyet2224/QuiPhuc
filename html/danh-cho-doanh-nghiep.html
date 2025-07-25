@@ -288,6 +288,20 @@
       stroke-linejoin="round"
     />
   </symbol>
+
+  <symbol
+    id="icon-plus"
+    viewBox="0 0 10 10"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M5 1L5 9M9 5L1 5"
+      stroke="#141B34"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </symbol>
 </svg>
 
         <header class="header transparent">
@@ -1827,61 +1841,37 @@
 </section>
         <section class="section collection">
   <div class="collection_wrap">
-    <div class="collection_banner">
-      <div class="collection_banner--item current" data-target="1">
-        <img
-          width="720"
-          height="720"
-          loading="lazy"
-          fetchpriority="low"
-          src="images/collection-banner-1.png"
-          alt="goc bep"
-        />
-      </div>
-      <div class="collection_banner--item" data-target="2">
-        <img
-          width="720"
-          height="720"
-          loading="lazy"
-          fetchpriority="low"
-          src="images/collection-banner-2.png"
-          alt="goc bep"
-        />
-      </div>
-    </div>
     <div class="collection_content">
-      <div class="collection_detail">
-        <div class="title_block">
-          <div class="sub-title">Bộ sưu tập</div>
-          <h2>Dành cho doanh nghiệp</h2>
+      <div class="title_block">
+        <div class="sub-title">Bộ sưu tập</div>
+        <h2>Dành cho doanh nghiệp</h2>
+      </div>
+      <div class="collection-nav" id="slider-nav">
+        <div class="nav-prev">
+          <svg>
+            <use xlink:href="#icon-arrow-next"></use>
+          </svg>
         </div>
-        <div class="collection-nav" id="slider-nav">
-          <div class="collectionNavSlider swiper">
-            <div class="swiper-wrapper">
-              <div class="current swiper-slide" data-target="1">
-                <span>Căn-Tin</span>
-              </div>
-              <div data-target="2" class="swiper-slide">
-                <span>Nhà Hàng</span>
-              </div>
+        <div class="collectionNavSlider swiper">
+          <div class="swiper-wrapper">
+            <div class="current swiper-slide" data-target="1">
+              <span>Căn-Tin</span>
             </div>
-          </div>
-          <div class="block-nav">
-            <div class="nav-prev">
-              <svg>
-                <use xlink:href="#icon-arrow-next"></use>
-              </svg>
-            </div>
-            <div class="nav-next">
-              <svg>
-                <use xlink:href="#icon-arrow-next"></use>
-              </svg>
+            <div data-target="2" class="swiper-slide">
+              <span>Nhà Hàng</span>
             </div>
           </div>
         </div>
-        <div class="collection_product">
-          <div class="collection_product--item current" data-target="1">
-            <div class="product in-view">
+        <div class="nav-next">
+          <svg>
+            <use xlink:href="#icon-arrow-next"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="collection_product">
+        <div class="collection_product--item current" data-target="1">
+          <div class="products-list">
+            <div class="product">
               <div class="product-img">
                 <img
                   width="225"
@@ -1912,8 +1902,16 @@
                   20%
                 </span>
               </div>
+              <div class="compare">
+                <span class="compare-item">
+                  So sánh
+                  <svg>
+                    <use xlink:href="#icon-plus"></use>
+                  </svg>
+                </span>
+              </div>
             </div>
-            <div class="product in-view">
+            <div class="product">
               <div class="product-img">
                 <img
                   width="225"
@@ -1944,10 +1942,20 @@
                   20%
                 </span>
               </div>
+              <div class="compare">
+                <span class="compare-item">
+                  So sánh
+                  <svg>
+                    <use xlink:href="#icon-plus"></use>
+                  </svg>
+                </span>
+              </div>
             </div>
           </div>
-          <div class="collection_product--item" data-target="1">
-            <div class="product in-view">
+        </div>
+        <div class="collection_product--item" data-target="2">
+          <div class="products-list">
+            <div class="product">
               <div class="product-img">
                 <img
                   width="225"
@@ -1978,8 +1986,16 @@
                   20%
                 </span>
               </div>
+              <div class="compare">
+                <span class="compare-item">
+                  So sánh
+                  <svg>
+                    <use xlink:href="#icon-plus"></use>
+                  </svg>
+                </span>
+              </div>
             </div>
-            <div class="product in-view">
+            <div class="product">
               <div class="product-img">
                 <img
                   width="225"
@@ -2010,9 +2026,39 @@
                   20%
                 </span>
               </div>
+              <div class="compare">
+                <span class="compare-item">
+                  So sánh
+                  <svg>
+                    <use xlink:href="#icon-plus"></use>
+                  </svg>
+                </span>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="collection_banner">
+      <div class="collection_banner--item current" data-target="1">
+        <img
+          width="720"
+          height="720"
+          loading="lazy"
+          fetchpriority="low"
+          src="images/collection-banner-1.png"
+          alt="goc bep"
+        />
+      </div>
+      <div class="collection_banner--item" data-target="2">
+        <img
+          width="720"
+          height="720"
+          loading="lazy"
+          fetchpriority="low"
+          src="images/collection-banner-2.png"
+          alt="goc bep"
+        />
       </div>
     </div>
   </div>
@@ -2029,57 +2075,57 @@
           </div>
         </div>
         <div class="brand__personal-accordion">
-          <div class="accordion-item">
+          <div class="accordion-item current">
             <div class="title">
               Thiết kế riêng
               <svg>
                 <use xlink:href="#icon-cricle-down"></use>
               </svg>
             </div>
-            <div class="text">
+            <p class="text">
               Đội ngũ thiết kế của Qui Phúc sẽ đồng hành cùng bạn để tạo nên
               những mẫu mã riêng biệt, thể hiện rõ cá tính và gu thẩm mỹ cá
               nhân, từ kiểu dáng đến màu sắc và chất liệu.
-            </div>
+            </p>
           </div>
           <div class="accordion-item">
             <div class="title">
               Sản xuất theo yêu cầu
               <svg>
-                <use xlink:href="#icon-cricle-right"></use>
+                <use xlink:href="#icon-cricle-down"></use>
               </svg>
             </div>
-            <div class="text">
+            <p class="text">
               Đội ngũ thiết kế của Qui Phúc sẽ đồng hành cùng bạn để tạo nên
               những mẫu mã riêng biệt, thể hiện rõ cá tính và gu thẩm mỹ cá
               nhân, từ kiểu dáng đến màu sắc và chất liệu.
-            </div>
+            </p>
           </div>
           <div class="accordion-item">
             <div class="title">
               Khắc logo trên sản phẩm
               <svg>
-                <use xlink:href="#icon-cricle-right"></use>
+                <use xlink:href="#icon-cricle-down"></use>
               </svg>
             </div>
-            <div class="text">
+            <p class="text">
               Đội ngũ thiết kế của Qui Phúc sẽ đồng hành cùng bạn để tạo nên
               những mẫu mã riêng biệt, thể hiện rõ cá tính và gu thẩm mỹ cá
               nhân, từ kiểu dáng đến màu sắc và chất liệu.
-            </div>
+            </p>
           </div>
           <div class="accordion-item">
             <div class="title">
               Tư vấn giải pháp không gian
               <svg>
-                <use xlink:href="#icon-cricle-right"></use>
+                <use xlink:href="#icon-cricle-down"></use>
               </svg>
             </div>
-            <div class="text">
+            <p class="text">
               Đội ngũ thiết kế của Qui Phúc sẽ đồng hành cùng bạn để tạo nên
               những mẫu mã riêng biệt, thể hiện rõ cá tính và gu thẩm mỹ cá
               nhân, từ kiểu dáng đến màu sắc và chất liệu.
-            </div>
+            </p>
           </div>
         </div>
       </div>
@@ -2116,24 +2162,12 @@
               núc trở nên nhẹ nhàng hơn.
             </p>
           </div>
-          <div class="block-action">
-            <a href="#" class="link-but pc">
-              Tìm hiểu thêm
-              <svg>
-                <use xlink:href="#icon-arrow-next-medium"></use>
-              </svg>
-            </a>
-            <div class="nav-prev sp">
-              <svg>
-                <use xlink:href="#icon-arrow-next"></use>
-              </svg>
-            </div>
-            <div class="nav-next sp">
-              <svg>
-                <use xlink:href="#icon-arrow-next"></use>
-              </svg>
-            </div>
-          </div>
+          <a href="#" class="link-but">
+            Tìm hiểu thêm
+            <svg>
+              <use xlink:href="#icon-arrow-next-medium"></use>
+            </svg>
+          </a>
         </div>
         <div class="brand__certi-marque">
           <div class="brandCertiSlider swiper">
@@ -2236,7 +2270,7 @@
                   nhựa bền đẹp, dễ vệ sinh và bố trí thông minh — giúp mọi công
                   việc bếp núc trở nên nhẹ nhàng hơn.
                 </p>
-                <a href="#">
+                <a href="#" class="but-link">
                   Xem thêm
                   <svg>
                     <use xlink:href="#icon-link"></use>
@@ -2264,7 +2298,7 @@
                   nhựa bền đẹp, dễ vệ sinh và bố trí thông minh — giúp mọi công
                   việc bếp núc trở nên nhẹ nhàng hơn.
                 </p>
-                <a href="#">
+                <a href="#" class="but-link">
                   Xem thêm
                   <svg>
                     <use xlink:href="#icon-link"></use>
@@ -2292,7 +2326,7 @@
                   nhựa bền đẹp, dễ vệ sinh và bố trí thông minh — giúp mọi công
                   việc bếp núc trở nên nhẹ nhàng hơn.
                 </p>
-                <a href="#">
+                <a href="#" class="but-link">
                   Xem thêm
                   <svg>
                     <use xlink:href="#icon-link"></use>
@@ -2320,7 +2354,7 @@
                   nhựa bền đẹp, dễ vệ sinh và bố trí thông minh — giúp mọi công
                   việc bếp núc trở nên nhẹ nhàng hơn.
                 </p>
-                <a href="#">
+                <a href="#" class="but-link">
                   Xem thêm
                   <svg>
                     <use xlink:href="#icon-link"></use>
