@@ -22,7 +22,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Quy Phúc">
     <link rel="icon" href="images/favicon.png">
-    <link href="css/productdetail.css" rel="preload stylesheet" as="style">
+    <link href="css/product_detail.css" rel="preload stylesheet" as="style">
 </head>
 
 <body data-page="home">
@@ -1018,14 +1018,114 @@
                     <h3 class="btn-sale"><img src="../src/images/product-detail/samset.png" alt="right-img"> 20%</h3>
                 </div>
             </div>
-            <div class="shopping-cart-bottom"></div>
+            <div class="shopping-cart-bottom">
+                <div class="shopping-cart-color">
+                    <div class="shopping-cart-p">
+                        <div><p>Màu sắc:</p></div>
+                        <div><p class="p-bold">Trắng sữa</p></div>
+                    </div>
+                    <div class="shopping-cart-img">
+                        <div class="color-img"><img src="../src/images/product-detail/trangsua2.png" alt="img-color"></div>
+                        <div class="color-img"><img src="../src/images/product-detail/trangsua2.png" alt="img-color"></div>
+                        <div class="color-img"><img src="../src/images/product-detail/trangsua2.png" alt="img-color"></div>
+                        <div class="color-img"><img src="../src/images/product-detail/trangsua2.png" alt="img-color"></div>
+                    </div>
+                </div>
+                <div class="shopping-cart-vignette">
+                    <div><p>Hoạ tiết</p></div>
+                    <div class="vignette-container">
+                        <div class="padding-p">Chuột Hamter</div>
+                        <div class="padding-p">Sailor Bear</div>
+                        <div class="padding-p">Hươu</div>
+                        <div class="padding-p">Hoạ Mi</div>
+                        <div class="padding-p">Lan rừng</div>
+                    </div>
+                </div>
+                <div class="number-floor">
+                    <div><p>Số tầng</p></div>
+                    <div class="number-floor-container">
+                        <div class="padding-p">4 Tầng</div>
+                        <div class="padding-p">5 Tầng</div>
+                    </div>
+                </div>
+                <div class="btn-shopping-cart">
+                    <div class="quantity-control">
+                        <button class="btn-number" onclick="decrease()">-</button>
+                        <span id="quantity">1</span>
+                        <button class="btn-number" onclick="increase()">+</button>
+                    </div>
+                    <div class="btn-add">
+                        <button><img src="../src/images/product-detail/cart.png" alt="cart"><span>Thêm vào giỏ hàng</span></button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div></div>
-        <div></div>
+        <div class="right-buy">
+            <div class="buy-p"><p>Mua kết hợp</p></div>
+            <div class="buy-product">
+                <div class="product-container">
+                    <div class="product-top">
+                        <img src="../src/images/product-detail/ban.png" alt="buy-product">
+                    </div>
+                    <div class="product-bottom">
+                        <p>Ghế đẩu inox kiềng - Đặt riêng</p>
+                        <p>1.200.000 đ</p>
+                    </div>
+                </div>
+                 <div class="product-container">
+                    <div class="product-top">
+                        <img src="../src/images/product-detail/ghe.png" alt="buy-product">
+                    </div>
+                    <div class="product-bottom">
+                        <p>Ghế đẩu inox kiềng - Đặt riêng</p>
+                        <p>249.000 đ</p>
+                    </div>
+                </div>
+                 <div class="product-container">
+                    <div class="product-top">
+                        <img src="../src/images/product-detail/dungdua.png" alt="buy-product">
+                    </div>
+                    <div class="product-bottom">
+                        <p>Ghế đẩu inox kiềng - Đặt riêng</p>
+                        <p>249.000 đ</p>
+                    </div>
+                </div>
+                 <div class="product-container">
+                    <div class="product-top">
+                        <img src="../src/images/product-detail/dungchen.png" alt="buy-product">
+                    </div>
+                    <div class="product-bottom">
+                        <p>Ghế đẩu inox kiềng - Đặt riêng</p>
+                        <p>249.000 đ</p>
+                    </div>
+                </div>
+            </div>
+            <div class="add-to-cart">
+                <div class="cart-p">
+                    <p class="p-all">Tổng cộng</p>
+                    <p class="p-number">1.429.000 đ</p>
+                </div>
+                <div class="btn-cart">
+                    <button>Thêm hết vào giỏ</button>
+                </div>
+                <div class="point">
+                    <div class="point-container">
+                        <div><img src="../src/images/product-detail/crown.png" alt="point"></div>
+                        <div><p>Nhận <span>+35 điểm</span> tích luỹ</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="review-product">
+            <div class="review-product-container">
+                <div><p>Review sản phẩm</p></div>
+                <div class="review-product-img"><img src="../src/images/icon-arrow-down.svg" alt="review-product"></div>
+            </div>
+        </div>
         <div></div>
     </div>
 </section>
-        <section class="section subscribe">
+        <!-- <section class="section subscribe">
     <div class="subscribe_wrap">
         <div class="subscribe_block">
             <h2>Có khuyến mãi mới?</h2>
@@ -1045,7 +1145,7 @@
         </div>
     </div>
 
-</section>
+</section> -->
         <footer class="footer">
     <div class="footer-top">
         <div class="footer-col">
@@ -1163,7 +1263,7 @@
             }
             //window.onload = function () {
                 //setTimeout(function () {
-                    ['js/index.js'].forEach(function (src) {
+                    ['js/product_detail.js'].forEach(function (src) {
                         script(src);
                     });
                 //}, 100);
