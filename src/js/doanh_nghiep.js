@@ -410,27 +410,42 @@ function brandSlider() {
   if (document.querySelector(".brandCertiSlider")) {
     const slide = document.querySelector(".brandCertiSlider");
     new Swiper(slide, {
-      modules: [Navigation],
-      effect: "slide",
+      slidesPerView: "auto",
+      spaceBetween: 30,
       loop: true,
-      speed: 1000,
-      preloadImages: false,
-      lazy: true,
-      disableOnInteraction: true,
-      pauseOnMouseEnter: true,
-      slidesPerView: 1,
-      spaceBetween: 10,
-      allowTouchMove: true,
-      watchOverflow: true,
-      initialSlide: 0,
-      autoHeight: false,
-      navigation: false,
+      autoplay: {
+        delay: 500,
+        disableOnInteraction: false,
+      },
       on: {
         init: function (swiper) {},
         transitionStart: function (swiper) {},
         transitionEnd: function (swiper) {},
         click(swiper) {},
       },
+    });
+  }
+
+  const elm = document.querySelector(".brand__personal-accordion");
+  if (elm) {
+    const accordions = elm.querySelectorAll(".accordion-item .title");
+    accordions.forEach((item) => {
+      item.addEventListener("click", (e) => {
+        const parent = item.closest(".accordion-item");
+        if (!parent) return;
+
+        if (parent.classList.contains("current")) {
+          // Đã có class current rồi → không làm gì
+          return;
+        }
+
+        // Xóa class current ở tất cả các accordion-item khác
+        const allItems = elm.querySelectorAll(".accordion-item");
+        allItems.forEach((el) => el.classList.remove("current"));
+
+        // Thêm class current vào item được click
+        parent.classList.add("current");
+      });
     });
   }
 }
@@ -502,7 +517,7 @@ function collectionSlider() {
 function projectSlider() {
   if (document.querySelector(".projectsSlider")) {
     const slide = document.querySelector(".projectsSlider");
-    const elm = document.querySelector("#projects")
+    const elm = document.querySelector("#projects");
     new Swiper(slide, {
       modules: [Navigation],
       effect: "slide",
@@ -512,8 +527,9 @@ function projectSlider() {
       lazy: true,
       disableOnInteraction: true,
       pauseOnMouseEnter: true,
-      slidesPerView: 2,
-      spaceBetween: 10,
+      slidesPerView: "auto",
+      spaceBetween: 127,
+      slidesPerGroup: 1,
       allowTouchMove: true,
       watchOverflow: true,
       initialSlide: 0,

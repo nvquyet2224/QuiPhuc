@@ -1,0 +1,46 @@
+@use "function" as f;
+
+.projects {
+  padding: 0 f.rem(40) f.rem(120) f.rem(40);
+  &_wrap {
+    position: relative;
+  }
+  .title_block {
+    margin-bottom: f.rem(30);
+  }
+  .swiper-wrapper {
+    .swiper-slide:nth-child(odd) {
+      width: f.rem(789) !important; /* slide đầu to */
+    }
+
+    .swiper-slide:nth-child(even) {
+      width: f.rem(444) !important; /* các slide sau nhỏ hơn */
+    }
+  }
+  .block-action {
+    display: flex;
+    column-gap: f.rem(12);
+    align-items: center;
+    .nav-prev,
+    .nav-next {
+      width: f.rem(32);
+      height: f.rem(32);
+      background-color: transparent;
+      border: none;
+
+      svg {
+        width: f.rem(8);
+        height: f.rem(16);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 1023px) {
+}

@@ -1,0 +1,124 @@
+@use "function" as f;
+
+.collection {
+  padding: f.rem(120) 0;
+  &_wrap {
+    position: relative;
+    display: flex;
+  }
+
+  &_banner {
+    position: relative;
+    width: 50%;
+    aspect-ratio: 1/1;
+    &--item {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: auto;
+
+      opacity: 0;
+      -webkit-transition: opacity 0.3s linear;
+      transition: opacity 0.3s linear;
+
+      &.current {
+        position: relative;
+        left: auto;
+        top: auto;
+        opacity: 1;
+      }
+
+      line-height: 0;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &_content {
+    width: 50%;
+    font-size: f.rem(16);
+    line-height: 1.5;
+
+    .title_block {
+      margin-bottom: f.rem(85);
+      padding-left: f.rem(40);
+    }
+  }
+
+  &_product {
+    position: relative;
+    &--item {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: auto;
+
+      opacity: 0;
+      -webkit-transition: opacity 0.3s linear;
+      transition: opacity 0.3s linear;
+
+      &.current {
+        position: relative;
+        left: auto;
+        top: auto;
+        opacity: 1;
+      }
+      .products {
+        &-list {
+          display: flex;
+          .product {
+            flex: 0 0 50%;
+            border-top: 1px solid rgba(0, 0, 0, 0.15);
+            border-left: 1px solid rgba(0, 0, 0, 0.15);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+            padding: f.rem(22) f.rem(20);
+            &-img {
+                margin-bottom: f.rem(52);
+            }
+          }
+        }
+      }
+    }
+  }
+  &-nav {
+    padding-left: f.rem(40);
+    display: flex;
+    column-gap: f.rem(12);
+    margin-bottom: f.rem(26);
+    width: fit-content;
+    align-items: center;
+    .collectionNavSlider {
+      width: f.rem(120);
+      .swiper-slide {
+        text-align: center;
+      }
+    }
+    .nav-prev,
+    .nav-next {
+      width: f.rem(32);
+      height: f.rem(32);
+      background-color: transparent;
+      border: none;
+
+      svg {
+        width: f.rem(8);
+        height: f.rem(16);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 1023px) {
+  
+}
