@@ -54,6 +54,7 @@ module.exports = {
     main: ["./src/js/main.js"],
     index: ["./src/js/index.js"],
     doanh_nghiep: ["./src/js/doanh_nghiep.js"],
+    product_detail: ["./src/js/product-detail.js"],
   },
   output: {
     publicPath: "../",
