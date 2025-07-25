@@ -34,7 +34,8 @@ const bosuutap = fs.readFileSync(__dirname + "/src/_bo-suu-tap.html");
 const cacduan = fs.readFileSync(__dirname + "/src/_cac-du-an.html");
 const doanhnghiepbanner = fs.readFileSync(__dirname + "/src/_doanh-nghiep-banner.html");
 
-const detailinfo = fs.readFileSync(__dirname + "/src/_deatil-info.html");
+// const detailinfo = fs.readFileSync(__dirname + "/src/_deatil-info.html");
+// const detailVideo = fs.readFileSync(__dirname + "/src/_deatil-video.html");
 
 
 //noErrorOnMissing: true
@@ -190,9 +191,9 @@ module.exports = {
       svg: svg,
       header: headerComponent,
       productDetail: productDetail,
+      sanphamkhuyenmai,
       home_banner: homeBanner,
       breadcrumb: breadcrumb,
-      detailinfo,
       camket: camket,
       tuvanhotro: tuvanhotro,
       chuongtrinhkhuyenmai: chuongtrinhkhuyenmai,
