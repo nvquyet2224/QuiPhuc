@@ -26,8 +26,10 @@ const camket = fs.readFileSync(__dirname + "/src/_cam-ket.html");
 const chuongtrinhkhuyenmai = fs.readFileSync(__dirname + "/src/_chuong-trinh-khuyen-mai.html");
 const dangkykhuyenmai = fs.readFileSync(__dirname + "/src/_dang-ky-khuyen-mai.html");
 const dichvu = fs.readFileSync(__dirname + "/src/_dich-vu.html");
+
 const productDetail = fs.readFileSync(__dirname +"/src/_product-detail.html");
 const breadcrumb = fs.readFileSync(__dirname +"/src/_breadcrumb-component.html");
+const sanphamlienquan = fs.readFileSync(__dirname + "/src/_san-pham-lien-quan.html");
 
 const thuonghieu = fs.readFileSync(__dirname + "/src/_thuong-hieu.html");
 const bosuutap = fs.readFileSync(__dirname + "/src/_bo-suu-tap.html");
@@ -191,7 +193,7 @@ module.exports = {
       svg: svg,
       header: headerComponent,
       productDetail: productDetail,
-      sanphamkhuyenmai,
+      sanphamlienquan,
       home_banner: homeBanner,
       breadcrumb: breadcrumb,
       camket: camket,
