@@ -214,18 +214,16 @@
         </div>
         <div class="write-comment-right">
           <div class="comment-right-img">
-            <img
-              src="../src/images/product-detail/camera-01.png"
-              alt="write-comment"
-            />
+            <svg>
+              <use xlink:href="#icon-camera"></use>
+            </svg>
           </div>
           <div class="comment-right-btn">
-            <div><p>Đăng bình luận</p></div>
+            <div class="pc"><p>Đăng bình luận</p></div>
             <div>
-              <img
-                src="../src/images/product-detail/Line.svg"
-                alt="write-comment"
-              />
+              <svg>
+                <use xlink:href="#icon-arrow-line"></use>
+              </svg>
             </div>
           </div>
         </div>
@@ -238,8 +236,10 @@
           <div>
             <p>Mới nhất</p>
           </div>
-          <div>
-            <img src="../src/images/icon-cricle-down.svg" alt="notification" />
+          <div class="notification-right--icon">
+            <svg>
+              <use xlink:href="#icon-cricle-down"></use>
+            </svg>
           </div>
         </div>
       </div>
@@ -351,8 +351,10 @@
       </div>
       <div class="comment-3">
         <div class="comment-3-container">
-          <div>
-            <img src="../src/images/product-detail/Line.svg" alt="icon" />
+          <div class="comment-3-container--icon">
+            <svg>
+              <use xlink:href="#icon-loading"></use>
+            </svg>
           </div>
           <div><p>Xem thêm review</p></div>
         </div>
@@ -463,10 +465,24 @@
     </div>
     <div class="structure_bottom">
       <div class="structure_bottom-left">
-        <img src="images/structure-left.png" alt="Chịu lực cao 120kg" />
+        <img
+          src="images/structure-left.png"
+          alt="Chịu lực cao 120kg"
+          class="pc"
+        />
+        <div class="structure_bottom-left--swiper sp structureSlider swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/structure-left.png" alt="Chịu lực cao 120kg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/structure-right.png" alt="Chịu lực cao 120kg" />
+            </div>
+          </div>
+        </div>
       </div>
       <div class="structure_bottom-right">
-        <div class="structure_bottom-right--img">
+        <div class="structure_bottom-right--img pc">
           <img src="images/structure-right.png" alt="Chịu lực cao 120kg" />
         </div>
         <div class="structure_bottom-right--txt">
@@ -508,9 +524,26 @@
     <div class="additional_wrap">
       <div class="additional_left">
         <img
-          src="images/additional-left.png "
-          alt="Ngăn tủ rộng chứa được nhiều đồ đạc "
+          src="images/additional-left.png"
+          alt="Ngăn tủ rộng chứa được nhiều đồ đạc"
+          class="pc"
         />
+        <div class="additional_left--swiper sp additionalSlider swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="images/additional-left.png "
+                alt="Ngăn tủ rộng chứa được nhiều đồ đạc "
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="images/additional-right.png"
+                alt="Ngăn tủ rộng chứa được nhiều đồ đạc "
+              />
+            </div>
+          </div>
+        </div>
       </div>
       <div class="additional_right">
         <div class="additional_right-txt">
@@ -525,7 +558,7 @@
             lợi.
           </p>
         </div>
-        <div class="additional_right-img">
+        <div class="additional_right-img pc">
           <img
             src="images/additional-right.png"
             alt="Ngăn tủ rộng chứa được nhiều đồ đạc "

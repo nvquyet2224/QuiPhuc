@@ -1,5 +1,12 @@
 import "../sass/product-detail.scss";
-import Swiper, { Autoplay, Pagination, Navigation, Scrollbar, FreeMode, Mousewheel } from "swiper";
+import Swiper, {
+  Autoplay,
+  Pagination,
+  Navigation,
+  Scrollbar,
+  FreeMode,
+  Mousewheel,
+} from "swiper";
 // console.log('___detail page');
 // const boxes = document.querySelectorAll('.padding-p');
 // // Bấm vào ô → bật màu, tắt màu các ô còn lại
@@ -30,6 +37,66 @@ window.decrease = function () {
   }
 };
 
+function structureSlider() {
+  if (document.querySelector(".structureSlider")) {
+    new Swiper(".structureSlider", {
+      modules: [Scrollbar, FreeMode, Mousewheel],
+      effect: "slide",
+      loop: false,
+      speed: 1000,
+      preloadImages: false,
+      lazy: true,
+      disableOnInteraction: true,
+      pauseOnMouseEnter: true,
+      slidesPerView: 1.5,
+      spaceBetween: 12,
+      freeMode: true,
+      grabCursor: true,
+      allowTouchMove: true,
+      watchOverflow: true,
+      initialSlide: 0,
+      autoHeight: false,
+      navigation: false,
+      on: {
+        init: function (swiper) {},
+        transitionStart: function (swiper) {},
+        transitionEnd: function () {},
+        click(swiper) {},
+      },
+    });
+  }
+}
+
+function additionalSlider() {
+  if (document.querySelector(".additionalSlider")) {
+    new Swiper(".additionalSlider", {
+      modules: [Scrollbar, FreeMode, Mousewheel],
+      effect: "slide",
+      loop: false,
+      speed: 1000,
+      preloadImages: false,
+      lazy: true,
+      disableOnInteraction: true,
+      pauseOnMouseEnter: true,
+      slidesPerView: 1.5,
+      spaceBetween: 12,
+      freeMode: true,
+      grabCursor: true,
+      allowTouchMove: true,
+      watchOverflow: true,
+      initialSlide: 0,
+      autoHeight: false,
+      navigation: false,
+      on: {
+        init: function (swiper) {},
+        transitionStart: function (swiper) {},
+        transitionEnd: function () {},
+        click(swiper) {},
+      },
+    });
+  }
+}
+
 function productRelatedSlider() {
   if (document.querySelector(".product-related .productsSlider")) {
     new Swiper(".product-related .productsSlider", {
@@ -45,15 +112,10 @@ function productRelatedSlider() {
       spaceBetween: 0,
       freeMode: true,
       grabCursor: true,
-      allowTouchMove: false,
+      allowTouchMove: true,
       watchOverflow: true,
       initialSlide: 0,
       autoHeight: false,
-      mousewheel: {
-        sensitivity: 1,
-        forceToAxis: true, // Bắt buộc cuộn theo trục chính
-        releaseOnEdges: true, // Tiếp tục cuộn khi đến cuối
-      },
       breakpoints: {
         320: {
           slidesPerView: 1.5,
@@ -80,4 +142,6 @@ function productRelatedSlider() {
 
 (function () {
   productRelatedSlider();
+  structureSlider();
+  additionalSlider();
 })();
