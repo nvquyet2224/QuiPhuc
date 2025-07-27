@@ -2,6 +2,7 @@
 
 .collection {
   padding: f.rem(120) 0;
+
   &_wrap {
     position: relative;
     display: flex;
@@ -11,6 +12,7 @@
     position: relative;
     width: 50%;
     aspect-ratio: 1/1;
+
     &--item {
       position: absolute;
       left: 0;
@@ -51,6 +53,7 @@
 
   &_product {
     position: relative;
+
     &--item {
       position: absolute;
       left: 0;
@@ -68,18 +71,23 @@
         top: auto;
         opacity: 1;
       }
+
       .products {
         &-list {
           display: flex;
+
           .product {
             flex: 0 0 50%;
             border-top: 1px solid rgba(0, 0, 0, 0.15);
 
-            border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+            //border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
             &:not(:first-child) {
               border-left: 1px solid rgba(0, 0, 0, 0.15);
             }
+
             padding: f.rem(22) f.rem(20);
+
             &-img {
               margin-bottom: f.rem(52);
             }
@@ -88,6 +96,7 @@
       }
     }
   }
+
   &-nav {
     padding-left: f.rem(40);
     display: flex;
@@ -95,12 +104,15 @@
     margin-bottom: f.rem(26);
     width: fit-content;
     align-items: center;
+
     .collectionNavSlider {
       width: f.rem(120);
+
       .swiper-slide {
         text-align: center;
       }
     }
+
     .nav-prev,
     .nav-next {
       width: f.rem(32);
@@ -117,10 +129,14 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .collection {
+    &_wrap {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    }
+  }
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1200px) {
-}
+@media screen and (min-width: 1024px) and (max-width: 1200px) {}
 
 @media screen and (max-width: 1023px) {
   .collection {
@@ -132,6 +148,7 @@
 
     &_content {
       width: 100%;
+
       .title_block {
         margin-bottom: f.rem(16);
         padding: 0 f.rem(16);
@@ -140,6 +157,7 @@
 
     &_product {
       position: relative;
+
       &--item {
         position: absolute;
         left: 0;
@@ -157,17 +175,21 @@
           top: auto;
           opacity: 1;
         }
+
         .products {
           &-list {
             display: flex;
+
             .product {
               padding: f.rem(12) f.rem(8);
+
               &-img {
                 margin-bottom: f.rem(41);
                 margin-top: f.rem(22);
                 width: f.rem(119);
                 height: f.rem(117);
               }
+
               .compare {
                 display: none;
               }
@@ -176,9 +198,11 @@
         }
       }
     }
+
     &-nav {
       padding: 0 f.rem(16);
       margin-bottom: f.rem(20);
+
       .nav-prev,
       .nav-next {
         width: f.rem(16);
@@ -190,5 +214,6 @@
         }
       }
     }
+
   }
 }

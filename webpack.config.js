@@ -12,6 +12,7 @@ const preload = fs.readFileSync(__dirname + "/src/_preload.html");
 const svg = fs.readFileSync(__dirname + "/src/_svg.html");
 
 const headerComponent = fs.readFileSync(__dirname + "/src/_component-header.html");
+const headerNoramComponent = fs.readFileSync(__dirname + "/src/_component-header-normal.html");
 const footerComponent = fs.readFileSync(__dirname + "/src/_component-footer.html");
 
 const homeBanner = fs.readFileSync(__dirname + "/src/_home-banner.html");
@@ -36,9 +37,8 @@ const bosuutap = fs.readFileSync(__dirname + "/src/_bo-suu-tap.html");
 const cacduan = fs.readFileSync(__dirname + "/src/_cac-du-an.html");
 const doanhnghiepbanner = fs.readFileSync(__dirname + "/src/_doanh-nghiep-banner.html");
 
-// const detailinfo = fs.readFileSync(__dirname + "/src/_deatil-info.html");
-// const detailVideo = fs.readFileSync(__dirname + "/src/_deatil-video.html");
-
+const detailInfo = fs.readFileSync(__dirname + "/src/_detail-info.html");
+const detailVideo = fs.readFileSync(__dirname + "/src/_detail-video.html");
 
 //noErrorOnMissing: true
 
@@ -63,6 +63,7 @@ module.exports = {
     index: ["./src/js/index.js"],
     doanh_nghiep: ["./src/js/doanh_nghiep.js"],
     product_detail: ["./src/js/product-detail.js"],
+    san_pham_chi_tiet: ["./src/js/san_pham_chi_tiet.js"],
   },
   output: {
     publicPath: "../",
@@ -185,7 +186,6 @@ module.exports = {
       template: "src/danh-cho-doanh-nghiep.html",
       minify: minify,
     }),
-    // product detail
     new HtmlWebpackPlugin({
       inject: false,
       filename: "product-detail.html",
@@ -203,6 +203,28 @@ module.exports = {
       dichvu: dichvu,
       footer: footerComponent,
       template: "src/product-detail.html",
+      minify: minify,
+    }),
+    ,
+    new HtmlWebpackPlugin({
+      inject: false,
+      filename: "san-pham-chi-tiet.html",
+      preload: preload,
+      svg: svg,
+      header: headerNoramComponent,
+      productDetail: productDetail,
+      sanphamlienquan,
+      home_banner: homeBanner,
+      breadcrumb: breadcrumb,
+      detailInfo: detailInfo,
+      //detailVideo: detailInfo,
+      camket: camket,
+      tuvanhotro: tuvanhotro,
+      chuongtrinhkhuyenmai: chuongtrinhkhuyenmai,
+      dangkykhuyenmai: dangkykhuyenmai,
+      dichvu: dichvu,
+      footer: footerComponent,
+      template: "src/san-pham-chi-tiet.html",
       minify: minify,
     }),
     

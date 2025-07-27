@@ -4,6 +4,10 @@
     background: #ffffff;
     padding: f.rem(120) 0;
 
+    &.product-related {
+        padding-top: f.rem(40);
+    }
+
     .title_block {
         padding: 0 f.rem(40);
         margin-bottom: f.rem(66);
@@ -57,16 +61,20 @@
 
     .products {
         padding: f.rem(66) 0;
+
         .title_block {
             padding: 0 f.rem(15);
             margin-bottom: f.rem(20);
         }
+
         &-list {
             .swiper-horizontal>.swiper-scrollbar {
                 display: none;
             }
+
             .action {
                 padding: 0 f.rem(15);
+
                 .link-but {
                     width: 100%;
                 }

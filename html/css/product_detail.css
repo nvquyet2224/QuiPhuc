@@ -284,6 +284,11 @@ input[type=number] {
   height: auto;
 }
 
+.main {
+  width: 100%;
+  height: auto;
+}
+
 .product {
   position: relative;
   width: 100%;
@@ -1283,6 +1288,12 @@ input[type=number] {
     transition: all 0.3s ease-in-out;
     transition-delay: 0.25s;
   }
+  .header:not(.transparent) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .header:not(.transparent) + .main {
+    padding-top: 9.375rem;
+  }
 }
 @media screen and (max-width: 1023px) {
   .bg-menu {
@@ -1533,6 +1544,12 @@ input[type=number] {
   .header.sticky .nav-menu .dropdown-menu {
     height: calc(var(--winH) - 0.3125rem);
     top: 3.125rem;
+  }
+  .header:not(.transparent) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .header:not(.transparent) + .main {
+    padding-top: 6.25rem;
   }
   .header.open-menu {
     background-color: #fff;
@@ -2307,6 +2324,9 @@ button.swiper-pagination-bullet {
   background: #ffffff;
   padding: 7.5rem 0;
 }
+.products.product-related {
+  padding-top: 2.5rem;
+}
 .products .title_block {
   padding: 0 2.5rem;
   margin-bottom: 4.125rem;
@@ -2381,33 +2401,10 @@ button.swiper-pagination-bullet {
   color: #000;
 }
 
-@media screen and (min-width: 1024px) {
-  .breadcrumb {
-    padding: 2.1354166667vw 3.125vw;
-  }
-  .breadcrumb ul {
-    column-gap: 0.4166666667vw;
-  }
-  .breadcrumb ul li a,
-  .breadcrumb ul li span {
-    font-size: 0.78125vw;
-  }
-  .breadcrumb ul li a:hover {
-    color: #EF3D29;
-  }
-}
-@media screen and (min-width: 1024px) and (max-width: 1200px) {
-  .breadcrumb {
-    padding: 15px 50px;
-  }
-  .breadcrumb ul li a,
-  .breadcrumb ul li span {
-    font-size: 11px;
-  }
-}
 @media screen and (max-width: 1023px) {
   .breadcrumb {
-    display: none;
+    padding-left: 1rem;
+    padding-bottom: 0.75rem;
   }
 }
 .product-detail .product-detail-container {
@@ -2849,6 +2846,7 @@ button.swiper-pagination-bullet {
 }
 .product-detail .infomation {
   padding: 0 2.5rem;
+  padding-top: 7.25rem;
 }
 .product-detail .infomation .infomation-header {
   color: #000000;
