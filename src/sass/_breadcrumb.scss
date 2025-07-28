@@ -1,8 +1,7 @@
 @use "function" as f;
 
 .breadcrumb {
-
-    padding-bottom: f.rem(20);
+    padding: 0 f.rem(40) f.rem(20) f.rem(40);
 
     &.bg-white {
         background-color: #fff;

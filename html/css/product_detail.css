@@ -2379,7 +2379,7 @@ button.swiper-pagination-bullet {
   }
 }
 .breadcrumb {
-  padding-bottom: 1.25rem;
+  padding: 0 2.5rem 1.25rem 2.5rem;
 }
 .breadcrumb.bg-white {
   background-color: #fff;

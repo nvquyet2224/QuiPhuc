@@ -37,8 +37,13 @@ const collectionComponent = fs.readFileSync(__dirname + "/src/_collection.html")
 const projectComponent = fs.readFileSync(__dirname + "/src/_project.html");
 const businessBannerComponent = fs.readFileSync(__dirname + "/src/_business-banner.html");
 
+const mainProductComponent = fs.readFileSync(__dirname + "/src/_main-product.html");
 const detailInfo = fs.readFileSync(__dirname + "/src/_detail-info.html");
 const detailVideo = fs.readFileSync(__dirname + "/src/_detail-video.html");
+const detailSafeComponent = fs.readFileSync(__dirname + "/src/_product-detail-safe.html");
+const detailStructureComponent = fs.readFileSync(__dirname + "/src/_product-detail-structure.html");
+const detailBigimgComponent = fs.readFileSync(__dirname + "/src/_product-detail-bigimg.html");
+const detailAdditionalComponent = fs.readFileSync(__dirname + "/src/_product-detail-additional.html");
 
 //noErrorOnMissing: true
 
@@ -212,12 +217,17 @@ module.exports = {
       preload: preload,
       svg: svg,
       header: headerNoramComponent,
-      productDetail: productDetail,
+      // productDetail: productDetail,
+      mainProductComponent,
       productRelatedComponent: productRelatedComponent,
       home_banner: homeBanner,
       breadcrumb: breadcrumb,
       detailInfo: detailInfo,
-      //detailVideo: detailInfo,
+      detailVideo,
+      detailSafeComponent,
+      detailStructureComponent,
+      detailBigimgComponent,
+      detailAdditionalComponent,
       commit: commitComponent,
       support: supportComponent,
       promotionComponent: promotionComponent,
