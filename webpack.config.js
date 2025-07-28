@@ -16,26 +16,26 @@ const headerNoramComponent = fs.readFileSync(__dirname + "/src/_component-header
 const footerComponent = fs.readFileSync(__dirname + "/src/_component-footer.html");
 
 const homeBanner = fs.readFileSync(__dirname + "/src/_home-banner.html");
-const danhmucsanpham = fs.readFileSync(__dirname + "/src/_danh-muc-san-pham.html");
-const gocbepthongminh = fs.readFileSync(__dirname + "/src/_goc-bep-thong-minh.html");
-const sanphammoi = fs.readFileSync(__dirname + "/src/_san-pham-moi.html");
-const bandanglamgi = fs.readFileSync(__dirname + "/src/_ban-dang-lam-gi.html");
-const sanphamkhuyenmai = fs.readFileSync(__dirname + "/src/_san-pham-khuyen-mai.html");
-const camhung = fs.readFileSync(__dirname + "/src/_cam-hung.html");
-const tuvanhotro = fs.readFileSync(__dirname + "/src/_tu-van-ho-tro.html");
-const camket = fs.readFileSync(__dirname + "/src/_cam-ket.html");
-const chuongtrinhkhuyenmai = fs.readFileSync(__dirname + "/src/_chuong-trinh-khuyen-mai.html");
-const dangkykhuyenmai = fs.readFileSync(__dirname + "/src/_dang-ky-khuyen-mai.html");
-const dichvu = fs.readFileSync(__dirname + "/src/_dich-vu.html");
+const productCategoryComponent = fs.readFileSync(__dirname + "/src/_product-category.html");
+const kitchenComponent = fs.readFileSync(__dirname + "/src/_kitchen.html");
+const productNewComponent = fs.readFileSync(__dirname + "/src/_product-new.html");
+const whatnowComponent = fs.readFileSync(__dirname + "/src/_whatnow.html");
+const productPromotion = fs.readFileSync(__dirname + "/src/_product-promotion.html");
+const inspirationComponent = fs.readFileSync(__dirname + "/src/_inspiration.html");
+const supportComponent = fs.readFileSync(__dirname + "/src/_support.html");
+const commitComponent = fs.readFileSync(__dirname + "/src/_commit.html");
+const promotionComponent = fs.readFileSync(__dirname + "/src/_promotion.html");
+const registerPromotion = fs.readFileSync(__dirname + "/src/_register-promotion.html");
+const serviceComponent = fs.readFileSync(__dirname + "/src/_service.html");
 
 const productDetail = fs.readFileSync(__dirname +"/src/_product-detail.html");
 const breadcrumb = fs.readFileSync(__dirname +"/src/_breadcrumb-component.html");
-const sanphamlienquan = fs.readFileSync(__dirname + "/src/_san-pham-lien-quan.html");
+const productRelatedComponent = fs.readFileSync(__dirname + "/src/_product-related.html");
 
-const thuonghieu = fs.readFileSync(__dirname + "/src/_thuong-hieu.html");
-const bosuutap = fs.readFileSync(__dirname + "/src/_bo-suu-tap.html");
-const cacduan = fs.readFileSync(__dirname + "/src/_cac-du-an.html");
-const doanhnghiepbanner = fs.readFileSync(__dirname + "/src/_doanh-nghiep-banner.html");
+const brandComponent = fs.readFileSync(__dirname + "/src/_brand.html");
+const collectionComponent = fs.readFileSync(__dirname + "/src/_collection.html");
+const projectComponent = fs.readFileSync(__dirname + "/src/_project.html");
+const businessBannerComponent = fs.readFileSync(__dirname + "/src/_business-banner.html");
 
 const detailInfo = fs.readFileSync(__dirname + "/src/_detail-info.html");
 const detailVideo = fs.readFileSync(__dirname + "/src/_detail-video.html");
@@ -61,7 +61,7 @@ module.exports = {
   entry: {
     main: ["./src/js/main.js"],
     index: ["./src/js/index.js"],
-    doanh_nghiep: ["./src/js/doanh_nghiep.js"],
+    business: ["./src/js/business.js"],
     product_detail: ["./src/js/product-detail.js"],
     san_pham_chi_tiet: ["./src/js/san_pham_chi_tiet.js"],
   },
@@ -150,17 +150,17 @@ module.exports = {
       svg: svg,
       header: headerComponent,
       home_banner: homeBanner,
-      danhmucsanpham: danhmucsanpham,
-      gocbepthongminh: gocbepthongminh,
-      sanphammoi: sanphammoi,
-      bandanglamgi: bandanglamgi,
-      sanphamkhuyenmai: sanphamkhuyenmai,
-      camhung: camhung,
-      camket: camket,
-      tuvanhotro: tuvanhotro,
-      chuongtrinhkhuyenmai: chuongtrinhkhuyenmai,
-      dangkykhuyenmai: dangkykhuyenmai,
-      dichvu: dichvu,
+      productCategoryComponent: productCategoryComponent,
+      kitchen: kitchenComponent,
+      productNewComponent: productNewComponent,
+      whatnowComponent: whatnowComponent,
+      productPromotion: productPromotion,
+      inspiration: inspirationComponent,
+      commit: commitComponent,
+      support: supportComponent,
+      promotionComponent: promotionComponent,
+      registerPromotion: registerPromotion,
+      service: serviceComponent,
       footer: footerComponent,
       template: "src/index.html",
       minify: minify,
@@ -170,18 +170,18 @@ module.exports = {
       preload: preload,
       svg: svg,
       header: headerComponent,
-      doanhnghiepbanner,
-      danhmucsanpham: danhmucsanpham,
-      gocbepthongminh: gocbepthongminh,
-      bosuutap,
-      sanphammoi,
-      thuonghieu,
-      cacduan,
-      camket: camket,
-      tuvanhotro: tuvanhotro,
-      chuongtrinhkhuyenmai: chuongtrinhkhuyenmai,
-      dangkykhuyenmai: dangkykhuyenmai,
-      dichvu: dichvu,
+      businessBannerComponent: businessBannerComponent,
+      productCategoryComponent: productCategoryComponent,
+      kitchen: kitchenComponent,
+      collection: collectionComponent,
+      productNewComponent: productNewComponent,
+      brandComponent: brandComponent,
+      project: projectComponent,
+      commit: commitComponent,
+      support: supportComponent,
+      promotionComponent: promotionComponent,
+      registerPromotion: registerPromotion,
+      service: serviceComponent,
       footer: footerComponent,
       template: "src/danh-cho-doanh-nghiep.html",
       minify: minify,
@@ -193,14 +193,14 @@ module.exports = {
       svg: svg,
       header: headerComponent,
       productDetail: productDetail,
-      sanphamlienquan,
+      productRelatedComponent: productRelatedComponent,
       home_banner: homeBanner,
       breadcrumb: breadcrumb,
-      camket: camket,
-      tuvanhotro: tuvanhotro,
-      chuongtrinhkhuyenmai: chuongtrinhkhuyenmai,
-      dangkykhuyenmai: dangkykhuyenmai,
-      dichvu: dichvu,
+      commit: commitComponent,
+      support: supportComponent,
+      promotionComponent: promotionComponent,
+      registerPromotion: registerPromotion,
+      service: serviceComponent,
       footer: footerComponent,
       template: "src/product-detail.html",
       minify: minify,
@@ -213,16 +213,16 @@ module.exports = {
       svg: svg,
       header: headerNoramComponent,
       productDetail: productDetail,
-      sanphamlienquan,
+      productRelatedComponent: productRelatedComponent,
       home_banner: homeBanner,
       breadcrumb: breadcrumb,
       detailInfo: detailInfo,
       //detailVideo: detailInfo,
-      camket: camket,
-      tuvanhotro: tuvanhotro,
-      chuongtrinhkhuyenmai: chuongtrinhkhuyenmai,
-      dangkykhuyenmai: dangkykhuyenmai,
-      dichvu: dichvu,
+      commit: commitComponent,
+      support: supportComponent,
+      promotionComponent: promotionComponent,
+      registerPromotion: registerPromotion,
+      service: serviceComponent,
       footer: footerComponent,
       template: "src/san-pham-chi-tiet.html",
       minify: minify,

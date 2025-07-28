@@ -424,7 +424,6 @@ function resize() {
   window.addEventListener("resize", updateHeaderHeight);
 }
 
-
 //import { bannerSwipper } from "./_banner-swiper";
 (function () {
   gocbepSlider();

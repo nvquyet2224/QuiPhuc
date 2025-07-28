@@ -1,4 +1,4 @@
-import "../sass/doanh_nghiep.scss";
+import "../sass/business.scss";
 import Swiper, {
   Autoplay,
   Pagination,

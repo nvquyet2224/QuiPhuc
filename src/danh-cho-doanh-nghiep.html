@@ -22,7 +22,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Qui Phúc">
     <link rel="icon" href="images/favicon.png">
-    <link href="css/doanh_nghiep.css" rel="preload stylesheet" as="style">
+    <link href="css/business.css" rel="preload stylesheet" as="style">
 </head>
 
 <body data-page="home">
@@ -30,16 +30,16 @@
         <%= htmlWebpackPlugin.options.svg %>
         <%= htmlWebpackPlugin.options.header %>
         <div class="main">
-            <%= htmlWebpackPlugin.options.doanhnghiepbanner %>
-            <%= htmlWebpackPlugin.options.danhmucsanpham %>
-            <%= htmlWebpackPlugin.options.gocbepthongminh %>
-            <%= htmlWebpackPlugin.options.bosuutap %>
-            <%= htmlWebpackPlugin.options.thuonghieu %>
-            <%= htmlWebpackPlugin.options.cacduan %>
-            <%= htmlWebpackPlugin.options.camket %>
-            <%= htmlWebpackPlugin.options.dichvu %>
-            <%= htmlWebpackPlugin.options.tuvanhotro %>
-            <%= htmlWebpackPlugin.options.dangkykhuyenmai %>
+            <%= htmlWebpackPlugin.options.businessBannerComponent %>
+            <%= htmlWebpackPlugin.options.productCategoryComponent %>
+            <%= htmlWebpackPlugin.options.kitchen %>
+            <%= htmlWebpackPlugin.options.collection %>
+            <%= htmlWebpackPlugin.options.brandComponent %>
+            <%= htmlWebpackPlugin.options.project %>
+            <%= htmlWebpackPlugin.options.commit %>
+            <%= htmlWebpackPlugin.options.service %>
+            <%= htmlWebpackPlugin.options.support %>
+            <%= htmlWebpackPlugin.options.registerPromotion %>
         </div>
         <%= htmlWebpackPlugin.options.footer %>
     </div>
@@ -59,7 +59,7 @@
             }
             //window.onload = function () {
                 //setTimeout(function () {
-                    ['js/doanh_nghiep.js'].forEach(function (src) {
+                    ['js/business.js'].forEach(function (src) {
                         script(src);
                     });
                 //}, 100);

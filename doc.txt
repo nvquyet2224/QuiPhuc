@@ -1,21 +1,5 @@
 https://www.figma.com/proto/jH663H9qTVyeuFt9VFAerV/Qui-Ph%C3%BAc-Revamp-Website?page-id=1103%3A668&node-id=1103-669&viewport=125%2C238%2C0.14&t=fcAgkPo4QWerdRxJ-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1103%3A669
 
-
-
-
-
-1. Layout
-- map, history
-- global-color cho theme
-
-
-2. Login
-- 404 ( static ), facebook, google
-
-3. Ngôn ngữ
-
-4. Subcrible footer
-
-5: Seo --> Cat update thêm
-
-6. Notify --> bõ qua
+https://nvquyet2224.github.io/QuiPhuc/html/
+https://nvquyet2224.github.io/QuiPhuc/html/danh-cho-doanh-nghiep.html
+https://nvquyet2224.github.io/QuiPhuc/html/san-pham-chi-tiet.html

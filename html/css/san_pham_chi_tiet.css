@@ -2378,6 +2378,9 @@ button.swiper-pagination-bullet {
     width: 100%;
   }
 }
+.breadcrumb {
+  padding-bottom: 1.25rem;
+}
 .breadcrumb.bg-white {
   background-color: #fff;
 }
