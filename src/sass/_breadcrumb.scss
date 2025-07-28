@@ -1,7 +1,7 @@
 @use "function" as f;
 
 .breadcrumb {
-    // background-color: #F5EBE3;
+
     &.bg-white {
         background-color: #fff;
     }
@@ -20,17 +20,17 @@
                 font-weight: 500;
                 text-decoration: none;
                 font-size: f.rem(12);
-                //text-transform: capitalize;
             }
+
             a {
                 -webkit-transition: color 0.3s ease;
                 transition: color 0.3s ease;
             }
+
             &.a-bold a,
-            &.a-bold span
-            {
-                color: #000 ;
-                
+            &.a-bold span {
+                color: #000;
+
             }
         }
     }
@@ -38,47 +38,12 @@
 
 @media screen and (min-width: 1024px) {
 
-    .breadcrumb {
-        padding: f.vwPc(41) f.vwPc(60);
 
-        ul {
-            column-gap: f.vwPc(8);
-
-            li {
-
-                a,
-                span {
-                    font-size: f.vwPc(15);
-                }
-                a {
-                    &:hover {
-                        color: #EF3D29;
-                    }
-                }
-            }
-        }
-    }
-
-}
-
-@media screen and (min-width:1024px) and (max-width:1200px) {
-    .breadcrumb {
-        padding: 15px 50px;
-
-        ul {
-            li {
-
-                a,
-                span {
-                    font-size: 11px;
-                }
-            }
-        }
-    }
 }
 
 @media screen and (max-width:1023px) {
     .breadcrumb {
-        display: none;
+        padding-left: f.rem(16);
+        padding-bottom: f.rem(12);
     }
 }

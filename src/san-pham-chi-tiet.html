@@ -5,24 +5,24 @@
     <meta charset="utf-8">
     <meta name="google" content="notranslate">
     <meta name="robots" content="index, follow">
-    <meta name="author" content="Qui Phúc">
+    <meta name="author" content="Quy Phúc">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-    <title>Qui Phúc | Dành cho doanh nghiệp</title>
-    <meta name="description" content="Qui Phúc">
-    <meta name="keywords" content="Qui Phúc">
+    <title>Quy Phúc | Produc detail</title>
+    <meta name="description" content="Quy Phúc">
+    <meta name="keywords" content="Quy Phúc">
     <meta name="theme-color" content="#fff">
-    <meta property="og:title" content="Qui Phúc">
-    <meta property="og:description" content="Qui Phúc">
+    <meta property="og:title" content="Quy Phúc">
+    <meta property="og:description" content="Quy Phúc">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/thumbnail.jpg">
-    <meta property="og:site_name" content="Qui Phúc">
+    <meta property="og:site_name" content="Quy Phúc">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Qui Phúc">
+    <meta name="apple-mobile-web-app-title" content="Quy Phúc">
     <link rel="icon" href="images/favicon.png">
-    <link href="css/doanh_nghiep.css" rel="preload stylesheet" as="style">
+    <link href="css/san_pham_chi_tiet.css" rel="preload stylesheet" as="style">
 </head>
 
 <body data-page="home">
@@ -30,22 +30,18 @@
         <%= htmlWebpackPlugin.options.svg %>
         <%= htmlWebpackPlugin.options.header %>
         <div class="main">
-            <%= htmlWebpackPlugin.options.doanhnghiepbanner %>
-            <%= htmlWebpackPlugin.options.danhmucsanpham %>
-            <%= htmlWebpackPlugin.options.gocbepthongminh %>
-            <%= htmlWebpackPlugin.options.bosuutap %>
-            <%= htmlWebpackPlugin.options.thuonghieu %>
-            <%= htmlWebpackPlugin.options.cacduan %>
-            <%= htmlWebpackPlugin.options.camket %>
-            <%= htmlWebpackPlugin.options.dichvu %>
-            <%= htmlWebpackPlugin.options.tuvanhotro %>
+            <%= htmlWebpackPlugin.options.breadcrumb %>
+            <%= htmlWebpackPlugin.options.productDetail %>
+            <%= htmlWebpackPlugin.options.sanphamlienquan %>
+            <% htmlWebpackPlugin.options.detailInfo %>
+            <% htmlWebpackPlugin.options.detailVideo %>
             <%= htmlWebpackPlugin.options.dangkykhuyenmai %>
         </div>
         <%= htmlWebpackPlugin.options.footer %>
     </div>
     <!--Script-->
     <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
-    <script defer src="js/main.js"></script>
+<script defer src="js/main.js"></script>
     <script defer src="js/common.js"></script>
     <%= htmlWebpackPlugin.options.preload %>
         <script>
@@ -59,12 +55,11 @@
             }
             //window.onload = function () {
                 //setTimeout(function () {
-                    ['js/doanh_nghiep.js'].forEach(function (src) {
+                    ['js/san_pham_chi_tiet.js'].forEach(function (src) {
                         script(src);
                     });
                 //}, 100);
             //}
         </script>
 </body>
-
 </html>

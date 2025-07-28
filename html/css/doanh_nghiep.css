@@ -285,6 +285,11 @@ input[type=number] {
   height: auto;
 }
 
+.main {
+  width: 100%;
+  height: auto;
+}
+
 .product {
   position: relative;
   width: 100%;
@@ -765,6 +770,31 @@ input[type=number] {
   .stroke-but {
     font-size: 3.2vw;
     padding: 2.6666666667vw 6.6666666667vw;
+  }
+  .project-img {
+    width: 100%;
+    aspect-ratio: 343/220;
+    margin-bottom: 1.25rem;
+  }
+  .project-txt {
+    display: flex;
+    flex-direction: column;
+  }
+  .project-txt .name {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  .project-txt .text {
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+  }
+  .project-txt .but-link {
+    font-size: 0.875rem;
+  }
+  .project-txt .but-link svg {
+    width: 0.8125rem;
+    height: 0.5rem;
+    margin-left: 0.5rem;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1259,6 +1289,12 @@ input[type=number] {
     transition: all 0.3s ease-in-out;
     transition-delay: 0.25s;
   }
+  .header:not(.transparent) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .header:not(.transparent) + .main {
+    padding-top: 9.375rem;
+  }
 }
 @media screen and (max-width: 1023px) {
   .bg-menu {
@@ -1509,6 +1545,12 @@ input[type=number] {
   .header.sticky .nav-menu .dropdown-menu {
     height: calc(var(--winH) - 0.3125rem);
     top: 3.125rem;
+  }
+  .header:not(.transparent) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .header:not(.transparent) + .main {
+    padding-top: 6.25rem;
   }
   .header.open-menu {
     background-color: #fff;
@@ -2245,18 +2287,12 @@ button.swiper-pagination-bullet {
   width: 56.4375rem;
   text-align: center;
 }
-.banner_detail .sub-title,
-.banner_detail h1 {
-  font-weight: 400;
+.banner_detail .sub-title {
   color: #fff;
   text-transform: uppercase;
   font-size: 2.25rem;
   line-height: 1.2;
-}
-.banner_detail h1 {
-  font-weight: 700;
-}
-.banner_detail h1 {
+  font-weight: 400;
   margin-bottom: 1.9375rem;
 }
 .banner_detail .list-banner {
@@ -2281,6 +2317,11 @@ button.swiper-pagination-bullet {
   text-transform: uppercase;
 }
 
+@media screen and (min-width: 1024px) {
+  .banner_detail .sub-title strong {
+    display: block;
+  }
+}
 @media screen and (max-width: 1023px) {
   .banner {
     width: 100%;
@@ -2294,12 +2335,22 @@ button.swiper-pagination-bullet {
     padding-bottom: 2.375rem;
   }
   .banner_detail .sub-title {
-    font-size: 0.875rem;
-    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 1.875rem;
   }
-  .banner_detail .sub-title,
-  .banner_detail h1 {
-    margin-bottom: 1.125rem;
+  .banner_detail .list-banner {
+    column-gap: 0.75rem;
+  }
+  .banner_detail .list-banner-item {
+    column-gap: 1px;
+  }
+  .banner_detail .list-banner-item svg {
+    width: 1.125rem;
+    height: 2.5rem;
+  }
+  .banner_detail .list-banner-item .title {
+    font-size: 0.75rem;
+    text-transform: none;
   }
 }
 .category {
@@ -2699,9 +2750,10 @@ button.swiper-pagination-bullet {
 .collection_product--item .products-list .product {
   flex: 0 0 50%;
   border-top: 1px solid rgba(0, 0, 0, 0.15);
-  border-left: 1px solid rgba(0, 0, 0, 0.15);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   padding: 1.375rem 1.25rem;
+}
+.collection_product--item .products-list .product:not(:first-child) {
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
 }
 .collection_product--item .products-list .product-img {
   margin-bottom: 3.25rem;
@@ -2733,6 +2785,74 @@ button.swiper-pagination-bullet {
   height: 1rem;
 }
 
+@media screen and (min-width: 1024px) {
+  .collection_wrap {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+}
+@media screen and (max-width: 1023px) {
+  .collection {
+    padding: 3.75rem 0;
+  }
+  .collection_banner {
+    display: none;
+  }
+  .collection_content {
+    width: 100%;
+  }
+  .collection_content .title_block {
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+  }
+  .collection_product {
+    position: relative;
+  }
+  .collection_product--item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s linear;
+    transition: opacity 0.3s linear;
+  }
+  .collection_product--item.current {
+    position: relative;
+    left: auto;
+    top: auto;
+    opacity: 1;
+  }
+  .collection_product--item .products-list {
+    display: flex;
+  }
+  .collection_product--item .products-list .product {
+    padding: 0.75rem 0.5rem;
+  }
+  .collection_product--item .products-list .product-img {
+    margin-bottom: 2.5625rem;
+    margin-top: 1.375rem;
+    width: 7.4375rem;
+    height: 7.3125rem;
+  }
+  .collection_product--item .products-list .product .compare {
+    display: none;
+  }
+  .collection-nav {
+    padding: 0 1rem;
+    margin-bottom: 1.25rem;
+  }
+  .collection-nav .nav-prev,
+  .collection-nav .nav-next {
+    width: 1rem;
+    height: 1rem;
+  }
+  .collection-nav .nav-prev svg,
+  .collection-nav .nav-next svg {
+    width: 0.25rem;
+    height: 0.5rem;
+  }
+}
 .projects {
   padding: 0 2.5rem 7.5rem 2.5rem;
 }
@@ -2766,8 +2886,32 @@ button.swiper-pagination-bullet {
   height: 1rem;
 }
 
+@media screen and (max-width: 1023px) {
+  .projects {
+    padding: 0 1rem 3.75rem 1rem;
+  }
+  .projects .title_block {
+    margin-bottom: 1.25rem;
+  }
+  .projects .swiper-wrapper .swiper-slide:nth-child(odd),
+  .projects .swiper-wrapper .swiper-slide:nth-child(even) {
+    width: 100% !important;
+  }
+  .projects .block-action {
+    column-gap: 0.25rem;
+  }
+  .projects .block-action .nav-prev,
+  .projects .block-action .nav-next {
+    border: 1px solid rgba(0, 0, 0, 0.36);
+  }
+  .projects .block-action .nav-prev svg,
+  .projects .block-action .nav-next svg {
+    width: 0.25rem;
+    height: 0.5rem;
+  }
+}
 .brand {
-  padding-bottom: 7.5rem;
+  margin-bottom: 7.5rem;
 }
 .brand__personal {
   display: flex;
@@ -2862,7 +3006,7 @@ button.swiper-pagination-bullet {
 }
 .brand__certi-text .link-but {
   background-color: #fff;
-  color: #055CA5;
+  color: #055ca5;
   border: 1px solid rgba(16, 24, 40, 0.0509803922);
 }
 .brand__certi-marque {
@@ -2870,6 +3014,13 @@ button.swiper-pagination-bullet {
   left: 0;
   bottom: 0;
   right: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.brand__certi-marque--inner {
+  display: flex;
+  animation: scroll 5s linear infinite;
+  width: max-content;
 }
 .brand__certi-marque .patter-thumb {
   width: 18.75rem;
@@ -2877,6 +3028,10 @@ button.swiper-pagination-bullet {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.brand__certi-marque .patter-thumb img {
+  width: 13rem;
+  height: auto;
 }
 .brand__certi-thumb {
   position: relative;
@@ -2891,6 +3046,80 @@ button.swiper-pagination-bullet {
   height: auto;
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@media screen and (max-width: 1023px) {
+  .brand {
+    margin-bottom: 3.75rem;
+  }
+  .brand__personal {
+    flex-direction: column;
+  }
+  .brand__personal-text {
+    width: 100%;
+    padding: 3.75rem 1rem;
+  }
+  .brand__personal-text .title_block {
+    margin-bottom: 1.875rem;
+  }
+  .brand__personal-accordion {
+    row-gap: 1rem;
+  }
+  .brand__personal-accordion .accordion-item {
+    padding-bottom: 1rem;
+  }
+  .brand__personal-accordion .accordion-item.current .title svg {
+    transform: rotate(0deg);
+  }
+  .brand__personal-accordion .accordion-item.current .text {
+    padding-top: 0.75rem;
+  }
+  .brand__personal-accordion .accordion-item .title {
+    font-size: 1rem;
+  }
+  .brand__personal-accordion .accordion-item .title svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  .brand__personal-accordion .accordion-item .text {
+    font-size: 0.875rem;
+  }
+  .brand__personal-thumb {
+    width: 100%;
+  }
+  .brand__certi {
+    flex-direction: column-reverse;
+  }
+  .brand__certi-text {
+    width: 100%;
+    padding: 3.75rem 1rem;
+  }
+  .brand__certi-text .title_block {
+    margin-bottom: 4.875rem;
+  }
+  .brand__certi-text .title_block p {
+    margin-top: 1.5rem;
+    margin-bottom: 2.625rem;
+    font-size: 0.875rem;
+  }
+  .brand__certi-marque .patter-thumb {
+    width: 9.75rem;
+    height: 4.875rem;
+  }
+  .brand__certi-marque .patter-thumb img {
+    width: 6.75rem;
+    height: auto;
+  }
+  .brand__certi-thumb {
+    width: 100%;
+  }
+}
 .commit_wrap {
   position: relative;
   width: 100%;
@@ -2995,6 +3224,39 @@ button.swiper-pagination-bullet {
   .commit_content .commits-item .unit {
     font-size: 1.5rem;
     margin-bottom: 0.625rem;
+  }
+}
+.inspiration {
+  background: #C7E1FF;
+  padding: 4.125rem 2.5rem;
+}
+.inspiration.bg-white {
+  background-color: #fff;
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+}
+.inspiration .title_block {
+  margin-bottom: 1.875rem;
+}
+.inspiration-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.875rem;
+}
+
+@media screen and (max-width: 1023px) {
+  .inspiration {
+    background: #C7E1FF;
+    padding: 4.125rem 0.9375rem;
+  }
+  .inspiration.bg-white {
+    padding-top: 4.125rem;
+    padding-bottom: 4.125rem;
+  }
+  .inspiration-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
   }
 }
 .promotion_wrap {

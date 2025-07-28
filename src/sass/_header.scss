@@ -567,6 +567,13 @@
                 }
             }
         }
+
+        &:not(.transparent) {
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            + .main {
+                padding-top: f.rem(150);
+            }
+        }
     }
 }
 
@@ -878,7 +885,6 @@
             }
         }
 
-
         &.sticky {
             top: f.rem(-34);
 
@@ -891,6 +897,13 @@
                         top: f.rem(50);
                     }
                 }
+            }
+        }
+
+        &:not(.transparent) {
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            + .main {
+                padding-top: f.rem(100);
             }
         }
 

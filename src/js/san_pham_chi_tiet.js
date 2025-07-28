@@ -1,4 +1,4 @@
-import "../sass/product-detail.scss";
+import "../sass/san-pham-chi-tiet.scss";
 import Swiper, {
   Autoplay,
   Pagination,
@@ -7,21 +7,7 @@ import Swiper, {
   FreeMode,
   Mousewheel,
 } from "swiper";
-// console.log('___detail page');
-// const boxes = document.querySelectorAll('.padding-p');
-// // Bấm vào ô → bật màu, tắt màu các ô còn lại
-// boxes.forEach(box => {
-//   box.addEventListener('click', function (e) {
-//     e.stopPropagation(); // Ngăn click lan ra ngoài
-//     boxes.forEach(b => b.classList.remove('active'));
-//     this.classList.add('active');
-//   });
-// });
-// // Bấm vào bất kỳ đâu ngoài box → tắt hết
-// document.addEventListener('click', () => {
-//   boxes.forEach(b => b.classList.remove('active'));
-// });
-// cộng trừ thêm giỏ hàng
+
 let count = 1;
 
 window.increase = function () {
@@ -58,10 +44,10 @@ function structureSlider() {
       autoHeight: false,
       navigation: false,
       on: {
-        init: function (swiper) {},
-        transitionStart: function (swiper) {},
-        transitionEnd: function () {},
-        click(swiper) {},
+        init: function (swiper) { },
+        transitionStart: function (swiper) { },
+        transitionEnd: function () { },
+        click(swiper) { },
       },
     });
   }
@@ -88,10 +74,10 @@ function additionalSlider() {
       autoHeight: false,
       navigation: false,
       on: {
-        init: function (swiper) {},
-        transitionStart: function (swiper) {},
-        transitionEnd: function () {},
-        click(swiper) {},
+        init: function (swiper) { },
+        transitionStart: function (swiper) { },
+        transitionEnd: function () { },
+        click(swiper) { },
       },
     });
   }
@@ -131,17 +117,65 @@ function productRelatedSlider() {
         prevEl: ".product-related .nav-prev",
       },
       on: {
-        init: function (swiper) {},
-        transitionStart: function (swiper) {},
-        transitionEnd: function () {},
-        click(swiper) {},
+        init: function (swiper) { },
+        transitionStart: function (swiper) { },
+        transitionEnd: function () { },
+        click(swiper) { },
       },
     });
   }
 }
 
+
+function menuAnim() {
+
+  // Mouse event
+    document.querySelectorAll('.nav-item').forEach(function (item) {
+      item.addEventListener('mouseenter', function () {
+        var container = item.querySelector('.dropdown-menu > .container');
+        var menuH = container ? container.offsetHeight : 0;
+        var winH = window.innerHeight - 200;
+        var realH = menuH < winH ? menuH : winH;
+
+        document.querySelector('.header').classList.add('header-in');
+        document.querySelector('.bg-menu').style.height = realH + 'px';
+        item.classList.add('active');
+      });
+
+      item.addEventListener('mouseleave', function () {
+        document.querySelector('.bg-menu').style.height = '0px';
+        item.classList.remove('active');
+        document.querySelector('.header').classList.remove('header-in');
+      });
+    });
+
+
+}
+
+function resize() {
+  const updateHeaderHeight = () => {
+    //if (headerRef.current) {
+      //const headerHeight = headerRef.current.offsetHeight;
+      //document.body.style.setProperty("--headerH", `${headerHeight}px`);
+      document.body.style.setProperty("--winH", `${window.innerHeight}px`);
+
+      //document.body.style.setProperty("--global-color", `#636be3`);
+    //}
+    //if (sliderRef.current) {
+      //const refHeight = sliderRef.current.offsetHeight;
+      //document.body.style.setProperty("--refH", `${refHeight}px`);
+    //}
+  };
+
+  updateHeaderHeight();
+  window.addEventListener("resize", updateHeaderHeight);
+}
+
+
 (function () {
   productRelatedSlider();
   structureSlider();
   additionalSlider();
+  menuAnim();
+  resize();
 })();

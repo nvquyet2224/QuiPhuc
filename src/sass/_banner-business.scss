@@ -59,21 +59,15 @@
   &_detail {
     width: f.rem(903);
     text-align: center;
-    .sub-title,
-    h1 {
-      font-weight: 400;
+    .sub-title {
       color: #fff;
       text-transform: uppercase;
       font-size: f.rem(36);
       line-height: 1.2;
-    }
-
-    h1 {
-      font-weight: 700;
-    }
-    h1 {
+      font-weight: 400;
       margin-bottom: f.rem(31);
     }
+
     .list-banner {
       display: flex;
       column-gap: f.rem(24);
@@ -99,6 +93,15 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .banner {
+    &_detail {
+      .sub-title {
+        strong {
+          display: block;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1023px) {
@@ -118,13 +121,23 @@
     }
 
     &_detail {
-      .sub-title {
-        font-size: f.rem(14);
-        line-height: 1.6;
+      .sub-title{
+        margin-bottom: f.rem(24);
+        font-size: f.rem(30);
       }
-      .sub-title,
-      h1 {
-        margin-bottom: f.rem(18);
+      .list-banner {
+        column-gap: f.rem(12);
+        &-item {
+          column-gap: 1px;
+          svg {
+            width: f.rem(18);
+            height: f.rem(40);
+          }
+          .title {
+            font-size: f.rem(12);
+            text-transform: none;
+          }
+        }
       }
     }
   }
