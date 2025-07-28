@@ -126,28 +126,71 @@ function productRelatedSlider() {
   }
 }
 
+function combineSlider() {
+  if (document.querySelector(".combineSlider")) {
+    new Swiper(".combineSlider", {
+      modules: [Navigation, Scrollbar, FreeMode, Mousewheel],
+      effect: "slide",
+      loop: false,
+      speed: 1000,
+      preloadImages: false,
+      lazy: true,
+      disableOnInteraction: true,
+      pauseOnMouseEnter: true,
+      slidesPerView: 4,
+      spaceBetween: 18,
+      //freeMode: true,
+      grabCursor: true,
+      allowTouchMove: true,
+      watchOverflow: true,
+      initialSlide: 0,
+      autoHeight: false,
+      breakpoints: {
+        320: {
+          slidesPerView: 2.6,
+          spaceBetween: 10,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 18,
+        },
+      },
+      // navigation: {
+      //   nextEl: ".product-related .nav-next",
+      //   prevEl: ".product-related .nav-prev",
+      // },
+      on: {
+        init: function (swiper) { },
+        transitionStart: function (swiper) { },
+        transitionEnd: function () { },
+        click(swiper) { },
+      },
+    });
+  }
+}
+
 
 function menuAnim() {
 
   // Mouse event
-    document.querySelectorAll('.nav-item').forEach(function (item) {
-      item.addEventListener('mouseenter', function () {
-        var container = item.querySelector('.dropdown-menu > .container');
-        var menuH = container ? container.offsetHeight : 0;
-        var winH = window.innerHeight - 200;
-        var realH = menuH < winH ? menuH : winH;
+  document.querySelectorAll('.nav-item').forEach(function (item) {
+    item.addEventListener('mouseenter', function () {
+      var container = item.querySelector('.dropdown-menu > .container');
+      var menuH = container ? container.offsetHeight : 0;
+      var winH = window.innerHeight - 200;
+      var realH = menuH < winH ? menuH : winH;
 
-        document.querySelector('.header').classList.add('header-in');
-        document.querySelector('.bg-menu').style.height = realH + 'px';
-        item.classList.add('active');
-      });
-
-      item.addEventListener('mouseleave', function () {
-        document.querySelector('.bg-menu').style.height = '0px';
-        item.classList.remove('active');
-        document.querySelector('.header').classList.remove('header-in');
-      });
+      document.querySelector('.header').classList.add('header-in');
+      document.querySelector('.bg-menu').style.height = realH + 'px';
+      item.classList.add('active');
     });
+
+    item.addEventListener('mouseleave', function () {
+      document.querySelector('.bg-menu').style.height = '0px';
+      item.classList.remove('active');
+      document.querySelector('.header').classList.remove('header-in');
+    });
+  });
 
 
 }
@@ -155,15 +198,15 @@ function menuAnim() {
 function resize() {
   const updateHeaderHeight = () => {
     //if (headerRef.current) {
-      //const headerHeight = headerRef.current.offsetHeight;
-      //document.body.style.setProperty("--headerH", `${headerHeight}px`);
-      document.body.style.setProperty("--winH", `${window.innerHeight}px`);
+    //const headerHeight = headerRef.current.offsetHeight;
+    //document.body.style.setProperty("--headerH", `${headerHeight}px`);
+    document.body.style.setProperty("--winH", `${window.innerHeight}px`);
 
-      //document.body.style.setProperty("--global-color", `#636be3`);
+    //document.body.style.setProperty("--global-color", `#636be3`);
     //}
     //if (sliderRef.current) {
-      //const refHeight = sliderRef.current.offsetHeight;
-      //document.body.style.setProperty("--refH", `${refHeight}px`);
+    //const refHeight = sliderRef.current.offsetHeight;
+    //document.body.style.setProperty("--refH", `${refHeight}px`);
     //}
   };
 
@@ -176,6 +219,7 @@ function resize() {
   productRelatedSlider();
   structureSlider();
   additionalSlider();
+  combineSlider();
   menuAnim();
   resize();
 })();

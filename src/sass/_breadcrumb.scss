@@ -40,7 +40,7 @@
 @media screen and (min-width: 1024px) {
 
     .breadcrumb {
-        
+
         padding-bottom: f.rem(40);
     }
 }
@@ -49,5 +49,17 @@
     .breadcrumb {
         padding-left: f.rem(16);
         padding-bottom: f.rem(12);
+
+        ol {
+            gap: f.rem(10);
+        }
+
+        li {
+
+            a,
+            span {
+                font-size: f.rem(12);
+            }
+        }
     }
 }
