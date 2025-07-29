@@ -45,8 +45,10 @@
         </div>
         <%= htmlWebpackPlugin.options.footer %>
     </div>
+    <div id="lottie-animation" style="width:300px;height:300px;"></div>
     <!--Script-->
     <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
     <script defer src="js/main.js"></script>
     <script defer src="js/common.js"></script>
     <%= htmlWebpackPlugin.options.preload %>
@@ -67,6 +69,16 @@
                 //}, 100);
             //}
         </script>
+        <!-- <script>
+            lottie.loadAnimation({
+              container: document.getElementById('lottie-animation'), // DOM element
+              renderer: 'svg',
+              loop: true,
+              autoplay: true,
+              path: 'jsons/wired-outline-508-bedroom-bed-hover-default.json' // đường dẫn tới file JSON
+            });
+          </script> -->
+          
 </body>
 
 </html>
