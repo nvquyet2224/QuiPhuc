@@ -1,0 +1,81 @@
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+var product_list;
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/js/product_list.js":
+/*!********************************!*\
+  !*** ./src/js/product_list.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_product_lists_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/product-lists.scss */ \"./src/sass/product-lists.scss\");\n\nfunction menuAnim() {\n  // Mouse event\n  document.querySelectorAll('.nav-item').forEach(function (item) {\n    item.addEventListener('mouseenter', function () {\n      var container = item.querySelector('.dropdown-menu > .container');\n      var menuH = container ? container.offsetHeight : 0;\n      var winH = window.innerHeight - 200;\n      var realH = menuH < winH ? menuH : winH;\n      document.querySelector('.header').classList.add('header-in');\n      document.querySelector('.bg-menu').style.height = realH + 'px';\n      item.classList.add('active');\n    });\n    item.addEventListener('mouseleave', function () {\n      document.querySelector('.bg-menu').style.height = '0px';\n      item.classList.remove('active');\n      document.querySelector('.header').classList.remove('header-in');\n    });\n  });\n}\nfunction resize() {\n  var updateHeaderHeight = function updateHeaderHeight() {\n    //if (headerRef.current) {\n    //const headerHeight = headerRef.current.offsetHeight;\n    //document.body.style.setProperty(\"--headerH\", `${headerHeight}px`);\n    document.body.style.setProperty(\"--winH\", \"\".concat(window.innerHeight, \"px\"));\n\n    //document.body.style.setProperty(\"--global-color\", `#636be3`);\n    //}\n    //if (sliderRef.current) {\n    //const refHeight = sliderRef.current.offsetHeight;\n    //document.body.style.setProperty(\"--refH\", `${refHeight}px`);\n    //}\n  };\n  updateHeaderHeight();\n  window.addEventListener(\"resize\", updateHeaderHeight);\n}\n(function () {\n  menuAnim();\n  resize();\n})();\n\n//# sourceURL=webpack://modules/./src/js/product_list.js?");
+
+/***/ }),
+
+/***/ "./src/sass/product-lists.scss":
+/*!*************************************!*\
+  !*** ./src/sass/product-lists.scss ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://modules/./src/sass/product-lists.scss?");
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/js/product_list.js");
+/******/ 	(product_list = typeof product_list === "undefined" ? {} : product_list).modules = __webpack_exports__;
+/******/ 	
+/******/ })()
+;

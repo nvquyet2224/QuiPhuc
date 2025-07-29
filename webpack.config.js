@@ -45,6 +45,10 @@ const detailStructureComponent = fs.readFileSync(__dirname + "/src/_product-deta
 const detailBigimgComponent = fs.readFileSync(__dirname + "/src/_product-detail-bigimg.html");
 const detailAdditionalComponent = fs.readFileSync(__dirname + "/src/_product-detail-additional.html");
 
+
+const listBannerComponent = fs.readFileSync(__dirname + "/src/_list-banner.html");
+const listProductComponent = fs.readFileSync(__dirname + "/src/_list-product.html");
+
 //noErrorOnMissing: true
 
 const minifyRules = {
@@ -69,8 +73,12 @@ module.exports = {
     business: ["./src/js/business.js"],
     product_detail: ["./src/js/product-detail.js"],
     san_pham_chi_tiet: ["./src/js/san_pham_chi_tiet.js"],
+<<<<<<< HEAD
     news: ["./src/js/news.js"],
     new_detail: ["./src/js/new-detail.js"],
+=======
+    product_list: ["./src/js/product_list.js"],
+>>>>>>> c052911c4289c77abef8a71193c8894f92252983
   },
   output: {
     publicPath: "../",
@@ -240,6 +248,7 @@ module.exports = {
       template: "src/san-pham-chi-tiet.html",
       minify: minify,
     }),
+<<<<<<< HEAD
     new HtmlWebpackPlugin({
       inject: false,
       filename: "tin-tuc.html",
@@ -263,6 +272,30 @@ module.exports = {
       minify: minify,
     }),
 
+=======
+    
+    new HtmlWebpackPlugin({
+      inject: false,
+      filename: "product-list.html",
+      preload: preload,
+      svg: svg,
+      header: headerNoramComponent,
+      productRelatedComponent: productRelatedComponent,
+      home_banner: homeBanner,
+      breadcrumb: breadcrumb,
+      listBannerComponent,
+      listProductComponent,
+      commit: commitComponent,
+      support: supportComponent,
+      promotionComponent: promotionComponent,
+      registerPromotion: registerPromotion,
+      service: serviceComponent,
+      footer: footerComponent,
+      template: "src/product-list.html",
+      minify: minify,
+    }),
+   
+>>>>>>> c052911c4289c77abef8a71193c8894f92252983
   ],
   performance: {
     hints: false,
