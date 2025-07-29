@@ -73,12 +73,9 @@ module.exports = {
     business: ["./src/js/business.js"],
     product_detail: ["./src/js/product-detail.js"],
     san_pham_chi_tiet: ["./src/js/san_pham_chi_tiet.js"],
-<<<<<<< HEAD
     news: ["./src/js/news.js"],
     new_detail: ["./src/js/new-detail.js"],
-=======
     product_list: ["./src/js/product_list.js"],
->>>>>>> c052911c4289c77abef8a71193c8894f92252983
   },
   output: {
     publicPath: "../",
@@ -248,7 +245,6 @@ module.exports = {
       template: "src/san-pham-chi-tiet.html",
       minify: minify,
     }),
-<<<<<<< HEAD
     new HtmlWebpackPlugin({
       inject: false,
       filename: "tin-tuc.html",
@@ -272,7 +268,6 @@ module.exports = {
       minify: minify,
     }),
 
-=======
     
     new HtmlWebpackPlugin({
       inject: false,
@@ -295,7 +290,6 @@ module.exports = {
       minify: minify,
     }),
    
->>>>>>> c052911c4289c77abef8a71193c8894f92252983
   ],
   performance: {
     hints: false,
