@@ -142,7 +142,8 @@ module.exports = {
           info: { minimized: minimized },
           noErrorOnMissing: true,
         },
-        { from: "src/videos", to: "videos", noErrorOnMissing: true }
+        { from: "src/videos", to: "videos", noErrorOnMissing: true },
+        { from: "src/jsons", to: "jsons", noErrorOnMissing: true }
       ],
       options: {
         concurrency: 100
