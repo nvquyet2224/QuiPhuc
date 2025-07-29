@@ -14,7 +14,7 @@ export function onScroll() {
   var lastScrollTop = 0;
   function toggleClassOnView() {
     setTimeout(() => {
-    const items = `.header, .banner, .title, .home-about__key h3, .home-about__info, .home-about__key--item, .home-about__gallery--box, .home-collection__gallery, 
+      const items = `.header, .banner, .title, .home-about__key h3, .home-about__info, .home-about__key--item, .home-about__gallery--box, .home-collection__gallery, 
     .title-category, .product, .home-our-techniques__gallery, .home-millwork__item, .article, .box-center, .about__title, .about__mission--item, .about__milestone--img,
     .about__milestone--txt, .about__human--item, .about__human--brief, .about__sustainability--item, .about__sustainability--gallery__item, .about__tour--information,
     .about__tour--gallery__box, .breadcrumb li, .product__page--information, .product-cate, .tab-menu li, .technique__information p, .technique__item--img, 
@@ -40,13 +40,13 @@ export function onScroll() {
       });
       var scrollTop = $(this).scrollTop();
       //if (scrollTop > lastScrollTop) {
-        if (scrollTop > 50) {
-          $('.header').addClass('sticky');
-        }else {
-          $('.header').removeClass('sticky');
-        }
+      if (scrollTop > 50) {
+        $('.header').addClass('sticky');
+      } else {
+        $('.header').removeClass('sticky');
+      }
       //} else if (scrollTop < lastScrollTop) {
-        //$('.header').removeClass('sticky');
+      //$('.header').removeClass('sticky');
       //}
       lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     }, 50);

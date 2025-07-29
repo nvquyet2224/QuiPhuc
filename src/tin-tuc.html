@@ -9,7 +9,7 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-    <title>Qui Phúc | Home</title>
+    <title>Qui Phúc | Tin Tức</title>
     <meta name="description" content="Qui Phúc">
     <meta name="keywords" content="Qui Phúc">
     <meta name="theme-color" content="#fff">
@@ -30,24 +30,12 @@
         <%= htmlWebpackPlugin.options.svg %>
         <%= htmlWebpackPlugin.options.header %>
         <div class="main">
-            <%= htmlWebpackPlugin.options.home_banner %>
-            <%= htmlWebpackPlugin.options.productCategoryComponent %>
-            <%= htmlWebpackPlugin.options.kitchen %>
-            <%= htmlWebpackPlugin.options.productNewComponent %>
-            <%= htmlWebpackPlugin.options.whatnowComponent %>
-            <%= htmlWebpackPlugin.options.productPromotion %>
-            <%= htmlWebpackPlugin.options.promotionComponent %>
-            <%= htmlWebpackPlugin.options.inspiration %>
-            <%= htmlWebpackPlugin.options.commit %>
-            <%= htmlWebpackPlugin.options.service %>
-            <%= htmlWebpackPlugin.options.support %>
+          
             <%= htmlWebpackPlugin.options.registerPromotion %>
         </div>
         <%= htmlWebpackPlugin.options.footer %>
     </div>
-    <!-- <div id="lottie-animation" style="width:300px;height:300px;"></div> -->
     <!--Script-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
     <script defer src="js/main.js"></script>
     <script defer src="js/common.js"></script>
     <%= htmlWebpackPlugin.options.preload %>
@@ -62,22 +50,12 @@
             }
             //window.onload = function () {
                 //setTimeout(function () {
-                    ['js/index.js'].forEach(function (src) {
+                    ['js/news.js'].forEach(function (src) {
                         script(src);
                     });
                 //}, 100);
             //}
-        </script>
-        <!-- <script>
-            lottie.loadAnimation({
-              container: document.getElementById('lottie-animation'), // DOM element
-              renderer: 'svg',
-              loop: true,
-              autoplay: true,
-              path: 'jsons/wired-outline-508-bedroom-bed-hover-default.json' // đường dẫn tới file JSON
-            });
-          </script> -->
-          
+        </script>          
 </body>
 
 </html>

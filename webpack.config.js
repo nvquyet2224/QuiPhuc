@@ -28,8 +28,8 @@ const promotionComponent = fs.readFileSync(__dirname + "/src/_promotion.html");
 const registerPromotion = fs.readFileSync(__dirname + "/src/_register-promotion.html");
 const serviceComponent = fs.readFileSync(__dirname + "/src/_service.html");
 
-const productDetail = fs.readFileSync(__dirname +"/src/_product-detail.html");
-const breadcrumb = fs.readFileSync(__dirname +"/src/_breadcrumb-component.html");
+const productDetail = fs.readFileSync(__dirname + "/src/_product-detail.html");
+const breadcrumb = fs.readFileSync(__dirname + "/src/_breadcrumb-component.html");
 const productRelatedComponent = fs.readFileSync(__dirname + "/src/_product-related.html");
 
 const brandComponent = fs.readFileSync(__dirname + "/src/_brand.html");
@@ -52,7 +52,7 @@ const minifyRules = {
   removeComments: true,
   removeRedundantAttributes: false,
   removeScriptTypeAttributes: true,
-  removeStyleLinkTypeAttributes: true, 
+  removeStyleLinkTypeAttributes: true,
 };
 
 const devMode = true;
@@ -69,6 +69,8 @@ module.exports = {
     business: ["./src/js/business.js"],
     product_detail: ["./src/js/product-detail.js"],
     san_pham_chi_tiet: ["./src/js/san_pham_chi_tiet.js"],
+    news: ["./src/js/news.js"],
+    new_detail: ["./src/js/new-detail.js"],
   },
   output: {
     publicPath: "../",
@@ -137,7 +139,8 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: "src/images", to: "images", noErrorOnMissing: true },
-        { from: "src/js/common.js",
+        {
+          from: "src/js/common.js",
           to: isBack ? "../../source/plugins/Web/webroot/js/common.js" : "js/common.js",
           info: { minimized: minimized },
           noErrorOnMissing: true,
@@ -211,7 +214,6 @@ module.exports = {
       template: "src/product-detail.html",
       minify: minify,
     }),
-    ,
     new HtmlWebpackPlugin({
       inject: false,
       filename: "san-pham-chi-tiet.html",
@@ -238,8 +240,29 @@ module.exports = {
       template: "src/san-pham-chi-tiet.html",
       minify: minify,
     }),
-    
-   
+    new HtmlWebpackPlugin({
+      inject: false,
+      filename: "tin-tuc.html",
+      preload: preload,
+      svg: svg,
+      header: headerNoramComponent,
+      registerPromotion: registerPromotion,
+      footer: footerComponent,
+      template: "src/tin-tuc.html",
+      minify: minify,
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      filename: "tin-chi-tiet.html",
+      preload: preload,
+      svg: svg,
+      header: headerNoramComponent,
+      registerPromotion: registerPromotion,
+      footer: footerComponent,
+      template: "src/tin-chi-tiet.html",
+      minify: minify,
+    }),
+
   ],
   performance: {
     hints: false,
