@@ -45,6 +45,10 @@ const detailStructureComponent = fs.readFileSync(__dirname + "/src/_product-deta
 const detailBigimgComponent = fs.readFileSync(__dirname + "/src/_product-detail-bigimg.html");
 const detailAdditionalComponent = fs.readFileSync(__dirname + "/src/_product-detail-additional.html");
 
+
+const listBannerComponent = fs.readFileSync(__dirname + "/src/_list-banner.html");
+const listProductComponent = fs.readFileSync(__dirname + "/src/_list-product.html");
+
 //noErrorOnMissing: true
 
 const minifyRules = {
@@ -69,6 +73,7 @@ module.exports = {
     business: ["./src/js/business.js"],
     product_detail: ["./src/js/product-detail.js"],
     san_pham_chi_tiet: ["./src/js/san_pham_chi_tiet.js"],
+    product_list: ["./src/js/product_list.js"],
   },
   output: {
     publicPath: "../",
@@ -238,6 +243,26 @@ module.exports = {
       minify: minify,
     }),
     
+    new HtmlWebpackPlugin({
+      inject: false,
+      filename: "product-list.html",
+      preload: preload,
+      svg: svg,
+      header: headerNoramComponent,
+      productRelatedComponent: productRelatedComponent,
+      home_banner: homeBanner,
+      breadcrumb: breadcrumb,
+      listBannerComponent,
+      listProductComponent,
+      commit: commitComponent,
+      support: supportComponent,
+      promotionComponent: promotionComponent,
+      registerPromotion: registerPromotion,
+      service: serviceComponent,
+      footer: footerComponent,
+      template: "src/product-list.html",
+      minify: minify,
+    }),
    
   ],
   performance: {
