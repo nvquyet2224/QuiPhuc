@@ -1,0 +1,60 @@
+@use "function" as f;
+
+.new {
+    width: 100%;
+    height: auto;
+
+    &-img {
+        width: 100%;
+        height: auto;
+        line-height: 0;
+        aspect-ratio: 432/276;
+
+        img {
+            width: 100%;
+            height: 100%;
+            -webkit-object-fit: cover;
+            object-fit: cover;
+        }
+    }
+
+    &-txt {
+
+        h3 {
+            font-size: f.rem(20);
+            font-weight: 600;
+            line-height: 1.5;
+            margin-bottom: f.rem(22);
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+    }
+
+    &-meta {
+        display: flex;
+        justify-content: space-between;
+        font-size: f.rem(14);
+        margin: f.rem(22) 0;
+
+        .date {
+            font-weight: 400;
+            color: #475467;
+            color: #000000;
+        }
+
+        .cate {
+            font-weight: 500;
+        }
+    }
+
+    &-result {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 f.rem(40);
+        column-gap: f.rem(30);
+        row-gap: f.rem(60);
+        margin-bottom: f.rem(30);
+    }
+}
