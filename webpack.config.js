@@ -49,6 +49,8 @@ const detailAdditionalComponent = fs.readFileSync(__dirname + "/src/_product-det
 const listBannerComponent = fs.readFileSync(__dirname + "/src/_list-banner.html");
 const listProductComponent = fs.readFileSync(__dirname + "/src/_list-product.html");
 
+const newListComponent = fs.readFileSync(__dirname + "/src/_new-list.html");
+
 //noErrorOnMissing: true
 
 const minifyRules = {
@@ -251,6 +253,7 @@ module.exports = {
       preload: preload,
       svg: svg,
       header: headerNoramComponent,
+      newListComponent: newListComponent,
       registerPromotion: registerPromotion,
       footer: footerComponent,
       template: "src/tin-tuc.html",

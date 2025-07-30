@@ -30,8 +30,15 @@
         <%= htmlWebpackPlugin.options.svg %>
         <%= htmlWebpackPlugin.options.header %>
         <div class="main">
-            <%= htmlWebpackPlugin.options.breadcrumb %>
-            
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="/"><span>Trang chủ</span></a></li>
+                    <li><span>/</span></li>
+                    <li><a href="#"><span>Nội thất</span></a></li>
+                    <li><span>/</span></li>
+                    <li><span>Tủ nhựa DELI MAX 5 tầng</span></li>
+                </ul>
+            </div>
             <%= htmlWebpackPlugin.options.mainProductComponent %>
             <%= htmlWebpackPlugin.options.detailInfo %>
             <%= htmlWebpackPlugin.options.detailVideo %>

@@ -66,6 +66,39 @@ strong {
   font-weight: 700;
 }
 
+.breadcrumb {
+  padding: 1.5rem 2.5rem;
+}
+.breadcrumb ul {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.breadcrumb ul li a,
+.breadcrumb ul li span {
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 0.75rem;
+}
+.breadcrumb ul li a {
+  color: #B4B4B4;
+}
+.breadcrumb ul li span {
+  color: #242420;
+}
+
+@media screen and (max-width: 1023px) {
+  .breadcrumb {
+    padding: 1rem;
+  }
+  .breadcrumb ul {
+    gap: 0.625rem;
+  }
+  .breadcrumb li a,
+  .breadcrumb li span {
+    font-size: 0.75rem;
+  }
+}
 :root {
   --global-color: #015aab;
   --global-color-dark: #07274a;
@@ -1293,7 +1326,7 @@ input[type=number] {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
   .header:not(.transparent) + .main {
-    padding-top: 9.375rem;
+    padding-top: 7.0625rem;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -1550,7 +1583,7 @@ input[type=number] {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
   .header:not(.transparent) + .main {
-    padding-top: 6.25rem;
+    padding-top: 5.125rem;
   }
   .header.open-menu {
     background-color: #fff;

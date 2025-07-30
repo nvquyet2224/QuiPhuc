@@ -1,59 +1,42 @@
 @use "function" as f;
 
 .breadcrumb {
-    padding: 0 f.rem(40) f.rem(20) f.rem(40);
+    padding: f.rem(24) f.rem(40);
 
-    &.bg-white {
-        background-color: #fff;
-    }
-
-    ol {
+    ul {
 
         display: flex;
         align-items: center;
-        gap: 15px;
+        gap: f.rem(12);
 
         li {
 
             a,
             span {
-                color: #B4B4B4;
                 font-weight: 500;
                 text-decoration: none;
                 font-size: f.rem(12);
             }
 
             a {
-                -webkit-transition: color 0.3s ease;
-                transition: color 0.3s ease;
+                color: #B4B4B4;
             }
 
-            &.a-bold a,
-            &.a-bold span {
-                color: #000;
-
+            span {
+                color: #242420;
             }
+
         }
-    }
-}
-
-@media screen and (min-width: 1024px) {
-
-    .breadcrumb {
-
-        padding-bottom: f.rem(40);
     }
 }
 
 @media screen and (max-width:1023px) {
     .breadcrumb {
-        padding-left: f.rem(16);
-        padding-bottom: f.rem(12);
+        padding: f.rem(16);
 
-        ol {
+        ul {
             gap: f.rem(10);
         }
-
         li {
 
             a,
