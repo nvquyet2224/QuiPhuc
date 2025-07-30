@@ -1,5 +1,4 @@
-
-import Swiper, { Autoplay, Pagination, Navigation, Scrollbar } from "swiper";
+import Swiper, { Autoplay, Pagination, Navigation, Scrollbar, Mousewheel } from "swiper";
 
 export function kitchenSlider() {
 
@@ -44,7 +43,7 @@ export function kitchenSlider() {
         let byClick = false;
 
         new Swiper(".thumbSlider", {
-            modules: [Pagination, Autoplay, Navigation, Scrollbar],
+            modules: [Pagination, Autoplay, Navigation, Scrollbar, Mousewheel],
             effect: "slide",
             loop: false,
             speed: 1000,
@@ -63,6 +62,11 @@ export function kitchenSlider() {
                 hide: false,
                 draggable: true,
             },
+            mousewheel: {
+                sensitivity: 1,
+                forceToAxis: true,
+                releaseOnEdges: true,
+            },
             navigation: {
                 nextEl: ".kitchen_thumb .swiper-button-next",
                 prevEl: ".kitchen_thumb .swiper-button-prev",
@@ -74,7 +78,11 @@ export function kitchenSlider() {
                         console.log('___byClick', byClick);
                         byClick = false;
                     } else {
-
+                        const currentIndex = swiper.activeIndex;
+                        const currentSlide = swiper.slides[currentIndex];
+                        if(currentSlide) {
+                            setCurrent(currentSlide);
+                        }
                     }
                 },
                 transitionEnd: function () { },
@@ -84,6 +92,7 @@ export function kitchenSlider() {
                     const clickedIndex = swiper.clickedIndex;
                     if (clickedSlide) {
                         setCurrent(clickedSlide);
+                        console.log('____clickedSlide', clickedSlide);
                         swiper.slideTo(clickedIndex);
                     }
                 },
@@ -91,7 +100,7 @@ export function kitchenSlider() {
         });
 
         new Swiper(".cardSlider", {
-            modules: [Navigation, Scrollbar],
+            modules: [Navigation, Scrollbar, Mousewheel],
             effect: "slide",
             loop: false,
             speed: 1000,
@@ -101,7 +110,8 @@ export function kitchenSlider() {
             pauseOnMouseEnter: true,
             slidesPerView: 1,
             spaceBetween: 10,
-            allowTouchMove: false,
+            allowTouchMove: true,
+            //freeMode: true,
             watchOverflow: true,
             initialSlide: 0,
             autoHeight: false,
@@ -109,6 +119,11 @@ export function kitchenSlider() {
                 el: ".cardSlider .swiper-scrollbar",
                 hide: false,
                 draggable: true,
+            },
+            mousewheel: {
+                sensitivity: 1,
+                forceToAxis: true,
+                releaseOnEdges: true,
             },
             navigation: {
                 nextEl: ".kitchen .nav-next",

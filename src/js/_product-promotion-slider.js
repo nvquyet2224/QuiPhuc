@@ -16,7 +16,7 @@ export function productPromotionSlider() {
             spaceBetween: 0,
             freeMode: true,
             grabCursor: true,
-            allowTouchMove: false,
+            allowTouchMove: true,
             watchOverflow: true,
             initialSlide: 0,
             autoHeight: false,
