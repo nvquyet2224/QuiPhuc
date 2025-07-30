@@ -2439,10 +2439,29 @@ button.swiper-pagination-bullet {
   z-index: 1;
 }
 .kitchen_detail {
+  position: relative;
   width: 28rem;
   color: #fff;
   font-size: 1rem;
   line-height: 1.5;
+}
+.kitchen_detail--item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  pointer-events: none;
+}
+.kitchen_detail--item.current {
+  position: relative;
+  left: auto;
+  top: auto;
+  opacity: 1;
+  pointer-events: all;
 }
 .kitchen_detail .title_block {
   display: inline-flex;

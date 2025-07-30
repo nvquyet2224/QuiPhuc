@@ -61,10 +61,32 @@
     }
 
     &_detail {
+        position: relative;
         width: f.rem(448);
         color: #fff;
         font-size: f.rem(16);
         line-height: 1.5;
+
+        &--item {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: auto;
+
+            opacity: 0;
+            -webkit-transition: opacity 0.3s linear;
+            transition: opacity 0.3s linear;
+            pointer-events: none;
+
+            &.current {
+                position: relative;
+                left: auto;
+                top: auto;
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
 
         .title_block {
             display: inline-flex;
@@ -319,7 +341,7 @@
                         -webkit-border-radius: f.rem(8);
                         border-radius: f.rem(8);
                     }
-    
+
                 }
 
                 .kitchen_pot {

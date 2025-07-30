@@ -2,12 +2,14 @@
 import Swiper, { Autoplay, Pagination, Navigation, Scrollbar } from "swiper";
 
 export function kitchenSlider() {
+
     const setCurrent = (clickedSlide) => {
         let cur = clickedSlide.querySelector(".kitchen_thumb--img");
         if (!cur) {
             cur = clickedSlide.querySelector(".kitchen_pot");
         }
         const target = cur.getAttribute("data-target");
+
         // Banner
         document.querySelectorAll(".kitchen_banner--item").forEach((elm) => {
             const _target = elm.getAttribute("data-target");
@@ -17,8 +19,18 @@ export function kitchenSlider() {
                 elm.classList.remove("current");
             }
         });
+
         // Hot pot
         document.querySelectorAll(".kitchen_pot").forEach((elm) => {
+            const _target = elm.getAttribute("data-target");
+            if (_target === target) {
+                elm.classList.add("current");
+            } else {
+                elm.classList.remove("current");
+            }
+        });
+        // detail
+        document.querySelectorAll(".kitchen_detail--item").forEach((elm) => {
             const _target = elm.getAttribute("data-target");
             if (_target === target) {
                 elm.classList.add("current");
@@ -29,6 +41,8 @@ export function kitchenSlider() {
     };
 
     if (document.querySelector(".thumbSlider")) {
+        let byClick = false;
+
         new Swiper(".thumbSlider", {
             modules: [Pagination, Autoplay, Navigation, Scrollbar],
             effect: "slide",
@@ -47,7 +61,7 @@ export function kitchenSlider() {
             scrollbar: {
                 el: ".kitchen_thumb .swiper-scrollbar",
                 hide: false,
-                draggable: false,
+                draggable: true,
             },
             navigation: {
                 nextEl: ".kitchen_thumb .swiper-button-next",
@@ -55,9 +69,17 @@ export function kitchenSlider() {
             },
             on: {
                 init: function (swiper) { },
-                transitionStart: function (swiper) { },
+                transitionStart: function (swiper) {
+                    if(byClick) {
+                        console.log('___byClick', byClick);
+                        byClick = false;
+                    } else {
+
+                    }
+                },
                 transitionEnd: function () { },
                 click(swiper) {
+                    byClick = true;
                     const clickedSlide = swiper.clickedSlide;
                     const clickedIndex = swiper.clickedIndex;
                     if (clickedSlide) {
@@ -86,7 +108,7 @@ export function kitchenSlider() {
             scrollbar: {
                 el: ".cardSlider .swiper-scrollbar",
                 hide: false,
-                draggable: false,
+                draggable: true,
             },
             navigation: {
                 nextEl: ".kitchen .nav-next",
@@ -112,5 +134,6 @@ export function kitchenSlider() {
                 },
             },
         });
+
     }
 }
