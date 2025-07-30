@@ -46,6 +46,222 @@
     display: flex;
     &-filter {
       width: 25%;
+      padding: f.rem(20) 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.15);
+      .filter {
+        &__head {
+          padding: 0 f.rem(40);
+          margin-bottom: f.rem(16);
+          .head {
+            &-top {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: f.rem(16);
+              &--left {
+                display: flex;
+                align-items: center;
+                gap: f.rem(8);
+                font-weight: 500;
+                font-size: f.rem(16);
+                line-height: 1.5;
+                letter-spacing: 0;
+                color: #000;
+                svg {
+                  width: f.rem(18);
+                  height: f.rem(16);
+                }
+              }
+              &--right {
+                font-weight: 500;
+                font-size: f.rem(14);
+                line-height: 1.4;
+                color: #667085;
+                letter-spacing: 0;
+                text-decoration: underline;
+                cursor: pointer;
+              }
+            }
+            &-tags {
+              display: flex;
+              gap: f.rem(8);
+              flex-wrap: wrap;
+              .tag {
+                height: f.rem(26);
+                display: flex;
+                align-items: center;
+                gap: f.rem(3);
+                padding: 0 f.rem(12);
+                border-radius: f.rem(100);
+                background-color: #eaecf0;
+                font-weight: 400;
+                font-size: f.rem(12);
+                line-height: 1.5;
+                letter-spacing: 0;
+                color: #000;
+                cursor: pointer;
+                svg {
+                  width: f.rem(6);
+                  height: f.rem(6);
+                }
+              }
+            }
+          }
+        }
+        &__accordion {
+          .list_accordion {
+            position: relative;
+            width: 100%;
+            padding: f.rem(24) f.rem(40);
+            border-bottom: 1px solid #d9d9d9;
+
+            &:first-child {
+              border-top: 1px solid #d9d9d9;
+            }
+
+            .accordion__header {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              color: #015aab;
+              cursor: pointer;
+              .accordion__title {
+                font-weight: 600;
+                font-size: f.rem(16);
+                line-height: 1.5;
+                letter-spacing: 0;
+                color: #000000;
+              }
+
+              svg {
+                width: f.rem(14);
+                height: f.rem(14);
+              }
+            }
+
+            .accordion__content {
+              padding-top: f.rem(16);
+              height: 100%;
+              .check__list {
+                display: flex;
+                flex-direction: column;
+                gap: f.rem(12);
+                .check__item {
+                  display: flex;
+                  align-items: center;
+                  gap: f.rem(12);
+                  font-weight: 400;
+                  font-size: f.rem(16);
+                  line-height: 1.5;
+                  letter-spacing: 0;
+                  color: #000000;
+                  cursor: pointer;
+                  width: fit-content;
+                  input {
+                    position: relative;
+                    width: f.rem(16);
+                    height: f.rem(16);
+                    -webkit-border-radius: 4px;
+                    border-radius: 4px;
+                    overflow: hidden;
+                    border: 1px solid #98a2b3;
+
+                    &::before,
+                    &::after {
+                      content: "";
+                      position: absolute;
+                      width: 100%;
+                      height: 100%;
+                      left: 0;
+                      top: 0;
+                      opacity: 0;
+                      -webkit-transition: opacity 0.3s ease-in-out;
+                      transition: opacity 0.3s ease-in-out;
+                      border: 1px solid var(--global-color);
+                    }
+
+                    &::before {
+                      background-color: var(--global-color);
+                    }
+
+                    &::after {
+                      background: url(../images/check.svg) no-repeat center
+                        center;
+                      background-size: 60% auto;
+                    }
+
+                    &:checked {
+                      border-color: var(--global-color);
+                      &::before,
+                      &::after {
+                        opacity: 1;
+                      }
+                    }
+                  }
+                }
+              }
+              &.range-slider {
+                .ui-widget.ui-widget-content {
+                  height: f.rem(10);
+                  background-color: #7bc4fe;
+                  border: none;
+                  border-radius: f.rem(5);
+                }
+                .ui-slider-horizontal .ui-slider-range {
+                  background-color: #015aab;
+                }
+                .ui-slider .ui-slider-handle {
+                  width: f.rem(24);
+                  height: f.rem(24);
+                  border-radius: 50%;
+                  background-color: #015AAB;
+                  background: #015AAB;
+                  color: #015AAB;
+                  border: f.rem(4) solid #fff !important;
+                  top: f.rem(-7);
+                  outline: none;
+                }
+              }
+
+              .inputs {
+                margin-top: 20px;
+                display: flex;
+                gap: 20px;
+              }
+
+              .inputs label {
+                font-size: 14px;
+              }
+
+              .inputs {
+                display: flex;
+                flex-direction: column;
+                gap: f.rem(16);
+                .inputs-item {
+                  display: flex;
+                  flex-direction: column;
+                  gap: f.rem(8);
+                  font-weight: 500;
+                  font-size: f.rem(14);
+                  line-height: 1.4;
+                  letter-spacing: 0;
+                  color: #000;
+                  input {
+                    font-weight: 400;
+                    font-size: f.rem(16);
+                    line-height: 1.5;
+                    letter-spacing: 0;
+                    width: 100%;
+                    border-radius: f.rem(4);
+                    border: 1px solid #98a2b3;
+                    padding: f.rem(12) f.rem(16);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
     &-products {
       width: 75%;
