@@ -4,6 +4,12 @@
     width: 100%;
     height: auto;
 
+    &-block {
+        width: 100%;
+        height: auto;
+        margin-bottom: f.rem(120);
+    }
+
     &-img {
         width: 100%;
         height: auto;
@@ -49,6 +55,38 @@
         }
     }
 
+    &-highlight {
+        width: 100%;
+        height: auto;
+        display: flex;
+        padding: 0 f.rem(40);
+        margin-bottom: f.rem(40);
+        flex-direction: row-reverse;
+        align-items: center;
+
+        .new-txt {
+            display: flex;
+            flex-direction: column;
+            padding-right: f.rem(35);
+
+            h2 {
+                font-size: f.rem(30);
+                margin-bottom: f.rem(18)
+            }
+
+            p {
+                font-size: f.rem(16);
+            }
+
+            .new-meta {
+                order: 3;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+    }
+
     &-result {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -56,5 +94,55 @@
         column-gap: f.rem(30);
         row-gap: f.rem(60);
         margin-bottom: f.rem(30);
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .new {
+        &-block {
+            margin-bottom: f.rem(85);
+        }
+        &-txt {
+            h3 {
+                font-size: f.rem(16);
+                margin-bottom: f.rem(18)
+            }
+        }
+
+        &-meta {
+            font-size: f.rem(12);
+        }
+
+        &-highlight {
+            padding: 0 f.rem(16);
+            flex-direction: column;
+
+            .new-txt {
+                padding-right: 0;
+                width: 100%;
+
+                h2 {
+                    font-size: f.rem(16);
+                    margin-bottom: f.rem(18)
+                }
+
+                .new-brief {
+                    display: none;
+                }
+
+                .new-meta {
+                    order: 0;
+                    flex-direction: row;
+                }
+            }
+        }
+
+        &-result {
+            grid-template-columns: repeat(1, 1fr);
+            padding: 0 f.rem(16);
+            row-gap: f.rem(30);
+        }
     }
 }

@@ -750,12 +750,13 @@ input[type="number"] {
   width: 100%;
   height: auto;
   margin-bottom: f.rem(40);
+  border-bottom: 1px solid #D0D5DD;
 
   &-list {
     display: flex;
     justify-content: center;
     gap: f.rem(32);
-    border-bottom: 1px solid #D0D5DD;
+    //border-bottom: 1px solid #D0D5DD;
   }
 
   &-item {
@@ -782,8 +783,7 @@ input[type="number"] {
 
 
     &.current,
-    &:active,
-    &:hover {
+    &:active {
       color: #000;
 
       &::after {
@@ -796,6 +796,23 @@ input[type="number"] {
 }
 
 @supports (-webkit-text-stroke: #fcd535) {}
+
+@media screen and (min-width: 1025px) {
+
+  .tab {
+    &-item {
+      &:hover {
+        color: #000;
+
+        &::after {
+          width: 100%;
+        }
+      }
+
+    }
+
+  }
+}
 
 @media screen and (min-width: 1024px) {
   html {
@@ -961,10 +978,6 @@ input[type="number"] {
     padding: f.vwSp(10) f.vwSp(25);
   }
 
-  .page {
-    //padding-top: f.vwSp(62);
-  }
-
   .project {
     &-img {
       width: 100%;
@@ -997,6 +1010,51 @@ input[type="number"] {
       }
     }
   }
+
+  .sub-banner {
+    margin-bottom: f.rem(20);
+
+    &--img {
+      aspect-ratio: 375/180;
+
+      img {
+        width: 100%;
+        height: 100%;
+        -webkit-object-fit: cover;
+        object-fit: cover;
+      }
+    }
+
+    &--txt {
+      .title_block {
+
+        .sub-title,
+        h1 {
+          font-size: f.rem(24);
+        }
+      }
+    }
+  }
+
+  .mobile-scroll {
+    display: block;
+    margin: 0 auto;
+    width: calc(100% - f.rem(32));
+    height: auto;
+    overflow: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tab {
+    &-list {
+      white-space: nowrap;
+      justify-content: flex-start;
+      gap: f.rem(22);
+    }
+  }
+
+
 }
 
 @media screen and (max-width: 480px) {
