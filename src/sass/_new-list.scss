@@ -101,13 +101,48 @@
 
 @media screen and (max-width: 768px) {
     .new {
+        &-block {
+            margin-bottom: f.rem(85);
+        }
+        &-txt {
+            h3 {
+                font-size: f.rem(16);
+                margin-bottom: f.rem(18)
+            }
+        }
+
+        &-meta {
+            font-size: f.rem(12);
+        }
+
         &-highlight {
             padding: 0 f.rem(16);
             flex-direction: column;
+
+            .new-txt {
+                padding-right: 0;
+                width: 100%;
+
+                h2 {
+                    font-size: f.rem(16);
+                    margin-bottom: f.rem(18)
+                }
+
+                .new-brief {
+                    display: none;
+                }
+
+                .new-meta {
+                    order: 0;
+                    flex-direction: row;
+                }
+            }
         }
+
         &-result {
             grid-template-columns: repeat(1, 1fr);
             padding: 0 f.rem(16);
+            row-gap: f.rem(30);
         }
     }
 }

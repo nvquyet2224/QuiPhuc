@@ -1820,13 +1820,39 @@ input[type=number] {
 }
 
 @media screen and (max-width: 768px) {
+  .new-block {
+    margin-bottom: 5.3125rem;
+  }
+  .new-txt h3 {
+    font-size: 1rem;
+    margin-bottom: 1.125rem;
+  }
+  .new-meta {
+    font-size: 0.75rem;
+  }
   .new-highlight {
     padding: 0 1rem;
     flex-direction: column;
   }
+  .new-highlight .new-txt {
+    padding-right: 0;
+    width: 100%;
+  }
+  .new-highlight .new-txt h2 {
+    font-size: 1rem;
+    margin-bottom: 1.125rem;
+  }
+  .new-highlight .new-txt .new-brief {
+    display: none;
+  }
+  .new-highlight .new-txt .new-meta {
+    order: 0;
+    flex-direction: row;
+  }
   .new-result {
     grid-template-columns: repeat(1, 1fr);
     padding: 0 1rem;
+    row-gap: 1.875rem;
   }
 }
 .subscribe {

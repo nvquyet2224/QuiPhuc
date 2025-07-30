@@ -50,6 +50,7 @@ const listBannerComponent = fs.readFileSync(__dirname + "/src/_list-banner.html"
 const listProductComponent = fs.readFileSync(__dirname + "/src/_list-product.html");
 
 const newListComponent = fs.readFileSync(__dirname + "/src/_new-list.html");
+const newDetailComponent = fs.readFileSync(__dirname + "/src/_new-detail.html");
 
 //noErrorOnMissing: true
 
@@ -265,6 +266,7 @@ module.exports = {
       preload: preload,
       svg: svg,
       header: headerNoramComponent,
+      newDetailComponent: newDetailComponent,
       registerPromotion: registerPromotion,
       footer: footerComponent,
       template: "src/tin-chi-tiet.html",
