@@ -103,11 +103,9 @@ strong {
   --global-color: #015aab;
   --global-color-dark: #07274a;
   --font-body: "Montserrat", sans-serif;
-  --g-blue: linear-gradient(
-    180deg,
-    rgba(10, 124, 220, 0) 23.17%,
-    rgba(5, 92, 165, 0.95) 88.61%
-  );
+  --g-blue: linear-gradient(180deg,
+      rgba(10, 124, 220, 0) 23.17%,
+      rgba(5, 92, 165, 0.95) 88.61%);
 }
 
 body {
@@ -692,6 +690,50 @@ input[type=number] {
   width: 100%;
   height: 100%;
   background: var(--g-blue);
+}
+
+.sub-banner {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-bottom: 3.75rem;
+}
+.sub-banner--img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  line-height: 0;
+}
+.sub-banner--img::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 38.6%, rgba(0, 0, 0, 0.5) 84.16%);
+}
+.sub-banner--img img {
+  width: 100%;
+  height: auto;
+}
+.sub-banner--txt {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+}
+.sub-banner--txt .title_block .sub-title,
+.sub-banner--txt .title_block h1 {
+  color: #fff;
+  font-size: 2.25rem;
+}
+.sub-banner--txt .title_block h1 {
+  font-weight: 700;
 }
 
 @media screen and (min-width: 1024px) {
