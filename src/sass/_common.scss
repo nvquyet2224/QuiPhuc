@@ -545,10 +545,17 @@ input[type="number"] {
     border-color: #d0d5dd;
   }
 
+  &.underline {
+    text-decoration: underline;
+    height: auto;
+  }
+
   svg {
     width: f.rem(16);
     height: f.rem(16);
   }
+
+
 }
 
 .title_block {
@@ -686,7 +693,6 @@ input[type="number"] {
   }
 }
 
-
 .sub-banner {
   position: relative;
   width: 100%;
@@ -740,6 +746,54 @@ input[type="number"] {
   }
 }
 
+.tab {
+  width: 100%;
+  height: auto;
+  margin-bottom: f.rem(40);
+
+  &-list {
+    display: flex;
+    justify-content: center;
+    gap: f.rem(32);
+    border-bottom: 1px solid #D0D5DD;
+  }
+
+  &-item {
+    font-size: f.rem(16);
+    color: #667085;
+    font-weight: 500;
+    -webkit-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+    padding: f.rem(20) 0;
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      background-color: #000;
+      -webkit-transition: width 0.3s ease-in-out;
+      transition: width 0.3s ease-in-out;
+    }
+
+
+    &.current,
+    &:active,
+    &:hover {
+      color: #000;
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+  }
+
+}
 
 @supports (-webkit-text-stroke: #fcd535) {}
 
