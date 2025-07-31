@@ -1,4 +1,8 @@
 @use "function" as f;
+.noScroll {
+  height: 100%;
+  overflow: hidden;
+}
 
 .footer {
   position: relative;
@@ -97,7 +101,6 @@
     }
   }
 
-
   &-bot {
     display: flex;
     align-items: center;
@@ -136,16 +139,14 @@
   }
 }
 
+@media screen and (min-width: 1024px) {
+}
 
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+}
 
-@media screen and (min-width:1024px) {}
-
-@media screen and (min-width:1024px) and (max-width:1200px) {}
-
-@media screen and (max-width:1023px) {
-
+@media screen and (max-width: 1023px) {
   .footer {
-
     padding: f.rem(40) f.rem(15) 0 f.rem(15);
 
     &-top {
@@ -174,7 +175,6 @@
       }
     }
 
-
     &-bot {
       flex-direction: column-reverse;
 
@@ -190,8 +190,6 @@
         text-align: center;
         line-height: 1.666666667;
       }
-
     }
-
   }
 }
