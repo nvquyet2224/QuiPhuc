@@ -4,6 +4,7 @@ import "jquery-ui/ui/widgets/slider";
 import { onScroll } from "./_scrolling";
 
 // Làm theo home page dùm anh
+const checkedData = new Set();
 
 function rangeValue() {
   const $slider = $("#slider-range");
@@ -84,11 +85,11 @@ function hanleFilter() {
 function onToggle(box, use) {
   if (box.classList.contains("open")) {
     box.classList.remove("open");
-    use.setAttribute('xlink:href', '#icon-increase');
+    use.setAttribute("xlink:href", "#icon-increase");
     setTimeout(() => (box.style.display = "none"), 200);
   } else {
     box.style.display = "block";
-    use.setAttribute('xlink:href', '#icon-decrease');
+    use.setAttribute("xlink:href", "#icon-decrease");
     setTimeout(() => box.classList.add("open"), 10);
   }
 }
@@ -108,8 +109,65 @@ function onToggleAccordion() {
   }
 }
 
+function onCheckBoxInput() {
+  const parent = document.querySelector(".accordion__body");
+  const tags = document.querySelector(".head-tags");
+  tags.innerHTML = "";
+
+  function renderTags() {
+    tags.innerHTML = [...checkedData]
+      .map(
+        (value) => `
+      <div class="tag">
+        ${value}
+        <svg>
+          <use xlink:href="#icon-close"></use>
+        </svg>
+      </div>
+    `
+      )
+      .join("");
+  }
+
+  if (parent) {
+    const inputRefs = parent.querySelectorAll('input[type="checkbox"]');
+    if (inputRefs.length > 0) {
+      console.log("inputRefs", inputRefs);
+      inputRefs.forEach((item) => {
+        item.addEventListener("change", (e) => {
+          console.log("e.target.checked", e.target.checked);
+          if (e.target.checked) {
+            checkedData.add(item.value);
+          } else {
+            checkedData.delete(item.value);
+          }
+          renderTags();
+        });
+      });
+
+      tags.addEventListener("click", (e) => {
+        if (e.target.closest("svg")) {
+          const tagDiv = e.target.closest(".tag");
+          if (tagDiv) {
+            const value = tagDiv.textContent.trim();
+            checkedData.delete(value);
+            inputRefs.forEach((input) => {
+              if (input.value === value) {
+                input.checked = false;
+              }
+            });
+
+            renderTags();
+          }
+        }
+      });
+    }
+  }
+}
+
 (function () {
   rangeValue();
   hanleFilter();
   onToggleAccordion();
+  // onCheckBoxInput();
 })();
