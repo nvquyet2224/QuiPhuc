@@ -569,9 +569,10 @@
         }
 
         &:not(.transparent) {
-            border-bottom: 1px solid rgba(0,0,0,0.1);
-            + .main {
-                padding-top: f.rem(113);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+            +.main {
+                padding-top: f.rem(120);
             }
         }
     }
@@ -901,8 +902,9 @@
         }
 
         &:not(.transparent) {
-            border-bottom: 1px solid rgba(0,0,0,0.1);
-            + .main {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+            +.main {
                 padding-top: f.rem(82);
             }
         }

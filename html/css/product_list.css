@@ -1448,7 +1448,7 @@ input[type=number] {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
   .header:not(.transparent) + .main {
-    padding-top: 7.0625rem;
+    padding-top: 7.5rem;
   }
 }
 @media screen and (max-width: 1023px) {

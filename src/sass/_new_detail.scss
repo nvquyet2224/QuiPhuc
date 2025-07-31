@@ -1,0 +1,214 @@
+@use "function" as f;
+
+.new-detail {
+    display: flex;
+    padding: 0 f.rem(40);
+    margin-bottom: f.rem(110);
+
+    .content {
+        flex: 0 0 calc(100% - 456px);
+        max-width: calc(100% - 456px);
+        padding-right: f.rem(40);
+        padding-top: f.rem(60);
+        border-right: 1px solid #D0D5DD;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        gap: f.rem(20);
+        margin-bottom: f.rem(40);
+
+        .cate {
+            font-size: f.rem(14);
+            background-color: #EAECF0;
+            display: inline-flex;
+            padding: 0 f.rem(14);
+            height: f.rem(36);
+            width: auto;
+            align-items: center;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+        }
+
+        h1 {
+            color: #015AAB;
+            font-size: f.rem(36);
+        }
+
+        .time {
+            color: #475467;
+            font-size: f.rem(14);
+            display: flex;
+            gap: f.rem(29);
+
+            span {
+                position: relative;
+
+                &:not(:last-child) {
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 1px;
+                        height: 60%;
+                        background-color: #98A2B3;
+                        display: block;
+                        top: 20%;
+                        right: f.rem(-14);
+                    }
+                }
+            }
+        }
+
+        .relation {
+            flex: 0 0 456px;
+            max-width: 456px;
+        }
+    }
+
+    .detail {
+        font-size: f.rem(16);
+        color: #101828;
+        line-height: 1.5;
+
+        a {
+            text-decoration: underline;
+            color: inherit;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+
+        >* {
+            margin-bottom: f.rem(20);
+        }
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: f.rem(20);
+        }
+
+        ul {
+            list-style: disc;
+            margin-left: f.rem(18);
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+
+            +span {
+                display: block;
+                text-align: center;
+                font-size: f.rem(14);
+                margin: f.rem(20) 0;
+            }
+        }
+    }
+
+    .share {
+        display: flex;
+        font-size: f.rem(16);
+        color: #015AAB;
+        font-weight: 500;
+        gap: f.rem(10);
+        text-decoration: underline;
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+
+        svg {
+            width: f.rem(20);
+            height: f.rem(20);
+        }
+    }
+
+    .relation {
+        padding-top: f.rem(60);
+        padding-left: f.rem(40);
+
+        &-title {
+            font-size: f.rem(20);
+            font-weight: 600;
+            line-height: 1.5;
+            margin-bottom: f.rem(14);
+        }
+
+        .new {
+            border-bottom: 1px solid #D0D5DD;
+            padding-bottom: f.rem(30);
+            margin-bottom: f.rem(30);
+
+            &-txt {
+                h3 {
+                    font-size: f.rem(16);
+                    font-weight: 600;
+                    line-height: 1.5;
+                    margin-bottom: f.rem(10);
+                }
+            }
+
+            &-meta {
+                font-size: f.rem(14);
+                color: #475467;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .new-detail {
+        display: flex;
+        padding: 0;
+        margin-bottom: f.rem(60);
+        flex-wrap: wrap;
+
+        .content,
+        .relation {
+            flex: 0 0 100%;
+            max-width: 100%;
+            border: none;
+            padding: 0;
+        }
+
+        .content {
+            padding: f.rem(24) f.rem(16);
+        }
+
+        .info {
+            padding: 0;
+
+            .cate {
+                font-size: f.rem(14);
+
+            }
+
+            h1 {
+                font-size: f.rem(30);
+            }
+
+            .time {
+                font-size: f.rem(14);
+            }
+        }
+
+        .detail {
+            font-size: f.rem(16);
+        }
+
+        .relation {
+            padding: f.rem(24) f.rem(16);
+            border-top: 1px solid #D0D5DD;
+        }
+    }
+}
