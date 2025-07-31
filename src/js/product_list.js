@@ -1,6 +1,7 @@
 import "../sass/product-lists.scss";
 import $ from "jquery";
 import "jquery-ui/ui/widgets/slider";
+import { onScroll } from "./_scrolling";
 
 // Làm theo home page dùm anh
 
@@ -61,6 +62,54 @@ function rangeValue() {
   });
 }
 
+function hanleFilter() {
+  const btnOpen = document.getElementById("open-filter");
+  const btnClose = document.getElementById("btn-close-filter");
+  const elmFilter = document.getElementById("filter__accordion");
+  if (btnOpen && elmFilter) {
+    btnOpen.addEventListener("touchstart", () => {
+      elmFilter.classList.add("show");
+      $("body").addClass("noScroll");
+    });
+  }
+
+  if (btnClose && elmFilter) {
+    btnClose.addEventListener("click", () => {
+      elmFilter.classList.remove("show");
+      $("body").removeClass("noScroll");
+    });
+  }
+}
+
+function onToggle(box, use) {
+  if (box.classList.contains("open")) {
+    box.classList.remove("open");
+    use.setAttribute('xlink:href', '#icon-increase');
+    setTimeout(() => (box.style.display = "none"), 200);
+  } else {
+    box.style.display = "block";
+    use.setAttribute('xlink:href', '#icon-decrease');
+    setTimeout(() => box.classList.add("open"), 10);
+  }
+}
+
+function onToggleAccordion() {
+  const accordionHeaders = document.querySelectorAll(".accordion__header");
+  if (accordionHeaders.length > 0) {
+    accordionHeaders.forEach((item) => {
+      item.addEventListener("click", () => {
+        const parent = item.closest(".list_accordion");
+        const content = parent.querySelector(".accordion__content");
+        const use = parent.querySelector("use");
+        console.log("content", content);
+        onToggle(content, use);
+      });
+    });
+  }
+}
+
 (function () {
   rangeValue();
+  hanleFilter();
+  onToggleAccordion();
 })();

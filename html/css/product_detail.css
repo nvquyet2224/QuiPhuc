@@ -3921,6 +3921,11 @@ button.swiper-pagination-bullet {
     max-width: 100%;
   }
 }
+.noScroll {
+  height: 100%;
+  overflow: hidden;
+}
+
 .footer {
   position: relative;
   background-color: var(--global-color-dark);

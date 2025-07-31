@@ -1823,6 +1823,11 @@ input[type=number] {
     width: 93.733333333%;
   }
 }
+.noScroll {
+  height: 100%;
+  overflow: hidden;
+}
+
 .footer {
   position: relative;
   background-color: var(--global-color-dark);
