@@ -3,171 +3,219 @@ import $ from "jquery";
 import "jquery-ui/ui/widgets/slider";
 import { onScroll } from "./_scrolling";
 
-// Làm theo home page dùm anh
-const checkedData = new Set();
+const checkedData = new Map();
+const elements = {
+  productList: document.getElementById("products-list"),
+  navigation: document.getElementById("products-navigation"),
+  notFound: document.getElementById("products-notfound"),
+  deleteFilter: document.getElementById("delete-filter"),
+  btnReset: document.getElementById("btn-reset"),
+  btnApply: document.getElementById("btn-apply"),
+  btnOpen: document.getElementById("open-filter"),
+  btnClose: document.getElementById("btn-close-filter"),
+  elmFilter: document.getElementById("filter__accordion"),
+  accordionHeaders: document.querySelectorAll(".accordion__header"),
+  tags: document.querySelector(".head-tags"),
+  accordionBody: document.querySelector(".accordion__body"),
+  amount: document.getElementById("amount"),
+};
 
-function rangeValue() {
+// Ẩn/hiện thông báo không tìm thấy sản phẩm
+const toggleNotFound = (show) => {
+  elements.productList.classList.toggle("hide", show);
+  elements.navigation.classList.toggle("hide", show);
+  elements.notFound.classList.toggle("hide", !show);
+  if (show) {
+    elements.amount.innerHTML = "0 sản phẩm";
+  } else {
+    if(checkedData.size > 2) {
+      elements.amount.innerHTML = "24 sản phẩm";
+    }else {
+      elements.amount.innerHTML = "134 sản phẩm";
+    }
+  }
+};
+
+// Khởi tạo slider giá
+const initPriceSlider = () => {
   const $slider = $("#slider-range");
   const $inputLeft = $("#number-left");
   const $inputRight = $("#number-right");
-
   const min = parseInt($inputLeft.attr("min"), 10) || 0;
   const max = parseInt($inputRight.attr("max"), 10) || 30000000;
-
-  // Formatter chỉ số, KHÔNG style: 'currency'
   const numberFormatter = new Intl.NumberFormat("vi-VN");
 
-  function formatVND(value) {
-    if (value === 0) return "0";
-    return numberFormatter.format(value) + " đ";
-  }
-
-  function parseNumber(value) {
-    return parseInt(value.replace(/[^\d]/g, ""), 10) || 0;
-  }
+  const formatVND = (value) =>
+    value === 0 ? "0" : `${numberFormatter.format(value)} đ`;
+  const parseNumber = (value) => parseInt(value.replace(/[^\d]/g, ""), 10) || 0;
 
   $slider.slider({
     range: true,
-    min: min,
-    max: max,
+    min,
+    max,
     values: [
       parseNumber($inputLeft.val()) || min,
       parseNumber($inputRight.val()) || max,
     ],
-    slide: function (event, ui) {
+    slide: (event, ui) => {
       $inputLeft.val(formatVND(ui.values[0]));
       $inputRight.val(formatVND(ui.values[1]));
     },
   });
 
-  // Giá trị ban đầu
   $inputLeft.val(formatVND($slider.slider("values", 0)));
   $inputRight.val(formatVND($slider.slider("values", 1)));
 
-  $inputLeft.on("change", function () {
+  $inputLeft.on("change", () => {
     let val = parseNumber($inputLeft.val());
-    let right = $slider.slider("values", 1);
-    if (val > right) val = right;
-    if (val < min) val = min;
+    const right = $slider.slider("values", 1);
+    val = Math.max(min, Math.min(val, right));
     $slider.slider("values", 0, val);
     $inputLeft.val(formatVND(val));
   });
 
-  $inputRight.on("change", function () {
+  $inputRight.on("change", () => {
     let val = parseNumber($inputRight.val());
-    let left = $slider.slider("values", 0);
-    if (val < left) val = left;
-    if (val > max) val = max;
+    const left = $slider.slider("values", 0);
+    val = Math.min(max, Math.max(val, left));
     $slider.slider("values", 1, val);
     $inputRight.val(formatVND(val));
   });
-}
+};
 
-function hanleFilter() {
-  const btnOpen = document.getElementById("open-filter");
-  const btnClose = document.getElementById("btn-close-filter");
-  const elmFilter = document.getElementById("filter__accordion");
-  if (btnOpen && elmFilter) {
-    btnOpen.addEventListener("touchstart", () => {
-      elmFilter.classList.add("show");
+// Ẩn bộ lọc
+const hideFilter = () => {
+  elements.elmFilter.classList.remove("show");
+  $("body").removeClass("noScroll");
+};
+
+// Xử lý sự kiện nút lọc
+const handleFilterEvents = () => {
+  if (elements.btnOpen && elements.elmFilter) {
+    elements.btnOpen.addEventListener("click", () => {
+      elements.elmFilter.classList.add("show");
       $("body").addClass("noScroll");
     });
   }
+  if (elements.btnClose && elements.elmFilter) {
+    elements.btnClose.addEventListener("click", hideFilter);
+    elements.btnReset.addEventListener("click", hideFilter);
+    elements.btnApply.addEventListener("click", hideFilter);
+  }
+};
 
-  if (btnClose && elmFilter) {
-    btnClose.addEventListener("click", () => {
-      elmFilter.classList.remove("show");
-      $("body").removeClass("noScroll");
+// Xử lý accordion
+const toggleAccordion = (content, use) => {
+  const isOpen = content.classList.contains("open");
+  use.setAttribute("xlink:href", isOpen ? "#icon-increase" : "#icon-decrease");
+  content.style.display = isOpen ? "none" : "block";
+  setTimeout(
+    () => content.classList.toggle("open", !isOpen),
+    isOpen ? 200 : 10
+  );
+};
+
+const closeAllAccordions = () => {
+  elements.accordionHeaders.forEach((header) => {
+    const parent = header.closest(".list_accordion");
+    const content = parent.querySelector(".accordion__content");
+    const use = parent.querySelector("use");
+    if (content.classList.contains("open")) toggleAccordion(content, use);
+  });
+};
+
+const initAccordionEvents = () => {
+  elements.accordionHeaders.forEach((header) => {
+    header.addEventListener("click", () => {
+      const parent = header.closest(".list_accordion");
+      toggleAccordion(
+        parent.querySelector(".accordion__content"),
+        parent.querySelector("use")
+      );
     });
-  }
-}
+  });
+};
 
-function onToggle(box, use) {
-  if (box.classList.contains("open")) {
-    box.classList.remove("open");
-    use.setAttribute("xlink:href", "#icon-increase");
-    setTimeout(() => (box.style.display = "none"), 200);
-  } else {
-    box.style.display = "block";
-    use.setAttribute("xlink:href", "#icon-decrease");
-    setTimeout(() => box.classList.add("open"), 10);
-  }
-}
+// Xử lý checkbox và tags
+const handleCheckboxes = () => {
+  if (!elements.accordionBody) return;
 
-function onToggleAccordion() {
-  const accordionHeaders = document.querySelectorAll(".accordion__header");
-  if (accordionHeaders.length > 0) {
-    accordionHeaders.forEach((item) => {
-      item.addEventListener("click", () => {
-        const parent = item.closest(".list_accordion");
-        const content = parent.querySelector(".accordion__content");
-        const use = parent.querySelector("use");
-        console.log("content", content);
-        onToggle(content, use);
-      });
-    });
-  }
-}
+  const inputs = elements.accordionBody.querySelectorAll(
+    'input[type="checkbox"]'
+  );
 
-function onCheckBoxInput() {
-  const parent = document.querySelector(".accordion__body");
-  const tags = document.querySelector(".head-tags");
-  tags.innerHTML = "";
+  const renderTags = () => {
+    elements.tags.classList.toggle("has-tag", checkedData.size > 0);
 
-  function renderTags() {
-    tags.innerHTML = [...checkedData]
+    elements.tags.innerHTML = [...checkedData]
       .map(
-        (value) => `
-      <div class="tag">
-        ${value}
-        <svg>
-          <use xlink:href="#icon-close"></use>
-        </svg>
-      </div>
-    `
+        ([value, text]) => `
+        <div class="tag" data-value="${value}">
+          ${text}
+          <button>
+            <svg>
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      `
       )
       .join("");
-  }
+  };
 
-  if (parent) {
-    const inputRefs = parent.querySelectorAll('input[type="checkbox"]');
-    if (inputRefs.length > 0) {
-      console.log("inputRefs", inputRefs);
-      inputRefs.forEach((item) => {
-        item.addEventListener("change", (e) => {
-          console.log("e.target.checked", e.target.checked);
-          if (e.target.checked) {
-            checkedData.add(item.value);
-          } else {
-            checkedData.delete(item.value);
-          }
-          renderTags();
-        });
+  const toggleDeleteButton = () => {
+    elements.deleteFilter.classList.toggle("hide", checkedData.size === 0);
+  };
+
+  const resetFilters = () => {
+    checkedData.clear();
+    inputs.forEach((input) => (input.checked = false));
+    renderTags();
+    toggleDeleteButton();
+    toggleNotFound(false);
+    closeAllAccordions();
+  };
+
+  inputs.forEach((input) => {
+    const label = input.closest("label");
+    const textSpan = label?.querySelector("span:not([class])");
+    const spanText = textSpan?.textContent.trim() || input.value;
+
+    input.addEventListener("change", (e) => {
+      if (e.target.checked) {
+        checkedData.set(input.value, spanText);
+      } else {
+        checkedData.delete(input.value);
+      }
+      renderTags();
+      toggleDeleteButton();
+      toggleNotFound(checkedData.size > 4);
+    });
+  });
+
+  elements.tags.addEventListener("click", (e) => {
+    const tag = e.target.closest(".tag");
+    if (tag) {
+      const value = tag.dataset.value;
+      checkedData.delete(value);
+      inputs.forEach((input) => {
+        if (input.value === value) input.checked = false;
       });
-
-      tags.addEventListener("click", (e) => {
-        if (e.target.closest("svg")) {
-          const tagDiv = e.target.closest(".tag");
-          if (tagDiv) {
-            const value = tagDiv.textContent.trim();
-            checkedData.delete(value);
-            inputRefs.forEach((input) => {
-              if (input.value === value) {
-                input.checked = false;
-              }
-            });
-
-            renderTags();
-          }
-        }
-      });
+      renderTags();
+      toggleDeleteButton();
+      toggleNotFound(checkedData.size > 4);
     }
-  }
-}
+  });
 
-(function () {
-  rangeValue();
-  hanleFilter();
-  onToggleAccordion();
-  // onCheckBoxInput();
+  elements.deleteFilter.addEventListener("click", resetFilters);
+  elements.btnReset.addEventListener("click", resetFilters);
+};
+
+// Khởi tạo
+(() => {
+  elements.deleteFilter.classList.add("hide");
+  initPriceSlider();
+  handleFilterEvents();
+  initAccordionEvents();
+  handleCheckboxes();
 })();
