@@ -1,20 +1,24 @@
 @use "function" as f;
 
 .projects {
-  padding: 0 f.rem(40) f.rem(120) f.rem(40);
+  // padding: 0 f.rem(40) f.rem(120) f.rem(40);
+  padding-bottom: f.rem(120);
   &_wrap {
     position: relative;
   }
   .title_block {
     margin-bottom: f.rem(30);
+    padding: 0 f.rem(40);
   }
-  .swiper-wrapper {
-    .swiper-slide:nth-child(odd) {
-      width: f.rem(789) !important; /* slide đầu to */
+  &-list {
+    display: flex;
+    gap: f.rem(40);
+    &--side {
+      flex: 1;
+      padding-left: f.rem(40);
     }
-
-    .swiper-slide:nth-child(even) {
-      width: f.rem(444) !important; /* các slide sau nhỏ hơn */
+    &--slide {
+      width: 47.6388888889%;
     }
   }
   .block-action {
@@ -47,11 +51,11 @@
     padding: 0 f.rem(16) f.rem(60) f.rem(16);
     .title_block {
       margin-bottom: f.rem(20);
+      padding: 0;
     }
-    .swiper-wrapper {
-      .swiper-slide:nth-child(odd),
-      .swiper-slide:nth-child(even) {
-       width: 100% !important;
+    &-list {
+      &--slide {
+        width: 100%;
       }
     }
     .block-action {

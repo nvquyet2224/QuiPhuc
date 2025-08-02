@@ -14,13 +14,19 @@ export function projectSlider() {
             lazy: true,
             disableOnInteraction: true,
             pauseOnMouseEnter: true,
-            slidesPerView: "auto",
-            spaceBetween: 127,
+            slidesPerView: 1,
+            spaceBetween: 40,
             slidesPerGroup: 1,
             allowTouchMove: true,
             watchOverflow: true,
             initialSlide: 0,
             autoHeight: false,
+            breakpoints: {
+                1024: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 40
+                }
+            },
             navigation: {
                 nextEl: elm.querySelector(".nav-next"),
                 prevEl: elm.querySelector(".nav-prev"),

@@ -103,9 +103,11 @@ strong {
   --global-color: #015aab;
   --global-color-dark: #07274a;
   --font-body: "Montserrat", sans-serif;
-  --g-blue: linear-gradient(180deg,
-      rgba(10, 124, 220, 0) 23.17%,
-      rgba(5, 92, 165, 0.95) 88.61%);
+  --g-blue: linear-gradient(
+    180deg,
+    rgba(10, 124, 220, 0) 23.17%,
+    rgba(5, 92, 165, 0.95) 88.61%
+  );
 }
 
 body {
@@ -399,6 +401,12 @@ input[type=number] {
   display: flex;
   flex-direction: column;
 }
+.project.project-big .name {
+  font-size: 1.5rem;
+}
+.project.project-big .but-link {
+  margin-top: 1.5rem;
+}
 .project-img {
   line-height: 0;
   width: 100%;
@@ -416,25 +424,40 @@ input[type=number] {
   display: flex;
   flex-direction: column;
 }
+.project-txt .sub {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: #000000;
+}
+.project-txt .sub .date {
+  font-weight: 400;
+  color: #475467;
+}
 .project-txt .name {
   color: #000;
   font-weight: 600;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
   line-height: 1.3;
+  margin-top: 0.75rem;
 }
 .project-txt .text {
   color: #000;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5;
-  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
 }
 .project-txt .but-link {
   color: #015aab;
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.5;
+  margin-top: 1.25rem;
 }
 .project-txt .but-link svg {
   width: 0.8125rem;
@@ -744,7 +767,7 @@ input[type=number] {
   width: 100%;
   height: auto;
   margin-bottom: 2.5rem;
-  border-bottom: 1px solid #D0D5DD;
+  border-bottom: 1px solid #d0d5dd;
 }
 .tab-list {
   display: flex;
@@ -897,6 +920,12 @@ input[type=number] {
     font-size: 3.2vw;
     padding: 2.6666666667vw 6.6666666667vw;
   }
+  .project.project-big .name {
+    font-size: 1rem;
+  }
+  .project.project-big .but-link {
+    margin-top: 1.25rem;
+  }
   .project-img {
     width: 100%;
     aspect-ratio: 343/220;
@@ -907,15 +936,15 @@ input[type=number] {
     flex-direction: column;
   }
   .project-txt .name {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    margin-top: 0.75rem;
   }
   .project-txt .text {
     font-size: 0.875rem;
-    margin-bottom: 1.5rem;
   }
   .project-txt .but-link {
     font-size: 0.875rem;
+    margin-top: 1.25rem;
   }
   .project-txt .but-link svg {
     width: 0.8125rem;

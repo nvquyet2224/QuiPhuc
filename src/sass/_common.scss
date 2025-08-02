@@ -6,9 +6,11 @@
   --global-color: #015aab;
   --global-color-dark: #07274a;
   --font-body: "Montserrat", sans-serif;
-  --g-blue: linear-gradient(180deg,
-      rgba(10, 124, 220, 0) 23.17%,
-      rgba(5, 92, 165, 0.95) 88.61%);
+  --g-blue: linear-gradient(
+    180deg,
+    rgba(10, 124, 220, 0) 23.17%,
+    rgba(5, 92, 165, 0.95) 88.61%
+  );
 }
 
 body {
@@ -67,7 +69,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {}
+h6 {
+}
 
 h1,
 .h1 {
@@ -82,19 +85,24 @@ h1,
 }
 
 h2,
-.h2 {}
+.h2 {
+}
 
 h3,
-.h3 {}
+.h3 {
+}
 
 h4,
-.h4 {}
+.h4 {
+}
 
 h5,
-.h5 {}
+.h5 {
+}
 
 h6,
-.h6 {}
+.h6 {
+}
 
 .relative {
   position: relative;
@@ -334,6 +342,14 @@ input[type="number"] {
   width: 100%;
   display: flex;
   flex-direction: column;
+  &.project-big {
+    .name {
+      font-size: f.rem(24);
+    }
+    .but-link {
+      margin-top: f.rem(24);
+    }
+  }
 
   &-img {
     line-height: 0;
@@ -353,13 +369,27 @@ input[type="number"] {
   &-txt {
     display: flex;
     flex-direction: column;
-
+    .sub {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 500;
+      font-size: f.rem(14);
+      line-height: 1.4;
+      letter-spacing: 0;
+      color: #000000;
+      .date {
+        font-weight: 400;
+        color: #475467;
+      }
+    }
     .name {
       color: #000;
       font-weight: 600;
-      font-size: f.rem(24);
-      margin-bottom: f.rem(8);
+      font-size: f.rem(20);
+
       line-height: 1.3;
+      margin-top: f.rem(12);
     }
 
     .text {
@@ -367,7 +397,8 @@ input[type="number"] {
       font-weight: 400;
       font-size: f.rem(16);
       line-height: 1.5;
-      margin-bottom: f.rem(24);
+
+      margin-top: f.rem(8);
     }
 
     .but-link {
@@ -375,7 +406,7 @@ input[type="number"] {
       font-weight: 500;
       font-size: f.rem(16);
       line-height: 1.5;
-
+      margin-top: f.rem(20);
       svg {
         width: f.rem(13);
         height: f.rem(8);
@@ -554,8 +585,6 @@ input[type="number"] {
     width: f.rem(16);
     height: f.rem(16);
   }
-
-
 }
 
 .title_block {
@@ -577,7 +606,6 @@ input[type="number"] {
     margin-bottom: f.rem(20);
 
     &.current {
-
       a,
       span {
         font-weight: 700;
@@ -706,13 +734,17 @@ input[type="number"] {
     line-height: 0;
 
     &::after {
-      content: '';
+      content: "";
       width: 100%;
       height: 100%;
       position: absolute;
       left: 0;
       top: 0;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 38.6%, rgba(0, 0, 0, 0.5) 84.16%);
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 38.6%,
+        rgba(0, 0, 0, 0.5) 84.16%
+      );
     }
 
     img {
@@ -732,7 +764,6 @@ input[type="number"] {
     text-align: center;
 
     .title_block {
-
       .sub-title,
       h1 {
         color: #fff;
@@ -750,7 +781,7 @@ input[type="number"] {
   width: 100%;
   height: auto;
   margin-bottom: f.rem(40);
-  border-bottom: 1px solid #D0D5DD;
+  border-bottom: 1px solid #d0d5dd;
 
   &-list {
     display: flex;
@@ -770,7 +801,7 @@ input[type="number"] {
     cursor: pointer;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       width: 0;
       height: 2px;
@@ -781,7 +812,6 @@ input[type="number"] {
       transition: width 0.3s ease-in-out;
     }
 
-
     &.current,
     &:active {
       color: #000;
@@ -790,15 +820,13 @@ input[type="number"] {
         width: 100%;
       }
     }
-
   }
-
 }
 
-@supports (-webkit-text-stroke: #fcd535) {}
+@supports (-webkit-text-stroke: #fcd535) {
+}
 
 @media screen and (min-width: 1025px) {
-
   .tab {
     &-item {
       &:hover {
@@ -808,9 +836,7 @@ input[type="number"] {
           width: 100%;
         }
       }
-
     }
-
   }
 }
 
@@ -864,7 +890,6 @@ input[type="number"] {
 }
 
 @media screen and (max-width: 1023px) {
-
   h1,
   .h1 {
     font-size: f.rem(32);
@@ -872,19 +897,24 @@ input[type="number"] {
   }
 
   h2,
-  .h2 {}
+  .h2 {
+  }
 
   h3,
-  .h3 {}
+  .h3 {
+  }
 
   h4,
-  .h4 {}
+  .h4 {
+  }
 
   h5,
-  .h5 {}
+  .h5 {
+  }
 
   h6,
-  .h6 {}
+  .h6 {
+  }
 
   .nav-overlay {
     display: flex;
@@ -979,6 +1009,15 @@ input[type="number"] {
   }
 
   .project {
+    &.project-big {
+      .name {
+        font-size: f.rem(16);
+      }
+      .but-link {
+        margin-top: f.rem(20);
+      }
+    }
+
     &-img {
       width: 100%;
       aspect-ratio: 343/220;
@@ -990,18 +1029,17 @@ input[type="number"] {
       flex-direction: column;
 
       .name {
-        font-size: f.rem(20);
-        margin-bottom: f.rem(8);
+        font-size: f.rem(16);
+        margin-top: f.rem(12);
       }
 
       .text {
         font-size: f.rem(14);
-        margin-bottom: f.rem(24);
       }
 
       .but-link {
         font-size: f.rem(14);
-
+        margin-top: f.rem(20);
         svg {
           width: f.rem(13);
           height: f.rem(8);
@@ -1027,7 +1065,6 @@ input[type="number"] {
 
     &--txt {
       .title_block {
-
         .sub-title,
         h1 {
           font-size: f.rem(24);
@@ -1053,8 +1090,6 @@ input[type="number"] {
       gap: f.rem(22);
     }
   }
-
-
 }
 
 @media screen and (max-width: 480px) {
