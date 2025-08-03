@@ -4,13 +4,12 @@
 
 :root {
   --global-color: #015aab;
+  --global-colorA: 1, 90, 171;
   --global-color-dark: #07274a;
   --font-body: "Montserrat", sans-serif;
-  --g-blue: linear-gradient(
-    180deg,
-    rgba(10, 124, 220, 0) 23.17%,
-    rgba(5, 92, 165, 0.95) 88.61%
-  );
+  --g-blue: linear-gradient(180deg,
+      rgba(10, 124, 220, 0) 23.17%,
+      rgba(5, 92, 165, 0.95) 88.61%);
 }
 
 body {
@@ -69,8 +68,7 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-}
+h6 {}
 
 h1,
 .h1 {
@@ -85,24 +83,19 @@ h1,
 }
 
 h2,
-.h2 {
-}
+.h2 {}
 
 h3,
-.h3 {
-}
+.h3 {}
 
 h4,
-.h4 {
-}
+.h4 {}
 
 h5,
-.h5 {
-}
+.h5 {}
 
 h6,
-.h6 {
-}
+.h6 {}
 
 .relative {
   position: relative;
@@ -342,10 +335,12 @@ input[type="number"] {
   width: 100%;
   display: flex;
   flex-direction: column;
+
   &.project-big {
     .name {
       font-size: f.rem(24);
     }
+
     .but-link {
       margin-top: f.rem(24);
     }
@@ -369,6 +364,7 @@ input[type="number"] {
   &-txt {
     display: flex;
     flex-direction: column;
+
     .sub {
       display: flex;
       justify-content: space-between;
@@ -378,11 +374,13 @@ input[type="number"] {
       line-height: 1.4;
       letter-spacing: 0;
       color: #000000;
+
       .date {
         font-weight: 400;
         color: #475467;
       }
     }
+
     .name {
       color: #000;
       font-weight: 600;
@@ -407,6 +405,7 @@ input[type="number"] {
       font-size: f.rem(16);
       line-height: 1.5;
       margin-top: f.rem(20);
+
       svg {
         width: f.rem(13);
         height: f.rem(8);
@@ -606,6 +605,7 @@ input[type="number"] {
     margin-bottom: f.rem(20);
 
     &.current {
+
       a,
       span {
         font-weight: 700;
@@ -740,11 +740,9 @@ input[type="number"] {
       position: absolute;
       left: 0;
       top: 0;
-      background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0) 38.6%,
-        rgba(0, 0, 0, 0.5) 84.16%
-      );
+      background: linear-gradient(180deg,
+          rgba(0, 0, 0, 0) 38.6%,
+          rgba(0, 0, 0, 0.5) 84.16%);
     }
 
     img {
@@ -764,6 +762,7 @@ input[type="number"] {
     text-align: center;
 
     .title_block {
+
       .sub-title,
       h1 {
         color: #fff;
@@ -823,10 +822,76 @@ input[type="number"] {
   }
 }
 
-@supports (-webkit-text-stroke: #fcd535) {
+.paging {
+  width: 100%;
+
+  &_box,
+  &_block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  &-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: f.rem(32);
+    height: f.rem(32);
+    background-color: rgba(var(--global-colorA), 0);
+    font-weight: 500;
+    font-size: f.rem(12);
+    line-height: 1.333333333;
+    letter-spacing: 0;
+    cursor: pointer;
+    color: #667085;
+    -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    &.active,
+    &:active {
+      background-color: rgba(var(--global-colorA), 1);
+      color: #fff;
+    }
+
+  }
+
+  &-next,
+  &-prev {
+    color: #282930;
+    width: f.rem(32);
+    height: f.rem(32);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: f.rem(12);
+      height: f.rem(12);
+    }
+  }
+
 }
 
+
+@supports (-webkit-text-stroke: #fcd535) {}
+
 @media screen and (min-width: 1025px) {
+
+
+  .paging {
+
+    &-item {
+      &:hover {
+        background-color: rgba(var(--global-colorA), 1);
+        color: #fff;
+      }
+
+    }
+
+  }
+
   .tab {
     &-item {
       &:hover {
@@ -890,6 +955,7 @@ input[type="number"] {
 }
 
 @media screen and (max-width: 1023px) {
+
   h1,
   .h1 {
     font-size: f.rem(32);
@@ -897,24 +963,19 @@ input[type="number"] {
   }
 
   h2,
-  .h2 {
-  }
+  .h2 {}
 
   h3,
-  .h3 {
-  }
+  .h3 {}
 
   h4,
-  .h4 {
-  }
+  .h4 {}
 
   h5,
-  .h5 {
-  }
+  .h5 {}
 
   h6,
-  .h6 {
-  }
+  .h6 {}
 
   .nav-overlay {
     display: flex;
@@ -1013,6 +1074,7 @@ input[type="number"] {
       .name {
         font-size: f.rem(16);
       }
+
       .but-link {
         margin-top: f.rem(20);
       }
@@ -1040,6 +1102,7 @@ input[type="number"] {
       .but-link {
         font-size: f.rem(14);
         margin-top: f.rem(20);
+
         svg {
           width: f.rem(13);
           height: f.rem(8);
@@ -1065,6 +1128,7 @@ input[type="number"] {
 
     &--txt {
       .title_block {
+
         .sub-title,
         h1 {
           font-size: f.rem(24);

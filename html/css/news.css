@@ -100,13 +100,12 @@ strong {
 }
 :root {
   --global-color: #015aab;
+  --global-colorA: 1, 90, 171;
   --global-color-dark: #07274a;
   --font-body: "Montserrat", sans-serif;
-  --g-blue: linear-gradient(
-    180deg,
-    rgba(10, 124, 220, 0) 23.17%,
-    rgba(5, 92, 165, 0.95) 88.61%
-  );
+  --g-blue: linear-gradient(180deg,
+      rgba(10, 124, 220, 0) 23.17%,
+      rgba(5, 92, 165, 0.95) 88.61%);
 }
 
 body {
@@ -801,7 +800,53 @@ input[type=number] {
   width: 100%;
 }
 
+.paging {
+  width: 100%;
+}
+.paging_box, .paging_block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.paging-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background-color: rgba(var(--global-colorA), 0);
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1.333333333;
+  letter-spacing: 0;
+  cursor: pointer;
+  color: #667085;
+  -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.paging-item.active, .paging-item:active {
+  background-color: rgba(var(--global-colorA), 1);
+  color: #fff;
+}
+.paging-next, .paging-prev {
+  color: #282930;
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.paging-next svg, .paging-prev svg {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
 @media screen and (min-width: 1025px) {
+  .paging-item:hover {
+    background-color: rgba(var(--global-colorA), 1);
+    color: #fff;
+  }
   .tab-item:hover {
     color: #000;
   }
@@ -1845,7 +1890,7 @@ input[type=number] {
   padding: 0 2.5rem;
   column-gap: 1.875rem;
   row-gap: 3.75rem;
-  margin-bottom: 1.875rem;
+  margin-bottom: 2.5rem;
 }
 
 @media screen and (max-width: 768px) {

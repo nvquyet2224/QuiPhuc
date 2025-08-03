@@ -93,7 +93,7 @@
         padding: 0 f.rem(40);
         column-gap: f.rem(30);
         row-gap: f.rem(60);
-        margin-bottom: f.rem(30);
+        margin-bottom: f.rem(40);
     }
 
 }
@@ -104,6 +104,7 @@
         &-block {
             margin-bottom: f.rem(85);
         }
+
         &-txt {
             h3 {
                 font-size: f.rem(16);
