@@ -1165,6 +1165,71 @@ input[type=number] {
 .header-container {
   width: 100%;
 }
+.header .select-language .select-selected,
+.header .select-language .select-arrow {
+  color: #fff;
+}
+.header .select-language .select-selected {
+  font-size: 0.75rem;
+}
+.header .select-language .select-arrow {
+  margin-left: 0.5rem;
+}
+.header .select-language .select-box {
+  min-width: initial;
+  width: 100px;
+  padding: 0.3125rem;
+  -webkit-border-radius: 0.625rem;
+  border-radius: 0.625rem;
+}
+.header .select-language .select-box ul {
+  padding: 0;
+}
+.header .select-language .select-box li {
+  padding: 0.3125rem 0.75rem;
+}
+.header .support {
+  margin-left: auto;
+  display: flex;
+  gap: 2.125rem;
+}
+.header .support-list {
+  display: flex;
+  align-items: center;
+  gap: 2.125rem;
+}
+.header .support-list li {
+  position: relative;
+}
+.header .support-list li::after {
+  content: "";
+  position: absolute;
+  right: -1.0625rem;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.header .support-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-weight: 400;
+  color: #fff;
+  display: flex;
+  font-size: 0.75rem;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.header .support-icon {
+  width: 0.8125rem;
+  height: 0.75rem;
+}
+.header .support-icon svg {
+  width: 100%;
+  height: 100%;
+}
 .header-top {
   background-color: var(--global-color);
   display: flex;
@@ -1192,34 +1257,6 @@ input[type=number] {
 .header-top .promotion_tag-icon svg {
   width: 100%;
   height: 100%;
-}
-.header-top .support {
-  margin-left: auto;
-}
-.header-top .support ul {
-  display: flex;
-  align-items: center;
-  gap: 2.125rem;
-}
-.header-top .support-icon {
-  width: 0.8125rem;
-  height: 0.75rem;
-}
-.header-top .support-icon svg {
-  width: 100%;
-  height: 100%;
-}
-.header-top .support a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.625rem;
-  font-weight: 400;
-  color: #fff;
-  display: flex;
-  font-size: 0.75rem;
-  text-decoration: none;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 .header-mid {
   position: relative;
@@ -1612,9 +1649,6 @@ input[type=number] {
   .header-top .promotion_tag {
     font-size: 0.625rem;
   }
-  .header-top .support {
-    display: none;
-  }
   .header-mid {
     padding: 0 0.9375rem;
     height: 3.125rem;
@@ -1686,19 +1720,6 @@ input[type=number] {
   .header .nav-menu > li {
     border-top: 1px solid #D9D9D9;
   }
-  .header .nav-menu .icon-toggle {
-    position: relative;
-    width: 1.5rem;
-    height: 1.5rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .header .nav-menu .icon-toggle svg {
-    width: 0.875rem;
-    position: absolute;
-    height: 0.875rem;
-  }
   .header .nav-menu .dropdown-toggle,
   .header .nav-menu .normal-link {
     display: flex;
@@ -1762,6 +1783,32 @@ input[type=number] {
     flex: 0 0 100%;
     max-width: 100%;
   }
+  .header .nav-menu .dropdown-menu--customize .dropdown-menu--inner {
+    padding: 1rem;
+    padding-top: 0;
+    display: block;
+  }
+  .header .nav-menu .dropdown-menu--customize .dropdown-menu--subitem {
+    padding: 0;
+    border-bottom: 1px solid #D9D9D9;
+    margin-bottom: 0rem;
+  }
+  .header .nav-menu .dropdown-menu--customize .dropdown-menu--subitem.is-group {
+    border: none;
+  }
+  .header .nav-menu .dropdown-menu--customize .dropdown-menu--subitem .dropdown-menu--link {
+    font-size: 0.875rem;
+  }
+  .header .nav-menu .dropdown-menu--customize .container-list {
+    height: var(--data-h, 0px);
+    overflow: hidden;
+    -webkit-transition: height 0.4s linear;
+    transition: height 0.4s linear;
+  }
+  .header .nav-menu .dropdown-menu--customize .container-list ul {
+    padding-bottom: 1rem;
+    padding-left: 1.125rem;
+  }
   .header .nav-menu .push-content {
     padding: 1rem 1rem 2.8125rem 1rem;
     grid-template-columns: repeat(2, 1fr);
@@ -1775,6 +1822,89 @@ input[type=number] {
   }
   .header .nav-menu .push-content[data-item="2"] {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .header .nav-menu .dropdown-menu--title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    padding: 1.25rem 0;
+  }
+  .header .nav-menu .dropdown-menu--title.current .icon-toggle .icon-increase {
+    opacity: 0;
+  }
+  .header .nav-menu .dropdown-menu--title.current .icon-toggle .icon-decrease {
+    opacity: 1;
+  }
+  .header .nav-menu .dropdown-menu--title .icon-toggle {
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--global-color);
+  }
+  .header .nav-menu .dropdown-menu--title .icon-toggle .icon-increase,
+  .header .nav-menu .dropdown-menu--title .icon-toggle .icon-decrease {
+    -webkit-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .header .nav-menu .dropdown-menu--title .icon-toggle .icon-decrease {
+    opacity: 0;
+  }
+  .header .nav-menu .dropdown-menu--title .icon-toggle svg {
+    width: 0.875rem;
+    position: absolute;
+    height: 0.875rem;
+  }
+  .header .nav-bot {
+    width: 100%;
+    padding: 1rem;
+    margin-top: auto;
+  }
+  .header .nav-bot .support {
+    background-color: #F2F4F7;
+    display: block;
+    padding: 0.625rem 1.25rem;
+    -webkit-border-radius: 0.75rem;
+    border-radius: 0.75rem;
+  }
+  .header .nav-bot .support-list {
+    display: block;
+  }
+  .header .nav-bot .support-list li {
+    border-bottom: 1px solid #D9D9D9;
+  }
+  .header .nav-bot .support-list li::after {
+    display: none;
+  }
+  .header .nav-bot .support-list a {
+    color: #1D2939;
+    padding: 1.0625rem 0;
+    font-size: 0.75rem;
+  }
+  .header .nav-bot .support-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+  .header .nav-bot .select-language {
+    display: inline-flex;
+  }
+  .header .nav-bot .select-language .select-selected,
+  .header .nav-bot .select-language .select-arrow {
+    color: #1D2939;
+  }
+  .header .nav-bot .select-language .select-selected {
+    font-size: 0.75rem;
+  }
+  .header .nav-bot .select-language .select-header {
+    padding: 1.0625rem 0;
+  }
+  .header .nav-bot .select-language .select-box {
+    right: auto;
+    left: 0;
+    top: auto;
+    bottom: 100%;
   }
   .header:not(.transparent) {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);

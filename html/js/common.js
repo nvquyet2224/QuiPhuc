@@ -39,6 +39,9 @@ function navClick() {
     if (menu && menu.classList.contains("open-menu")) {
       menu.classList.remove("open-menu");
       document.querySelector("html, body").classList.remove("no-scroll");
+      if (document.querySelector('.nav-item.current')) {
+        document.querySelector('.nav-item.current').classList.remove('current');
+      }
     } else {
       document.querySelector("html, body").classList.add("no-scroll");
       menu.classList.add("open-menu");
@@ -62,10 +65,19 @@ function navClick() {
           document.querySelector('.nav-item.current').classList.remove('current');
         }
       }
+
+      //close menu
+      const closeMenu = e.target.closest(".close-menu");
+      if(closeMenu) {
+        document.querySelector(".toggle-menu").click();
+      }
+
     });
 
   }
 
+
+  /*
   const body = document.querySelector('body');
 
   if (body) {
@@ -73,7 +85,7 @@ function navClick() {
     if (document.querySelector('.nav-menu li[data-page=' + page + '] > a')) {
       document.querySelector('.nav-menu li[data-page=' + page + '] > a').classList.add('current');
     }
-  }
+  }*/
 
 }
 
@@ -105,6 +117,31 @@ function selectClick() {
     if (!$(event.target).closest('.select').length) {
       $('.select.open').removeClass('open');
     }
+  });
+
+}
+
+function navAccordion() {
+  $('div.dropdown-menu--title').on('click', function () {
+    const box = $(this).closest('.dropdown-menu--subitem');
+    const body = box.find('.container-list');
+    const detail = box.find('.container-list ul');
+    const bodyH = detail.innerHeight();
+    if ($(this).hasClass('current')) {
+      $(this).removeClass('current');
+      body.css('--data-h', '0px');
+    } else {
+      const oldCur = $('.dropdown-menu--title.current');
+      if(oldCur.length) {
+        const oldBox = $(oldCur).closest('.dropdown-menu--subitem');
+        const oldBody = oldBox.find('.container-list');
+        oldBody.css('--data-h', '0px').removeClass('current');
+        oldCur
+      }
+      $(this).addClass('current');
+      body.css('--data-h', bodyH + 'px');
+    }
+
   });
 
 }
@@ -173,4 +210,5 @@ function onScroll() {
   resize();
   onScroll();
   selectClick();
+  navAccordion();
 })();
