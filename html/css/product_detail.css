@@ -103,9 +103,11 @@ strong {
   --global-colorA: 1, 90, 171;
   --global-color-dark: #07274a;
   --font-body: "Montserrat", sans-serif;
-  --g-blue: linear-gradient(180deg,
-      rgba(10, 124, 220, 0) 23.17%,
-      rgba(5, 92, 165, 0.95) 88.61%);
+  --g-blue: linear-gradient(
+    180deg,
+    rgba(10, 124, 220, 0) 23.17%,
+    rgba(5, 92, 165, 0.95) 88.61%
+  );
 }
 
 body {
@@ -390,6 +392,45 @@ input[type=number] {
 .product .color {
   margin-top: 0.875rem;
   margin-bottom: 1.25rem;
+}
+
+.article-banner {
+  display: flex;
+  flex-direction: column;
+}
+.article-banner--img {
+  width: 100%;
+  aspect-ratio: 361/341;
+}
+.article-banner--img img {
+  width: 100%;
+  height: 100%;
+}
+.article-banner--txt {
+  padding: 1.25rem;
+  background: linear-gradient(180deg, #015aab 0%, #82c3ff 109.43%);
+  color: #fff;
+}
+.article-banner--txt .title {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+.article-banner--txt .btn-arrow {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #282930;
+}
+.article-banner--txt .btn-arrow svg {
+  width: 0.75rem;
+  height: 0.5625rem;
 }
 
 .project {
@@ -1002,6 +1043,25 @@ input[type=number] {
   }
   .product-txt .price {
     font-size: 0.875rem;
+  }
+  .article-banner--img {
+    aspect-ratio: 242/257;
+  }
+  .article-banner--txt {
+    padding: 0.875rem;
+    color: #fff;
+  }
+  .article-banner--txt .title {
+    font-size: 0.875rem;
+  }
+  .article-banner--txt .btn-arrow {
+    width: 1.4375rem;
+    height: 1.4375rem;
+    margin-top: 0.5rem;
+  }
+  .article-banner--txt .btn-arrow svg {
+    width: 0.5625rem;
+    height: 0.4375rem;
   }
   .mini-title {
     font-size: 1.25rem;
@@ -2711,11 +2771,22 @@ button.swiper-pagination-bullet {
 .products-list .swiper-slide {
   height: auto;
 }
+.products-list .article-banner {
+  height: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.products-list .article-banner--txt {
+  flex-grow: 1;
+}
 .products-list .product {
   height: 100%;
   border-top: 1px solid rgba(0, 0, 0, 0.15);
   border-left: 1px solid rgba(0, 0, 0, 0.15);
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.products-list .product-img {
+  margin-bottom: 3.125rem;
 }
 .products-list .product-txt {
   flex-grow: 1;
@@ -2737,6 +2808,9 @@ button.swiper-pagination-bullet {
   }
   .products-list .action .link-but {
     width: 100%;
+  }
+  .products .product-img {
+    margin-bottom: 1.25rem;
   }
 }
 .product-detail .product-detail-container {
