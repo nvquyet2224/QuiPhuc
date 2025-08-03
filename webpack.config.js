@@ -28,7 +28,6 @@ const promotionComponent = fs.readFileSync(__dirname + "/src/_promotion.html");
 const registerPromotion = fs.readFileSync(__dirname + "/src/_register-promotion.html");
 const serviceComponent = fs.readFileSync(__dirname + "/src/_service.html");
 
-const productDetail = fs.readFileSync(__dirname + "/src/_product-detail.html");
 const breadcrumb = fs.readFileSync(__dirname + "/src/_breadcrumb-component.html");
 const productRelatedComponent = fs.readFileSync(__dirname + "/src/_product-related.html");
 
@@ -83,7 +82,7 @@ module.exports = {
   output: {
     publicPath: "../",
     path: path.resolve(__dirname, "html"),
-    filename: isBack ? "../../source/plugins/Web/webroot/js/[name].js" : "js/[name].js", // copy to backend
+    //filename: isBack ? "../../source/plugins/Web/webroot/js/[name].js" : "js/[name].js", // copy to backend
     library: ["[name]", "modules"],
     clean: true,
   },
@@ -148,8 +147,56 @@ module.exports = {
       patterns: [
         { from: "src/images", to: "images", noErrorOnMissing: true },
         {
+          from: "src/js/jquery.js",
+          to: "js/jquery.js",
+          info: { minimized: minimized },
+          noErrorOnMissing: true,
+        },
+        {
+          from: "src/js/jquery-ui.js",
+          to: "js/jquery-ui.js",
+          info: { minimized: minimized },
+          noErrorOnMissing: true,
+        },
+        {
+          from: "src/js/swiper-bundle.js",
+          to: "js/swiper-bundle.js",
+          info: { minimized: minimized },
+          noErrorOnMissing: true,
+        },
+        {
+          from: "src/js/lottie-player.js",
+          to: "js/lottie-player.js",
+          info: { minimized: minimized },
+          noErrorOnMissing: true,
+        },
+        {
           from: "src/js/common.js",
-          to: isBack ? "../../source/plugins/Web/webroot/js/common.js" : "js/common.js",
+          to: "js/common.js",
+          info: { minimized: minimized },
+          noErrorOnMissing: true,
+        },
+        {
+          from: "src/js/index_main.js",
+          to: "js/index_main.js",
+          info: { minimized: minimized },
+          noErrorOnMissing: true,
+        },
+        {
+          from: "src/js/business_main.js",
+          to: "js/business_main.js",
+          info: { minimized: minimized },
+          noErrorOnMissing: true,
+        },
+        {
+          from: "src/js/product_list_main.js",
+          to: "js/product_list_main.js",
+          info: { minimized: minimized },
+          noErrorOnMissing: true,
+        },
+        {
+          from: "src/js/product_detail_main.js",
+          to: "js/product_detail_main.js",
           info: { minimized: minimized },
           noErrorOnMissing: true,
         },
@@ -201,25 +248,6 @@ module.exports = {
       service: serviceComponent,
       footer: footerComponent,
       template: "src/danh-cho-doanh-nghiep.html",
-      minify: minify,
-    }),
-    new HtmlWebpackPlugin({
-      inject: false,
-      filename: "product-detail.html",
-      preload: preload,
-      svg: svg,
-      header: headerComponent,
-      productDetail: productDetail,
-      productRelatedComponent: productRelatedComponent,
-      home_banner: homeBanner,
-      breadcrumb: breadcrumb,
-      commit: commitComponent,
-      support: supportComponent,
-      promotionComponent: promotionComponent,
-      registerPromotion: registerPromotion,
-      service: serviceComponent,
-      footer: footerComponent,
-      template: "src/product-detail.html",
       minify: minify,
     }),
     new HtmlWebpackPlugin({

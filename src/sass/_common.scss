@@ -874,6 +874,84 @@ input[type="number"] {
 
 }
 
+.select {
+  position: relative;
+  width: 100%;
+  height: auto;
+  font-size: f.rem(14);
+  font-weight: 500;
+
+  &.open {
+    .select-box {
+      display: block;
+    }
+  }
+
+  &-selected {
+    font-weight: 600;
+  }
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &-arrow {
+    width: f.rem(18);
+    height: f.rem(18);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: f.rem(10);
+
+    svg {
+      width: f.rem(12);
+      height: f.rem(6);
+    }
+  }
+
+  &-box {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 100%;
+    height: auto;
+    min-width: f.rem(200);
+    box-shadow: 2px 4px 20px 0px #0000001A;
+    background-color: #fff;
+    padding: f.rem(8) f.rem(5);
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    z-index: 2;
+    display: none;
+
+    ul {
+      padding: f.rem(5);
+      overflow: hidden;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      -webkit-overflow-scrolling: touch;
+      max-height: 400px;
+
+      li {
+        padding: f.rem(7) f.rem(12);
+        color: #000;
+        cursor: pointer;
+        -webkit-transition: color 0.3s ease-in-out;
+        transition: color 0.3s ease-in-out;
+
+        &.selected,
+        &:active {
+          color: var(--global-color);
+        }
+      }
+    }
+
+  }
+}
+
 
 @supports (-webkit-text-stroke: #fcd535) {}
 
@@ -891,6 +969,20 @@ input[type="number"] {
     }
 
   }
+
+
+  .select {
+    &-box {
+      ul {
+        li {
+          &:hover {
+            color: var(--global-color);
+          }
+        }
+      }
+    }
+  }
+
 
   .tab {
     &-item {

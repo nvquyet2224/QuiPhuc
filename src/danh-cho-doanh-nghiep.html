@@ -6,8 +6,7 @@
     <meta name="google" content="notranslate">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Qui Phúc">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <title>Qui Phúc | Dành cho doanh nghiệp</title>
     <meta name="description" content="Qui Phúc">
@@ -44,11 +43,13 @@
         <%= htmlWebpackPlugin.options.footer %>
     </div>
     <!--Script-->
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script defer src="js/main.js"></script>
+    <script defer src="js/lottie-player.js"></script>
+    <script defer src="js/jquery.js"></script>
     <script defer src="js/common.js"></script>
+    <script defer src="js/swiper-bundle.js"></script>
+    <script defer src="js/business_main.js"></script>
     <%= htmlWebpackPlugin.options.preload %>
-        <script>
+        <!-- <script>
             function script(url) {
                 var s = document.createElement('script');
                 s.type = 'text/javascript';
@@ -57,14 +58,14 @@
                 var x = document.getElementsByTagName('head')[0];
                 x.appendChild(s);
             }
-            //window.onload = function () {
-                //setTimeout(function () {
+            window.onload = function () {
+                setTimeout(function () {
                     ['js/business.js'].forEach(function (src) {
                         script(src);
                     });
-                //}, 100);
-            //}
-        </script>
+                }, 100);
+            }
+        </script> -->
 </body>
 
 </html>

@@ -842,10 +842,78 @@ input[type=number] {
   height: 0.75rem;
 }
 
+.select {
+  position: relative;
+  width: 100%;
+  height: auto;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.select.open .select-box {
+  display: block;
+}
+.select-selected {
+  font-weight: 600;
+}
+.select-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.select-arrow {
+  width: 1.125rem;
+  height: 1.125rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.625rem;
+}
+.select-arrow svg {
+  width: 0.75rem;
+  height: 0.375rem;
+}
+.select-box {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 100%;
+  height: auto;
+  min-width: 12.5rem;
+  box-shadow: 2px 4px 20px 0px rgba(0, 0, 0, 0.1019607843);
+  background-color: #fff;
+  padding: 0.5rem 0.3125rem;
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  z-index: 2;
+  display: none;
+}
+.select-box ul {
+  padding: 0.3125rem;
+  overflow: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+  max-height: 400px;
+}
+.select-box ul li {
+  padding: 0.4375rem 0.75rem;
+  color: #000;
+  cursor: pointer;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.select-box ul li.selected, .select-box ul li:active {
+  color: var(--global-color);
+}
+
 @media screen and (min-width: 1025px) {
   .paging-item:hover {
     background-color: rgba(var(--global-colorA), 1);
     color: #fff;
+  }
+  .select-box ul li:hover {
+    color: var(--global-color);
   }
   .tab-item:hover {
     color: #000;
