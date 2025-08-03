@@ -3,3 +3,11 @@ https://www.figma.com/proto/jH663H9qTVyeuFt9VFAerV/Qui-Ph%C3%BAc-Revamp-Website?
 https://nvquyet2224.github.io/QuiPhuc/html/
 https://nvquyet2224.github.io/QuiPhuc/html/danh-cho-doanh-nghiep.html
 https://nvquyet2224.github.io/QuiPhuc/html/san-pham-chi-tiet.html
+
+
+https://nvquyet2224.github.io/QuiPhuc/html/
+https://nvquyet2224.github.io/QuiPhuc/html/danh-cho-doanh-nghiep.html
+https://nvquyet2224.github.io/QuiPhuc/html/san-pham.html
+https://nvquyet2224.github.io/QuiPhuc/html/san-pham-chi-tiet.html
+https://nvquyet2224.github.io/QuiPhuc/html/tin-tuc.html
+https://nvquyet2224.github.io/QuiPhuc/html/tin-chi-tiet.html

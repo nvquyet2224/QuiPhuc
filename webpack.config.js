@@ -73,7 +73,7 @@ module.exports = {
     main: ["./src/js/main.js"],
     index: ["./src/js/index.js"],
     business: ["./src/js/business.js"],
-    product_detail: ["./src/js/product-detail.js"],
+    //product_detail: ["./src/js/product-detail.js"],
     san_pham_chi_tiet: ["./src/js/san_pham_chi_tiet.js"],
     news: ["./src/js/news.js"],
     new_detail: ["./src/js/new-detail.js"],

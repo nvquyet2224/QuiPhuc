@@ -102,13 +102,14 @@
 
       <div class="metadata_cart">
         <div class="metadata_cart-control">
-          <div class="metadata_cart-control--btn" onclick="decrease()">
+          <div class="metadata_cart--minus" onclick="decrease()">
             <svg>
               <use xlink:href="#icon-decrease"></use>
             </svg>
           </div>
-          <span id="quantity" class="metadata_cart-control--quantity">1</span>
-          <div class="metadata_cart-control--btn" onclick="increase()">
+          <!-- <span id="quantity" class="metadata_cart-control--quantity">1</span> -->
+          <input id="quantity" data-value="1" class="metadata_cart--quantity" type="number" value="1" />
+          <div class="metadata_cart--plus" onclick="increase()">
             <svg>
               <use xlink:href="#icon-increase"></use>
             </svg>
