@@ -56,13 +56,14 @@ function navClick() {
       }
 
       //close
-      const target = e.target.closest(".c-btn--full");
+      const target = e.target.closest(".back-menu");
       if (target) {
         if (document.querySelector('.nav-item.current')) {
           document.querySelector('.nav-item.current').classList.remove('current');
         }
       }
     });
+
   }
 
   const body = document.querySelector('body');

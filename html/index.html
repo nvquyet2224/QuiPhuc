@@ -37,6 +37,12 @@
       fill="currentColor"
     />
   </symbol>
+
+  <symbol id="icon-user" viewBox="0 0 20 23" fill="none">
+    <path d="M4.57757 14.9816C3.1628 15.824 -0.546635 17.5441 1.71266 19.6966C2.81631 20.748 4.04549 21.5 5.59087 21.5H14.4091C15.9545 21.5 17.1837 20.748 18.2873 19.6966C20.5466 17.5441 16.8372 15.824 15.4224 14.9816C12.1048 13.0061 7.89519 13.0061 4.57757 14.9816Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M14.5 6C14.5 8.48528 12.4853 10.5 10 10.5C7.51472 10.5 5.5 8.48528 5.5 6C5.5 3.51472 7.51472 1.5 10 1.5C12.4853 1.5 14.5 3.51472 14.5 6Z" stroke="currentColor" stroke-width="1.5"/>
+  </symbol>
+
   <symbol id="icon-cart" viewBox="0 0 24 25" fill="none">
     <path
       d="M4.53767 5.75H20.477C21.4269 5.75 22.1449 6.59757 21.975 7.51833L20.7259 14.2867C20.4626 15.7131 19.2015 16.75 17.7298 16.75H9.10926C7.63756 16.75 6.37644 15.7131 6.11318 14.2867L4.53767 5.75ZM4.53767 5.75L4.04646 3.33039C4.03697 3.28365 3.99531 3.25 3.94692 3.25H2M9.61301 9.25H13.1657M10.6281 20.25C10.6281 21.0784 9.94639 21.75 9.10548 21.75C8.26457 21.75 7.58287 21.0784 7.58287 20.25C7.58287 19.4216 8.26457 18.75 9.10548 18.75C9.94639 18.75 10.6281 19.4216 10.6281 20.25ZM18.7486 20.25C18.7486 21.0784 18.0669 21.75 17.226 21.75C16.3851 21.75 15.7034 21.0784 15.7034 20.25C15.7034 19.4216 16.3851 18.75 17.226 18.75C18.0669 18.75 18.7486 19.4216 18.7486 20.25Z"
@@ -713,7 +719,7 @@
 
 </svg>
 
-        <header class="header transparent">
+        <header class="header transparent open-menu">
     <div class="header-container">
         <div class="header-top">
             <div class="promotion_tag">
@@ -744,112 +750,92 @@
             </div>
         </div>
         <div class="header-mid">
-            <button type="button" class="toggle-menu">
+            <div class="toggle-menu">
                 <svg class="sp">
                     <use xlink:href="#icon-menu"></use>
                 </svg>
-            </button>
+            </div>
             <div class="logo">
                 <a href="./"><img width="186" height="49" fetcpriority="high" src="images/logo.svg" alt="Qui Phúc"></a>
             </div>
             <nav class="nav">
+                <div class="nav-top sp">
+                    <div class="logo">
+                        <a href="./"><img width="186" height="49" fetcpriority="high" src="images/logo.svg"
+                                alt="Qui Phúc"></a>
+                    </div>
+                    <div class="close-menu">
+                        <svg>
+                            <use xlink:href="#icon-close"></use>
+                        </svg>
+                    </div>
+                </div>
                 <ul class="nav-menu flex">
                     <li data-page="san-pham" class="nav-item">
                         <a href="san-pham.html" class="pc"><span>Sản phẩm</span></a>
                         <div class="nav-link dropdown-toggle sp">
                             <span class="title">Sản phẩm</span>
-                            <svg class="symbol sp">
+                            <svg class="sp">
                                 <use xlink:href="#symbol-vector">
                                 </use>
                             </svg>
                         </div>
                         <div class="dropdown-menu dropdown-menu--customize">
                             <div class="container">
-                                <div class="dropdown-menu--subitem--close sp">
-                                    <button class="c-btn--full">
+                                <div class="dropdown-back sp">
+                                    <div class="back-menu">
                                         <span class="arrow">
                                             <svg>
                                                 <use xlink:href="#symbol-vector-left">
                                                 </use>
                                             </svg>
                                         </span>
-                                        <span class="sr-only">Quay lại</span>
-                                    </button>
+                                        <span class="back-txt">Sản phẩm</span>
+                                    </div>
+                                    <div class="close-menu">
+                                        <svg>
+                                            <use xlink:href="#icon-close"></use>
+                                        </svg>
+                                    </div>
                                 </div>
                                 <ul class="dropdown-menu--inner">
                                     <li class="dropdown-menu--subitem">
-                                        <a href="#" class="dropdown-menu--title">
+                                        <div class="dropdown-menu--title">
                                             <span class="title">Bàn</span>
-                                            <svg class="symbol sp">
-                                                <use xlink:href="#symbol-vector">
-                                                </use>
-                                            </svg>
-                                        </a>
+                                            <span class="sp icon-toggle">
+                                                <svg class="icon-increase">
+                                                    <use xlink:href="#icon-increase"></use>
+                                                </svg>
+                                                <svg class="icon-decrease">
+                                                    <use xlink:href="#icon-decrease"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
                                         <div class="container-list">
-                                            <div class="dropdown-menu--subitem--child--close sp">
-                                                <button class="c-btn--full">
-                                                    <span class="arrow">
-                                                        <svg>
-                                                            <use xlink:href="#symbol-vector-left">
-                                                            </use>
-                                                        </svg>
-                                                    </span>
-                                                    <div class="lon-subcat">
-                                                        Sản phẩm
-                                                        <svg>
-                                                            <use xlink:href="#symbol-seprator">
-                                                            </use>
-                                                        </svg>
-                                                        Bàn
-                                                    </div>
-                                                    <span class="sr-only" data-back-to="back to"
-                                                        data-menu-string="Menu"></span>
-                                                </button>
-                                            </div>
                                             <ul>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         <span class="title">Bàn ăn</span>
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Bàn cafe
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Bàn học tập
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Bàn văn phòng
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Bàn phòng khách
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                             </ul>
@@ -857,96 +843,52 @@
                                     </li>
 
                                     <li class="dropdown-menu--subitem">
-                                        <a href="#" class="dropdown-menu--title">
+                                        <div class="dropdown-menu--title">
                                             <span class="title">Ghế</span>
-                                            <svg class="symbol sp">
-                                                <use xlink:href="#symbol-vector">
-                                                </use>
-                                            </svg>
-                                        </a>
+                                            <span class="sp icon-toggle">
+                                                <svg class="icon-increase">
+                                                    <use xlink:href="#icon-increase"></use>
+                                                </svg>
+                                                <svg class="icon-decrease">
+                                                    <use xlink:href="#icon-decrease"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
                                         <div class="container-list">
-                                            <div class="dropdown-menu--subitem--child--close sp">
-                                                <button class="c-btn--full">
-                                                    <span class="arrow">
-                                                        <svg>
-                                                            <use xlink:href="#symbol-vector-left">
-                                                            </use>
-                                                        </svg>
-                                                    </span>
-                                                    <div class="lon-subcat">
-                                                        Sản phẩm
-                                                        <svg>
-                                                            <use xlink:href="#symbol-seprator">
-                                                            </use>
-                                                        </svg>
-                                                        Ghế
-                                                    </div>
-                                                    <span class="sr-only" data-back-to="back to"
-                                                        data-menu-string="Menu"></span>
-                                                </button>
-                                            </div>
                                             <ul>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
-                                                        <span class="title">Ghế nhựa</span>
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
+                                                        Ghế nhựa
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Ghế văn phòng
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Ghế học tập
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Ghế phòng khách
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Ghế cafe
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Ghế nhà hàng, quán ăn
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Ghế phòng ăn
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                             </ul>
@@ -954,87 +896,47 @@
                                     </li>
 
                                     <li class="dropdown-menu--subitem">
-                                        <a href="#" class="dropdown-menu--title">
+                                        <div class="dropdown-menu--title">
                                             <span class="title">Tủ nhựa</span>
-                                            <svg class="symbol sp">
-                                                <use xlink:href="#symbol-vector">
-                                                </use>
-                                            </svg>
-                                        </a>
+                                            <span class="sp icon-toggle">
+                                                <svg class="icon-increase">
+                                                    <use xlink:href="#icon-increase"></use>
+                                                </svg>
+                                                <svg class="icon-decrease">
+                                                    <use xlink:href="#icon-decrease"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
                                         <div class="container-list">
-                                            <div class="dropdown-menu--subitem--child--close sp">
-                                                <button class="c-btn--full">
-                                                    <span class="arrow">
-                                                        <svg>
-                                                            <use xlink:href="#symbol-vector-left">
-                                                            </use>
-                                                        </svg>
-                                                    </span>
-                                                    <div class="lon-subcat">
-                                                        Sản phẩm
-                                                        <svg>
-                                                            <use xlink:href="#symbol-seprator">
-                                                            </use>
-                                                        </svg>
-                                                        Tủ nhựa
-                                                    </div>
-                                                    <span class="sr-only" data-back-to="back to"
-                                                        data-menu-string="Menu"></span>
-                                                </button>
-                                            </div>
                                             <ul>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
-                                                        <span class="title">Tủ kéo</span>
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
+                                                        Tủ kéo
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Tủ treo
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Tủ 2 tầng
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Tủ 3 tầng
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Tủ 4 tầng
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Tủ 5 tầng
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                             </ul>
@@ -1042,105 +944,57 @@
                                     </li>
 
                                     <li class="dropdown-menu--subitem">
-                                        <a href="#" class="dropdown-menu--title">
+                                        <div class="dropdown-menu--title">
                                             <span class="title">Gia dụng</span>
-                                            <svg class="symbol sp">
-                                                <use xlink:href="#symbol-vector">
-                                                </use>
-                                            </svg>
-                                        </a>
+                                            <span class="sp icon-toggle">
+                                                <svg class="icon-increase">
+                                                    <use xlink:href="#icon-increase"></use>
+                                                </svg>
+                                                <svg class="icon-decrease">
+                                                    <use xlink:href="#icon-decrease"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
                                         <div class="container-list">
-                                            <div class="dropdown-menu--subitem--child--close sp">
-                                                <button class="c-btn--full">
-                                                    <span class="arrow">
-                                                        <svg>
-                                                            <use xlink:href="#symbol-vector-left">
-                                                            </use>
-                                                        </svg>
-                                                    </span>
-                                                    <div class="lon-subcat">
-                                                        Sản phẩm
-                                                        <svg>
-                                                            <use xlink:href="#symbol-seprator">
-                                                            </use>
-                                                        </svg>
-                                                        Gia dụng
-                                                    </div>
-                                                    <span class="sr-only" data-back-to="back to"
-                                                        data-menu-string="Menu"></span>
-                                                </button>
-                                            </div>
                                             <ul>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
-                                                        <span class="title">Kệ inox</span>
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
+                                                        Kệ inox
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Sào inox
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Thang inox
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Móc treo
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Ống đủa
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Máng khăn
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Thang & ghế cao
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Kệ bàn ủi
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                             </ul>
@@ -1148,60 +1002,32 @@
                                     </li>
 
                                     <li class="dropdown-menu--subitem">
-                                        <a href="#" class="dropdown-menu--title">
+                                        <div class="dropdown-menu--title">
                                             <span class="title">Võng & Ghế thư giãn</span>
-                                            <svg class="symbol sp">
-                                                <use xlink:href="#symbol-vector">
-                                                </use>
-                                            </svg>
-                                        </a>
+                                            <span class="sp icon-toggle">
+                                                <svg class="icon-increase">
+                                                    <use xlink:href="#icon-increase"></use>
+                                                </svg>
+                                                <svg class="icon-decrease">
+                                                    <use xlink:href="#icon-decrease"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
                                         <div class="container-list">
-                                            <div class="dropdown-menu--subitem--child--close sp">
-                                                <button class="c-btn--full">
-                                                    <span class="arrow">
-                                                        <svg>
-                                                            <use xlink:href="#symbol-vector-left">
-                                                            </use>
-                                                        </svg>
-                                                    </span>
-                                                    <div class="lon-subcat">
-                                                        Sản phẩm
-                                                        <svg>
-                                                            <use xlink:href="#symbol-seprator">
-                                                            </use>
-                                                        </svg>
-                                                        Võng & Ghế thư giãn
-                                                    </div>
-                                                    <span class="sr-only" data-back-to="back to"
-                                                        data-menu-string="Menu"></span>
-                                                </button>
-                                            </div>
                                             <ul>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
-                                                        <span class="title">Deli</span>
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
+                                                        Deli
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Dona
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Win
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
 
@@ -1210,78 +1036,42 @@
                                     </li>
 
                                     <li class="dropdown-menu--subitem">
-                                        <a href="#" class="dropdown-menu--title">
+                                        <div class="dropdown-menu--title">
                                             <span class="title">Giường</span>
-                                            <svg class="symbol sp">
-                                                <use xlink:href="#symbol-vector">
-                                                </use>
-                                            </svg>
-                                        </a>
+                                            <span class="sp icon-toggle">
+                                                <svg class="icon-increase">
+                                                    <use xlink:href="#icon-increase"></use>
+                                                </svg>
+                                                <svg class="icon-decrease">
+                                                    <use xlink:href="#icon-decrease"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
                                         <div class="container-list">
-                                            <div class="dropdown-menu--subitem--child--close sp">
-                                                <button class="c-btn--full">
-                                                    <span class="arrow">
-                                                        <svg>
-                                                            <use xlink:href="#symbol-vector-left">
-                                                            </use>
-                                                        </svg>
-                                                    </span>
-                                                    <div class="lon-subcat">
-                                                        Sản phẩm
-                                                        <svg>
-                                                            <use xlink:href="#symbol-seprator">
-                                                            </use>
-                                                        </svg>
-                                                        Giường
-                                                    </div>
-                                                    <span class="sr-only" data-back-to="back to"
-                                                        data-menu-string="Menu"></span>
-                                                </button>
-                                            </div>
                                             <ul>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
-                                                        <span class="title">Giường inox</span>
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
+                                                        Giường inox
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Giường sắt
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Giường tầng
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Giường mầm non
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Giường y tế
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                             </ul>
@@ -1289,51 +1079,27 @@
                                     </li>
 
                                     <li class="dropdown-menu--subitem">
-                                        <a href="#" class="dropdown-menu--title">
+                                        <div class="dropdown-menu--title">
                                             <span class="title">Sản phẩm ngoài trời</span>
-                                            <svg class="symbol sp">
-                                                <use xlink:href="#symbol-vector">
-                                                </use>
-                                            </svg>
-                                        </a>
+                                            <span class="sp icon-toggle">
+                                                <svg class="icon-increase">
+                                                    <use xlink:href="#icon-increase"></use>
+                                                </svg>
+                                                <svg class="icon-decrease">
+                                                    <use xlink:href="#icon-decrease"></use>
+                                                </svg>
+                                            </span>
+                                        </div>
                                         <div class="container-list">
-                                            <div class="dropdown-menu--subitem--child--close sp">
-                                                <button class="c-btn--full">
-                                                    <span class="arrow">
-                                                        <svg>
-                                                            <use xlink:href="#symbol-vector-left">
-                                                            </use>
-                                                        </svg>
-                                                    </span>
-                                                    <div class="lon-subcat">
-                                                        Sản phẩm
-                                                        <svg>
-                                                            <use xlink:href="#symbol-seprator">
-                                                            </use>
-                                                        </svg>
-                                                        Sản phẩm ngoài trời
-                                                    </div>
-                                                    <span class="sr-only" data-back-to="back to"
-                                                        data-menu-string="Menu"></span>
-                                                </button>
-                                            </div>
                                             <ul>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
-                                                        <span class="title">Xích đu</span>
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
+                                                        Xích đu
                                                     </a>
                                                 </li>
                                                 <li>
                                                     <a href="#" class="dropdown-menu--link">
                                                         Sào phơi
-                                                        <svg class="symbol sp">
-                                                            <use xlink:href="#symbol-vector">
-                                                            </use>
-                                                        </svg>
                                                     </a>
                                                 </li>
                                             </ul>
@@ -1343,22 +1109,14 @@
                                     <li class="dropdown-menu--subitem is-group">
                                         <a href="#" class="dropdown-menu--title">
                                             <span class="title">Sản phẩm khác</span>
-                                            <svg class="symbol sp">
-                                                <use xlink:href="#symbol-vector">
-                                                </use>
-                                            </svg>
                                         </a>
                                         <a href="#" class="dropdown-menu--title">
                                             <span class="title">Lookbook Qui Phúc</span>
-                                            <svg class="symbol sp">
-                                                <use xlink:href="#symbol-vector">
-                                                </use>
-                                            </svg>
                                         </a>
                                     </li>
 
                                 </ul>
-                                <div class="highlight-img">
+                                <div class="highlight-img pc">
                                     <img width="256" height="162" fetcpriority="low" loading="lazy"
                                         src="images/highlight-menu.png" alt="Qui Phúc">
                                 </div>
@@ -1369,25 +1127,30 @@
                         <a href="khong-gian.html" class="pc"><span>Không gian</span></a>
                         <div class="nav-link dropdown-toggle sp">
                             <span class="title">Không gian</span>
-                            <svg class="symbol sp">
+                            <svg class="sp">
                                 <use xlink:href="#symbol-vector">
                                 </use>
                             </svg>
                         </div>
                         <div class="dropdown-menu">
                             <div class="container">
-                                <div class="dropdown-menu--subitem--close sp">
-                                    <button class="c-btn--full">
+                                <div class="dropdown-back sp">
+                                    <div class="back-menu">
                                         <span class="arrow">
                                             <svg>
                                                 <use xlink:href="#symbol-vector-left">
                                                 </use>
                                             </svg>
                                         </span>
-                                        <span class="sr-only">Quay lại</span>
-                                    </button>
+                                        <span class="back-txt">Không gian</span>
+                                    </div>
+                                    <div class="close-menu">
+                                        <svg>
+                                            <use xlink:href="#icon-close"></use>
+                                        </svg>
+                                    </div>
                                 </div>
-                                <div class="push-content" style="--item:6">
+                                <div class="push-content" data-item="6" style="--item:6">
                                     <a class="push-content--item" href="#">
                                         <div class="image-push-wrapper zoom-img">
                                             <img width="193" height="141" src="images/khong-gian-menu1.jpg"
@@ -1438,25 +1201,30 @@
                         <a href="ve-qui-phuc.html" class="pc"><span>Về Qui Phúc</span></a>
                         <div class="nav-link dropdown-toggle sp">
                             <span class="title">Về Qui Phúc</span>
-                            <svg class="symbol sp">
+                            <svg class="sp">
                                 <use xlink:href="#symbol-vector">
                                 </use>
                             </svg>
                         </div>
                         <div class="dropdown-menu">
                             <div class="container">
-                                <div class="dropdown-menu--subitem--close sp">
-                                    <button class="c-btn--full">
+                                <div class="dropdown-back sp">
+                                    <div class="back-menu">
                                         <span class="arrow">
                                             <svg>
                                                 <use xlink:href="#symbol-vector-left">
                                                 </use>
                                             </svg>
                                         </span>
-                                        <span class="sr-only">Quay lại</span>
-                                    </button>
+                                        <span class="back-txt">Về Qui Phúc</span>
+                                    </div>
+                                    <div class="close-menu">
+                                        <svg>
+                                            <use xlink:href="#icon-close"></use>
+                                        </svg>
+                                    </div>
                                 </div>
-                                <div class="push-content" style="--item:2">
+                                <div class="push-content" data-item="2" style="--item:2">
                                     <a class="push-content--item" href="#">
                                         <div class="image-push-wrapper zoom-img">
                                             <img width="193" height="141" src="images/ve-qui-phuc-menu1.jpg"
@@ -1479,25 +1247,30 @@
                         <a href="danh-cho-doanh-nghiep.html" class="pc"><span>Dành cho doanh nghiệp</span></a>
                         <div class="nav-link dropdown-toggle sp">
                             <span class="title">Dành cho doanh nghiệp</span>
-                            <svg class="symbol sp">
+                            <svg class="sp">
                                 <use xlink:href="#symbol-vector">
                                 </use>
                             </svg>
                         </div>
                         <div class="dropdown-menu">
                             <div class="container">
-                                <div class="dropdown-menu--subitem--close sp">
-                                    <button class="c-btn--full">
+                                <div class="dropdown-back sp">
+                                    <div class="back-menu">
                                         <span class="arrow">
                                             <svg>
                                                 <use xlink:href="#symbol-vector-left">
                                                 </use>
                                             </svg>
                                         </span>
-                                        <span class="sr-only">Quay lại</span>
-                                    </button>
+                                        <span class="back-txt">Dành cho doanh nghiệp</span>
+                                    </div>
+                                    <div class="close-menu">
+                                        <svg>
+                                            <use xlink:href="#icon-close"></use>
+                                        </svg>
+                                    </div>
                                 </div>
-                                <div class="push-content" style="--item:7">
+                                <div class="push-content" data-item="7" style="--item:7">
                                     <a class="push-content--item" href="#">
                                         <div class="image-push-wrapper zoom-img">
                                             <img width="193" height="141" src="images/doanh-nghiep-menu1.jpg"
@@ -1552,41 +1325,87 @@
                         </div>
                     </li>
                     <li data-page="khuyen-mai">
-                        <a href="khuyen-mai.html" class="normal-link"><span>Khuyến mãi</span> <svg class="symbol sp">
+                        <a href="khuyen-mai.html" class="normal-link"><span>Khuyến mãi</span> <svg class="sp">
                                 <use xlink:href="#symbol-vector">
                                 </use>
                             </svg></a>
                     </li>
+                    <li data-page="e-catalogue" class="nav-item">
+                        <a href="e-catalogue.html" class="pc"><span>E-Catalogue</span></a>
+                        <div class="nav-link dropdown-toggle sp">
+                            <span class="title">E-Catalogue</span>
+                            <svg class="sp">
+                                <use xlink:href="#symbol-vector">
+                                </use>
+                            </svg>
+                        </div>
+                        <div class="dropdown-menu">
+                            <div class="container">
+                                <div class="dropdown-back sp">
+                                    <div class="back-menu">
+                                        <span class="arrow">
+                                            <svg>
+                                                <use xlink:href="#symbol-vector-left">
+                                                </use>
+                                            </svg>
+                                        </span>
+                                        <span class="back-txt">E-Catalogue</span>
+                                    </div>
+                                    <div class="close-menu">
+                                        <svg>
+                                            <use xlink:href="#icon-close"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="push-content" data-item="2" style="--item:2">
+                                    <a class="push-content--item" href="#">
+                                        <div class="image-push-wrapper zoom-img">
+                                            <img width="193" height="141" src="images/catalogue-nhua.jpg"
+                                                alt="Catalogue Nhựa" />
+                                        </div>
+                                        <p>Catalogue Nhựa</p>
+                                    </a>
+                                    <a class="push-content--item" href="#">
+                                        <div class="image-push-wrapper zoom-img">
+                                            <img width="193" height="141" src="images/catalogue-inox.jpg"
+                                                alt="Catalogue Inox" />
+                                        </div>
+                                        <p>Catalogue Inox</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
 
                     <div class="bg-menu"></div>
+                    <div class="bg-menu-overlay"></div>
                 </ul>
             </nav>
             <div class="header-action">
                 <div class="search">
-                    <input type="text" class="search-input" />
-                    <button type="button" class="search-but">
-                        <svg class="pc">
-                            <use xlink:href="#icon-search"></use>
-                        </svg>
-                        <svg class="sp">
+                    <div class="search-but action-icon">
+                        <svg class="symbol">
                             <use xlink:href="#icon-search-el"></use>
                         </svg>
-                    </button>
+                    </div>
                 </div>
-                <button type="button" class="mini-cart">
-                    <svg>
+                <div class="mini-cart action-icon">
+                    <svg class="symbol">
                         <use xlink:href="#icon-cart"></use>
                     </svg>
-                </button>
+                </div>
                 <div class="user">
-                    <div class="user-avatar">
-                        <img width="32" height="32" fetcpriority="high" src="images/avatar.png" alt="Member">
+                    <div class="user-avatar action-icon">
+                        <svg class="symbol">
+                            <use xlink:href="#icon-user"></use>
+                        </svg>
                     </div>
-                    <span class="icon-caret">
+                    <span class="user-caption">Đăng nhập</span>
+                    <!-- <span class="icon-caret">
                         <svg>
                             <use xlink:href="#icon-arrow-down"></use>
                         </svg>
-                    </span>
+                    </span> -->
                 </div>
             </div>
         </div>
@@ -3493,6 +3312,14 @@
                 </li>
                 <li>
                     <a href="#">Tin tức</a>
+                    <span class="arrow">
+                        <svg>
+                            <use xlink:href="#icon-arrow-next"></use>
+                        </svg>
+                    </span>
+                </li>
+                <li>
+                    <a href="#">E-Catalogue</a>
                     <span class="arrow">
                         <svg>
                             <use xlink:href="#icon-arrow-next"></use>

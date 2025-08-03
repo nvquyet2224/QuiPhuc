@@ -301,10 +301,10 @@ module.exports = {
       minify: minify,
     }),
 
-    
+
     new HtmlWebpackPlugin({
       inject: false,
-      filename: "product-list.html",
+      filename: "san-pham.html",
       preload: preload,
       svg: svg,
       header: headerNoramComponent,
@@ -319,10 +319,10 @@ module.exports = {
       registerPromotion: registerPromotion,
       service: serviceComponent,
       footer: footerComponent,
-      template: "src/product-list.html",
+      template: "src/san-pham.html",
       minify: minify,
     }),
-   
+
   ],
   performance: {
     hints: false,

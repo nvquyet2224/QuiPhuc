@@ -438,13 +438,14 @@
 
         input {
           position: absolute;
-          right: 5px;
-          top: 5px;
+          right: 7px;
+          top: 7px;
           width: f.rem(18);
           height: f.rem(18);
           -webkit-border-radius: 4px;
           border-radius: 4px;
           overflow: hidden;
+          border: 1px solid var(--global-color);
 
           &::before,
           &::after {
