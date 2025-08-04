@@ -51,6 +51,8 @@ const listProductComponent = fs.readFileSync(__dirname + "/src/_list-product.htm
 const newListComponent = fs.readFileSync(__dirname + "/src/_new-list.html");
 const newDetailComponent = fs.readFileSync(__dirname + "/src/_new-detail.html");
 
+const roomsComponent = fs.readFileSync(__dirname + "/src/_rooms.html");
+
 //noErrorOnMissing: true
 
 const minifyRules = {
@@ -336,6 +338,7 @@ module.exports = {
       preload: preload,
       svg: svg,
       header: headerNoramComponent,
+      rooms: roomsComponent,
       registerPromotion: registerPromotion,
       footer: footerComponent,
       template: "src/lookbooks.html",
