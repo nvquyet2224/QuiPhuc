@@ -1698,7 +1698,7 @@ input[type=number] {
 }
 @media screen and (max-width: 1023px) {
   .bg-menu,
-  .bg-menu--overlay {
+  .bg-menu-overlay {
     display: none;
   }
   .header-top {
@@ -1736,9 +1736,12 @@ input[type=number] {
     top: 0;
     width: 100%;
     height: 100vh;
+    padding-bottom: 3.75rem;
     background-color: #fff;
     display: none;
     overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     z-index: 1;
   }
   .header .nav-top {
@@ -2008,6 +2011,7 @@ input[type=number] {
   display: flex;
   padding: 0 2.5rem;
   margin-bottom: 6.875rem;
+  overflow: initial;
 }
 .new-detail .content {
   flex: 0 0 calc(100% - 456px);
@@ -2141,6 +2145,15 @@ input[type=number] {
   color: #475467;
 }
 
+@media screen and (min-width: 1024px) {
+  .new-detail .relation {
+    position: sticky;
+    align-self: flex-start;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 4.375rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .new-detail {
     display: flex;
