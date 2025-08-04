@@ -54,6 +54,7 @@ const newDetailComponent = fs.readFileSync(__dirname + "/src/_new-detail.html");
 
 const aboutComponent = fs.readFileSync(__dirname + "/src/_about.html");
 const aboutVisionComponent = fs.readFileSync(__dirname + "/src/_about-vision.html");
+const roomsComponent = fs.readFileSync(__dirname + "/src/_rooms.html");
 
 //noErrorOnMissing: true
 
@@ -347,6 +348,7 @@ module.exports = {
       preload: preload,
       svg: svg,
       header: headerNoramComponent,
+      rooms: roomsComponent,
       registerPromotion: registerPromotion,
       footer: footerComponent,
       template: "src/lookbooks.html",
