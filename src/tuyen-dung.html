@@ -8,7 +8,7 @@
   <meta name="author" content="Qui Phúc" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no" />
-  <title>Qui Phúc | Sản phẩm</title>
+  <title>Qui Phúc | Tuyển dụng</title>
   <meta name="description" content="Qui Phúc" />
   <meta name="keywords" content="Qui Phúc" />
   <meta name="theme-color" content="#fff" />
@@ -21,12 +21,12 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="Qui Phúc" />
   <link rel="icon" href="images/favicon.png" />
-  <link href="css/product_list.css" rel="preload stylesheet" as="style" />
+  <link href="css/recruitment.css" rel="preload stylesheet" as="style" />
 </head>
 
-<body data-page="products">
+<body data-page="recruitment">
   <div class="page">
-    <%= htmlWebpackPlugin.options.svg %>
+      <%= htmlWebpackPlugin.options.svg %>
       <%= htmlWebpackPlugin.options.header%>
         <div class="main">
           <div class="breadcrumb">
@@ -36,24 +36,39 @@
               </li>
               <li><span>/</span></li>
               <li>
-                <a href="#"><span>Sản phẩm</span></a>
+                <a href="#"><span>Tuyển dụng</span></a>
               </li>
-              <li><span>/</span></li>
-              <li><span>Ghế</span></li>
             </ul>
           </div>
-        <%= htmlWebpackPlugin.options.listBannerComponent %>
-        <%= htmlWebpackPlugin.options.listProductComponent %>
+          <section class="section sub-banner">
+            <div class="sub-banner--img">
+              <img
+                width="1440"
+                height="320"
+                loading="lazy"
+                fetchpriority="low"
+                src="images/list-banner.jpg"
+                alt="Sản phẩm"
+                Nội
+                thất
+                Ghế
+              />
+            </div>
+            <div class="sub-banner--txt">
+              <div class="title_block">
+                <div class="sub-title">Sản phẩm</div>
+                <h1>Nội thất Ghế</h1>
+              </div>
+            </div>
+          </section>
         <%= htmlWebpackPlugin.options.registerPromotion %>
         </div>
         <%= htmlWebpackPlugin.options.footer %>
   </div>
   <!--Script-->
-  <script defer src="js/lottie-player.js"></script>
   <script defer src="js/jquery.js"></script>
-  <script defer src="js/jquery-ui.js"></script>
   <script defer src="js/common.js"></script>
-  <script defer src="js/product_list_main.js"></script>
+  <script defer src="js/recruitment_main.js"></script>
   <%= htmlWebpackPlugin.options.preload %>
     <!-- <script>
       function script(url) {

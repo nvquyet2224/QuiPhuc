@@ -14,6 +14,7 @@ const svg = fs.readFileSync(__dirname + "/src/_svg.html");
 const headerComponent = fs.readFileSync(__dirname + "/src/_component-header.html");
 const headerNoramComponent = fs.readFileSync(__dirname + "/src/_component-header-normal.html");
 const footerComponent = fs.readFileSync(__dirname + "/src/_component-footer.html");
+const componentPartner = fs.readFileSync(__dirname + "/src/_component-partner.html");
 
 const homeBanner = fs.readFileSync(__dirname + "/src/_home-banner.html");
 const productCategoryComponent = fs.readFileSync(__dirname + "/src/_product-category.html");
@@ -51,6 +52,9 @@ const listProductComponent = fs.readFileSync(__dirname + "/src/_list-product.htm
 const newListComponent = fs.readFileSync(__dirname + "/src/_new-list.html");
 const newDetailComponent = fs.readFileSync(__dirname + "/src/_new-detail.html");
 
+const aboutComponent = fs.readFileSync(__dirname + "/src/_about.html");
+const aboutVisionComponent = fs.readFileSync(__dirname + "/src/_about-vision.html");
+
 //noErrorOnMissing: true
 
 const minifyRules = {
@@ -79,6 +83,8 @@ module.exports = {
     new_detail: ["./src/js/new-detail.js"],
     product_list: ["./src/js/product_list.js"],
     lookbooks: ["./src/js/lookbooks.js"],
+    about: ["./src/js/about.js"],
+    recruitment: ["./src/js/recruitment.js"],
   },
   output: {
     publicPath: "../",
@@ -207,6 +213,12 @@ module.exports = {
           info: { minimized: minimized },
           noErrorOnMissing: true,
         },
+        {
+          from: "src/js/abouts_main.js",
+          to: "js/recruitment_main.js",
+          info: { minimized: minimized },
+          noErrorOnMissing: true,
+        },
         { from: "src/videos", to: "videos", noErrorOnMissing: true },
         { from: "src/jsons", to: "jsons", noErrorOnMissing: true }
       ],
@@ -329,7 +341,6 @@ module.exports = {
       template: "src/san-pham.html",
       minify: minify,
     }),
-
     new HtmlWebpackPlugin({
       inject: false,
       filename: "lookbooks.html",
@@ -339,6 +350,32 @@ module.exports = {
       registerPromotion: registerPromotion,
       footer: footerComponent,
       template: "src/lookbooks.html",
+      minify: minify,
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      filename: "ve-qui-phuc.html",
+      preload: preload,
+      svg: svg,
+      header: headerNoramComponent,
+      aboutComponent: aboutComponent,
+      commit: commitComponent,
+      componentPartner: componentPartner,
+      aboutVisionComponent: aboutVisionComponent,
+      registerPromotion: registerPromotion,
+      footer: footerComponent,
+      template: "src/ve-qui-phuc.html",
+      minify: minify,
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      filename: "tuyen-dung.html",
+      preload: preload,
+      svg: svg,
+      header: headerNoramComponent,
+      registerPromotion: registerPromotion,
+      footer: footerComponent,
+      template: "src/tuyen-dung.html",
       minify: minify,
     }),
 

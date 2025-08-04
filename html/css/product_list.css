@@ -104,11 +104,9 @@ strong {
   --global-colorA: 1, 90, 171;
   --global-color-dark: #07274a;
   --font-body: "Montserrat", sans-serif;
-  --g-blue: linear-gradient(
-    180deg,
-    rgba(10, 124, 220, 0) 23.17%,
-    rgba(5, 92, 165, 0.95) 88.61%
-  );
+  --g-blue: linear-gradient(180deg,
+      rgba(10, 124, 220, 0) 23.17%,
+      rgba(5, 92, 165, 0.95) 88.61%);
 }
 
 body {
@@ -949,6 +947,84 @@ input[type=number] {
   color: var(--global-color);
 }
 
+.img_txt,
+.txt_img {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.img_txt .img,
+.img_txt .txt,
+.txt_img .img,
+.txt_img .txt {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.img_txt .img,
+.txt_img .img {
+  line-height: 0;
+  aspect-ratio: 1/1;
+}
+.img_txt .img img,
+.txt_img .img img {
+  width: 100%;
+  height: 100%;
+  -webkit-object-fit: cover;
+  object-fit: cover;
+}
+.img_txt .txt,
+.txt_img .txt {
+  padding: 0 5rem;
+}
+.img_txt .txt .title_block,
+.txt_img .txt .title_block {
+  margin-bottom: 1.5625rem;
+}
+.img_txt .detail_block,
+.txt_img .detail_block {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.img_txt .detail_block *:not(:last-child),
+.txt_img .detail_block *:not(:last-child) {
+  margin-bottom: 1.5625rem;
+}
+
+.marquee {
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(var(--mask-direction, to right), hsla(0, 0%, 0%, 0), hsl(0, 0%, 0%) 10%, hsl(0, 0%, 0%) 90%, hsla(0, 0%, 0%, 0));
+}
+.marquee__ctn {
+  display: flex;
+  width: 100%;
+}
+.marquee__track {
+  display: flex;
+}
+.marquee__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 200px;
+  margin-inline-end: 3rem;
+}
+.marquee__item img {
+  height: 100px;
+  width: 100%;
+  object-fit: contain;
+  backface-visibility: hidden;
+  filter: brightness(100%);
+}
+
+@supports (-webkit-touch-callout: none) {
+  .marquee__ctn {
+    transform: translate3d(0, 0, 0) scale(1);
+    perspective: 1px;
+  }
+}
 @media screen and (min-width: 1025px) {
   .paging-item:hover {
     background-color: rgba(var(--global-colorA), 1);

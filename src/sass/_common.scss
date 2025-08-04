@@ -7,11 +7,9 @@
   --global-colorA: 1, 90, 171;
   --global-color-dark: #07274a;
   --font-body: "Montserrat", sans-serif;
-  --g-blue: linear-gradient(
-    180deg,
-    rgba(10, 124, 220, 0) 23.17%,
-    rgba(5, 92, 165, 0.95) 88.61%
-  );
+  --g-blue: linear-gradient(180deg,
+      rgba(10, 124, 220, 0) 23.17%,
+      rgba(5, 92, 165, 0.95) 88.61%);
 }
 
 body {
@@ -70,8 +68,7 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-}
+h6 {}
 
 h1,
 .h1 {
@@ -86,24 +83,19 @@ h1,
 }
 
 h2,
-.h2 {
-}
+.h2 {}
 
 h3,
-.h3 {
-}
+.h3 {}
 
 h4,
-.h4 {
-}
+.h4 {}
 
 h5,
-.h5 {
-}
+.h5 {}
 
 h6,
-.h6 {
-}
+.h6 {}
 
 .relative {
   position: relative;
@@ -340,24 +332,29 @@ input[type="number"] {
 .article-banner {
   display: flex;
   flex-direction: column;
+
   &--img {
     width: 100%;
     aspect-ratio: 361/341;
+
     img {
       width: 100%;
       height: 100%;
     }
   }
+
   &--txt {
     padding: f.rem(20);
     background: linear-gradient(180deg, #015aab 0%, #82c3ff 109.43%);
     color: #fff;
+
     .title {
       font-weight: 700;
       font-size: f.rem(16);
       line-height: 1.5;
       letter-spacing: 0;
     }
+
     .btn-arrow {
       width: f.rem(32);
       height: f.rem(32);
@@ -368,6 +365,7 @@ input[type="number"] {
       align-items: center;
       justify-content: center;
       color: #282930;
+
       svg {
         width: f.rem(12);
         height: f.rem(9);
@@ -652,6 +650,7 @@ input[type="number"] {
     margin-bottom: f.rem(20);
 
     &.current {
+
       a,
       span {
         font-weight: 700;
@@ -786,11 +785,9 @@ input[type="number"] {
       position: absolute;
       left: 0;
       top: 0;
-      background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0) 38.6%,
-        rgba(0, 0, 0, 0.5) 84.16%
-      );
+      background: linear-gradient(180deg,
+          rgba(0, 0, 0, 0) 38.6%,
+          rgba(0, 0, 0, 0.5) 84.16%);
     }
 
     img {
@@ -810,6 +807,7 @@ input[type="number"] {
     text-align: center;
 
     .title_block {
+
       .sub-title,
       h1 {
         color: #fff;
@@ -997,8 +995,91 @@ input[type="number"] {
   }
 }
 
-@supports (-webkit-text-stroke: #fcd535) {
+.img_txt,
+.txt_img {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  .img,
+  .txt {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .img {
+    line-height: 0;
+    aspect-ratio: 1/1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      -webkit-object-fit: cover;
+      object-fit: cover;
+    }
+  }
+
+  .txt {
+    padding: 0 f.rem(80);
+
+    .title_block {
+      margin-bottom: f.rem(25);
+    }
+  }
+
+  .detail_block {
+    font-weight: 400;
+    font-size: f.rem(16);
+    line-height: 1.5;
+
+    *:not(:last-child) {
+      margin-bottom: f.rem(25);
+    }
+  }
 }
+
+
+.marquee {
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(var(--mask-direction, to right), hsla(0, 0%, 0%, 0), hsl(0, 0%, 0%) 10%, hsl(0, 0%, 0%) 90%, hsla(0, 0%, 0%, 0));
+
+  &__ctn {
+    display: flex;
+    width: 100%;
+  }
+
+  &__track {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 200px;
+    margin-inline-end: 3rem;
+
+    img {
+      height: 100px;
+      width: 100%;
+      object-fit: contain;
+      backface-visibility: hidden;
+      filter: brightness(100%);
+    }
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  .marquee__ctn {
+    transform: translate3d(0, 0, 0) scale(1);
+    perspective: 1px;
+  }
+}
+
+
+@supports (-webkit-text-stroke: #fcd535) {}
 
 @media screen and (min-width: 1025px) {
   .paging {
@@ -1085,6 +1166,7 @@ input[type="number"] {
 }
 
 @media screen and (max-width: 1023px) {
+
   h1,
   .h1 {
     font-size: f.rem(32);
@@ -1092,24 +1174,19 @@ input[type="number"] {
   }
 
   h2,
-  .h2 {
-  }
+  .h2 {}
 
   h3,
-  .h3 {
-  }
+  .h3 {}
 
   h4,
-  .h4 {
-  }
+  .h4 {}
 
   h5,
-  .h5 {
-  }
+  .h5 {}
 
   h6,
-  .h6 {
-  }
+  .h6 {}
 
   .nav-overlay {
     display: flex;
@@ -1164,16 +1241,20 @@ input[type="number"] {
     &--img {
       aspect-ratio: 242/257;
     }
+
     &--txt {
       padding: f.rem(14);
       color: #fff;
+
       .title {
         font-size: f.rem(14);
       }
+
       .btn-arrow {
         width: f.rem(23);
         height: f.rem(23);
         margin-top: f.rem(8);
+
         svg {
           width: f.rem(9);
           height: f.rem(7);
@@ -1284,6 +1365,7 @@ input[type="number"] {
 
     &--txt {
       .title_block {
+
         .sub-title,
         h1 {
           font-size: f.rem(24);
