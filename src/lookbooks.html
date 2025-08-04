@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="google" content="notranslate" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Qui Phúc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no" />
+  <title>Qui Phúc | Lookbooks</title>
+  <meta name="description" content="Qui Phúc" />
+  <meta name="keywords" content="Qui Phúc" />
+  <meta name="theme-color" content="#fff" />
+  <meta property="og:title" content="Qui Phúc" />
+  <meta property="og:description" content="Qui Phúc" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/thumbnail.jpg" />
+  <meta property="og:site_name" content="Qui Phúc" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Qui Phúc" />
+  <link rel="icon" href="images/favicon.png" />
+  <link href="css/lookbooks.css" rel="preload stylesheet" as="style" />
+</head>
+
+<body data-page="home">
+  <div class="page">
+      <%= htmlWebpackPlugin.options.svg %>
+      <%= htmlWebpackPlugin.options.header%>
+        <div class="main">
+          <div class="breadcrumb">
+            <ul>
+              <li>
+                <a href="/"><span>Trang chủ</span></a>
+              </li>
+              <li><span>/</span></li>
+              <li>
+                <a href="#"><span>Lookbooks</span></a>
+              </li>
+            </ul>
+          </div>
+          <section class="section sub-banner">
+            <div class="sub-banner--img">
+              <img
+                width="1440"
+                height="320"
+                loading="lazy"
+                fetchpriority="low"
+                src="images/list-banner.jpg"
+                alt="Sản phẩm"
+                Nội
+                thất
+                Ghế
+              />
+            </div>
+            <div class="sub-banner--txt">
+              <div class="title_block">
+                <div class="sub-title">Sản phẩm</div>
+                <h1>Nội thất Ghế</h1>
+              </div>
+            </div>
+          </section>
+        <%= htmlWebpackPlugin.options.registerPromotion %>
+        </div>
+        <%= htmlWebpackPlugin.options.footer %>
+  </div>
+  <!--Script-->
+  <script defer src="js/lottie-player.js"></script>
+  <script defer src="js/jquery.js"></script>
+  <script defer src="js/jquery-ui.js"></script>
+  <script defer src="js/common.js"></script>
+  <script defer src="js/lookbooks_main.js"></script>
+  <%= htmlWebpackPlugin.options.preload %>
+    <!-- <script>
+      function script(url) {
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = false;
+        s.src = url;
+        var x = document.getElementsByTagName("head")[0];
+        x.appendChild(s);
+      }
+        window.onload = function () {
+          setTimeout(function () {
+            ["js/product_list.js"].forEach(function (src) {
+              script(src);
+            });
+          }, 100);
+        }
+    </script> -->
+</body>
+
+</html>

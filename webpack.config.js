@@ -78,6 +78,7 @@ module.exports = {
     news: ["./src/js/news.js"],
     new_detail: ["./src/js/new-detail.js"],
     product_list: ["./src/js/product_list.js"],
+    lookbooks: ["./src/js/lookbooks.js"],
   },
   output: {
     publicPath: "../",
@@ -197,6 +198,12 @@ module.exports = {
         {
           from: "src/js/product_detail_main.js",
           to: "js/product_detail_main.js",
+          info: { minimized: minimized },
+          noErrorOnMissing: true,
+        },
+        {
+          from: "src/js/lookbooks_main.js",
+          to: "js/lookbooks_main.js",
           info: { minimized: minimized },
           noErrorOnMissing: true,
         },
@@ -320,6 +327,18 @@ module.exports = {
       service: serviceComponent,
       footer: footerComponent,
       template: "src/san-pham.html",
+      minify: minify,
+    }),
+
+    new HtmlWebpackPlugin({
+      inject: false,
+      filename: "lookbooks.html",
+      preload: preload,
+      svg: svg,
+      header: headerNoramComponent,
+      registerPromotion: registerPromotion,
+      footer: footerComponent,
+      template: "src/lookbooks.html",
       minify: minify,
     }),
 
