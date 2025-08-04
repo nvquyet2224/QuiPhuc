@@ -651,7 +651,7 @@
 @media screen and (max-width:1023px) {
 
     .bg-menu,
-    .bg-menu--overlay {
+    .bg-menu-overlay {
         display: none;
     }
 
@@ -703,9 +703,12 @@
             top: 0;
             width: 100%;
             height: 100vh;
+            padding-bottom: f.rem(60);
             background-color: #fff;
             display: none;
             overflow: hidden;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
             z-index: 1;
 
             &-top {

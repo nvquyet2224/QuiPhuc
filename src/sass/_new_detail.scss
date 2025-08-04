@@ -4,6 +4,7 @@
     display: flex;
     padding: 0 f.rem(40);
     margin-bottom: f.rem(110);
+    overflow: initial;
 
     .content {
         flex: 0 0 calc(100% - 456px);
@@ -164,6 +165,17 @@
     }
 }
 
+@media screen and (min-width: 1024px) {
+    .new-detail {
+        .relation {
+            position: sticky;
+            align-self: flex-start;
+            position: sticky;
+            position: -webkit-sticky;
+            top:f.rem(70);
+        }
+    }
+}
 
 @media screen and (max-width: 768px) {
 
