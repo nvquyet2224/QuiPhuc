@@ -850,14 +850,19 @@
                         .container-list {
                             height: var(--data-h, 0px);
                             overflow: hidden;
-                            -webkit-transition: height 0.4s linear;
-                            transition: height 0.4s linear;
+                            opacity: 0;
+                            -webkit-transition: height .6s cubic-bezier(.165, .84, .44, 1), opacity .6s cubic-bezier(.165, .84, .44, 1);
+                            transition: height .6s cubic-bezier(.165, .84, .44, 1), opacity .6s cubic-bezier(.165, .84, .44, 1);
 
                             ul {
                                 padding-bottom: f.rem(16);
                                 padding-left: f.rem(18);
                             }
                         }
+                        .dropdown-menu--title.current + .container-list {
+                            opacity: 1;
+                        }
+
                     }
 
                 }

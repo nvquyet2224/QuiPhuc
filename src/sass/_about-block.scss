@@ -1,0 +1,53 @@
+@use "function" as f;
+
+.vision {
+    margin-bottom: f.rem(120);
+}
+
+.history {
+    position: relative;
+    background-color: var(--global-color);
+    padding: 0 f.rem(40);
+
+    &_wrap {
+        width: 100%;
+        display: flex;
+
+        .year-list {
+            flex: 0 0 f.rem(255);
+            max-width: f.rem(255);
+        }
+
+        .year-detail {
+            flex: 0 0 calc(100% - f.rem(255));
+            max-width: calc(100% - f.rem(255));
+            color: #fff;
+
+            .title_block {
+
+                .sub-title,
+                h2 {
+                    color: #fff;
+                }
+            }
+
+            .txt_img {
+                .img {
+                    aspect-ratio: 503/378;
+                }
+            }
+
+        }
+
+
+    }
+
+
+}
+
+@media screen and (max-width:1023px) {
+    .vision {
+        margin-bottom: f.rem(60);
+    }
+
+}

@@ -6,11 +6,16 @@
   --global-color: #015aab;
   --global-colorA: 1, 90, 171;
   --global-color-dark: #07274a;
+  //--font-body: 'Montserrat', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-body: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  //--font-body: 'Montserrat', Segoe UI, system-ui, -apple-system, sans-serif;
   --font-body: "Montserrat", sans-serif;
   --g-blue: linear-gradient(180deg,
       rgba(10, 124, 220, 0) 23.17%,
       rgba(5, 92, 165, 0.95) 88.61%);
 }
+
+//--font-body: Montserrat, Segoe UI, system-ui, -apple-system, sans-serif;
 
 body {
   font-family: var(--font-body);
@@ -1043,6 +1048,7 @@ input[type="number"] {
   overflow: hidden;
   position: relative;
   mask-image: linear-gradient(var(--mask-direction, to right), hsla(0, 0%, 0%, 0), hsl(0, 0%, 0%) 10%, hsl(0, 0%, 0%) 90%, hsla(0, 0%, 0%, 0));
+  padding: f.rem(15) 0;
 
   &__ctn {
     display: flex;
@@ -1391,6 +1397,30 @@ input[type="number"] {
       gap: f.rem(22);
     }
   }
+
+
+  .img_txt,
+  .txt_img {
+
+    .txt,
+    .img {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .txt {
+      padding: f.rem(85) f.rem(16);
+    }
+
+    .detail_block {
+      font-size: f.rem(14);
+    }
+  }
+
+  .img_txt {
+    flex-direction: column-reverse;
+  }
+
 }
 
 @media screen and (max-width: 480px) {

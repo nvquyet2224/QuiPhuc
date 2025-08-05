@@ -54,6 +54,8 @@ const newDetailComponent = fs.readFileSync(__dirname + "/src/_new-detail.html");
 
 const aboutComponent = fs.readFileSync(__dirname + "/src/_about.html");
 const aboutVisionComponent = fs.readFileSync(__dirname + "/src/_about-vision.html");
+const aboutHistoryComponent = fs.readFileSync(__dirname + "/src/_about-history.html");
+
 const roomsComponent = fs.readFileSync(__dirname + "/src/_rooms.html");
 
 //noErrorOnMissing: true
@@ -66,10 +68,10 @@ const minifyRules = {
   removeStyleLinkTypeAttributes: true,
 };
 
-const devMode = true;
+const devMode = false;
 const isBack = false;
 const minify = false;
-const minimized = true;
+const minimized = false;
 
 module.exports = {
   mode: devMode ? "development" : "production",
@@ -215,8 +217,8 @@ module.exports = {
           noErrorOnMissing: true,
         },
         {
-          from: "src/js/abouts_main.js",
-          to: "js/recruitment_main.js",
+          from: "src/js/about_main.js",
+          to: "js/about_main.js",
           info: { minimized: minimized },
           noErrorOnMissing: true,
         },
@@ -363,6 +365,7 @@ module.exports = {
       aboutComponent: aboutComponent,
       commit: commitComponent,
       componentPartner: componentPartner,
+      aboutHistoryComponent: aboutHistoryComponent,
       aboutVisionComponent: aboutVisionComponent,
       registerPromotion: registerPromotion,
       footer: footerComponent,

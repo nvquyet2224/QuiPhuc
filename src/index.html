@@ -44,29 +44,11 @@
         </div>
         <%= htmlWebpackPlugin.options.footer %>
     </div>
-    <script defer src="js/lottie-player.js"></script>
-    <script defer src="js/jquery.js"></script>
+    <%= htmlWebpackPlugin.options.preload %>_
     <script defer src="js/common.js"></script>
+    <script async src="js/lottie-player.js"></script>
     <script defer src="js/swiper-bundle.js"></script>
     <script defer src="js/index_main.js"></script>
-    <%= htmlWebpackPlugin.options.preload %>
-        <!-- <script>
-            function script(url) {
-                var s = document.createElement('script');
-                s.type = 'text/javascript';
-                s.async = false;
-                s.src = url;
-                var x = document.getElementsByTagName('head')[0];
-                x.appendChild(s);
-            }
-            window.onload = function () {
-                setTimeout(function () {
-                    ['js/index.js'].forEach(function (src) {
-                        script(src);
-                    });
-                }, 100);
-            }
-        </script> -->
 </body>
 
 </html>

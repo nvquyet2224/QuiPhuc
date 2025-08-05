@@ -1,1 +1,0 @@
-import "../sass/recruitment.scss";
