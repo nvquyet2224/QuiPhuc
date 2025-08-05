@@ -6,16 +6,11 @@
   --global-color: #015aab;
   --global-colorA: 1, 90, 171;
   --global-color-dark: #07274a;
-  //--font-body: 'Montserrat', 'Segoe UI', system-ui, -apple-system, sans-serif;
   --font-body: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  //--font-body: 'Montserrat', Segoe UI, system-ui, -apple-system, sans-serif;
-  --font-body: "Montserrat", sans-serif;
   --g-blue: linear-gradient(180deg,
       rgba(10, 124, 220, 0) 23.17%,
       rgba(5, 92, 165, 0.95) 88.61%);
 }
-
-//--font-body: Montserrat, Segoe UI, system-ui, -apple-system, sans-serif;
 
 body {
   font-family: var(--font-body);
