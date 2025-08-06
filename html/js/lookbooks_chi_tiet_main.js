@@ -1,4 +1,3 @@
-import Swiper, { Autoplay, Pagination, Navigation, Scrollbar, Mousewheel } from "swiper";
 
 function detailSilder() {
   if (document.querySelector(".productsLookbooksSlider")) {
@@ -12,20 +11,20 @@ function detailSilder() {
         speed: 1000,
         preloadImages: false,
         lazy: true,
-        disableOnInteraction: true,
-        pauseOnMouseEnter: true,
-        slidesPerView: 3,
+        // disableOnInteraction: true,
+        // pauseOnMouseEnter: true,
+        slidesPerView: 4,
         spaceBetween: 0,
-        allowTouchMove: true,
-        watchOverflow: true,
-        initialSlide: 0,
-        autoHeight: false,
-        breakpoints: {
-          1024: {
-            slidesPerView: 4,
-            spaceBetween: 0,
-          },
-        },
+        // allowTouchMove: true,
+        // watchOverflow: true,
+        // initialSlide: 0,
+        // autoHeight: false,
+        // breakpoints: {
+        //   1024: {
+        //     slidesPerView: 4,
+        //     spaceBetween: 0,
+        //   },
+        // },
         on: {
           init: function (swiper) {},
           transitionStart: function (swiper) {},
