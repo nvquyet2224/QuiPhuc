@@ -1119,35 +1119,6 @@ lottie-player {
   height: 100% !important;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.zoom-img {
-  overflow: hidden;
-}
-
-.zoom-img img {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.zoom-img:hover img {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
-.input-txt {
-  width: 100%;
-  height: auto;
-}
-
 .main {
   width: 100%;
   height: auto;

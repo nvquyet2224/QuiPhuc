@@ -57,6 +57,7 @@ const aboutVisionComponent = fs.readFileSync(__dirname + "/src/_about-vision.htm
 const aboutHistoryComponent = fs.readFileSync(__dirname + "/src/_about-history.html");
 
 const roomsComponent = fs.readFileSync(__dirname + "/src/_rooms.html");
+const lookbooksDetailComponent = fs.readFileSync(__dirname + "/src/_lookbooks-chi-tiet.html");
 
 //noErrorOnMissing: true
 
@@ -86,6 +87,7 @@ module.exports = {
     new_detail: ["./src/js/new-detail.js"],
     product_list: ["./src/js/product_list.js"],
     lookbooks: ["./src/js/lookbooks.js"],
+    lookbooks_chi_tiet: ["./src/js/lookbooks_chi_tiet.js"],
     about: ["./src/js/about.js"],
     recruitment: ["./src/js/recruitment.js"],
   },
@@ -213,6 +215,12 @@ module.exports = {
         {
           from: "src/js/lookbooks_main.js",
           to: "js/lookbooks_main.js",
+          info: { minimized: minimized },
+          noErrorOnMissing: true,
+        },
+        {
+          from: "src/js/lookbooks_chi_tiet_main.js",
+          to: "js/lookbooks_chi_tiet_main.js",
           info: { minimized: minimized },
           noErrorOnMissing: true,
         },
@@ -354,6 +362,18 @@ module.exports = {
       registerPromotion: registerPromotion,
       footer: footerComponent,
       template: "src/lookbooks.html",
+      minify: minify,
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      filename: "lookbooks-chi-tiet.html",
+      preload: preload,
+      svg: svg,
+      header: headerNoramComponent,
+      detail: lookbooksDetailComponent,
+      registerPromotion: registerPromotion,
+      footer: footerComponent,
+      template: "src/lookbooks-chi-tiet.html",
       minify: minify,
     }),
     new HtmlWebpackPlugin({

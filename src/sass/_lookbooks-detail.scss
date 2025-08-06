@@ -1,0 +1,41 @@
+@use "function" as f;
+
+.lookbooks-detail {
+  .detail {
+    &-top {
+      display: flex;
+      .products {
+        flex: 1;
+        &_head {
+          font-weight: 500;
+          font-size: f.rem(16);
+          line-height: 1.5;
+          letter-spacing: 0;
+          color: #000000;
+          display: flex;
+          gap: f.rem(12);
+          align-items: center;
+          padding: f.rem(24) f.rem(24) f.rem(16) f.rem(24);
+          svg {
+            width: f.rem(24);
+            height: f.rem(24);
+            
+          }
+        }
+        .product {
+            flex-direction: row;
+            padding: f.rem(24);
+            gap: f.rem(16);
+            &-img {
+                margin: 0;
+                width: f.rem(112);
+                height: f.rem(112);
+            }
+        }
+      }
+      .rooms {
+        width: 72.1527777778%;
+      }
+    }
+  }
+}

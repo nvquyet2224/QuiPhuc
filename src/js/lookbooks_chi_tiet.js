@@ -1,0 +1,1 @@
+import "../sass/lookbooks-chi-tiet.scss";
