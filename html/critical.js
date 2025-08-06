@@ -6,28 +6,28 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-var recruitment;
+var critical;
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/js/recruitment.js":
-/*!*******************************!*\
-  !*** ./src/js/recruitment.js ***!
-  \*******************************/
+/***/ "./src/js/critical.js":
+/*!****************************!*\
+  !*** ./src/js/critical.js ***!
+  \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_recruitment_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/recruitment.scss */ \"./src/sass/recruitment.scss\");\n\n\n//# sourceURL=webpack://modules/./src/js/recruitment.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_critical_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/critical.scss */ \"./src/sass/critical.scss\");\n\n\n//# sourceURL=webpack://modules/./src/js/critical.js?");
 
 /***/ }),
 
-/***/ "./src/sass/recruitment.scss":
-/*!***********************************!*\
-  !*** ./src/sass/recruitment.scss ***!
-  \***********************************/
+/***/ "./src/sass/critical.scss":
+/*!********************************!*\
+  !*** ./src/sass/critical.scss ***!
+  \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://modules/./src/sass/recruitment.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://modules/./src/sass/critical.scss?");
 
 /***/ })
 
@@ -74,8 +74,8 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/js/recruitment.js");
-/******/ 	(recruitment = typeof recruitment === "undefined" ? {} : recruitment).modules = __webpack_exports__;
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/js/critical.js");
+/******/ 	(critical = typeof critical === "undefined" ? {} : critical).modules = __webpack_exports__;
 /******/ 	
 /******/ })()
 ;

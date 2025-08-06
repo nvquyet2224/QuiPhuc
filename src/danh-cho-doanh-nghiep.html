@@ -21,7 +21,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Qui Phúc">
     <link rel="icon" href="images/favicon.png">
-    <link href="css/business.css" rel="preload stylesheet" as="style">
+    <link href="css/critical.css" rel="preload stylesheet" as="style">
+    <link rel="stylesheet" href="css/business.css">
 </head>
 
 <body data-page="home">
@@ -43,29 +44,26 @@
         <%= htmlWebpackPlugin.options.footer %>
     </div>
     <!--Script-->
-    <script defer src="js/lottie-player.js"></script>
-    <script defer src="js/jquery.js"></script>
     <script defer src="js/common.js"></script>
-    <script defer src="js/swiper-bundle.js"></script>
-    <script defer src="js/business_main.js"></script>
+    <script defer src="js/lottie-player.js"></script>
+    <script>
+        function script(url) {
+          var s = document.createElement("script");
+          s.type = "text/javascript";
+          s.async = false;
+          s.src = url;
+          var x = document.getElementsByTagName("head")[0];
+          x.appendChild(s);
+        }
+          window.onload = function () {
+            setTimeout(function () {
+              ["js/swiper-bundle.js", "js/business_main.js"].forEach(function (src) {
+                script(src);
+              });
+            }, 0);
+          }
+      </script>
     <%= htmlWebpackPlugin.options.preload %>
-        <!-- <script>
-            function script(url) {
-                var s = document.createElement('script');
-                s.type = 'text/javascript';
-                s.async = false;
-                s.src = url;
-                var x = document.getElementsByTagName('head')[0];
-                x.appendChild(s);
-            }
-            window.onload = function () {
-                setTimeout(function () {
-                    ['js/business.js'].forEach(function (src) {
-                        script(src);
-                    });
-                }, 100);
-            }
-        </script> -->
 </body>
 
 </html>

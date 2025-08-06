@@ -1,0 +1,27 @@
+@use "function" as f;
+
+.form {
+   &_group{
+    width: 100%;
+    display: flex;
+    &.spr2{}
+    &.spr3{}
+   }
+   &_field{
+    position: relative;
+    width: 100%;
+   }
+   &_caption{
+    position: absolute;
+    left: 0;
+    top:0;
+   }
+}
+
+@media screen and (min-width: 1024px) {}
+
+
+@media screen and (max-width:1023px) {
+    
+
+}

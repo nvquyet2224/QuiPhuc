@@ -294,9 +294,6 @@ window.addEventListener('scroll', loadImagesOnScroll);
 window.addEventListener('load', loadImagesOnScroll);
 
 (function () {
-  setTimeout(() => {
-    //document.body.style.fontFamily = "'Montserrat', sans-serif";
-  }, 1000);
   navClick();
   menuAnim();
   resize();
@@ -304,4 +301,7 @@ window.addEventListener('load', loadImagesOnScroll);
   //onScroll();
   //selectClick();
   //navAccordion();
+  // setTimeout(() => {
+  //   document.body.style.fontFamily = "'Montserrat', sans-serif";
+  // }, 1500);
 })();

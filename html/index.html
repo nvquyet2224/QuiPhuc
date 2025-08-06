@@ -21,7 +21,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Qui Phúc">
     <link rel="icon" href="images/favicon.png">
-    <link href="css/index.css" rel="preload stylesheet" as="style">
+    <link href="css/critical.css" rel="preload stylesheet" as="style">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body data-page="home">
@@ -3697,13 +3698,13 @@
     </div>
 </footer>
     </div>
+    <script defer src="js/common.js"></script>
+    <script defer src="js/lottie-player.js"></script>
+    <!-- <script defer src="js/swiper-bundle.js"></script>
+    <script defer src="js/index_main.js"></script> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script defer src="js/common.js"></script>
-    <script async src="js/lottie-player.js"></script>
-    <!-- <script defer src="js/swiper-bundle.js"></script>
-    <script defer src="js/index_main.js"></script> -->
     <script>
         function script(url) {
           var s = document.createElement("script");
@@ -3718,7 +3719,7 @@
               ["js/swiper-bundle.js", "js/index_main.js"].forEach(function (src) {
                 script(src);
               });
-            }, 500);
+            }, 0);
           }
       </script>
 </body>

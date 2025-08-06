@@ -1,1 +1,407 @@
-function kitchenSlider(){const e=e=>{let t=e.querySelector(".kitchen_thumb--img");t||(t=e.querySelector(".kitchen_pot"));const i=t.getAttribute("data-target");document.querySelectorAll(".kitchen_banner--item").forEach((e=>{e.getAttribute("data-target")===i?e.classList.add("current"):e.classList.remove("current")})),document.querySelectorAll(".kitchen_pot").forEach((e=>{e.getAttribute("data-target")===i?e.classList.add("current"):e.classList.remove("current")})),document.querySelectorAll(".kitchen_detail--item").forEach((e=>{e.getAttribute("data-target")===i?e.classList.add("current"):e.classList.remove("current")}))};if(document.querySelector(".thumbSlider")){let t=!1;new Swiper(".thumbSlider",{effect:"slide",loop:!1,speed:1e3,preloadImages:!1,lazy:!0,disableOnInteraction:!0,pauseOnMouseEnter:!0,slidesPerView:3,spaceBetween:10,allowTouchMove:!0,watchOverflow:!0,initialSlide:0,autoHeight:!1,scrollbar:{el:".kitchen_thumb .swiper-scrollbar",hide:!1,draggable:!0},mousewheel:{sensitivity:1,forceToAxis:!0,releaseOnEdges:!0},navigation:{nextEl:".kitchen_thumb .swiper-button-next",prevEl:".kitchen_thumb .swiper-button-prev"},on:{init:function(e){},transitionStart:function(i){if(t)console.log("___byClick",t),t=!1;else{const t=i.activeIndex,n=i.slides[t];n&&e(n)}},transitionEnd:function(){},click(i){t=!0;const n=i.clickedSlide,r=i.clickedIndex;n&&(e(n),console.log("____clickedSlide",n),i.slideTo(r))}}}),new Swiper(".cardSlider",{effect:"slide",loop:!1,speed:1e3,preloadImages:!1,lazy:!0,disableOnInteraction:!0,pauseOnMouseEnter:!0,slidesPerView:1,spaceBetween:10,allowTouchMove:!0,watchOverflow:!0,initialSlide:0,autoHeight:!1,scrollbar:{el:".cardSlider .swiper-scrollbar",hide:!1,draggable:!0},mousewheel:{sensitivity:1,forceToAxis:!0,releaseOnEdges:!0},navigation:{nextEl:".kitchen .nav-next",prevEl:".kitchen .nav-prev"},on:{init:function(e){},transitionStart:function(t){const i=t.activeIndex,n=t.slides[i];n&&e(n)},transitionEnd:function(){},click(e){}}})}}function productNewSlider(){document.querySelector(".product-new .productsSlider")&&new Swiper(".product-new .productsSlider",{effect:"slide",loop:!1,speed:1e3,preloadImages:!1,lazy:!0,disableOnInteraction:!0,pauseOnMouseEnter:!0,slidesPerView:4,spaceBetween:0,freeMode:!0,grabCursor:!0,allowTouchMove:!0,watchOverflow:!0,initialSlide:0,autoHeight:!1,scrollbar:{el:".product-new .swiper-scrollbar",hide:!1,draggable:!0},mousewheel:{sensitivity:1,forceToAxis:!0,releaseOnEdges:!0},breakpoints:{320:{slidesPerView:1.5,spaceBetween:0},1024:{slidesPerView:4,spaceBetween:0}},navigation:{nextEl:".product-new .nav-next",prevEl:".product-new .nav-prev"},on:{init:function(e){},transitionStart:function(e){},transitionEnd:function(){},click(e){}}})}function productPromotionSlider(){document.querySelector(".product-promotion .productsSlider")&&new Swiper(".product-promotion .productsSlider",{effect:"slide",loop:!1,speed:1e3,preloadImages:!1,lazy:!0,disableOnInteraction:!0,pauseOnMouseEnter:!0,slidesPerView:4,spaceBetween:0,freeMode:!0,grabCursor:!0,allowTouchMove:!0,watchOverflow:!0,initialSlide:0,autoHeight:!1,scrollbar:{el:".product-promotion .swiper-scrollbar",hide:!1,draggable:!0},mousewheel:{sensitivity:1,forceToAxis:!0,releaseOnEdges:!0},breakpoints:{320:{slidesPerView:1.5,spaceBetween:0},1024:{slidesPerView:4,spaceBetween:0}},navigation:{nextEl:".product-promotion .nav-next",prevEl:".product-promotion .nav-prev"},on:{init:function(e){},transitionStart:function(e){},transitionEnd:function(){},click(e){}}})}function whatnowSlider(){document.querySelector(".whatnowSlider")&&document.querySelectorAll(".whatnow_thumb--item").forEach((e=>{const t=e.querySelector(".whatnowSlider");new Swiper(t,{effect:"slide",loop:!1,speed:1e3,preloadImages:!1,lazy:!0,disableOnInteraction:!0,pauseOnMouseEnter:!0,slidesPerView:3,spaceBetween:10,allowTouchMove:!0,watchOverflow:!0,initialSlide:0,autoHeight:!1,breakpoints:{320:{slidesPerView:2.1,spaceBetween:10},1024:{slidesPerView:3,spaceBetween:10}},navigation:{nextEl:e.querySelector(".nav-next"),prevEl:e.querySelector(".nav-prev")},on:{init:function(e){},transitionStart:function(e){},transitionEnd:function(){},click(e){}}})}));const e=document.querySelector(".whatnow .nav-overlay");e&&e.addEventListener("click",(e=>{const t=e.target.closest(".nav-overlay li");t&&!t.classList.contains("current")&&(e=>{document.querySelectorAll(".nav-overlay li").forEach((t=>{t.getAttribute("data-target")===e?t.classList.add("current"):t.classList.remove("current")})),document.querySelectorAll(".whatnow_banner--item").forEach((t=>{t.getAttribute("data-target")===e?t.classList.add("current"):t.classList.remove("current")})),document.querySelectorAll(".whatnow_thumb--item").forEach((t=>{t.getAttribute("data-target")===e?t.classList.add("current"):t.classList.remove("current")}))})(t.getAttribute("data-target"))}))}function promotionSlider(){document.querySelector(".promotionSlider")&&new Swiper(".promotionSlider",{effect:"slide",loop:!1,speed:1e3,preloadImages:!1,lazy:!0,disableOnInteraction:!0,pauseOnMouseEnter:!0,slidesPerView:2,spaceBetween:0,allowTouchMove:!0,watchOverflow:!0,initialSlide:0,autoHeight:!1,breakpoints:{320:{slidesPerView:1.2,spaceBetween:0},1024:{slidesPerView:2,spaceBetween:0}},on:{init:function(e){},transitionStart:function(e){},transitionEnd:function(){},click(e){}}})}kitchenSlider(),productNewSlider(),productPromotionSlider(),whatnowSlider(),promotionSlider();
+function kitchenSlider() {
+
+    const setCurrent = (clickedSlide) => {
+        let cur = clickedSlide.querySelector(".kitchen_thumb--img");
+        if (!cur) {
+            cur = clickedSlide.querySelector(".kitchen_pot");
+        }
+        const target = cur.getAttribute("data-target");
+
+        // Banner
+        document.querySelectorAll(".kitchen_banner--item").forEach((elm) => {
+            const _target = elm.getAttribute("data-target");
+            if (_target === target) {
+                elm.classList.add("current");
+            } else {
+                elm.classList.remove("current");
+            }
+        });
+
+        // Hot pot
+        document.querySelectorAll(".kitchen_pot").forEach((elm) => {
+            const _target = elm.getAttribute("data-target");
+            if (_target === target) {
+                elm.classList.add("current");
+            } else {
+                elm.classList.remove("current");
+            }
+        });
+        // detail
+        document.querySelectorAll(".kitchen_detail--item").forEach((elm) => {
+            const _target = elm.getAttribute("data-target");
+            if (_target === target) {
+                elm.classList.add("current");
+            } else {
+                elm.classList.remove("current");
+            }
+        });
+    };
+
+    if (document.querySelector(".thumbSlider")) {
+        let byClick = false;
+
+        new Swiper(".thumbSlider", {
+            //modules: [Pagination, Autoplay, Navigation, Scrollbar, Mousewheel],
+            effect: "slide",
+            loop: false,
+            speed: 1000,
+            preloadImages: false,
+            lazy: true,
+            disableOnInteraction: true,
+            pauseOnMouseEnter: true,
+            slidesPerView: 3,
+            spaceBetween: 10,
+            allowTouchMove: true,
+            watchOverflow: true,
+            initialSlide: 0,
+            autoHeight: false,
+            scrollbar: {
+                el: ".kitchen_thumb .swiper-scrollbar",
+                hide: false,
+                draggable: true,
+            },
+            mousewheel: {
+                sensitivity: 1,
+                forceToAxis: true,
+                releaseOnEdges: true,
+            },
+            navigation: {
+                nextEl: ".kitchen_thumb .swiper-button-next",
+                prevEl: ".kitchen_thumb .swiper-button-prev",
+            },
+            on: {
+                init: function (swiper) { },
+                transitionStart: function (swiper) {
+                    if (byClick) {
+                        console.log('___byClick', byClick);
+                        byClick = false;
+                    } else {
+                        const currentIndex = swiper.activeIndex;
+                        const currentSlide = swiper.slides[currentIndex];
+                        if (currentSlide) {
+                            setCurrent(currentSlide);
+                        }
+                    }
+                },
+                transitionEnd: function () { },
+                click(swiper) {
+                    byClick = true;
+                    const clickedSlide = swiper.clickedSlide;
+                    const clickedIndex = swiper.clickedIndex;
+                    if (clickedSlide) {
+                        setCurrent(clickedSlide);
+                        console.log('____clickedSlide', clickedSlide);
+                        swiper.slideTo(clickedIndex);
+                    }
+                },
+            },
+        });
+
+        new Swiper(".cardSlider", {
+            //modules: [Navigation, Scrollbar, Mousewheel],
+            effect: "slide",
+            loop: false,
+            speed: 1000,
+            preloadImages: false,
+            lazy: true,
+            disableOnInteraction: true,
+            pauseOnMouseEnter: true,
+            slidesPerView: 1,
+            spaceBetween: 10,
+            allowTouchMove: true,
+            //freeMode: true,
+            watchOverflow: true,
+            initialSlide: 0,
+            autoHeight: false,
+            scrollbar: {
+                el: ".cardSlider .swiper-scrollbar",
+                hide: false,
+                draggable: true,
+            },
+            mousewheel: {
+                sensitivity: 1,
+                forceToAxis: true,
+                releaseOnEdges: true,
+            },
+            navigation: {
+                nextEl: ".kitchen .nav-next",
+                prevEl: ".kitchen .nav-prev",
+            },
+            on: {
+                init: function (swiper) { },
+                transitionStart: function (swiper) {
+                    const currentIndex = swiper.activeIndex;
+                    const currentSlide = swiper.slides[currentIndex];
+                    if (currentSlide) {
+                        setCurrent(currentSlide);
+                    }
+                },
+                transitionEnd: function () { },
+                click(swiper) {
+                    // const clickedSlide = swiper.clickedSlide;
+                    // const clickedIndex = swiper.clickedIndex;
+                    // if (clickedSlide) {
+                    //   setCurrent(clickedSlide);
+                    //   swiper.slideTo(clickedIndex);
+                    // }
+                },
+            },
+        });
+
+    }
+}
+
+function productNewSlider() {
+    if (document.querySelector(".product-new .productsSlider")) {
+        new Swiper(".product-new .productsSlider", {
+            //modules: [Navigation, Scrollbar, FreeMode, Mousewheel],
+            effect: "slide",
+            loop: false,
+            speed: 1000,
+            preloadImages: false,
+            lazy: true,
+            disableOnInteraction: true,
+            pauseOnMouseEnter: true,
+            slidesPerView: 4,
+            spaceBetween: 0,
+            freeMode: true,
+            grabCursor: true,
+            allowTouchMove: true,
+            watchOverflow: true,
+            initialSlide: 0,
+            autoHeight: false,
+            scrollbar: {
+                el: '.product-new .swiper-scrollbar',
+                hide: false,
+                draggable: true
+            },
+            mousewheel: {
+                sensitivity: 1,
+                forceToAxis: true,
+                releaseOnEdges: true,
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 0
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 0
+                }
+            },
+            navigation: {
+                nextEl: ".product-new .nav-next",
+                prevEl: ".product-new .nav-prev",
+            },
+            on: {
+                init: function (swiper) {
+                },
+                transitionStart: function (swiper) {
+                },
+                transitionEnd: function () { },
+                click(swiper) {
+                }
+            },
+        });
+    }
+}
+
+function productPromotionSlider() {
+    if (document.querySelector(".product-promotion .productsSlider")) {
+        new Swiper(".product-promotion .productsSlider", {
+            //modules: [Navigation, Scrollbar, FreeMode, Mousewheel],
+            effect: "slide",
+            loop: false,
+            speed: 1000,
+            preloadImages: false,
+            lazy: true,
+            disableOnInteraction: true,
+            pauseOnMouseEnter: true,
+            slidesPerView: 4,
+            spaceBetween: 0,
+            freeMode: true,
+            grabCursor: true,
+            allowTouchMove: true,
+            watchOverflow: true,
+            initialSlide: 0,
+            autoHeight: false,
+            scrollbar: {
+                el: '.product-promotion .swiper-scrollbar',
+                hide: false,
+                draggable: true
+            },
+            mousewheel: {
+                sensitivity: 1,
+                forceToAxis: true,
+                releaseOnEdges: true,
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 0
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 0
+                }
+            },
+            navigation: {
+                nextEl: ".product-promotion .nav-next",
+                prevEl: ".product-promotion .nav-prev",
+            },
+            on: {
+                init: function (swiper) {
+                },
+                transitionStart: function (swiper) {
+                },
+                transitionEnd: function () { },
+                click(swiper) {
+                }
+            },
+        });
+    }
+}
+
+function whatnowSlider() {
+
+    const setCurrent = (target) => {
+        // nav
+        document.querySelectorAll('.nav-overlay li').forEach((elm) => {
+            const _target = elm.getAttribute('data-target');
+            if (_target === target) {
+                elm.classList.add('current');
+            } else {
+                elm.classList.remove('current');
+            }
+        });
+
+        // banner
+        document.querySelectorAll('.whatnow_banner--item').forEach((elm) => {
+            const _target = elm.getAttribute('data-target');
+            if (_target === target) {
+                elm.classList.add('current');
+            } else {
+                elm.classList.remove('current');
+            }
+        });
+        //item
+        document.querySelectorAll('.whatnow_thumb--item').forEach((elm) => {
+            const _target = elm.getAttribute('data-target');
+            if (_target === target) {
+                elm.classList.add('current');
+            } else {
+                elm.classList.remove('current');
+            }
+        });
+    }
+
+    if (document.querySelector(".whatnowSlider")) {
+        document.querySelectorAll('.whatnow_thumb--item').forEach((elm) => {
+            const slide = elm.querySelector('.whatnowSlider')
+            new Swiper(slide, {
+                //modules: [Navigation],
+                effect: "slide",
+                loop: false,
+                speed: 1000,
+                preloadImages: false,
+                lazy: true,
+                disableOnInteraction: true,
+                pauseOnMouseEnter: true,
+                slidesPerView: 3,
+                spaceBetween: 10,
+                allowTouchMove: true,
+                watchOverflow: true,
+                initialSlide: 0,
+                autoHeight: false,
+                breakpoints: {
+                    320: {
+                        slidesPerView: 2.1,
+                        spaceBetween: 10
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 10
+                    }
+                },
+                navigation: {
+                    nextEl: elm.querySelector('.nav-next'),
+                    prevEl: elm.querySelector('.nav-prev'),
+                },
+                on: {
+                    init: function (swiper) {
+                    },
+                    transitionStart: function (swiper) {
+                    },
+                    transitionEnd: function () { },
+                    click(swiper) {
+                    }
+                },
+            });
+        });
+
+
+    }
+
+    //filter nav
+    const navTab = document.querySelector('.whatnow .nav-overlay');
+    if (navTab) {
+        navTab.addEventListener("click", (e) => {
+            const target = e.target.closest(".nav-overlay li");
+            if (target) {
+                if (!target.classList.contains('current')) {
+                    const tab = target.getAttribute('data-target');
+                    setCurrent(tab);
+                }
+            }
+        });
+    }
+
+}
+
+function promotionSlider() {
+    if (document.querySelector(".promotionSlider")) {
+        new Swiper(".promotionSlider", {
+            effect: "slide",
+            loop: false,
+            speed: 1000,
+            preloadImages: false,
+            lazy: true,
+            disableOnInteraction: true,
+            pauseOnMouseEnter: true,
+            slidesPerView: 2,
+            spaceBetween: 0,
+            allowTouchMove: true,
+            watchOverflow: true,
+            initialSlide: 0,
+            autoHeight: false,
+            breakpoints: {
+                320: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 0
+                },
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 0
+                }
+            },
+            on: {
+                init: function (swiper) {
+                },
+                transitionStart: function (swiper) {
+                },
+                transitionEnd: function () { },
+                click(swiper) {
+                }
+            },
+        });
+    }
+}
+
+(function () {
+    kitchenSlider();
+    productNewSlider();
+    productPromotionSlider();
+    whatnowSlider();
+    promotionSlider();
+})();
