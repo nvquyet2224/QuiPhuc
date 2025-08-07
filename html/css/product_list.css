@@ -3460,19 +3460,6 @@ a.ui-button:active,
   letter-spacing: 0;
   color: #07274a;
 }
-.categories_head .sort {
-  display: flex;
-  gap: 1.125rem;
-  align-items: center;
-}
-.categories_head .sort_caption {
-  flex-grow: 1;
-  font-size: 1rem;
-  font-weight: 500;
-}
-.categories_head .sort .select {
-  width: 8.625rem;
-}
 .categories_content {
   display: flex;
   margin-bottom: 2.5rem;
@@ -3747,13 +3734,6 @@ a.ui-button:active,
   }
   .categories_head .amount {
     font-size: 1rem;
-  }
-  .categories_head .sort .form__field {
-    gap: 0.5rem;
-    font-size: 0.875rem;
-  }
-  .categories_head .sort .form__input {
-    padding-right: 0;
   }
   .categories_content {
     display: flex;

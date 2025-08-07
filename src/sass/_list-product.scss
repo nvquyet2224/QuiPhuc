@@ -18,22 +18,23 @@
       color: #07274a;
     }
 
-    .sort {
-      display: flex;
-      gap: f.rem(18);
-      align-items: center;
+    // .sort {
+    //   display: flex;
+    //   gap: f.rem(18);
+    //   align-items: center;
 
-      &_caption {
-        flex-grow: 1;
-        font-size: f.rem(16);
-        font-weight: 500;
-      }
+    //   &_caption {
+    //     flex-grow: 1;
+    //     font-size: f.rem(16);
+    //     font-weight: 500;
+    //   }
 
-      .select {
-        width: f.rem(138);
-      }
+    //   .select {
+    //     width: f.rem(138);
+    //   }
 
-    }
+    // }
+
   }
 
   &_content {
@@ -374,18 +375,18 @@
         font-size: f.rem(16);
       }
 
-      .sort {
-        .form {
-          &__field {
-            gap: f.rem(8);
-            font-size: f.rem(14);
-          }
+      // .sort {
+      //   .form {
+      //     &__field {
+      //       gap: f.rem(8);
+      //       font-size: f.rem(14);
+      //     }
 
-          &__input {
-            padding-right: 0;
-          }
-        }
-      }
+      //     &__input {
+      //       padding-right: 0;
+      //     }
+      //   }
+      // }
     }
 
     &_content {

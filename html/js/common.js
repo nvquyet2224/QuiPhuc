@@ -80,8 +80,9 @@ function navClick() {
   }
 }
 
-function accordionClick(blockAccordion) {
-  const accordion = document.querySelector(blockAccordion);
+function menuAccordion() {
+
+  const accordion = document.querySelector('.dropdown-menu--customize');
   if (accordion) {
     accordion.addEventListener("click", (e) => {
       const item = e.target.closest(".accordion-header");
@@ -93,68 +94,134 @@ function accordionClick(blockAccordion) {
 
       if (item.classList.contains('current')) {
         item.classList.remove('current');
-        if (accordion.classList.contains('dropdown-menu')) {
-          body.style.setProperty('--data-h', '0px');
-        } else {
-          body.style.height = '0px';
-        }
-
+        body.style.setProperty('--data-h', '0px');
       } else {
         accordion.querySelectorAll('.accordion-header').forEach((_item) => {
           _item.classList.remove("current");
           const oldBody = _item?.closest('.accordion').querySelector('.accordion-body');
-          if (accordion.classList.contains('dropdown-menu')) {
-            oldBody.style.setProperty('--data-h', '0px');
-          } else {
-            oldBody.style.height = '0px';
-          }
-          //oldBody.style.height = "0px";
-          //body.style.setProperty('--data-h', '0px');
+          oldBody.style.setProperty('--data-h', '0px');
         });
         // set current
         item.classList.add('current');
-        //body.style.height = itemH;
-        if (accordion.classList.contains('dropdown-menu')) {
-          body.style.setProperty('--data-h', itemH);
+        body.style.setProperty('--data-h', itemH);
+      }
+
+    });
+  }
+}
+
+function filterEvents() {
+  const accordion = document.querySelector('.filter');
+  if (accordion) {
+    accordion.addEventListener("click", (e) => {
+
+      // Accordion
+      const item = e.target.closest(".accordion__header");
+
+      if (item) {
+        const parent = item?.closest('.list_accordion');
+        const body = parent.querySelector('.accordion__content');
+        const detail = parent.querySelector('.accordion__detail');
+        const itemH = detail.clientHeight + 'px';
+
+        if (item.classList.contains('current')) {
+          item.classList.remove('current');
+          body.style.height = '0px';
         } else {
+          accordion.querySelectorAll('.accordion__header').forEach((_item) => {
+            _item.classList.remove("current");
+            const oldBody = _item?.closest('.list_accordion').querySelector('.accordion__content');
+            oldBody.style.height = '0px';
+          });
+          // set current
+          item.classList.add('current');
           body.style.height = itemH;
+        }
+      }
+
+      // Filter mobile
+      const box = e.target.closest(".head-top--left");
+      if (box) {
+        document.querySelector("body").classList.add("no-scroll");
+        const parent = box?.closest('.filter');
+        const filterMob = parent.querySelector('.filter__accordion');
+        if (filterMob) {
+          filterMob.classList.add('open');
+        }
+      }
+
+      // close filter
+      const close = e.target.closest(".close-filter");
+      if (close) {
+        const parent = close?.closest('.filter');
+        const filterMob = parent.querySelector('.filter__accordion');
+        if (filterMob) {
+          filterMob.classList.remove('open');
+        }
+        document.querySelector("body").classList.remove("no-scroll");
+      }
+
+
+    });
+  }
+}
+
+function toggleLanguage() {
+  const language = document.querySelector('.select-language');
+  language.addEventListener("click", (e) => {
+    const header = e.target.closest(".select-header");
+    const parent = header?.closest('.select');
+    if (parent) {
+      if (parent.classList.contains('open')) {
+        parent.classList.remove('open');
+      } else {
+        parent.classList.add('open');
+      }
+    }
+  });
+}
+
+function toggleSort() {
+  const sort = document.querySelector('.sort');
+  if (sort) {
+    sort.addEventListener("click", (e) => {
+      const header = e.target.closest(".select-header");
+
+      // header
+      if (header) {
+        const parent = header?.closest('.select');
+        if (parent.classList.contains('open')) {
+          parent.classList.remove('open');
+        } else {
+          parent.classList.add('open');
+        }
+      }
+
+      //item
+      const item = e.target.closest(".select-box li");
+      if (item) {
+        const parent = item?.closest('.select');
+
+        if (!item.classList.contains('selected')) {
+          const text = item.textContent;
+          const value = item.getAttribute('data-value');
+          console.log('selected', value);
+
+          // old selected
+          const oldSelected = parent.querySelector('li.selected');
+          if (oldSelected) {
+            oldSelected.classList.remove('selected');
+          }
+          // set selected text for header
+          parent.querySelector('.select-selected').innerHTML = text;
+          item.classList.add('selected');
+          parent.classList.remove('open');
         }
       }
 
     });
   }
 }
-
-
-function filterClick() {
-  const accordion = document.querySelector('.filter');
-  if (accordion) {
-    accordion.addEventListener("click", (e) => {
-      const item = e.target.closest(".accordion__header");
-      const parent = item?.closest('.list_accordion');
-
-      const body = parent.querySelector('.accordion__content');
-      const detail = parent.querySelector('.accordion__detail');
-      const itemH = detail.clientHeight + 'px';
-
-      if (item.classList.contains('current')) {
-        item.classList.remove('current');
-        body.style.height = '0px';
-      } else {
-        accordion.querySelectorAll('.accordion__header').forEach((_item) => {
-          _item.classList.remove("current");
-          const oldBody = _item?.closest('.list_accordion').querySelector('.accordion__content');
-          oldBody.style.height = '0px';
-        });
-        // set current
-        item.classList.add('current');
-        body.style.height = itemH;
-      }
-
-    });
-  }
-}
-
 
 function lazyEvent() {
   document.querySelectorAll('.lazy-event:not(.loaded)').forEach((item) => {
@@ -325,11 +392,16 @@ window.addEventListener('scroll', loadImagesOnScroll);
 window.addEventListener('load', loadImagesOnScroll);
 
 (function () {
+  toggleLanguage();
   navClick();
   menuAnim();
   resize();
-  accordionClick('.dropdown-menu--customize');
-  filterClick();
+
+  menuAccordion();
+  filterEvents();
+  toggleSort();
+
+
   //onScroll();
   //selectClick();
   //navAccordion();

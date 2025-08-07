@@ -803,7 +803,6 @@ input[type=number] {
   }
 }
 .filter__head {
-  padding: 0 1.25rem;
   margin-bottom: 1rem;
 }
 .filter__head .head-top {
@@ -822,8 +821,8 @@ input[type=number] {
   color: #000;
 }
 .filter__head .head-top--left svg {
-  width: 1.125rem;
-  height: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .filter__head .head-top--right {
   font-weight: 500;
@@ -870,6 +869,10 @@ input[type=number] {
   width: 0.375rem;
   height: 0.375rem;
 }
+.filter__accordion {
+  display: flex;
+  flex-direction: column;
+}
 .filter__accordion .list_accordion {
   position: relative;
   width: 100%;
@@ -884,7 +887,7 @@ input[type=number] {
   justify-content: space-between;
   color: #015aab;
   cursor: pointer;
-  padding: 1.5rem 1.25rem;
+  padding: 1.125rem 1.25rem;
 }
 .filter__accordion .list_accordion .accordion__header.current .accordion__icon svg.minus {
   opacity: 1;
@@ -1041,19 +1044,32 @@ input[type=number] {
   padding: 0 1.25rem 1.5rem 1.25rem;
 }
 
+.sort {
+  display: flex;
+  gap: 1.125rem;
+  align-items: center;
+}
+.sort_caption {
+  flex-grow: 1;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.sort .select {
+  width: 8.625rem;
+}
+
 @media screen and (max-width: 1023px) {
   .filter__head {
-    padding: 0 1rem;
-    margin-bottom: 0rem;
+    padding: 1rem;
+    border-bottom: 1px solid #D9D9D9;
   }
   .filter__head .head-top--left {
-    gap: 0.5rem;
     font-size: 0.875rem;
     cursor: pointer;
   }
   .filter__head .head-top--left svg {
-    width: 0.9375rem;
-    height: 0.8125rem;
+    width: 1.25rem;
+    height: 1.25rem;
   }
   .filter__head .head-tags {
     display: flex;
@@ -1073,11 +1089,24 @@ input[type=number] {
     height: 100%;
     background-color: #fff;
     z-index: 30;
-    display: none;
-    flex-direction: column;
-  }
-  .filter__accordion.show {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
     display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0s ease-in-out;
+    transition-delay: 0s;
+  }
+  .filter__accordion.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition-delay: 0.25s;
+    transition-delay: 0.25s;
   }
   .filter__accordion .accordion__head {
     display: flex;
@@ -1096,17 +1125,15 @@ input[type=number] {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
   }
-  .filter__accordion .accordion__head svg {
+  .filter__accordion .accordion__head-btn svg {
     width: 0.75rem;
     height: 0.75rem;
   }
   .filter__accordion .accordion__body {
     flex-grow: 1;
     overflow-y: auto;
-  }
-  .filter__accordion .list_accordion {
-    padding: 1.5rem 1rem;
   }
   .filter__accordion .list_accordion .accordion__content {
     height: 100%;
@@ -1196,6 +1223,118 @@ input[type=number] {
   .filter__accordion .accordion__footer svg {
     width: 0.75rem;
     height: 0.75rem;
+  }
+  .sort {
+    display: flex;
+    gap: 1.125rem;
+    align-items: center;
+  }
+  .sort_caption {
+    flex-grow: 1;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .sort .select {
+    width: 8.625rem;
+  }
+}
+.recruitment {
+  margin-bottom: 7.5rem;
+  padding: 0 2.5rem;
+}
+.recruitment_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.recruitment_action {
+  flex: 0 0 27.8125rem;
+  max-width: 27.8125rem;
+}
+.recruitment_result {
+  flex: 0 0 52.1875rem;
+  max-width: 52.1875rem;
+}
+.recruitment-sort, .recruitment-list {
+  width: 100%;
+  height: auto;
+}
+.recruitment-sort {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.875rem;
+}
+.recruitment-sort .sort {
+  margin-left: auto;
+}
+.recruitment-total {
+  white-space: nowrap;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.recruitment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 1.875rem;
+}
+.recruitment-item {
+  position: relative;
+  width: 100%;
+  border: 1px solid #D0D5DD;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+.recruitment .new h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.recruitment .new .salary {
+  position: absolute;
+  right: 1.25rem;
+  top: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #F58720;
+}
+.recruitment .new-meta {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+.recruitment .new-meta strong {
+  font-weight: 600;
+}
+.recruitment .new .link-but {
+  font-size: 0.875rem;
+}
+
+@media screen and (max-width: 1023px) {
+  .recruitment {
+    padding: 0;
+    margin-bottom: 3.75rem;
+  }
+  .recruitment_action, .recruitment_result {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .recruitment_result {
+    padding: 1rem;
+  }
+  .recruitment-sort, .recruitment-list {
+    width: 100%;
+    height: auto;
+  }
+  .recruitment-total {
+    font-size: 1rem;
+  }
+  .recruitment .new h3 {
+    font-size: 0.875rem;
+  }
+  .recruitment .new .salary {
+    display: block;
+    position: static;
+    margin-bottom: 0.5rem;
   }
 }
 .subscribe {
