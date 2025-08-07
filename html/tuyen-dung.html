@@ -831,8 +831,8 @@
                     </div>
                     <div class="select-box">
                         <ul>
-                            <li class="selected" data-value="vi">VI</li>
-                            <li data-value="en">EN</li>
+                            <li class="selected"><a href="index.html">VI</a></li>
+                            <li data-value="en"><a href="index.html">EN</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1516,8 +1516,8 @@
                             </div>
                             <div class="select-box">
                                 <ul>
-                                    <li class="selected" data-value="vi">VI</li>
-                                    <li data-value="en">EN</li>
+                                    <li class="selected"><a href="index.html">VI</a></li>
+                                    <li data-value="en"><a href="index.html">EN</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -1566,6 +1566,7 @@
         </li>
     </ul>
 </div>
+
 <section class="section sub-banner">
     <div class="sub-banner--img">
         <img width="1440" height="320" fetchpriority="high" src="images/recruitment-banner.jpg"
@@ -1582,132 +1583,280 @@
     </div>
 </section>
 
-
-<section class="section">
-    <div class="filter">
-        <div class="filter__head">
-            <div class="head-top">
-                <div class="head-top--left">
-                    <svg>
-                        <use xlink:href="#icon-filter"></use>
-                    </svg>
-                    BỘ LỌC
+<section class="section recruitment">
+    <div class="recruitment_wrap">
+        <div class="recruitment_action">
+            <div class="filter">
+                <div class="filter__head">
+                    <div class="head-top">
+                        <div class="head-top--left">
+                            <svg>
+                                <use xlink:href="#icon-filter"></use>
+                            </svg>
+                            BỘ LỌC
+                        </div>
+                        <div class="head-top--right" id="delete-filter">Xóa bộ lọc</div>
+                    </div>
+                    <div class="head-tags"></div>
                 </div>
-                <div class="head-top--right" id="delete-filter">Xóa bộ lọc</div>
+                <div class="filter__accordion">
+                    <div class="accordion__head sp">
+                        Bộ lọc
+                        <div class="accordion__head-btn close-filter">
+                            <svg>
+                                <use xlink:href="#icon-close"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="accordion__body">
+                        <div class="list_accordion has__content">
+                            <div class="accordion__header">
+                                <span class="accordion__title">Phòng ban</span>
+                                <span class="accordion__icon">
+                                    <svg class="plus">
+                                        <use xlink:href="#icon-increase"></use>
+                                    </svg>
+                                    <svg class="minus">
+                                        <use xlink:href="#icon-decrease"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="accordion__content" style="height: 0px;">
+                                <div class="accordion__detail">
+                                    <div class="check__list">
+                                        <label class="check__item" for="business-01">
+                                            <input id="business-01" type="checkbox" value="business-01"
+                                                name="business-01" />
+                                            <span>Phòng Kinh Doanh</span>
+                                        </label>
+                                        <label class="check__item" for="business-02">
+                                            <input id="business-02" type="checkbox" value="business-02"
+                                                name="business-02" />
+                                            <span>Phòng Marketing</span>
+                                        </label>
+                                        <label class="check__item" for="business-03">
+                                            <input id="business-03" type="checkbox" value="business-03"
+                                                name="business-03" />
+                                            <span>Phòng Kế Toán</span>
+                                        </label>
+                                        <label class="check__item" for="business-04">
+                                            <input id="business-04" type="checkbox" value="business-04"
+                                                name="business-04" />
+                                            <span>Phòng Nhân Sự</span>
+                                        </label>
+                                        <label class="check__item" for="business-05">
+                                            <input id="business-05" type="checkbox" value="business-05"
+                                                name="business-05" />
+                                            <span>Phòng Giao Nhận</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list_accordion has__content">
+                            <div class="accordion__header">
+                                <span class="accordion__title">Vị trí</span>
+                                <span class="accordion__icon">
+                                    <svg class="plus">
+                                        <use xlink:href="#icon-increase"></use>
+                                    </svg>
+                                    <svg class="minus">
+                                        <use xlink:href="#icon-decrease"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="accordion__content" style="height: 0px;">
+                                <div class="accordion__detail">
+                                    <div class="check__list">
+                                        <label class="check__item" for="location-01">
+                                            <input id="location-01" type="checkbox" value="location-01"
+                                                name="location-01" />
+                                            <span>Nhân viên thực tập</span>
+                                        </label>
+                                        <label class="check__item" for="location-02">
+                                            <input id="location-02" type="checkbox" value="location-02"
+                                                name="location-02" />
+                                            <span>Nhân viên chính thức</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list_accordion has__content">
+                            <div class="accordion__header">
+                                <span class="accordion__title">Khu vực</span>
+                                <span class="accordion__icon">
+                                    <svg class="plus">
+                                        <use xlink:href="#icon-increase"></use>
+                                    </svg>
+                                    <svg class="minus">
+                                        <use xlink:href="#icon-decrease"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="accordion__content" style="height: 0px;">
+                                <div class="accordion__detail">
+                                    <div class="check__list">
+                                        <label class="check__item" for="area-01">
+                                            <input id="area-01" type="checkbox" value="area-01" name="area-01" />
+                                            <span>Thành phố Hồ Chí Minh</span>
+                                        </label>
+                                        <label class="check__item" for="area-02">
+                                            <input id="area-02" type="checkbox" value="area-02" name="area-02" />
+                                            <span>Đà Nẵng</span>
+                                        </label>
+                                        <label class="check__item" for="area-03">
+                                            <input id="area-03" type="checkbox" value="area-03" name="area-03" />
+                                            <span>Hà Nội</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__footer sp">
+                        <button class="accordion__footer-btn btn-reset" id="btn-reset">Reset</button>
+                        <button class="accordion__footer-btn" id="btn-apply">Áp dụng</button>
+                    </div>
+                </div>
             </div>
-            <div class="head-tags"></div>
         </div>
-        <div class="filter__accordion">
-            <div class="accordion__head sp">
-                Bộ lọc
-                <button class="accordion__head-btn" id="btn-close-filter">
-                    <svg>
-                        <use xlink:href="#icon-close"></use>
-                    </svg>
-                </button>
-            </div>
-            <div class="accordion__body">
-                <div class="list_accordion has__content">
-                    <div class="accordion__header">
-                        <span class="accordion__title">Phòng ban</span>
-                        <span class="accordion__icon">
-                            <svg class="plus">
-                                <use xlink:href="#icon-increase"></use>
-                            </svg>
-                            <svg class="minus">
-                                <use xlink:href="#icon-decrease"></use>
-                            </svg>
-                        </span>
-                    </div>
-                    <div class="accordion__content" style="height: 0px;">
-                        <div class="accordion__detail">
-                            <div class="check__list">
-                                <label class="check__item" for="business-01">
-                                    <input id="business-01" type="checkbox" value="business-01" name="business-01" />
-                                    <span>Phòng Kinh Doanh</span>
-                                </label>
-                                <label class="check__item" for="business-02">
-                                    <input id="business-02" type="checkbox" value="business-02" name="business-02" />
-                                    <span>Phòng Marketing</span>
-                                </label>
-                                <label class="check__item" for="business-03">
-                                    <input id="business-03" type="checkbox" value="business-03" name="business-03" />
-                                    <span>Phòng Kế Toán</span>
-                                </label>
-                                <label class="check__item" for="business-04">
-                                    <input id="business-04" type="checkbox" value="business-04" name="business-04" />
-                                    <span>Phòng Nhân Sự</span>
-                                </label>
-                                <label class="check__item" for="business-05">
-                                    <input id="business-05" type="checkbox" value="business-05" name="business-05" />
-                                    <span>Phòng Giao Nhận</span>
-                                </label>
-                            </div>
+        <div class="recruitment_result">
+            <div class="recruitment-sort">
+                <span class="recruitment-total">7 CÔNG VIỆC</span>
+                <div class="sort">
+                    <div class="sort_caption">Sắp xếp:</div>
+                    <div class="select">
+                        <div class="select-header">
+                            <span class="select-selected">Mới nhất</span>
+                            <span class="select-arrow">
+                                <svg>
+                                    <use xlink:href="#icon-chevron-down"></use>
+                                </svg>
+                            </span>
                         </div>
-                    </div>
-                </div>
-                <div class="list_accordion has__content">
-                    <div class="accordion__header">
-                        <span class="accordion__title">Vị trí</span>
-                        <span class="accordion__icon">
-                            <svg class="plus">
-                                <use xlink:href="#icon-increase"></use>
-                            </svg>
-                            <svg class="minus">
-                                <use xlink:href="#icon-decrease"></use>
-                            </svg>
-                        </span>
-                    </div>
-                    <div class="accordion__content" style="height: 0px;">
-                        <div class="accordion__detail">
-                            <div class="check__list">
-                                <label class="check__item" for="location-01">
-                                    <input id="location-01" type="checkbox" value="location-01" name="location-01" />
-                                    <span>Nhân viên thực tập</span>
-                                </label>
-                                <label class="check__item" for="location-02">
-                                    <input id="location-02" type="checkbox" value="location-02" name="location-02" />
-                                    <span>Nhân viên chính thức</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="list_accordion has__content">
-                    <div class="accordion__header">
-                        <span class="accordion__title">Khu vực</span>
-                        <span class="accordion__icon">
-                            <svg class="plus">
-                                <use xlink:href="#icon-increase"></use>
-                            </svg>
-                            <svg class="minus">
-                                <use xlink:href="#icon-decrease"></use>
-                            </svg>
-                        </span>
-                    </div>
-                    <div class="accordion__content" style="height: 0px;">
-                        <div class="accordion__detail">
-                            <div class="check__list">
-                                <label class="check__item" for="area-01">
-                                    <input id="area-01" type="checkbox" value="area-01" name="area-01" />
-                                    <span>Thành phố Hồ Chí Minh</span>
-                                </label>
-                                <label class="check__item" for="area-02">
-                                    <input id="area-02" type="checkbox" value="area-02" name="area-02" />
-                                    <span>Đà Nẵng</span>
-                                </label>
-                                <label class="check__item" for="area-03">
-                                    <input id="area-03" type="checkbox" value="area-03" name="area-03" />
-                                    <span>Hà Nội</span>
-                                </label>
-                            </div>
+                        <div class="select-box">
+                            <ul>
+                                <li data-value="Giá tăng dần">Giá tăng dần</li>
+                                <li data-value="Giá giảm dần">Giá giảm dần</li>
+                                <li data-value="Tên: A-Z">Tên: A-Z</li>
+                                <li data-value="Tên: Z-A">Tên: Z-A</li>
+                                <li data-value="Cũ nhất">Cũ nhất</li>
+                                <li class="selected" data-value="Mới nhất">Mới nhất</li>
+                                <li data-value="Bán chạy nhất">Bán chạy nhất</li>
+                                <li data-value="Tồn kho giảm dần">Tồn kho giảm dần</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="accordion__footer sp">
-                <button class="accordion__footer-btn btn-reset" id="btn-reset">Reset</button>
-                <button class="accordion__footer-btn" id="btn-apply">Áp dụng</button>
+            <div class="recruitment-list">
+                <div class="recruitment-item">
+                    <div class="new">
+                        <div class="new-txt">
+                            <h3>NHÂN VIÊN KINH DOANH QUỐC TẾ</h3>
+                            <span class="salary">25 - 35 triệu</span>
+                            <div class="new-meta">
+                                <span class="number">Số lượng: <strong>3 nhân viên</strong></span>
+                            </div>
+                        </div>
+                        <div class="new-link">
+                            <a href="tuyen-dung-chi-tiet.html" class="link-but transparent blue underline">Xem chi
+                                tiết<svg>
+                                    <use xlink:href="#icon-arrow-next-medium"></use>
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="recruitment-item">
+                    <div class="new">
+                        <div class="new-txt">
+                            <h3>NHÂN VIÊN LIVESTREAM KIÊM SÁNG TẠO NỘI DUNG</h3>
+                            <span class="salary">20 triệu</span>
+                            <div class="new-meta">
+                                <span class="number">Số lượng: <strong>3 nhân viên</strong></span>
+                            </div>
+                        </div>
+                        <div class="new-link">
+                            <a href="tuyen-dung-chi-tiet.html" class="link-but transparent blue underline">Xem chi
+                                tiết<svg>
+                                    <use xlink:href="#icon-arrow-next-medium"></use>
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="recruitment-item">
+                    <div class="new">
+                        <div class="new-txt">
+                            <h3>NHÂN VIÊN KỸ THUẬT CƠ KHÍ</h3>
+                            <span class="salary">17 triệu</span>
+                            <div class="new-meta">
+                                <span class="number">Số lượng: <strong>3 nhân viên</strong></span>
+                            </div>
+                        </div>
+                        <div class="new-link">
+                            <a href="tuyen-dung-chi-tiet.html" class="link-but transparent blue underline">Xem chi
+                                tiết<svg>
+                                    <use xlink:href="#icon-arrow-next-medium"></use>
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="recruitment-item">
+                    <div class="new">
+                        <div class="new-txt">
+                            <h3>LAO ĐỘNG PHỔ THÔNG (Công nhân các Phân xưởng Inox, Ép nhựa, Lắp ráp)</h3>
+                            <span class="salary">16 triệu</span>
+                            <div class="new-meta">
+                                <span class="number">Số lượng: <strong>3 nhân viên</strong></span>
+                            </div>
+                        </div>
+                        <div class="new-link">
+                            <a href="tuyen-dung-chi-tiet.html" class="link-but transparent blue underline">Xem chi
+                                tiết<svg>
+                                    <use xlink:href="#icon-arrow-next-medium"></use>
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="recruitment-item">
+                    <div class="new">
+                        <div class="new-txt">
+                            <h3>TÀI XẾ - SỐ LƯỢNG: TUYỂN LIÊN TỤC</h3>
+                            <span class="salary">20 triệu</span>
+                            <div class="new-meta">
+                                <span class="number">Số lượng: <strong>3 nhân viên</strong></span>
+                            </div>
+                        </div>
+                        <div class="new-link">
+                            <a href="tuyen-dung-chi-tiet.html" class="link-but transparent blue underline">Xem chi
+                                tiết<svg>
+                                    <use xlink:href="#icon-arrow-next-medium"></use>
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="paging">
+                <div class="paging_box">
+                    <div class="paging-item paging-prev hide">
+                        <svg>
+                            <use xlink:href="#icon-arrow-prev"></use>
+                        </svg>
+                    </div>
+                    <div class="paging_block">
+                        <div class="paging-item active">1</div>
+                        <div class="paging-item">2</div>
+                        <div class="paging-item">3</div>
+                        <div class="paging-item dots">...</div>
+                        <div class="paging-item">6</div>
+                    </div>
+                    <div class="paging-item paging-next">
+                        <svg>
+                            <use xlink:href="#icon-arrow-next"></use>
+                        </svg>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

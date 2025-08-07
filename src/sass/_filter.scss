@@ -3,7 +3,7 @@
 
 .filter {
     &__head {
-        padding: 0 f.rem(20);
+        //padding: 0 f.rem(20);
         margin-bottom: f.rem(16);
 
         .head {
@@ -23,8 +23,8 @@
                     color: #000;
 
                     svg {
-                        width: f.rem(18);
-                        height: f.rem(16);
+                        width: f.rem(24);
+                        height: f.rem(24);
                     }
                 }
 
@@ -83,10 +83,12 @@
     }
 
     &__accordion {
+        display: flex;
+        flex-direction: column;
+
         .list_accordion {
             position: relative;
             width: 100%;
-            //padding: f.rem(24) f.rem(20);
             border-bottom: 1px solid #d9d9d9;
 
             &:last-child {
@@ -99,7 +101,7 @@
                 justify-content: space-between;
                 color: #015aab;
                 cursor: pointer;
-                padding: f.rem(24) f.rem(20);
+                padding: f.rem(18) f.rem(20);
 
                 &.current {
                     .accordion__icon {
@@ -300,25 +302,44 @@
     }
 }
 
+.sort {
+    display: flex;
+    gap: f.rem(18);
+    align-items: center;
+
+    &_caption {
+        flex-grow: 1;
+        font-size: f.rem(16);
+        font-weight: 500;
+    }
+
+    .select {
+        width: f.rem(138);
+    }
+
+}
 
 @media screen and (min-width: 1024px) {}
 
 @media screen and (max-width: 1023px) {
+
     .filter {
         &__head {
-            padding: 0 f.rem(16);
-            margin-bottom: f.rem(0);
+            //padding: 0 f.rem(16);
+            //margin-bottom: f.rem(0);
+            padding: f.rem(16);
+            border-bottom: 1px solid #D9D9D9;
 
             .head {
                 &-top {
                     &--left {
-                        gap: f.rem(8);
+                        //gap: f.rem(8);
                         font-size: f.rem(14);
                         cursor: pointer;
 
                         svg {
-                            width: f.rem(15);
-                            height: f.rem(13);
+                            width: f.rem(20);
+                            height: f.rem(20);
                         }
                     }
                 }
@@ -345,12 +366,27 @@
             height: 100%;
             background-color: #fff;
             z-index: 30;
-            display: none;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            display: flex;
             flex-direction: column;
 
-            &.show {
-                display: flex;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0s ease-in-out;
+            transition-delay: 0s;
+
+            &.open {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: all;
+                -webkit-transition: all .3s ease-in-out;
+                transition: all .3s ease-in-out;
+                -webkit-transition-delay: .25s;
+                transition-delay: .25s;
             }
+
 
             .accordion__head {
                 display: flex;
@@ -369,12 +405,15 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    cursor: pointer;
+
+                    svg {
+                        width: f.rem(12);
+                        height: f.rem(12);
+                    }
                 }
 
-                svg {
-                    width: f.rem(12);
-                    height: f.rem(12);
-                }
+
             }
 
             .accordion__body {
@@ -383,7 +422,7 @@
             }
 
             .list_accordion {
-                padding: f.rem(24) f.rem(16);
+                //padding: f.rem(24) f.rem(16);
 
                 .accordion__content {
                     height: 100%;
@@ -496,4 +535,20 @@
         }
     }
 
+    .sort {
+        display: flex;
+        gap: f.rem(18);
+        align-items: center;
+
+        &_caption {
+            flex-grow: 1;
+            font-size: f.rem(16);
+            font-weight: 500;
+        }
+
+        .select {
+            width: f.rem(138);
+        }
+
+    }
 }

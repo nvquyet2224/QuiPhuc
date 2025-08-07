@@ -60,6 +60,7 @@ const roomsComponent = fs.readFileSync(__dirname + "/src/_rooms.html");
 const lookbooksDetailComponent = fs.readFileSync(__dirname + "/src/_lookbooks-chi-tiet.html");
 
 const recruitmentComponent = fs.readFileSync(__dirname + "/src/_recruitment-block.html");
+const recruitmentDetailComponent = fs.readFileSync(__dirname + "/src/_recruitment-detail.html");
 //noErrorOnMissing: true
 
 const minifyRules = {
@@ -91,6 +92,7 @@ module.exports = {
     lookbooks_chi_tiet: ["./src/js/lookbooks_chi_tiet.js"],
     about: ["./src/js/about.js"],
     recruitment: ["./src/js/recruitment.js"],
+    recruitment_detail: ["./src/js/recruitment-detail.js"],
   },
   output: {
     publicPath: "../",
@@ -222,6 +224,10 @@ module.exports = {
         {
           from: "src/js/recruitment_main.js",
           to: "js/recruitment_main.js",
+          info: { minimized: minimized },
+          noErrorOnMissing: true,
+        },
+        {
           from: "src/js/lookbooks_chi_tiet_main.js",
           to: "js/lookbooks_chi_tiet_main.js",
           info: { minimized: minimized },
@@ -407,7 +413,18 @@ module.exports = {
       template: "src/tuyen-dung.html",
       minify: minify,
     }),
-
+    new HtmlWebpackPlugin({
+      inject: false,
+      filename: "tuyen-dung-chi-tiet.html",
+      preload: preload,
+      svg: svg,
+      header: headerNoramComponent,
+      recruitmentDetailComponent: recruitmentDetailComponent,
+      registerPromotion: registerPromotion,
+      footer: footerComponent,
+      template: "src/tuyen-dung-chi-tiet.html",
+      minify: minify,
+    }),
   ],
   performance: {
     hints: false,

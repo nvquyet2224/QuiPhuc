@@ -1,0 +1,132 @@
+@use "function" as f;
+
+.recruitment {
+    margin-bottom: f.rem(120);
+    padding: 0 f.rem(40);
+
+    &_wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &_action {
+        flex: 0 0 f.rem(445);
+        max-width: f.rem(445);
+    }
+
+    &_result {
+        flex: 0 0 f.rem(835);
+        max-width: f.rem(835);
+    }
+
+    &-sort,
+    &-list {
+        width: 100%;
+        height: auto;
+    }
+
+    &-sort {
+        display: flex;
+        align-items: center;
+        margin-bottom: f.rem(30);
+
+        .sort {
+            margin-left: auto;
+        }
+    }
+
+    &-total {
+        white-space: nowrap;
+        font-size: f.rem(24);
+        font-weight: 600;
+    }
+
+    &-list {
+        display: flex;
+        flex-direction: column;
+        gap: f.rem(32);
+        margin-bottom: f.rem(30);
+    }
+
+    &-item {
+        position: relative;
+        width: 100%;
+        border: 1px solid #D0D5DD;
+        border-radius: f.rem(8);
+        padding: f.rem(24);
+    }
+
+    .new {
+        h3 {
+            font-size: f.rem(16);
+            font-weight: 600;
+            margin-bottom: f.rem(8);
+        }
+
+        .salary {
+            position: absolute;
+            right: f.rem(20);
+            top: f.rem(20);
+            font-size: f.rem(14);
+            font-weight: 600;
+            color: #F58720
+        }
+
+        &-meta {
+            margin-bottom: f.rem(8);
+            font-size: f.rem(14);
+
+            strong {
+                font-weight: 600;
+            }
+        }
+
+        .link-but {
+            font-size: f.rem(14);
+        }
+    }
+}
+
+
+@media screen and (min-width: 1024px) {}
+
+@media screen and (max-width: 1023px) {
+
+    .recruitment {
+        padding: 0;
+        margin-bottom: f.rem(60);
+
+        &_action,
+        &_result {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        &_result {
+            padding: f.rem(16);
+        }
+
+        &-sort,
+        &-list {
+            width: 100%;
+            height: auto;
+        }
+
+        &-total {
+            font-size: f.rem(16);
+        }
+
+        .new {
+            h3 {
+                font-size: f.rem(14);
+            }
+
+            .salary {
+                display: block;
+                position: static;
+                margin-bottom: f.rem(8);
+            }
+        }
+    }
+}
