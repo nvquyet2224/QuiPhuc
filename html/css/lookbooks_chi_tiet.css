@@ -2009,8 +2009,15 @@ button.swiper-pagination-bullet {
 .lookbooks-detail .detail-top .rooms {
   width: 72.1527777778%;
 }
+.lookbooks-detail .detail-top .rooms .kitchen_banner,
+.lookbooks-detail .detail-top .rooms .kitchen_wrap {
+  width: 100%;
+  height: 100%;
+}
 .lookbooks-detail .detail-top .rooms-nav {
   position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .subscribe {
