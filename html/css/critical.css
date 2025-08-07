@@ -1119,35 +1119,6 @@ lottie-player {
   height: 100% !important;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.zoom-img {
-  overflow: hidden;
-}
-
-.zoom-img img {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.zoom-img:hover img {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
-.input-txt {
-  width: 100%;
-  height: auto;
-}
-
 .main {
   width: 100%;
   height: auto;
@@ -1201,6 +1172,24 @@ input[type=number] {
   color: var(--global-color);
   font-weight: 700;
   font-size: 2.25rem;
+}
+.title_block .sub-search {
+  padding-top: 1.5625rem;
+}
+.title_block .sub-search input {
+  width: 100%;
+  height: 3rem;
+  background: #fff url(../images/search-icon.svg) no-repeat 1rem center;
+  background-size: 1.0625rem auto;
+  max-width: 27.875rem;
+  font-size: 1rem;
+  color: #000;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  padding: 0 3rem;
+}
+.title_block .sub-search input::placeholder {
+  color: #6D6D6D;
 }
 
 .sub-banner {

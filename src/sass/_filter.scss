@@ -1,8 +1,9 @@
 @use "function" as f;
 
+
 .filter {
-    &-head {
-        padding: 0 f.rem(40);
+    &__head {
+        padding: 0 f.rem(20);
         margin-bottom: f.rem(16);
 
         .head {
@@ -81,20 +82,11 @@
         }
     }
 
-    &-body {
-        overflow: hidden;
-        opacity: 0;
-        -webkit-transition: height .6s cubic-bezier(.165, .84, .44, 1), opacity .6s cubic-bezier(.165, .84, .44, 1);
-        transition: height .6s cubic-bezier(.165, .84, .44, 1), opacity .6s cubic-bezier(.165, .84, .44, 1);
-    }
-
-    &-detail {}
-
-    &-accordion {
+    &__accordion {
         .list_accordion {
             position: relative;
             width: 100%;
-            padding: f.rem(24) f.rem(40);
+            //padding: f.rem(24) f.rem(20);
             border-bottom: 1px solid #d9d9d9;
 
             &:last-child {
@@ -107,6 +99,25 @@
                 justify-content: space-between;
                 color: #015aab;
                 cursor: pointer;
+                padding: f.rem(24) f.rem(20);
+
+                &.current {
+                    .accordion__icon {
+                        svg {
+                            &.minus {
+                                opacity: 1;
+                            }
+
+                            &.plus {
+                                opacity: 0;
+                            }
+                        }
+                    }
+
+                    +.accordion__content {
+                        opacity: 1;
+                    }
+                }
 
                 .accordion__title {
                     font-weight: 600;
@@ -117,27 +128,41 @@
 
                 }
 
-                svg {
-                    width: f.rem(14);
-                    height: f.rem(14);
+                .accordion__icon {
+                    position: relative;
+                    width: f.rem(24);
+                    height: f.rem(24);
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    svg {
+                        position: absolute;
+                        width: f.rem(14);
+                        height: f.rem(14);
+
+                        &.minus,
+                        &.plus {
+                            -webkit-transition: opacity 0.3s ease-in-out;
+                            transition: opacity 0.3s ease-in-out;
+                        }
+
+                        &.minus {
+                            opacity: 0;
+                        }
+
+                    }
                 }
+
             }
 
             .accordion__content {
-                display: none;
-                /* Ban đầu ẩn */
-                transform-origin: top;
-                transform: scaleY(0);
+                width: 100%;
+                height: 0;
+                overflow: hidden;
                 opacity: 0;
-                padding-top: 0;
-                transition: transform 0.3s ease, opacity 0.3s ease,
-                    padding-top 0.3s ease;
-
-                &.open {
-                    transform: scaleY(1);
-                    opacity: 1;
-                    padding-top: f.rem(16);
-                }
+                -webkit-transition: height 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+                transition: height 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 
                 .check__list {
                     display: flex;
@@ -235,6 +260,7 @@
 
                 .inputs label {
                     font-size: f.rem(14);
+
                 }
 
                 .inputs {
@@ -266,21 +292,20 @@
                     }
                 }
             }
-        }
-    }
-    &-icon {
-        .minus,
-        .plus{
-            svg{}
+
+            .accordion__detail {
+                padding: 0 f.rem(20) f.rem(24) f.rem(20);
+            }
         }
     }
 }
+
 
 @media screen and (min-width: 1024px) {}
 
 @media screen and (max-width: 1023px) {
     .filter {
-        &-head {
+        &__head {
             padding: 0 f.rem(16);
             margin-bottom: f.rem(0);
 
@@ -309,10 +334,6 @@
                 }
             }
         }
-
-        &-body {}
-
-        &-detail {}
 
         &__accordion {
             position: fixed;
@@ -474,4 +495,5 @@
             }
         }
     }
+
 }

@@ -93,20 +93,20 @@ function accordionClick(blockAccordion) {
 
       if (item.classList.contains('current')) {
         item.classList.remove('current');
-        if(accordion.classList.contains('dropdown-menu')) {
+        if (accordion.classList.contains('dropdown-menu')) {
           body.style.setProperty('--data-h', '0px');
         } else {
-          body.style.height = '0px';  
+          body.style.height = '0px';
         }
-        
+
       } else {
         accordion.querySelectorAll('.accordion-header').forEach((_item) => {
           _item.classList.remove("current");
           const oldBody = _item?.closest('.accordion').querySelector('.accordion-body');
-          if(accordion.classList.contains('dropdown-menu')) {
+          if (accordion.classList.contains('dropdown-menu')) {
             oldBody.style.setProperty('--data-h', '0px');
           } else {
-            oldBody.style.height = '0px';  
+            oldBody.style.height = '0px';
           }
           //oldBody.style.height = "0px";
           //body.style.setProperty('--data-h', '0px');
@@ -114,7 +114,7 @@ function accordionClick(blockAccordion) {
         // set current
         item.classList.add('current');
         //body.style.height = itemH;
-        if(accordion.classList.contains('dropdown-menu')) {
+        if (accordion.classList.contains('dropdown-menu')) {
           body.style.setProperty('--data-h', itemH);
         } else {
           body.style.height = itemH;
@@ -124,6 +124,37 @@ function accordionClick(blockAccordion) {
     });
   }
 }
+
+
+function filterClick() {
+  const accordion = document.querySelector('.filter');
+  if (accordion) {
+    accordion.addEventListener("click", (e) => {
+      const item = e.target.closest(".accordion__header");
+      const parent = item?.closest('.list_accordion');
+
+      const body = parent.querySelector('.accordion__content');
+      const detail = parent.querySelector('.accordion__detail');
+      const itemH = detail.clientHeight + 'px';
+
+      if (item.classList.contains('current')) {
+        item.classList.remove('current');
+        body.style.height = '0px';
+      } else {
+        accordion.querySelectorAll('.accordion__header').forEach((_item) => {
+          _item.classList.remove("current");
+          const oldBody = _item?.closest('.list_accordion').querySelector('.accordion__content');
+          oldBody.style.height = '0px';
+        });
+        // set current
+        item.classList.add('current');
+        body.style.height = itemH;
+      }
+
+    });
+  }
+}
+
 
 function lazyEvent() {
   document.querySelectorAll('.lazy-event:not(.loaded)').forEach((item) => {
@@ -298,6 +329,7 @@ window.addEventListener('load', loadImagesOnScroll);
   menuAnim();
   resize();
   accordionClick('.dropdown-menu--customize');
+  filterClick();
   //onScroll();
   //selectClick();
   //navAccordion();

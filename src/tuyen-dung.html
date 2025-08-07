@@ -30,45 +30,15 @@
       <%= htmlWebpackPlugin.options.svg %>
       <%= htmlWebpackPlugin.options.header%>
         <div class="main">
-          <div class="breadcrumb">
-            <ul>
-              <li>
-                <a href="/"><span>Trang chủ</span></a>
-              </li>
-              <li><span>/</span></li>
-              <li>
-                <a href="#"><span>Tuyển dụng</span></a>
-              </li>
-            </ul>
-          </div>
-          <section class="section sub-banner">
-            <div class="sub-banner--img">
-              <img
-                width="1440"
-                height="320"
-                loading="lazy"
-                fetchpriority="low"
-                src="images/list-banner.jpg"
-                alt="Sản phẩm"
-                Nội
-                thất
-                Ghế
-              />
-            </div>
-            <div class="sub-banner--txt">
-              <div class="title_block">
-                <div class="sub-title">Sản phẩm</div>
-                <h1>Nội thất Ghế</h1>
-              </div>
-            </div>
-          </section>
-        <%= htmlWebpackPlugin.options.registerPromotion %>
+          <%= htmlWebpackPlugin.options.recruitmentComponent %>
+          <%= htmlWebpackPlugin.options.registerPromotion %>
         </div>
         <%= htmlWebpackPlugin.options.footer %>
   </div>
   <!--Script-->
   <script defer src="js/common.js"></script>
-  <script>
+  <script defer src="js/recruitment_main.js"></script>
+  <!-- <script>
     function script(url) {
       var s = document.createElement("script");
       s.type = "text/javascript";
@@ -84,7 +54,7 @@
           });
         }, 0);
       }
-  </script>
+  </script> -->
   <%= htmlWebpackPlugin.options.preload %>
 </body>
 

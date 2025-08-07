@@ -58,6 +58,7 @@ const aboutHistoryComponent = fs.readFileSync(__dirname + "/src/_about-history.h
 
 const roomsComponent = fs.readFileSync(__dirname + "/src/_rooms.html");
 
+const recruitmentComponent = fs.readFileSync(__dirname + "/src/_recruitment-block.html");
 //noErrorOnMissing: true
 
 const minifyRules = {
@@ -213,6 +214,12 @@ module.exports = {
         {
           from: "src/js/lookbooks_main.js",
           to: "js/lookbooks_main.js",
+          info: { minimized: minimized },
+          noErrorOnMissing: true,
+        },
+        {
+          from: "src/js/recruitment_main.js",
+          to: "js/recruitment_main.js",
           info: { minimized: minimized },
           noErrorOnMissing: true,
         },
@@ -378,6 +385,7 @@ module.exports = {
       preload: preload,
       svg: svg,
       header: headerNoramComponent,
+      recruitmentComponent: recruitmentComponent,
       registerPromotion: registerPromotion,
       footer: footerComponent,
       template: "src/tuyen-dung.html",

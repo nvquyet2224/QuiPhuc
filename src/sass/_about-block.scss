@@ -7,7 +7,7 @@
 .history {
     position: relative;
     background-color: var(--global-color);
-    padding: 0 f.rem(40);
+    padding: f.rem(180) f.rem(40);
 
     &_wrap {
         width: 100%;
@@ -16,9 +16,15 @@
         .year-list {
             flex: 0 0 f.rem(255);
             max-width: f.rem(255);
+
+            .nav-overlay a::before,
+            .nav-overlay span::before {
+                display: none;
+            }
         }
 
         .year-detail {
+            position: relative;
             flex: 0 0 calc(100% - f.rem(255));
             max-width: calc(100% - f.rem(255));
             color: #fff;
@@ -35,6 +41,26 @@
                 .img {
                     aspect-ratio: 503/378;
                 }
+
+                .txt {
+                    padding: 0 f.rem(30) 0 0;
+                }
+            }
+
+            .detail {
+                position: absolute;
+                width: 100%;
+                height: auto;
+                opacity: 0;
+                pointer-events: none;
+                -webkit-transition: opacity 0.3s ease-in-out;
+                transition: opacity 0.3s ease-in-out;
+
+                &.current {
+                    position: relative;
+                    opacity: 1;
+                    pointer-events: all;
+                }
             }
 
         }
@@ -48,6 +74,47 @@
 @media screen and (max-width:1023px) {
     .vision {
         margin-bottom: f.rem(60);
+    }
+
+
+    .history {
+        padding: f.rem(95) f.rem(16);
+
+        &_wrap {
+
+            .year-list {
+                flex: 0 0 f.rem(100);
+                max-width: f.rem(100);
+
+                .nav-overlay {
+                    display: block;
+
+                    a,
+                    span {
+                        font-size: f.rem(16);
+                        padding: f.rem(14) 0;
+                        display: inline-flex;
+                    }
+                }
+            }
+
+            .year-detail {
+                flex: 0 0 calc(100% - f.rem(100));
+                max-width: calc(100% - f.rem(100));
+
+                .txt_img {
+                    .detail_block {
+                        font-size: f.rem(12);
+                        margin-bottom: f.rem(30);
+                    }
+                }
+
+            }
+
+
+        }
+
+
     }
 
 }
