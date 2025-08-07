@@ -739,6 +739,7 @@ input[type=number] {
   .txt_img .img {
     flex: 0 0 100%;
     max-width: 100%;
+    width: 100%;
   }
   .img_txt .txt,
   .txt_img .txt {
@@ -1884,12 +1885,15 @@ button.swiper-pagination-bullet {
 }
 .lookbooks-detail .detail-top {
   display: flex;
+  max-height: 42.25rem;
+  overflow: hidden;
 }
 .lookbooks-detail .detail-top .products {
   width: 27.8472222222%;
-  height: 100%;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  overflow: hidden;
 }
 .lookbooks-detail .detail-top .products_head {
   font-weight: 500;
@@ -1906,18 +1910,107 @@ button.swiper-pagination-bullet {
   width: 1.5rem;
   height: 1.5rem;
 }
+.lookbooks-detail .detail-top .products_content {
+  position: relative;
+}
+.lookbooks-detail .detail-top .products_content--item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+}
+.lookbooks-detail .detail-top .products_content--item.current {
+  position: relative;
+  left: auto;
+  top: auto;
+  opacity: 1;
+}
+.lookbooks-detail .detail-top .products_content--item .swiper-slide {
+  height: auto !important;
+}
+.lookbooks-detail .detail-top .products_content--item .swiper-slide:not(:last-child) .product {
+  border-bottom: 1px solid #eaecf0;
+}
 .lookbooks-detail .detail-top .products .product {
-  flex-direction: row;
   padding: 1.5rem;
-  gap: 1rem;
+  padding-left: 9.5rem;
 }
 .lookbooks-detail .detail-top .products .product-img {
   margin: 0;
   width: 7rem;
   height: 7rem;
+  position: absolute;
+  left: 1.5rem;
+  top: 1.5rem;
+}
+.lookbooks-detail .detail-top .products .product-txt .model {
+  margin-top: 0;
+  font-size: 0.75rem;
+}
+.lookbooks-detail .detail-top .products .product-txt .name {
+  margin-top: 0.125rem;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+.lookbooks-detail .detail-top .products .product .price {
+  margin-top: 0.5625rem;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+.lookbooks-detail .detail-top .products .product .color {
+  display: none;
+}
+.lookbooks-detail .detail-top .products .product .tag {
+  position: relative;
+  top: 0;
+  left: 0;
+  text-align: right;
+  width: fit-content;
+  margin-left: auto;
+  margin-top: -1.4375rem;
+}
+.lookbooks-detail .detail-top .products .product .tag .tag-item {
+  font-size: 0.625rem;
+  padding: 0 0.3125rem;
+  height: 1.375rem;
+}
+.lookbooks-detail .detail-top .products .product .tag .tag-item svg {
+  width: 0.5rem;
+  height: 0.625rem;
+}
+.lookbooks-detail .detail-top .products .product .meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.625rem;
+}
+.lookbooks-detail .detail-top .products .product .meta-btn {
+  width: 2rem;
+  height: 2rem;
+  color: #282930;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #c0c0c0;
+}
+.lookbooks-detail .detail-top .products .product .meta-btn svg {
+  width: 0.625rem;
+  height: 0.625rem;
+}
+.lookbooks-detail .detail-top .products .product .meta-link a {
+  font-size: 0.875rem;
+  line-height: 1.4;
 }
 .lookbooks-detail .detail-top .rooms {
   width: 72.1527777778%;
+}
+.lookbooks-detail .detail-top .rooms-nav {
+  position: absolute;
 }
 
 .subscribe {
