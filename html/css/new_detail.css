@@ -901,6 +901,11 @@ input[type=number] {
 }
 .new-detail .share {
   display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+.new-detail .share-title {
+  display: flex;
   font-size: 1rem;
   color: #015AAB;
   font-weight: 500;
@@ -910,9 +915,25 @@ input[type=number] {
   align-items: center;
   cursor: pointer;
 }
-.new-detail .share svg {
+.new-detail .share-title svg {
   width: 1.25rem;
   height: 1.25rem;
+}
+.new-detail .share-list {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.new-detail .share-list a {
+  display: inline-flex;
+  width: 1.875rem;
+  height: auto;
+  line-height: 0;
+  cursor: pointer;
+}
+.new-detail .share-list a img {
+  width: 100%;
+  height: auto;
 }
 .new-detail .relation {
   padding-top: 3.75rem;
@@ -938,6 +959,42 @@ input[type=number] {
 .new-detail .relation .new-meta {
   font-size: 0.875rem;
   color: #475467;
+}
+.new-detail .relation.recruiment-type .new {
+  position: relative;
+  width: 100%;
+  border: 1px solid #D0D5DD;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+.new-detail .relation.recruiment-type .new h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.new-detail .relation.recruiment-type .new .salary {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #F58720;
+  margin-bottom: 0.5rem;
+}
+.new-detail .relation.recruiment-type .new-meta {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+.new-detail .relation.recruiment-type .new-meta strong {
+  font-weight: 600;
+}
+.new-detail .relation.recruiment-type .new .link-but {
+  font-size: 0.875rem;
+}
+
+.apply-box {
+  background-color: #F2F2F2;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 @media screen and (min-width: 1024px) {

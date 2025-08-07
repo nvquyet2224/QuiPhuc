@@ -117,18 +117,43 @@
 
     .share {
         display: flex;
-        font-size: f.rem(16);
-        color: #015AAB;
-        font-weight: 500;
-        gap: f.rem(10);
-        text-decoration: underline;
-        display: inline-flex;
         align-items: center;
-        cursor: pointer;
+        gap: f.rem(28);
 
-        svg {
-            width: f.rem(20);
-            height: f.rem(20);
+        &-title {
+            display: flex;
+            font-size: f.rem(16);
+            color: #015AAB;
+            font-weight: 500;
+            gap: f.rem(10);
+            text-decoration: underline;
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+
+            svg {
+                width: f.rem(20);
+                height: f.rem(20);
+            }
+        }
+
+        &-list {
+            display: flex;
+            align-items: center;
+            gap: f.rem(12);
+
+            a {
+                display: inline-flex;
+                width: f.rem(30);
+                height: auto;
+                line-height: 0;
+                cursor: pointer;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
         }
     }
 
@@ -162,8 +187,53 @@
                 color: #475467;
             }
         }
+
+        &.recruiment-type {
+            .new {
+                position: relative;
+                width: 100%;
+                border: 1px solid #D0D5DD;
+                border-radius: f.rem(8);
+                padding: f.rem(24);
+                margin-bottom: f.rem(12);
+
+                h3 {
+                    font-size: f.rem(16);
+                    font-weight: 600;
+                    margin-bottom: f.rem(8);
+                }
+
+                .salary {
+                    display: block;
+                    font-size: f.rem(14);
+                    font-weight: 600;
+                    color: #F58720;
+                    margin-bottom: f.rem(8);
+                }
+
+                &-meta {
+                    margin-bottom: f.rem(8);
+                    font-size: f.rem(14);
+
+                    strong {
+                        font-weight: 600;
+                    }
+                }
+
+                .link-but {
+                    font-size: f.rem(14);
+                }
+            }
+        }
     }
 }
+
+.apply-box {
+    background-color: #F2F2F2;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 
 @media screen and (min-width: 1024px) {
     .new-detail {
@@ -172,7 +242,7 @@
             align-self: flex-start;
             position: sticky;
             position: -webkit-sticky;
-            top:f.rem(70);
+            top: f.rem(70);
         }
     }
 }

@@ -1458,6 +1458,8 @@ button.swiper-pagination-bullet {
 .new {
   width: 100%;
   height: auto;
+  text-decoration: none;
+  color: #000;
 }
 .new-block {
   width: 100%;
