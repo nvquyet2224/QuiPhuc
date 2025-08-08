@@ -1,4 +1,60 @@
 
+class LogosMarquee {
+  constructor({
+    containerSelector = ".marquee__ctn",
+    trackSelector = ".marquee__track",
+    speed = 60
+  } = {}) {
+    this.container = document.querySelector(containerSelector);
+    this.track = document.querySelector(trackSelector);
+    this.speed = speed;
+
+    if (!this.container || !this.track) {
+      console.warn("Marquee: éléments introuvables.");
+      return;
+    }
+
+    this.trackWidth = this.track.getBoundingClientRect().width;
+    this.pos = 0;
+    this.start = null;
+    this.rafId = null;
+
+    this.setup();
+    this.animate = this.animate.bind(this);
+    requestAnimationFrame(this.animate);
+  }
+
+  setup() {
+    this.container.style.width = `${this.trackWidth}px`;
+    this.clone = this.track.cloneNode(true);
+    this.container.appendChild(this.clone);
+    this.container.style.willChange = "transform";
+  }
+
+  animate(timestamp) {
+    if (!this.start) this.start = timestamp;
+
+    const elapsed = timestamp - this.start;
+    this.pos = -(elapsed / 1000) * this.speed;
+
+    if (Math.abs(this.pos) >= this.trackWidth) {
+      this.start = timestamp;
+      this.pos = 0;
+    }
+
+    this.container.style.transform = `translateX(${this.pos}px)`;
+
+    this.rafId = requestAnimationFrame(this.animate);
+  }
+
+  destroy() {
+    cancelAnimationFrame(this.rafId);
+    if (this.clone) this.clone.remove();
+    this.container.style.transform = "";
+    this.container.style.willChange = "";
+  }
+}
+
 function menuAnim() {
   // Mouse event
   document.querySelectorAll('.nav-item').forEach(function (item) {
@@ -231,121 +287,6 @@ function lazyEvent() {
   });
 }
 
-/*
-function selectClick() {
-
-
-  // Open dropdown
-  $('.select-header').on('click', function () {
-    if ($(this).parent().hasClass('open')) {
-      $(this).parent().removeClass('open');
-    } else {
-      $('.open').removeClass('open');
-      $(this).parent().addClass('open');
-    }
-  });
-
-  // Fake select apartment item
-  $('.select-box li').on('click', function () {
-    let text = $(this).html();
-    const select = $(this).closest('.select');
-    select.find('.select-selected').html(text);
-    select.removeClass('open');
-    select.find('.selected').removeClass('selected');
-    $(this).addClass('selected');
-  });
-
-  // Close dropdown when click out
-  $(document).on('click', function (event) {
-    if (!$(event.target).closest('.select').length) {
-      $('.select.open').removeClass('open');
-    }
-  });
-
-}
-
-function navAccordion() {
-  $('div.dropdown-menu--title').on('click', function () {
-    const box = $(this).closest('.dropdown-menu--subitem');
-    const body = box.find('.container-list');
-    const detail = box.find('.container-list ul');
-    const bodyH = detail.innerHeight();
-    if ($(this).hasClass('current')) {
-      $(this).removeClass('current');
-      body.css('--data-h', '0px');
-    } else {
-      const oldCur = $('.dropdown-menu--title.current');
-      if(oldCur.length) {
-        const oldBox = $(oldCur).closest('.dropdown-menu--subitem');
-        const oldBody = oldBox.find('.container-list');
-        oldBody.css('--data-h', '0px').removeClass('current');
-        oldCur
-      }
-      $(this).addClass('current');
-      body.css('--data-h', bodyH + 'px');
-    }
-
-  });
-
-}
-
-function onScroll() {
-
-  function setDelay(items, start) {
-    if ($(items).length) {
-      $(items).each(function (index) {
-        $(this).css('animation-delay', `${(index + 1) * start}s`); // Delay increases for each item
-      });
-    }
-  }
-
-  // Function to add/remove class on scroll
-  var lastScrollTop = 0;
-  function toggleClassOnView() {
-    setTimeout(() => {
-      const items = ``;
-      $(items).each(function () {
-        if ($(this).length) {
-          var elementTop = $(this).offset().top;
-          var elementBottom = elementTop + $(this).outerHeight();
-          var viewportTop = $(window).scrollTop();
-          var viewportBottom = viewportTop + $(window).height();
-
-          // Kiá»ƒm tra náº¿u pháº§n tá»­ Ä‘Ã£ vÃ o khung nhÃ¬n
-          if (elementTop < viewportBottom && elementBottom > viewportTop) {
-            $(this).addClass('in-view');
-          }
-
-          // Kiá»ƒm tra náº¿u pháº§n tá»­ Ä‘Ã£ thoÃ¡t khá»i khung nhÃ¬n
-          if (elementBottom <= viewportTop || elementTop >= viewportBottom) {
-            $(this).removeClass('in-view');
-          }
-        }
-
-      });
-      var scrollTop = $(this).scrollTop();
-      //if (scrollTop > lastScrollTop) {
-      if (scrollTop > 50) {
-        $('.header').addClass('sticky');
-      } else {
-        $('.header').removeClass('sticky');
-      }
-      //} else if (scrollTop < lastScrollTop) {
-      //$('.header').removeClass('sticky');
-      //}
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-    }, 50);
-  }
-
-  $(window).on('scroll resize', toggleClassOnView);
-
-  setDelay('.breadcrumb li', 0.15);
-  setDelay('.tab-menu li', 0.15);
-  toggleClassOnView();
-
-}*/
-
-
 function isInViewport(el, offset = 200) {
   const rect = el.getBoundingClientRect();
   return (
@@ -388,6 +329,30 @@ function loadImagesOnScroll() {
   }
 }
 
+function openPopup(byThis) {
+  const oldPop = document.querySelector('.popup.open');
+  const body = document.querySelector('body');
+  if(oldPop) {
+    curPop.classList.remove('open');
+  }
+  const curPop = document.querySelector(byThis);
+  if(curPop) {
+    body.classList.add('noScroll');
+    curPop.classList.add('open');
+  }
+
+}
+
+function closePopup(byThis) {
+  const oldPop = document.querySelector(byThis);
+  const body = document.querySelector('body');
+  if(oldPop) {
+    oldPop.classList.remove('open');
+  }
+  body.classList.remove('noScroll');
+
+}
+
 window.addEventListener('scroll', loadImagesOnScroll);
 window.addEventListener('load', loadImagesOnScroll);
 
@@ -401,11 +366,13 @@ window.addEventListener('load', loadImagesOnScroll);
   filterEvents();
   toggleSort();
 
+  // marquee
+  if (document.querySelector('.marquee__ctn')) {
+    new LogosMarquee({
+      containerSelector: ".marquee__ctn",
+      trackSelector: ".marquee__track",
+      speed: 120
+    });
+  }
 
-  //onScroll();
-  //selectClick();
-  //navAccordion();
-  // setTimeout(() => {
-  //   document.body.style.fontFamily = "'Montserrat', sans-serif";
-  // }, 1500);
 })();

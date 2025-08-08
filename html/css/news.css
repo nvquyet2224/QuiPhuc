@@ -64,6 +64,15 @@ input[type=number] {
   border-radius: 4px;
 }
 
+.input-txt--upload {
+  line-height: 3rem;
+  background: url(../images/icon-link.svg) no-repeat calc(100% - 1rem) center;
+  background-size: 1rem auto;
+}
+.input-txt--upload::-webkit-file-upload-button {
+  display: none;
+}
+
 .product {
   position: relative;
   width: 100%;

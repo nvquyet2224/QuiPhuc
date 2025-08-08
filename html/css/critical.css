@@ -1146,6 +1146,10 @@ lottie-player {
   box-shadow: none;
   padding: 0;
 }
+.link-but.full {
+  width: 100%;
+  justify-content: center;
+}
 .link-but.blue {
   color: var(--global-color);
 }
