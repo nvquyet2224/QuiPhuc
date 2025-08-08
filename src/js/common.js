@@ -329,6 +329,30 @@ function loadImagesOnScroll() {
   }
 }
 
+function openPopup(byThis) {
+  const oldPop = document.querySelector('.popup.open');
+  const body = document.querySelector('body');
+  if(oldPop) {
+    curPop.classList.remove('open');
+  }
+  const curPop = document.querySelector(byThis);
+  if(curPop) {
+    body.classList.add('noScroll');
+    curPop.classList.add('open');
+  }
+
+}
+
+function closePopup(byThis) {
+  const oldPop = document.querySelector(byThis);
+  const body = document.querySelector('body');
+  if(oldPop) {
+    oldPop.classList.remove('open');
+  }
+  body.classList.remove('noScroll');
+
+}
+
 window.addEventListener('scroll', loadImagesOnScroll);
 window.addEventListener('load', loadImagesOnScroll);
 

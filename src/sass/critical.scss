@@ -198,6 +198,11 @@ lottie-player {
     padding: 0;
   }
 
+  &.full {
+    width: 100%;
+    justify-content: center;
+  }
+
   &.blue {
     color: var(--global-color);
   }

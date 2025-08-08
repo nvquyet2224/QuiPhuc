@@ -35,6 +35,16 @@ input[type="number"] {
   border-radius: 4px;
 }
 
+.input-txt--upload {
+  line-height: f.rem(48);
+  background: url(../images/icon-link.svg) no-repeat calc(100% - f.rem(16)) center;
+  background-size: f.rem(16) auto;
+
+  &::-webkit-file-upload-button {
+    display: none;
+  }
+}
+
 
 .product {
   position: relative;
@@ -456,7 +466,7 @@ input[type="number"] {
     z-index: 1;
     padding: 0 f.rem(30) f.rem(30) f.rem(30);
     color: #fff;
-    
+
     p {
       margin-bottom: f.rem(10);
     }

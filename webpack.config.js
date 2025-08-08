@@ -73,7 +73,7 @@ const minifyRules = {
   removeStyleLinkTypeAttributes: true,
 };
 
-const devMode = false;
+const devMode = true;
 const isBack = false;
 const minify = false;
 const minimized = false;
@@ -227,6 +227,12 @@ module.exports = {
         {
           from: "src/js/recruitment_main.js",
           to: "js/recruitment_main.js",
+          info: { minimized: !minimized },
+          noErrorOnMissing: true,
+        },
+        {
+          from: "src/js/recruitment_detail_main.js",
+          to: "js/recruitment_detail_main.js",
           info: { minimized: !minimized },
           noErrorOnMissing: true,
         },
