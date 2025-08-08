@@ -73,7 +73,7 @@ const minifyRules = {
   removeStyleLinkTypeAttributes: true,
 };
 
-const devMode = true;
+const devMode = false;
 const isBack = false;
 const minify = false;
 const minimized = false;
@@ -197,55 +197,55 @@ module.exports = {
         {
           from: "src/js/index_main.js",
           to: "js/index_main.js",
-          info: { minimized: minimized },
+          info: { minimized: !minimized },
           noErrorOnMissing: true,
         },
         {
           from: "src/js/business_main.js",
           to: "js/business_main.js",
-          info: { minimized: minimized },
+          info: { minimized: !minimized },
           noErrorOnMissing: true,
         },
         {
           from: "src/js/product_list_main.js",
           to: "js/product_list_main.js",
-          info: { minimized: minimized },
+          info: { minimized: !minimized },
           noErrorOnMissing: true,
         },
         {
           from: "src/js/product_detail_main.js",
           to: "js/product_detail_main.js",
-          info: { minimized: minimized },
+          info: { minimized: !minimized },
           noErrorOnMissing: true,
         },
         {
           from: "src/js/lookbooks_main.js",
           to: "js/lookbooks_main.js",
-          info: { minimized: minimized },
+          info: { minimized: !minimized },
           noErrorOnMissing: true,
         },
         {
           from: "src/js/recruitment_main.js",
           to: "js/recruitment_main.js",
-          info: { minimized: minimized },
+          info: { minimized: !minimized },
           noErrorOnMissing: true,
         },
         {
           from: "src/js/lookbooks_chi_tiet_main.js",
           to: "js/lookbooks_chi_tiet_main.js",
-          info: { minimized: minimized },
+          info: { minimized: !minimized },
           noErrorOnMissing: true,
         },
         {
           from: "src/js/profile_main.js",
           to: "js/profile_main.js",
-          info: { minimized: minimized },
+          info: { minimized: !minimized },
           noErrorOnMissing: true,
         },
         {
           from: "src/js/about_main.js",
           to: "js/about_main.js",
-          info: { minimized: minimized },
+          info: { minimized: !minimized },
           noErrorOnMissing: true,
         },
         { from: "src/videos", to: "videos", noErrorOnMissing: true },
