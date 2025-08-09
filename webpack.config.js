@@ -61,6 +61,8 @@ const lookbooksDetailComponent = fs.readFileSync(__dirname + "/src/_lookbooks-ch
 
 const profileDetailComponent = fs.readFileSync(__dirname + "/src/_profile-detail.html");
 
+const loginFormComponent = fs.readFileSync(__dirname + "/src/_login-form.html");
+
 const recruitmentComponent = fs.readFileSync(__dirname + "/src/_recruitment-block.html");
 const recruitmentDetailComponent = fs.readFileSync(__dirname + "/src/_recruitment-detail.html");
 //noErrorOnMissing: true
@@ -92,6 +94,7 @@ module.exports = {
     product_list: ["./src/js/product_list.js"],
     lookbooks: ["./src/js/lookbooks.js"],
     profile: ["./src/js/profile.js"],
+    login: ["./src/js/login.js"],
     lookbooks_chi_tiet: ["./src/js/lookbooks_chi_tiet.js"],
     about: ["./src/js/about.js"],
     recruitment: ["./src/js/recruitment.js"],
@@ -245,6 +248,12 @@ module.exports = {
         {
           from: "src/js/profile_main.js",
           to: "js/profile_main.js",
+          info: { minimized: !minimized },
+          noErrorOnMissing: true,
+        },
+        {
+          from: "src/js/login_main.js",
+          to: "js/login_main.js",
           info: { minimized: !minimized },
           noErrorOnMissing: true,
         },
@@ -410,6 +419,18 @@ module.exports = {
       registerPromotion: registerPromotion,
       footer: footerComponent,
       template: "src/profile.html",
+      minify: minify,
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      filename: "login.html",
+      preload: preload,
+      svg: svg,
+      header: headerNoramComponent,
+      form: loginFormComponent,
+      registerPromotion: registerPromotion,
+      footer: footerComponent,
+      template: "src/login.html",
       minify: minify,
     }),
     new HtmlWebpackPlugin({

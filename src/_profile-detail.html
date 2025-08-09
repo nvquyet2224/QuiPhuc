@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="profile_content">
-      <div class="tab">
+      <div class="tab profile-tab">
         <div class="mobile-scroll">
           <ul class="tab-list">
             <li class="tab-item current" data-target="1">
@@ -39,7 +39,10 @@
       </div>
 
       <div class="profile-detail">
-        <div class="profile-detail--item profile-detail--account current" data-target="1">
+        <div
+          class="profile-detail--item profile-detail--account current"
+          data-target="1"
+        >
           <div class="account">
             <div class="account--item current" data-account="1">
               <div class="account_head profile_head">Thông tin tài khoản</div>
@@ -313,26 +316,49 @@
             </div>
           </div>
         </div>
-        <div class="profile-detail--item profile-detail--history" data-target="2">
+        <div
+          class="profile-detail--item profile-detail--history"
+          data-target="2"
+        >
           <div class="history">
             <div class="history--item">
-              <div class="history_head">Lịch sửa mua hàng</div>
+              <div class="history_head profile_head">Lịch sửa mua hàng</div>
               <div class="history_content">
                 <div class="tab">
-                  <ul class="tab-list">
-                    <li class="tab-item current" data-target="1">
+                  <ul class="tab-list pc">
+                    <li class="tab-item current" data-value="Tất cả">
                       <span>Tất cả (3)</span>
                     </li>
-                    <li class="tab-item" data-target="2">
+                    <li class="tab-item" data-value="Đang gia">
                       <span>Đang giao (1)</span>
                     </li>
-                    <li class="tab-item" data-target="3">
+                    <li class="tab-item" data-value="Đã giao">
                       <span>Đã giao (1)</span>
                     </li>
-                    <li class="tab-item" data-target="4">
+                    <li class="tab-item" data-value="Hủy đơn hàng">
                       <span>Hủy đơn hàng</span>
                     </li>
                   </ul>
+                  <div class="select sp">
+                    <div class="select-header">
+                      <span class="select-selected">Tất cả (3)</span>
+                      <span class="select-arrow">
+                        <svg>
+                          <use xlink:href="#icon-chevron-down"></use>
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="select-box">
+                      <ul>
+                        <li class="selected" data-value="Tất cả">
+                          Tất cả (3)
+                        </li>
+                        <li class="selected" data-value="Đang giao">Đang giao (1)</li>
+                        <li class="selected" data-value="Đã giao">Đã giao (1)</li>
+                        <li class="selected" data-value="Hủy đơn hàng">Hủy đơn hàng</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
                 <div class="list">
                   <div class="item">
@@ -419,7 +445,10 @@
             </div>
           </div>
         </div>
-        <div class="profile-detail--item profile-detail--address" data-target="3">
+        <div
+          class="profile-detail--item profile-detail--address"
+          data-target="3"
+        >
           <div class="address">
             <div class="address--item current" data-address="1">
               <div class="address_head sp-bw profile_head">
