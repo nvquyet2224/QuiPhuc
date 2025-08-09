@@ -1,0 +1,135 @@
+<section class="section login-form">
+  <div class="login-form_wrap">
+    <div class="side-login login-form--item" data-target="1">
+      <div class="form--item">
+        <div class="logo">
+          <a href="./">
+            <img
+              width="186"
+              height="49"
+              fetcpriority="high"
+              src="images/logo.svg"
+              alt="Qui Phúc"
+            />
+          </a>
+        </div>
+        <h4 class="title">Đăng nhập vào Qui Phúc</h4>
+        <p>Trải nghiệm không gian mua sắm cùng Qui Phúc</p>
+        <form class="form">
+          <div class="form_group form_normal">
+            <div class="form_field">
+              <label class="form_caption" for="email"> Email </label>
+              <input class="input-txt" type="email" id="email" placeholder="" />
+              <div class="field_error">Error message</div>
+            </div>
+          </div>
+          <div class="form_group form_normal">
+            <div class="form_field">
+              <label class="form_caption" for="password"> Mật khẩu </label>
+              <input
+                class="input-txt"
+                type="password"
+                id="password"
+                placeholder=""
+              />
+              <div class="field_error">Error message</div>
+            </div>
+          </div>
+          <a href="#" class="link-but transparent blue underline">
+            Quên mật khẩu
+          </a>
+          <button class="login-form-btn">Đăng nhập</button>
+        </form>
+      </div>
+      <div class="form--item">
+        <h4 class="title">Bạn là khách hàng mới</h4>
+        <p>
+          Tạo một tài khoản chỉ với hai thông tin và bạn sẽ có thể xử lý đơn đặt
+          hàng của mình nhanh hơn và tìm hiểu về các xu hướng và chương trình
+          khuyến mãi mới nhất qua email!
+        </p>
+        <button class="login-form-btn" data-target="2">Đăng ký</button>
+      </div>
+    </div>
+    <div class="side-sigup login-form--item current" data-target="2">
+      <div class="form--item">
+        <h4 class="title">Chào mừng bạn đến với Qui Phúc</h4>
+        <p>
+          Bạn đã có tài khoản?
+          <span data-target="1" class="back-login link-but transparent blue underline"> Đăng nhập </span>
+        </p>
+        <form class="form">
+          <div class="form_group form_normal">
+            <div class="form_field">
+              <label class="form_caption" for="firstname"> Họ </label>
+              <input
+                class="input-txt"
+                type="text"
+                id="firstname"
+                placeholder=""
+              />
+              <div class="field_error">Error message</div>
+            </div>
+
+            <div class="form_field">
+              <label class="form_caption" for="lastname"> Tên </label>
+              <input class="input-txt" type="text" id="lastname" />
+              <div class="field_error">Error message</div>
+            </div>
+          </div>
+
+          <div class="form_group form_normal">
+            <div class="form_field">
+              <label class="form_caption" for="phone"> Số điện thoại </label>
+              <input class="input-txt" type="text" id="phone" />
+              <div class="field_error">Error message</div>
+            </div>
+          </div>
+          <div class="form_group form_normal">
+            <div class="form_field">
+              <label class="form_caption" for="sigup-email"> Email </label>
+              <input
+                class="input-txt"
+                type="email"
+                id="sigup-email"
+                placeholder=""
+              />
+              <div class="field_error">Error message</div>
+            </div>
+          </div>
+          <div class="form_group form_normal">
+            <div class="form_field">
+              <label class="form_caption" for="sigup-password">
+                Mật khẩu
+              </label>
+              <input
+                class="input-txt"
+                type="password"
+                id="sigup-password"
+                placeholder=""
+              />
+              <div class="field_error">Error message</div>
+            </div>
+          </div>
+          <div class="form_group form_normal form_checkbox">
+            <div class="form_field">
+              <input
+                id="agree"
+                type="checkbox"
+                checked
+                class="input-checkbox"
+              />
+              <label class="form_caption" for="agree">
+                By signing up, signing in or continuing, I agree to Qui Phúc
+                <a href="#">Terms of Use</a> and
+                <a href="#">Privacy Policy.</a>
+              </label>
+              <div class="field_error">Error message</div>
+            </div>
+          </div>
+          <button class="login-form-btn">Đăng ký</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

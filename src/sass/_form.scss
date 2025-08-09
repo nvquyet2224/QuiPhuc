@@ -37,6 +37,52 @@
     }
     &.spr3 {
     }
+    &.form_normal {
+      .form_caption {
+        position: relative;
+        top: auto;
+        left: auto;
+        background-color: transparent;
+        padding: 0;
+        font-weight: 500;
+        font-size: f.rem(14);
+        line-height: 1.4;
+        color: #000;
+        margin-bottom: f.rem(4);
+      }
+      .input-txt {
+        background-color: #fff;
+      }
+      .form_field {
+        padding-bottom: f.rem(16);
+      }
+      &.form_checkbox {
+        gap: f.rem(24);
+        .form_field {
+          display: flex;
+          align-items: center;
+          gap: f.rem(12);
+          width: fit-content;
+          cursor: pointer;
+        }
+        .form_caption {
+          position: relative;
+          top: auto;
+          left: auto;
+          padding: 0;
+          font-weight: 400;
+          font-size: f.rem(14);
+          line-height: 1.5;
+          letter-spacing: 0;
+          color: #000000;
+          margin: 0;
+          a {
+            color: #000;
+            font-weight: 500;
+          }
+        }
+      }
+    }
   }
   &_field {
     position: relative;
@@ -75,6 +121,7 @@
     .input-checkbox {
       position: relative;
       width: f.rem(16);
+      min-width: f.rem(16);
       height: f.rem(16);
       -webkit-border-radius: 4px;
       border-radius: 4px;
