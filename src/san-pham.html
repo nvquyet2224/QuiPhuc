@@ -43,32 +43,238 @@
               <li><span>Ghế</span></li>
             </ul>
           </div>
-        <%= htmlWebpackPlugin.options.listBannerComponent %>
-        <%= htmlWebpackPlugin.options.listProductComponent %>
-        <%= htmlWebpackPlugin.options.registerPromotion %>
+          <%= htmlWebpackPlugin.options.listBannerComponent %>
+            <%= htmlWebpackPlugin.options.listProductComponent %>
+              <%= htmlWebpackPlugin.options.registerPromotion %>
         </div>
         <%= htmlWebpackPlugin.options.footer %>
   </div>
   <!--Script-->
   <script defer src="js/common.js"></script>
-  <script>
-    function script(url) {
-      var s = document.createElement("script");
-      s.type = "text/javascript";
-      s.async = false;
-      s.src = url;
-      var x = document.getElementsByTagName("head")[0];
-      x.appendChild(s);
-    }
-      window.onload = function () {
-        setTimeout(function () {
-          ["js/jquery.js", "js/jquery-ui.js", "js/product_list_main.js"].forEach(function (src) {
-            script(src);
-          });
-        }, 0);
-      }
-  </script>
+  <script defer src="js/jquery.js"></script>
+  <script defer src="js/jquery-ui.js"></script>
+  <script defer src="js/product_list_main.js"></script>
   <%= htmlWebpackPlugin.options.preload %>
+    <!--popup-->
+    <div class="popup" id="comparePop">
+      <div class="popup-inr">
+        <div class="compare-pop">
+          <div class="compare-title">SO SÁNH SẢN PHẨM <div class="popup-close">
+              <img width="24" height="24" src="images/icon-close.svg" alt="close" />
+            </div>
+          </div>
+          <div class="compare-content">
+            <div class="compare-row">
+              <div class="compare-name"><span>Sản phẩm</span></div>
+              <div class="compare-data">
+                <div class="compare-col">
+                  <div class="product">
+                    <div class="product-img">
+                      <img width="225" height="222" loading="lazy" fetchpriority="low" src="images/collection-1.png"
+                        alt="Ghế đẩu inox kiềng - Đặt riêng" />
+                    </div>
+                    <div class="product-txt">
+                      <div class="model">Model: 1200000454</div>
+                      <h3 class="name">Ghế đẩu inox kiềng - Đặt riêng</h3>
+                    </div>
+                    <div class="product-cart">
+                      <button type="button" class="link-but">
+                        <svg>
+                          <use xlink:href="#icon-cart"></use>
+                        </svg>
+                        Thêm vào giỏ hàng
+                      </button>
+                    </div>
+                    <div class="product-close">
+                      <svg>
+                        <use xlink:href="#icon-close"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="compare-col">
+                  <div class="product">
+                    <div class="product-img">
+                      <img width="225" height="222" loading="lazy" fetchpriority="low" src="images/collection-1.png"
+                        alt="Ghế đẩu inox kiềng - Đặt riêng" />
+                    </div>
+                    <div class="product-txt">
+                      <div class="model">Model: 1200000454</div>
+                      <h3 class="name">Ghế đẩu inox kiềng - Đặt riêng</h3>
+                    </div>
+                    <div class="product-cart">
+                      <button type="button" class="link-but">
+                        <svg>
+                          <use xlink:href="#icon-cart"></use>
+                        </svg>
+                        Thêm vào giỏ hàng
+                      </button>
+                    </div>
+                    <div class="product-close">
+                      <svg>
+                        <use xlink:href="#icon-close"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="compare-col">
+                  <div class="product">
+                    <div class="product-img">
+                      <img width="225" height="222" loading="lazy" fetchpriority="low" src="images/collection-1.png"
+                        alt="Ghế đẩu inox kiềng - Đặt riêng" />
+                    </div>
+                    <div class="product-txt">
+                      <div class="model">Model: 1200000454</div>
+                      <h3 class="name">Ghế đẩu inox kiềng - Đặt riêng</h3>
+                    </div>
+                    <div class="product-cart">
+                      <button type="button" class="link-but">
+                        <svg>
+                          <use xlink:href="#icon-cart"></use>
+                        </svg>
+                        Thêm vào giỏ hàng
+                      </button>
+                    </div>
+                    <div class="product-close">
+                      <svg>
+                        <use xlink:href="#icon-close"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="compare-row">
+              <div class="compare-name"><span>Giá</span></div>
+              <div class="compare-data">
+                <div class="compare-col">
+                  <div class="price">
+                    <span class="price-main">1.981.980đ</span>
+                    <span class="price-sale">2.43.000đ</span>
+                    <span class="price-tag">
+                      <svg>
+                        <use xlink:href="#icon-thunder"></use>
+                      </svg>
+                      20%
+                    </span>
+                  </div>
+                </div>
+                <div class="compare-col">
+                  <div class="price">
+                    <span class="price-main">1.981.980đ</span>
+                    <span class="price-sale">2.43.000đ</span>
+                    <span class="price-tag">
+                      <svg>
+                        <use xlink:href="#icon-thunder"></use>
+                      </svg>
+                      20%
+                    </span>
+                  </div>
+                </div>
+                <div class="compare-col">
+                  <div class="price">
+                    <span class="price-main">1.981.980đ</span>
+                    <span class="price-sale">2.43.000đ</span>
+                    <span class="price-tag">
+                      <svg>
+                        <use xlink:href="#icon-thunder"></use>
+                      </svg>
+                      20%
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="compare-row">
+              <div class="compare-name"><span>Màu sắc</span></div>
+              <div class="compare-data">
+                <div class="compare-col">
+                  <div class="color">
+                    <span class="color-circle" style="--color:#F52B2E"></span>
+                    Đỏ
+                  </div>
+                </div>
+                <div class="compare-col">
+                  <div class="color">
+                    <span class="color-circle" style="--color:#83CE48"></span>
+                    Xanh lá
+                  </div>
+                </div>
+                <div class="compare-col">
+                  <div class="color">
+                    <span class="color-circle" style="--color:#FFC44B"></span>
+                    Vàng
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="compare-row">
+              <div class="compare-name"><span>Kích thước</span></div>
+              <div class="compare-data">
+                <div class="compare-col">
+                  <div class="size">
+                    + Xếp: 1000 x 450 x 85mm <br>+ Mở: 500 x 450 x 840mm
+                  </div>
+                </div>
+                <div class="compare-col">
+                  <div class="size">
+                    + Xếp: 1000 x 450 x 85mm <br>+ Mở: 500 x 450 x 840mm
+                  </div>
+                </div>
+                <div class="compare-col">
+                  <div class="size">
+                    + Xếp: 1000 x 450 x 85mm <br>Mở: 500 x 450 x 840mm
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="compare-row">
+              <div class="compare-name"><span>Chất liệu</span></div>
+              <div class="compare-data">
+                <div class="compare-col">
+                  <div class="material">Inox 201</div>
+                </div>
+                <div class="compare-col">
+                  <div class="material">Inox 201</div>
+                </div>
+                <div class="compare-col">
+                  <div class="material">Inox 201</div>
+                </div>
+              </div>
+            </div>
+            <div class="compare-row">
+              <div class="compare-name"><span>Vật liệu</span></div>
+              <div class="compare-data">
+                <div class="compare-col">
+                  <div class="material">Inox 201</div>
+                </div>
+                <div class="compare-col">
+                  <div class="material">Inox 201</div>
+                </div>
+                <div class="compare-col">
+                  <div class="material">Inox 201</div>
+                </div>
+              </div>
+            </div>
+            <div class="compare-row">
+              <div class="compare-name"><span>Dòng SP</span></div>
+              <div class="compare-data">
+                <div class="compare-col">
+                  <div class="cate">DONA</div>
+                </div>
+                <div class="compare-col">
+                  <div class="cate">FELIX</div>
+                </div>
+                <div class="compare-col">
+                  <div class="cate">DELI</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/popup-->
 </body>
 
 </html>

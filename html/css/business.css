@@ -2317,6 +2317,11 @@ button.swiper-pagination-bullet {
   width: 100%;
   height: auto;
 }
+.brand .section-partner {
+  position: absolute;
+  left: 0;
+  bottom: 1.25rem;
+}
 
 @keyframes scroll {
   0% {
@@ -2390,6 +2395,9 @@ button.swiper-pagination-bullet {
   }
   .brand__certi-thumb {
     width: 100%;
+  }
+  .brand .section-partner {
+    bottom: 0rem;
   }
 }
 .commit_wrap {

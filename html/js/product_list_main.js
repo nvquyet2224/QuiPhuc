@@ -166,8 +166,42 @@ const handleCheckboxes = () => {
     elements.btnReset.addEventListener("click", resetFilters);
 };
 
+function compareEvent() {
+    const toggle = document.querySelector('.compare-toggle');
+    if (toggle) {
+        toggle.addEventListener("click", () => {
+            const compare = document.querySelector('.compare-box');
+            if (compare.classList.contains('show')) {
+                compare.classList.remove('show');
+            } else {
+                compare.classList.add('show');
+            }
+        });
+    }
+    //Open compare pop
+    const openCompareBut = document.querySelector('#openComparePop');
+    if (openCompareBut) {
+        openCompareBut.addEventListener("click", () => {
+            const compare = document.querySelector('#comparePop');
+            document.querySelector('body').classList.add('no-scroll');
+            compare.classList.add('open');
+        });
+    }
+    // close compare pop
+    const closeComparePop = document.querySelector('.popup-close');
+    if (closeComparePop) {
+        closeComparePop.addEventListener("click", () => {
+            const compare = document.querySelector('#comparePop');
+            document.querySelector('body').classList.remove('no-scroll');
+            compare.classList.remove('open');
+        });
+    }
+
+}
+
 (function () {
     initPriceSlider();
     handleFilterEvents();
     handleCheckboxes();
+    compareEvent();
 })();

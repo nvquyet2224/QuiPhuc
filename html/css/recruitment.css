@@ -1087,6 +1087,11 @@ input[type=number] {
   width: 8.625rem;
 }
 
+@media screen and (min-width: 1025px) {
+  .head-top--left {
+    pointer-events: none;
+  }
+}
 @media screen and (max-width: 1023px) {
   .filter__head {
     padding: 1rem;
