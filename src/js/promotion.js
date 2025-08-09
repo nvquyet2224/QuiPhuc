@@ -1,0 +1,1 @@
+import "../sass/promotion-page.scss";
