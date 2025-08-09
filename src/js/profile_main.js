@@ -19,7 +19,7 @@ function profileCommon() {
       }
     });
   };
-  document.querySelectorAll(".tab-item").forEach((elm) => {
+  document.querySelectorAll(".profile-tab .tab-item").forEach((elm) => {
     elm.addEventListener("click", () => {
       const _target = elm.getAttribute("data-target");
       setCurrent(_target);
