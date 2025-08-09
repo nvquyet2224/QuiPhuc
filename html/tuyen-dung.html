@@ -1706,11 +1706,11 @@
                             </svg>
                             BỘ LỌC
                         </div>
-                        <div class="head-top--right" id="delete-filter">Xóa bộ lọc</div>
+                        <div class="head-top--right hide" id="filterDelete">Xóa bộ lọc</div>
                     </div>
-                    <div class="head-tags"></div>
+                    <div class="head-tags" id="filterTag"></div>
                 </div>
-                <div class="filter__accordion">
+                <div class="filter__accordion" id="filter__accordion">
                     <div class="accordion__head sp">
                         Bộ lọc
                         <div class="accordion__head-btn close-filter">
@@ -1720,7 +1720,7 @@
                         </div>
                     </div>
                     <div class="accordion__body">
-                        <div class="list_accordion has__content">
+                        <div class="list_accordion">
                             <div class="accordion__header">
                                 <span class="accordion__title">Phòng ban</span>
                                 <span class="accordion__icon">
@@ -1764,7 +1764,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="list_accordion has__content">
+                        <div class="list_accordion">
                             <div class="accordion__header">
                                 <span class="accordion__title">Vị trí</span>
                                 <span class="accordion__icon">
@@ -1793,7 +1793,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="list_accordion has__content">
+                        <div class="list_accordion">
                             <div class="accordion__header">
                                 <span class="accordion__title">Khu vực</span>
                                 <span class="accordion__icon">
@@ -1826,15 +1826,15 @@
                         </div>
                     </div>
                     <div class="accordion__footer sp">
-                        <button class="accordion__footer-btn btn-reset" id="btn-reset">Reset</button>
-                        <button class="accordion__footer-btn" id="btn-apply">Áp dụng</button>
+                        <button class="accordion__footer-btn btn-reset" id="filterReset">Reset</button>
+                        <button class="accordion__footer-btn" id="filterApply">Áp dụng</button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="recruitment_result">
             <div class="recruitment-sort">
-                <span class="recruitment-total">7 CÔNG VIỆC</span>
+                <span class="recruitment-total" id="filterAmount">7 CÔNG VIỆC</span>
                 <div class="sort">
                     <div class="sort_caption">Sắp xếp:</div>
                     <div class="select">
@@ -1861,7 +1861,7 @@
                     </div>
                 </div>
             </div>
-            <div class="recruitment-list">
+            <div class="recruitment-list" id="filterResult">
                 <div class="recruitment-item">
                     <div class="new">
                         <div class="new-txt">
@@ -1948,7 +1948,13 @@
                     </div>
                 </div>
             </div>
-            <div class="paging">
+            <div class="empty-block hide" id="filterEmpty">
+                <svg>
+                  <use xlink:href="#icon-not-found"></use>
+                </svg>
+                <p>Không tìm thấy công việc nào</p>
+              </div>
+            <div class="paging" id="filterPaging">
                 <div class="paging_box">
                     <div class="paging-item paging-prev hide">
                         <svg>
@@ -2115,23 +2121,6 @@
   <!--Script-->
   <script defer src="js/common.js"></script>
   <script defer src="js/recruitment_main.js"></script>
-  <!-- <script>
-    function script(url) {
-      var s = document.createElement("script");
-      s.type = "text/javascript";
-      s.async = false;
-      s.src = url;
-      var x = document.getElementsByTagName("head")[0];
-      x.appendChild(s);
-    }
-      window.onload = function () {
-        setTimeout(function () {
-          ["js/recruitment_main.js"].forEach(function (src) {
-            script(src);
-          });
-        }, 0);
-      }
-  </script> -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
