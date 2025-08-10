@@ -30,9 +30,19 @@ input[type="number"] {
   width: 100%;
   height: f.rem(48);
   padding: 0 f.rem(10);
-  border: 1px solid #ddd;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
+  border: 1px solid #D0D5DD;
+  -webkit-border-radius: f.rem(4);
+  border-radius: f.rem(4);
+}
+
+.area-txt {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #D0D5DD;
+  -webkit-border-radius: f.rem(4);
+  border-radius: f.rem(4);
+  padding: f.rem(10);
+  height: f.rem(120);
 }
 
 .input-txt--upload {
@@ -724,6 +734,7 @@ input[type="number"] {
     padding: f.rem(66) f.rem(16);
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   }
+
   .nav-overlay {
     display: flex;
     gap: f.rem(20);

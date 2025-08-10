@@ -283,6 +283,12 @@ module.exports = {
           info: { minimized: !minimized },
           noErrorOnMissing: true,
         },
+        {
+          from: "src/js/contact_main.js",
+          to: "js/contact_main.js",
+          info: { minimized: !minimized },
+          noErrorOnMissing: true,
+        },
         { from: "src/videos", to: "videos", noErrorOnMissing: true },
         { from: "src/jsons", to: "jsons", noErrorOnMissing: true }
       ],

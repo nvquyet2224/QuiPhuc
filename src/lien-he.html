@@ -28,16 +28,155 @@
 <body data-page="news">
     <div class="page">
         <%= htmlWebpackPlugin.options.svg %>
-        <%= htmlWebpackPlugin.options.header %>
-        <div class="main">
-            <%= htmlWebpackPlugin.options.newListComponent %>
-            <%= htmlWebpackPlugin.options.registerPromotion %>
-        </div>
-        <%= htmlWebpackPlugin.options.footer %>
+            <%= htmlWebpackPlugin.options.header %>
+                <div class="main">
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="/">Trang chủ</a></li>
+                            <li><span>/</span></li>
+                            <li><span>Cửa hàng Qui Phúc</span></li>
+                        </ul>
+                    </div>
+                    <section class="section contact-info">
+                        <div class="contact_wrap">
+                            <div class="title_block">
+                                <div class="sub-title">Liên hệ</div>
+                                <h1>Với Qui Phúc</h1>
+                            </div>
+                            <div class="contact-brief">
+                                <p>Dù bạn là khách hàng cần tư vấn sản phẩm, đối tác muốn hợp tác phát triển, hay ứng
+                                    viên đang tìm kiếm cơ hội nghề nghiệp – Qui Phúc luôn chào đón mọi kết nối từ bạn.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="section contact-office">
+                        <div class="contact_wrap">
+                            <div class="office">
+                                <div class="office-icon">
+                                    <img width="58" height="58" fetchpriority="high" src="images/contact-hotline.svg"
+                                        alt="Hotline Qui Phúc" />
+                                </div>
+                                <div class="office-name">Hotline Qui Phúc</div>
+                                <div class="office-link">
+                                    <a href="tel:1900638386">1900638386</a>
+                                </div>
+                            </div>
+                            <div class="office">
+                                <div class="office-icon">
+                                    <img width="58" height="58" fetchpriority="high" src="images/contact-chat.svg"
+                                        alt="Hotline Qui Phúc" />
+                                </div>
+                                <div class="office-name">Chat với chúng tôi</div>
+                                <div class="office-link">
+                                    <a href="#"><img width="30" height="30" fetchpriority="high"
+                                            src="images/social-zalo.svg" alt="ZaloChat" />ZaloChat</a>
+                                    <a href="#"><img width="30" height="30" fetchpriority="high"
+                                            src="images/social-facebook.svg" alt="Messenger" />Messenger</a>
+                                </div>
+                            </div>
+                            <div class="office">
+                                <div class="office-icon">
+                                    <img width="58" height="58" fetchpriority="high" src="images/contact-email.svg"
+                                        alt="Liên hệ qua Email" />
+                                </div>
+                                <div class="office-name">Liên hệ qua Email</div>
+                                <div class="office-link">
+                                    <a href="mailto:info@quiphuc.com">info@quiphuc.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="section contact-form">
+                        <div class="contact_wrap">
+                            <div class="form">
+                                <div class="mini-logo">
+                                    <img width="156" height="41" class="lazy"
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                        data-src="images/logo.svg" alt="facebook" />
+                                </div>
+                                <h3>Gửi liên hệ</h3>
+                                <p>Trải nghiệm không gian mua sắm cùng Qui Phúc</p>
+                                <form accept="#">
+                                    <div class="form_group">
+                                        <div class="form_field">
+                                            <label class="form_caption">Họ và tên</label>
+                                            <input type="text" class="input-txt" value="" placeholder="" />
+                                            <div class="field_error">Error message</div>
+                                        </div>
+                                    </div>
+                                    <div class="form_group">
+                                        <div class="form_field show-error">
+                                            <label class="form_caption">Email</label>
+                                            <input type="text" class="input-txt" value="" placeholder="" />
+                                            <div class="field_error">Error message</div>
+                                        </div>
+                                    </div>
+                                    <div class="form_group">
+                                        <div class="form_field">
+                                            <label class="form_caption">Lời nhắn</label>
+                                            <textarea class="area-txt"></textarea>
+                                            <div class="field_error">Error message</div>
+                                        </div>
+                                    </div>
+                                    <div class="form_group">
+                                        <button type="button" class="link-but full" id="btnContactSend">Gửi</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="map">
+                                <div class="company">
+                                    <div class="name">CÔNG TY TNHH SẢN XUẤT - THƯƠNG MẠI - DỊCH VỤ QUI PHÚC</div>
+                                    <ul class="address">
+                                        <li><span class="icon">
+                                                <svg>
+                                                    <use xlink:href="#icon-location"></use>
+                                                </svg>
+                                            </span>
+                                            217 Bình Long, Phường Bình Hưng Hòa A, Quận Bình Tân, TP. Hồ Chí Minh</li>
+                                        <li><span class="icon">
+                                                <svg>
+                                                    <use xlink:href="#icon-loa"></use>
+                                                </svg>
+                                            </span>111/39/4 Tây Lân, Phường Tân Tạo, Quận Bình Tân, TP. Hồ Chí Minh</li>
+                                    </ul>
+                                </div>
+                                <div class="map-box">
+                                    <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31354.934768633928!2d106.5810674743164!3d10.783189800000013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752c0590983697%3A0x69fa734ec7a40843!2sQui%20Phuc%20Co.%2C%20Ltd!5e0!3m2!1sen!2s!4v1754801417814!5m2!1sen!2s"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <%= htmlWebpackPlugin.options.newListComponent %>
+                        <%= htmlWebpackPlugin.options.registerPromotion %>
+                </div>
+                <%= htmlWebpackPlugin.options.footer %>
     </div>
     <!--Script-->
     <script defer src="js/common.js"></script>
+    <script defer src="js/contact_main.js"></script>
     <%= htmlWebpackPlugin.options.preload %>
+      <!--popup-->
+      <div class="popup" id="messPop">
+        <div class="popup-inr">
+            <div class="popup-mess">
+                <div class="popup-close">
+                    <img width="24" height="24" src="images/icon-close.svg" alt="close" />
+                </div>
+                <div class="mess-icon">
+                    <img width="58" height="58" src="images/icon-success.svg" alt="success" />
+                </div>
+                <div class="mess-title">GỬI THÔNG TIN THÀNH CÔNG</div>
+                <div class="mess-content">
+                    <p>Cảm ơn bạn đã liên hệ, chúng tôi sẽ liên lạc với bạn trong thời gian sớm nhất</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/popup-->
 </body>
 
 </html>
