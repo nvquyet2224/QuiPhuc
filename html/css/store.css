@@ -1611,7 +1611,7 @@ input[type=number] {
   }
   .store_filter .form {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1.25rem;
   }
   .store_map {
     border-top: none;

@@ -1,4 +1,5 @@
 @use "function" as f;
+@use "search-popup";
 
 .header {
     position: fixed;
@@ -227,6 +228,7 @@
             align-items: center;
             justify-content: center;
             color: #000;
+            cursor: pointer;
         }
 
         .search {
