@@ -287,7 +287,6 @@
 
             li {
                 display: flex;
-                //align-items: center;
                 margin-bottom: f.rem(14);
                 gap: f.rem(14);
 
@@ -343,7 +342,9 @@
             }
 
             &.show-error {
-                display: block;
+                .field_error {
+                    display: block;
+                }
             }
         }
 
