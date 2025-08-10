@@ -61,6 +61,8 @@ const lookbooksDetailComponent = fs.readFileSync(__dirname + "/src/_lookbooks-ch
 
 const profileDetailComponent = fs.readFileSync(__dirname + "/src/_profile-detail.html");
 
+const listStoreComponent = fs.readFileSync(__dirname + "/src/_list-store.html");
+
 const loginFormComponent = fs.readFileSync(__dirname + "/src/_login-form.html");
 
 const recruitmentComponent = fs.readFileSync(__dirname + "/src/_recruitment-block.html");
@@ -260,6 +262,12 @@ module.exports = {
         {
           from: "src/js/login_main.js",
           to: "js/login_main.js",
+          info: { minimized: !minimized },
+          noErrorOnMissing: true,
+        },
+        {
+          from: "src/js/store_main.js",
+          to: "js/store_main.js",
           info: { minimized: !minimized },
           noErrorOnMissing: true,
         },
@@ -500,6 +508,7 @@ module.exports = {
       preload: preload,
       svg: svg,
       header: headerNoramComponent,
+      stores: listStoreComponent,
       registerPromotion: registerPromotion,
       footer: footerComponent,
       template: "src/cua-hang.html",
