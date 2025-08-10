@@ -149,6 +149,9 @@ input[type=number] {
   right: 1.25rem;
   top: 1.25rem;
 }
+.product .add-to-cart {
+  color: var(--global-color);
+}
 .product .color {
   margin-top: 0.875rem;
   margin-bottom: 1.25rem;
@@ -269,7 +272,7 @@ input[type=number] {
   -webkit-border-radius: 2px;
   border-radius: 2px;
   color: var(--color-tag, #fff);
-  background-color: var(--bg-tag, #eb5757);
+  background-color: var(--bg-tag, #FF0000);
   display: inline-flex;
   align-items: center;
   justify-content: center;

@@ -131,6 +131,10 @@ input[type="number"] {
     top: f.rem(20);
   }
 
+  .add-to-cart {
+    color: var(--global-color);
+  }
+
   .color {
     margin-top: f.rem(14);
     margin-bottom: f.rem(20);
@@ -274,7 +278,7 @@ input[type="number"] {
     -webkit-border-radius: 2px;
     border-radius: 2px;
     color: var(--color-tag, #fff);
-    background-color: var(--bg-tag, #eb5757);
+    background-color: var(--bg-tag, #FF0000);
     display: inline-flex;
     align-items: center;
     justify-content: center;
