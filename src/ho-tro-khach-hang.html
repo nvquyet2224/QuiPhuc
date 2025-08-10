@@ -28,12 +28,89 @@
 <body data-page="news">
     <div class="page">
         <%= htmlWebpackPlugin.options.svg %>
-        <%= htmlWebpackPlugin.options.header %>
-        <div class="main">
-            <%= htmlWebpackPlugin.options.newListComponent %>
-            <%= htmlWebpackPlugin.options.registerPromotion %>
-        </div>
-        <%= htmlWebpackPlugin.options.footer %>
+            <%= htmlWebpackPlugin.options.header %>
+                <div class="main">
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="/">Trang chủ</a></li>
+                            <li><span>/</span></li>
+                            <li><a href="#">Hỗ trợ khách hàng</a></li>
+                            <li><span>/</span></li>
+                            <li><span>Hướng dẫn mua hàng</span></li>
+                        </ul>
+                    </div>
+
+                    <section class="section new-detail support">
+                        <div class="content">
+                            <div class="info">
+                                <h1>Hướng dẫn mua hàng</h1>
+                            </div>
+                            <div class="detail">
+                                <p>Qui Phúc đã bán hàng trực tuyến. Giờ đây, Quý khách có thể đặt hàng ngay trên Website
+                                    www.quiphuc.com. Chúng tôi sẽ giao hàng tận nơi. Tuy nhiên, hiện Qui Phúc chỉ mở bán
+                                    Online một số sản phẩm (có nút "THÊM VÀO GIỎ" ở trang chi tiết sản phẩm). Đối với
+                                    các sản phẩm ở trang chi tiết có nút "XEM TẠI HỆ THỐNG CỬA HÀNG", Quý khách vui lòng
+                                    tìm Cửa hàng gần mình nhất để đến mua.</p>
+                                <p>Sau đây là các bước đặt mua Online các sản phẩm nội ngoại thất inox nhựa Qui Phúc:
+                                </p>
+                                <h2>Bước 1: Xem tất cả sản phẩm mà Qui Phúc mở bán Online</h2>
+
+                                <ul>
+                                    <li>Cách 1: Ngay tại cây thư mục ở Trang chủ, click vào "<a href="#">Sản phẩm</a>". Tiếp tục click
+                                        vào
+                                        tap "Sản phẩm online".</li>
+                                    <li>Cách 2: Ngay tại Trang chủ, click vào dòng chữ "<a href="#">Qui Phúc đã bán hàng trực tuyến.
+                                        Giờ
+                                        đây, bạn có thể đặt hàng ngay trên Website. Chúng tôi sẽ giao hàng tận nơi!</a>".
+                                    </li>
+                                    <li>Tiếp tục click vào tap "Sản phẩm online".</li>
+                                </ul>
+
+                                <p><img src="images/ho-tro-img1.jpg" alt="pic" /><span>Trang danh sách sản phẩm Qui
+                                        Phúc</span></p>
+
+                                <h2>Bước 2: Chọn sản phẩm nội ngoại thất inox nhựa</h2>
+
+                                <ul>
+                                    <li>Click chọn sản phẩm.</li>
+                                    <li>Chọn chính xác các phiên bản của sản phẩm (kiểu dáng/chất liệu/màu sắc/họa
+                                        tiết...).</li>
+                                    <li>Chọn số lượng sản phẩm muốn mua.</li>
+                                    <li>Click "THÊM VÀO GIỎ". Một hộp thoại mới được mở ra, Click "TIẾP TỤC MUA HÀNG"
+                                        nếu</li>
+                                    <li>Quý khách muốn mua thêm sản phẩm khác hoặc Click "THANH TOÁN".</li>
+                                </ul>
+                                <p><img src="images/ho-tro-img2.jpg" alt="pic" /><span>Trang danh sách sản phẩm Qui
+                                        Phúc</span></p>
+
+                                <h2>Bước 3: Nhập thông tin thanh toán</h2>
+                                <ul>
+                                    <li>Kiểm tra kỹ số lượng, phiên bản của sản phẩm (kiểu dáng/chất liệu/màu sắc/họa
+                                    tiết...)?</li>
+                                    <li>Nhập đầy đủ các trường thông tin. Nhập thêm MÃ GIẢM GIÁ (nếu có).</li>
+                                    <li>Click "TIẾP TỤC ĐẾN PHƯƠNG THỨC THANH TOÁN".</li>
+                                </ul>
+                                <p><img src="images/ho-tro-img3.jpg" alt="pic" /><span>Trang danh sách sản phẩm Qui Phúc</span></p>
+                            </div>
+                        </div>
+                        <div class="relation">
+                            <div class="relation-title">Hỗ trợ khách hàng khác</div>
+                            <div class="relation-list">
+                                <ul class="link-list">
+                                    <li><a href="#">Chính sách bảo mật</a></li>
+                                    <li><a href="#">Chính sách bán hàng</a></li>
+                                    <li><a href="#">Chính sách thanh toán</a></li>
+                                    <li><a href="#">Chính sách vận chuyển</a></li>
+                                    <li><a href="#">Chính sách kiểm hàng</a></li>
+                                    <li><a href="#">Chính sách đổi trả</a></li>
+                                    <li><a href="#">Chính sách bảo hành</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <%= htmlWebpackPlugin.options.registerPromotion %>
+                </div>
+                <%= htmlWebpackPlugin.options.footer %>
     </div>
     <!--Script-->
     <script defer src="js/common.js"></script>

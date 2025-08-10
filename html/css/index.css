@@ -1840,6 +1840,10 @@ button.swiper-pagination-bullet {
 .products.product-related {
   padding-top: 2.5rem;
 }
+.products.by-inventory, .products.by-price {
+  padding: 0;
+  margin-bottom: 7.5rem;
+}
 .products .title_block {
   padding: 0 2.5rem;
   margin-bottom: 4.125rem;

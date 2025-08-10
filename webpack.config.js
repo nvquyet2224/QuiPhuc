@@ -269,6 +269,12 @@ module.exports = {
           info: { minimized: !minimized },
           noErrorOnMissing: true,
         },
+        {
+          from: "src/js/promotion_main.js",
+          to: "js/promotion_main.js",
+          info: { minimized: !minimized },
+          noErrorOnMissing: true,
+        },
         { from: "src/videos", to: "videos", noErrorOnMissing: true },
         { from: "src/jsons", to: "jsons", noErrorOnMissing: true }
       ],
@@ -527,6 +533,7 @@ module.exports = {
       preload: preload,
       svg: svg,
       header: headerNoramComponent,
+      productCategoryComponent: productCategoryComponent,
       registerPromotion: registerPromotion,
       footer: footerComponent,
       template: "src/khuyen-mai.html",

@@ -226,6 +226,28 @@
             }
         }
     }
+
+    &.support {
+        .info {
+            align-items: flex-start;
+        }
+    }
+
+    .link-list {
+        li {
+            &:not(:last-child) {
+                border-bottom: 1px solid #D0D5DD;
+            }
+        }
+
+        a {
+            display: block;
+            color: #000000;
+            font-size: f.rem(16);
+            padding: f.rem(16) 0;
+            text-decoration: none;
+        }
+    }
 }
 
 .apply-box {

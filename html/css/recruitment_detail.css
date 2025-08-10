@@ -1019,6 +1019,19 @@ input[type=number] {
 .new-detail .relation.recruiment-type .new .link-but {
   font-size: 0.875rem;
 }
+.new-detail.support .info {
+  align-items: flex-start;
+}
+.new-detail .link-list li:not(:last-child) {
+  border-bottom: 1px solid #D0D5DD;
+}
+.new-detail .link-list a {
+  display: block;
+  color: #000000;
+  font-size: 1rem;
+  padding: 1rem 0;
+  text-decoration: none;
+}
 
 .apply-box {
   margin-top: 3rem;
