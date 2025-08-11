@@ -62,6 +62,7 @@ const lookbooksDetailComponent = fs.readFileSync(__dirname + "/src/_lookbooks-ch
 const profileDetailComponent = fs.readFileSync(__dirname + "/src/_profile-detail.html");
 
 const listStoreComponent = fs.readFileSync(__dirname + "/src/_list-store.html");
+const searchResultComponent = fs.readFileSync(__dirname + "/src/_search-result.html");
 
 const loginFormComponent = fs.readFileSync(__dirname + "/src/_login-form.html");
 
@@ -104,6 +105,7 @@ module.exports = {
     cart: ["./src/js/cart.js"],
     support_client: ["./src/js/support-client.js"],
     store: ["./src/js/store.js"],
+    search: ["./src/js/search.js"],
     contact: ["./src/js/contact.js"],
     promotion: ["./src/js/promotion.js"],
     not_found: ["./src/js/not-found.js"],
@@ -268,6 +270,12 @@ module.exports = {
         {
           from: "src/js/store_main.js",
           to: "js/store_main.js",
+          info: { minimized: !minimized },
+          noErrorOnMissing: true,
+        },
+        {
+          from: "src/js/search_main.js",
+          to: "js/search_main.js",
           info: { minimized: !minimized },
           noErrorOnMissing: true,
         },
@@ -524,6 +532,20 @@ module.exports = {
       registerPromotion: registerPromotion,
       footer: footerComponent,
       template: "src/cua-hang.html",
+      minify: minify,
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      filename: "tim-kiem.html",
+      preload: preload,
+      svg: svg,
+      header: headerNoramComponent,
+      searchResult:searchResultComponent,
+      listProductComponent,
+      registerPromotion: registerPromotion,
+      service: serviceComponent,
+      footer: footerComponent,
+      template: "src/tim-kiem.html",
       minify: minify,
     }),
     new HtmlWebpackPlugin({

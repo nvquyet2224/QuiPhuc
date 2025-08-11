@@ -97,6 +97,18 @@ function handleSearch() {
         "hide",
         !(e.target.value && e.target.value.length > 4)
       );
+      if (e.target.value) {
+        if (iconGoSearchRef) {
+          iconGoSearchRef.addEventListener('click', () => {
+            const url = `/tim-kiem.html.html?search=${encodeURIComponent(
+            e.target.value
+            )}`;
+
+            // Chuyển trang
+            window.location.href = url;
+          })
+        }
+      }
     });
   }
   if (iconClearRef) {
@@ -341,7 +353,6 @@ function toggleSort() {
   }
 }
 
-
 function toggleSelect() {
   const page = document.querySelector(".page");
   if (page) {
@@ -379,7 +390,6 @@ function toggleSelect() {
           parent.classList.remove("open");
         }
       }
-
     });
   }
 }

@@ -8,7 +8,7 @@
   <meta name="author" content="Qui Phúc" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no" />
-  <title>Qui Phúc | Sản phẩm</title>
+  <title>Qui Phúc | Tìm Kiếm</title>
   <meta name="description" content="Qui Phúc" />
   <meta name="keywords" content="Qui Phúc" />
   <meta name="theme-color" content="#fff" />
@@ -22,7 +22,8 @@
   <meta name="apple-mobile-web-app-title" content="Qui Phúc" />
   <link rel="icon" href="images/favicon.png" />
   <link href="css/critical.css" rel="preload stylesheet" as="style">
-  <link rel="stylesheet" href="css/product_list.css">
+  <link rel="stylesheet" href="css/search.css">
+  
 </head>
 
 <body data-page="products">
@@ -37,15 +38,14 @@
               </li>
               <li><span>/</span></li>
               <li>
-                <a href="#"><span>Sản phẩm</span></a>
+                <span>Tìm kiếm</span>
               </li>
-              <li><span>/</span></li>
-              <li><span>Ghế</span></li>
             </ul>
           </div>
-          <%= htmlWebpackPlugin.options.listBannerComponent %>
-            <%= htmlWebpackPlugin.options.listProductComponent %>
-              <%= htmlWebpackPlugin.options.registerPromotion %>
+          
+          <%= htmlWebpackPlugin.options.searchResult %>
+          <%= htmlWebpackPlugin.options.listProductComponent %>
+          <%= htmlWebpackPlugin.options.registerPromotion %>
         </div>
         <%= htmlWebpackPlugin.options.footer %>
   </div>
@@ -54,6 +54,7 @@
   <script defer src="js/jquery.js"></script>
   <script defer src="js/jquery-ui.js"></script>
   <script defer src="js/product_list_main.js"></script>
+  <script defer src="js/search_main.js"></script>
   <%= htmlWebpackPlugin.options.preload %>
     <!--popup-->
     <div class="popup" id="comparePop">
