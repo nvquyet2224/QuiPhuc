@@ -305,74 +305,6 @@ function filterEvents() {
   }
 }
 
-function toggleLanguage() {
-  const language = document.querySelector(".select-language");
-  language.addEventListener("click", (e) => {
-    const header = e.target.closest(".select-header");
-    const parent = header?.closest(".select");
-    if (parent) {
-      if (parent.classList.contains("open")) {
-        parent.classList.remove("open");
-      } else {
-        parent.classList.add("open");
-      }
-    }
-  });
-}
-
-function toggleSort() {
-  const sort = document.querySelector(".sort");
-  if (sort) {
-    sort.addEventListener("click", (e) => {
-      const header = e.target.closest(".select-header");
-
-      // header
-      if (header) {
-        const parent = header?.closest(".select");
-        if (parent.classList.contains("open")) {
-          parent.classList.remove("open");
-        } else {
-          const oldSelect = document.querySelector('.select.open');
-          if (oldSelect) {
-            oldSelect.classList.remove('open');
-          }
-
-          parent.classList.add("open");
-        }
-      } else {
-
-      }
-
-      //item
-      const item = e.target.closest(".select-box li");
-      if (item) {
-        const parent = item?.closest(".select");
-
-        if (!item.classList.contains("selected")) {
-          const text = item.textContent;
-          const value = item.getAttribute("data-value");
-          console.log("selected", value);
-          if (value !== '' && value !== 'none') {
-            parent.classList.add('hasSelected');
-          } else {
-            parent.classList.remove('hasSelected');
-          }
-
-          // old selected
-          const oldSelected = parent.querySelector("li.selected");
-          if (oldSelected) {
-            oldSelected.classList.remove("selected");
-          }
-          // set selected text for header
-          parent.querySelector(".select-selected").innerHTML = text;
-          item.classList.add("selected");
-          parent.classList.remove("open");
-        }
-      }
-    });
-  }
-}
-
 function toggleSelect() {
   const page = document.querySelector(".page");
   if (page) {
@@ -501,15 +433,15 @@ window.addEventListener("load", loadImagesOnScroll);
 
 (function () {
   handleSearch();
-  toggleLanguage();
+
   navClick();
   menuAnim();
   resize();
 
   menuAccordion();
+
   filterEvents();
 
-  //toggleSort();
 
   toggleSelect();
 

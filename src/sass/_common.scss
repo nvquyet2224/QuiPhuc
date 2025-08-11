@@ -132,6 +132,9 @@ input[type="number"] {
   }
 
   .add-to-cart {
+    position: absolute;
+    right: f.rem(20);
+    top: f.rem(20);
     color: var(--global-color);
   }
 
@@ -309,6 +312,21 @@ input[type="number"] {
       height: f.rem(8);
     }
   }
+}
+
+.add-to-cart {
+  font-weight: 500;
+    color: #000;
+    display: inline-flex;
+    align-items: center;
+    gap: f.rem(4);
+    font-size: f.rem(12);
+    cursor: pointer;
+
+    svg {
+      width: f.rem(8);
+      height: f.rem(8);
+    }
 }
 
 .color {
