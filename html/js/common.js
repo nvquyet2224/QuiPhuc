@@ -331,6 +331,49 @@ function toggleSort() {
   }
 }
 
+
+function toggleSelect() {
+  const page = document.querySelector(".page");
+  if (page) {
+    page.addEventListener("click", (e) => {
+      const header = e.target.closest(".select-header");
+
+      // header
+      if (header) {
+        const parent = header?.closest(".select");
+        if (parent.classList.contains("open")) {
+          parent.classList.remove("open");
+        } else {
+          parent.classList.add("open");
+        }
+      }
+
+      //item
+      const item = e.target.closest(".select-box li");
+      if (item) {
+        const parent = item?.closest(".select");
+
+        if (!item.classList.contains("selected")) {
+          const text = item.textContent;
+          const value = item.getAttribute("data-value");
+          console.log("selected", value);
+
+          // old selected
+          const oldSelected = parent.querySelector("li.selected");
+          if (oldSelected) {
+            oldSelected.classList.remove("selected");
+          }
+          // set selected text for header
+          parent.querySelector(".select-selected").innerHTML = text;
+          item.classList.add("selected");
+          parent.classList.remove("open");
+        }
+      }
+      
+    });
+  }
+}
+
 function lazyEvent() {
   document.querySelectorAll(".lazy-event:not(.loaded)").forEach((item) => {
     const src = item.getAttribute("data-src");
