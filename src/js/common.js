@@ -65,6 +65,14 @@ function handleSearch() {
   const resultProductRef = document.getElementById("result-product");
   const suggestSearchs = document.querySelectorAll(".search_popular-item");
 
+  const goSearch = (value) => {
+    if (!value) return;
+    const url = `/html/tim-kiem.html?search=${encodeURIComponent(
+          value
+        )}`;
+    window.location.href = url;
+  };
+
   if (iconOpenRef) {
     iconOpenRef.addEventListener("click", () => {
       if (searchPopupRef.classList.contains("show")) {
@@ -97,16 +105,16 @@ function handleSearch() {
         "hide",
         !(e.target.value && e.target.value.length > 4)
       );
-      if (e.target.value) {
-        if (iconGoSearchRef) {
-          iconGoSearchRef.addEventListener('click', () => {
-            const url = `/tim-kiem.html.html?search=${encodeURIComponent(
-            e.target.value
-            )}`;
+      const value = e.target.value.trim();
 
-            // Chuyển trang
-            window.location.href = url;
-          })
+      if (e.key === "Enter") {
+        goSearch(e.target.value);
+      }
+      if (value) {
+        if (iconGoSearchRef) {
+          iconGoSearchRef.addEventListener("click", () => {
+            goSearch(e.target.value)
+          });
         }
       }
     });
