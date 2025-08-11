@@ -289,6 +289,12 @@ module.exports = {
           info: { minimized: !minimized },
           noErrorOnMissing: true,
         },
+        {
+          from: "src/js/cart_main.js",
+          to: "js/cart_main.js",
+          info: { minimized: !minimized },
+          noErrorOnMissing: true,
+        },
         { from: "src/videos", to: "videos", noErrorOnMissing: true },
         { from: "src/jsons", to: "jsons", noErrorOnMissing: true }
       ],
