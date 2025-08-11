@@ -68,8 +68,8 @@ function handleSearch() {
   const goSearch = (value) => {
     if (!value) return;
     const url = `/html/tim-kiem.html?search=${encodeURIComponent(
-          value
-        )}`;
+      value
+    )}`;
     window.location.href = url;
   };
 
@@ -332,8 +332,15 @@ function toggleSort() {
         if (parent.classList.contains("open")) {
           parent.classList.remove("open");
         } else {
+          const oldSelect = document.querySelector('.select.open');
+          if (oldSelect) {
+            oldSelect.classList.remove('open');
+          }
+
           parent.classList.add("open");
         }
+      } else {
+
       }
 
       //item
@@ -345,6 +352,11 @@ function toggleSort() {
           const text = item.textContent;
           const value = item.getAttribute("data-value");
           console.log("selected", value);
+          if (value !== '' && value !== 'none') {
+            parent.classList.add('hasSelected');
+          } else {
+            parent.classList.remove('hasSelected');
+          }
 
           // old selected
           const oldSelected = parent.querySelector("li.selected");
@@ -373,7 +385,16 @@ function toggleSelect() {
         if (parent.classList.contains("open")) {
           parent.classList.remove("open");
         } else {
+          const oldSelect = document.querySelector('.select.open');
+          if (oldSelect) {
+            oldSelect.classList.remove('open');
+          }
           parent.classList.add("open");
+        }
+      } else {
+        const oldSelect = document.querySelector('.select.open');
+        if (oldSelect) {
+          oldSelect.classList.remove('open');
         }
       }
 
@@ -386,7 +407,11 @@ function toggleSelect() {
           const text = item.textContent;
           const value = item.getAttribute("data-value");
           console.log("selected", value);
-
+          if (value !== '' && value !== 'none') {
+            parent.classList.add('hasSelected');
+          } else {
+            parent.classList.remove('hasSelected');
+          }
           // old selected
           const oldSelected = parent.querySelector("li.selected");
           if (oldSelected) {
@@ -483,7 +508,8 @@ window.addEventListener("load", loadImagesOnScroll);
 
   menuAccordion();
   filterEvents();
-  toggleSort();
+
+  //toggleSort();
 
   toggleSelect();
 

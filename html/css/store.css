@@ -1000,6 +1000,9 @@ input[type=number] {
   background-color: #ededed;
   color: #828282;
 }
+.form_field.disabled {
+  pointer-events: none;
+}
 .form_field.disabled .select {
   background-color: #ededed;
   color: #828282;
@@ -1064,6 +1067,11 @@ input[type=number] {
   background-color: #fff;
 }
 
+@media screen and (max-width: 1023px) {
+  .form_group {
+    gap: 0.625rem;
+  }
+}
 .filter__head {
   margin-bottom: 1rem;
 }

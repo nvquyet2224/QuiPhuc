@@ -535,7 +535,6 @@
     padding: f.rem(60) f.rem(16) 0 f.rem(16);
     background-color: #f4f4f4;
 
-
     .title_block {
       margin-bottom: f.rem(20);
     }
@@ -724,5 +723,18 @@
         }
       }
     }
+
+    .select {
+      width: 100%;
+      &-box {
+        width: 100%;
+        min-width: initial;
+      }
+    }
+  }
+
+  .profile .account_content-btns,
+  .profile .address_content-btns {
+    gap: f.rem(10);
   }
 }

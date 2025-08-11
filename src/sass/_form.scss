@@ -192,6 +192,7 @@
     }
 
     &.disabled {
+      pointer-events: none;
       .select {
         //height: f.rem(48);
         background-color: #ededed;
@@ -245,7 +246,7 @@
       transform: translateY(f.rem(-22));
       background-color: #fff;
     }
-  } 
+  }
 
   .input-txt:disabled:not(:placeholder-shown) {
     +.form_caption {
@@ -284,4 +285,10 @@
 
 @media screen and (min-width: 1024px) {}
 
-@media screen and (max-width: 1023px) {}
+@media screen and (max-width: 1023px) {
+  .form {
+    &_group {
+      gap: f.rem(10);
+    }
+  }
+}

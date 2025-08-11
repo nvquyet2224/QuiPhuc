@@ -1000,6 +1000,9 @@ input[type=number] {
   background-color: #ededed;
   color: #828282;
 }
+.form_field.disabled {
+  pointer-events: none;
+}
 .form_field.disabled .select {
   background-color: #ededed;
   color: #828282;
@@ -1064,6 +1067,11 @@ input[type=number] {
   background-color: #fff;
 }
 
+@media screen and (max-width: 1023px) {
+  .form_group {
+    gap: 0.625rem;
+  }
+}
 .profile {
   padding: 2.5rem 2.5rem 0 2.5rem;
   background-color: #f4f4f4;
@@ -1657,6 +1665,17 @@ input[type=number] {
   }
   .profile .history_content .list .item-content {
     gap: 1.25rem;
+  }
+  .profile .select {
+    width: 100%;
+  }
+  .profile .select-box {
+    width: 100%;
+    min-width: initial;
+  }
+  .profile .account_content-btns,
+  .profile .address_content-btns {
+    gap: 0.625rem;
   }
 }
 .subscribe {
