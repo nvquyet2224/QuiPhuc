@@ -65,50 +65,60 @@ function handleSearch() {
   const resultProductRef = document.getElementById("result-product");
   const suggestSearchs = document.querySelectorAll(".search_popular-item");
 
-  iconOpenRef.addEventListener("click", () => {
-    if (searchPopupRef.classList.contains("show")) {
+  if (iconOpenRef) {
+    iconOpenRef.addEventListener("click", () => {
+      if (searchPopupRef.classList.contains("show")) {
+        searchPopupRef.classList.remove("show");
+        document.querySelector("body").classList.add("no-scroll");
+      } else {
+        searchPopupRef.classList.add("show");
+        document.querySelector("body").classList.add("no-scroll");
+      }
+    });
+  }
+
+  if (iconCloseRef) {
+    iconCloseRef.addEventListener("click", () => {
       searchPopupRef.classList.remove("show");
       document.querySelector("body").classList.add("no-scroll");
-    } else {
-      searchPopupRef.classList.add("show");
-      document.querySelector("body").classList.add("no-scroll");
-    }
-  });
-
-  iconCloseRef.addEventListener("click", () => {
-    searchPopupRef.classList.remove("show");
-    document.querySelector("body").classList.add("no-scroll");
-  });
-
-  inputRef.addEventListener("keyup", (e) => {
-    iconClearRef.classList.toggle("show", !!e.target.value);
-    if (e.target.value && e.target.value.length > 4) {
-    }
-    resultDefaultRef.classList.toggle(
-      "hide",
-      e.target.value && e.target.value.length > 4
-    );
-    resultProductRef.classList.toggle(
-      "hide",
-      !(e.target.value && e.target.value.length > 4)
-    );
-  });
-  iconClearRef.addEventListener("click", () => {
-    iconClearRef.classList.remove("show");
-    inputRef.value = "";
-    resultDefaultRef.classList.remove("hide");
-    resultProductRef.classList.add("hide");
-  });
-
-  suggestSearchs.forEach((item) => {
-    item.addEventListener("click", () => {
-      const value = item.getAttribute("data-value");
-      iconClearRef.classList.add("show");
-      inputRef.value = value;
-      resultDefaultRef.classList.add("hide");
-      resultProductRef.classList.remove("hide");
     });
-  });
+  }
+
+  if (inputRef) {
+    inputRef.addEventListener("keyup", (e) => {
+      iconClearRef.classList.toggle("show", !!e.target.value);
+      if (e.target.value && e.target.value.length > 4) {
+      }
+      resultDefaultRef.classList.toggle(
+        "hide",
+        e.target.value && e.target.value.length > 4
+      );
+      resultProductRef.classList.toggle(
+        "hide",
+        !(e.target.value && e.target.value.length > 4)
+      );
+    });
+  }
+  if (iconClearRef) {
+    iconClearRef.addEventListener("click", () => {
+      iconClearRef.classList.remove("show");
+      inputRef.value = "";
+      resultDefaultRef.classList.remove("hide");
+      resultProductRef.classList.add("hide");
+    });
+  }
+
+  if (suggestSearchs) {
+    suggestSearchs.forEach((item) => {
+      item.addEventListener("click", () => {
+        const value = item.getAttribute("data-value");
+        iconClearRef.classList.add("show");
+        inputRef.value = value;
+        resultDefaultRef.classList.add("hide");
+        resultProductRef.classList.remove("hide");
+      });
+    });
+  }
 }
 
 function menuAnim() {
@@ -369,7 +379,7 @@ function toggleSelect() {
           parent.classList.remove("open");
         }
       }
-      
+
     });
   }
 }
@@ -456,6 +466,8 @@ window.addEventListener("load", loadImagesOnScroll);
   menuAccordion();
   filterEvents();
   toggleSort();
+
+  toggleSelect();
 
   // marquee
   if (document.querySelector(".marquee__ctn")) {

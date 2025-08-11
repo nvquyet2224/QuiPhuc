@@ -1538,6 +1538,9 @@ button.swiper-pagination-bullet {
   background: #ffffff;
   padding: 7.5rem 0;
 }
+.products.product-new, .products.product-promotion {
+  padding: 5rem 0;
+}
 .products.product-related {
   padding-top: 2.5rem;
 }
@@ -1592,6 +1595,9 @@ button.swiper-pagination-bullet {
 @media screen and (max-width: 1023px) {
   .products {
     padding: 4.125rem 0;
+  }
+  .products.product-new, .products.product-promotion {
+    padding: 3.75rem 0;
   }
   .products .title_block {
     padding: 0 0.9375rem;

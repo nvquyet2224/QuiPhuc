@@ -4,6 +4,12 @@
   background: #ffffff;
   padding: f.rem(120) 0;
 
+
+  &.product-new,
+  &.product-promotion {
+    padding: f.rem(80) 0;
+  }
+
   &.product-related {
     padding-top: f.rem(40);
   }
@@ -78,6 +84,13 @@
 @media screen and (max-width: 1023px) {
   .products {
     padding: f.rem(66) 0;
+
+
+    &.product-new,
+    &.product-promotion {
+      padding: f.rem(60) 0;
+    }
+
 
     .title_block {
       padding: 0 f.rem(15);

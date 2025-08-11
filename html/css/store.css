@@ -1482,7 +1482,6 @@ input[type=number] {
 }
 .store {
   padding-bottom: 7.5rem;
-  padding-top: 1rem;
 }
 .store .title_block {
   text-align: center;
@@ -1532,8 +1531,10 @@ input[type=number] {
   max-height: 23.25rem;
   overflow: hidden;
   overflow-y: auto;
-  scrollbar-width: thin; /* Firefox */
-  scrollbar-color: #d0d5dd #f2f4f7; /* Firefox: thumb, track */
+  scrollbar-width: thin;
+  /* Firefox */
+  scrollbar-color: #d0d5dd #f2f4f7;
+  /* Firefox: thumb, track */
   /* Chrome, Edge, Safari */
 }
 .store_map-list.filter__accordion .list_accordion .accordion__detail-list::-webkit-scrollbar {
@@ -1593,6 +1594,8 @@ input[type=number] {
 }
 .store_map-map {
   flex: 1;
+  aspect-ratio: 840/903;
+  line-height: 0;
 }
 .store_map-map iframe {
   width: 100%;
@@ -1645,9 +1648,8 @@ input[type=number] {
   }
   .store_map-map {
     flex: 1;
-  }
-  .store_map-map iframe {
     aspect-ratio: 1/1;
+    margin-bottom: 1rem;
   }
 }
 .subscribe {
