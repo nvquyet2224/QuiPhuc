@@ -67,9 +67,7 @@ function handleSearch() {
 
   const goSearch = (value) => {
     if (!value) return;
-    const url = `/html/tim-kiem.html?search=${encodeURIComponent(
-      value
-    )}`;
+    const url = `/html/tim-kiem.html?search=${encodeURIComponent(value)}`;
     window.location.href = url;
   };
 
@@ -113,7 +111,7 @@ function handleSearch() {
       if (value) {
         if (iconGoSearchRef) {
           iconGoSearchRef.addEventListener("click", () => {
-            goSearch(e.target.value)
+            goSearch(e.target.value);
           });
         }
       }
@@ -137,6 +135,28 @@ function handleSearch() {
         resultDefaultRef.classList.add("hide");
         resultProductRef.classList.remove("hide");
       });
+    });
+  }
+}
+
+function handleMiniCart() {
+  const buttonCartRef = document.getElementById("icon-open-minicart");
+  const miniCartRef = document.getElementById("mini-cart");
+  const buttonCloseRef = document.getElementById("mini-cart--close");
+  if (buttonCartRef) {
+    buttonCartRef.addEventListener("click", () => {
+      if (miniCartRef) {
+        miniCartRef.classList.add("show");
+         document.querySelector("body").classList.add("no-scroll");
+      }
+    });
+  }
+  if (buttonCloseRef) {
+    buttonCloseRef.addEventListener("click", () => {
+      if (miniCartRef) {
+        miniCartRef.classList.remove("show");
+         document.querySelector("body").classList.remove("no-scroll");
+      }
     });
   }
 }
@@ -317,16 +337,16 @@ function toggleSelect() {
         if (parent.classList.contains("open")) {
           parent.classList.remove("open");
         } else {
-          const oldSelect = document.querySelector('.select.open');
+          const oldSelect = document.querySelector(".select.open");
           if (oldSelect) {
-            oldSelect.classList.remove('open');
+            oldSelect.classList.remove("open");
           }
           parent.classList.add("open");
         }
       } else {
-        const oldSelect = document.querySelector('.select.open');
+        const oldSelect = document.querySelector(".select.open");
         if (oldSelect) {
-          oldSelect.classList.remove('open');
+          oldSelect.classList.remove("open");
         }
       }
 
@@ -339,10 +359,10 @@ function toggleSelect() {
           const text = item.textContent;
           const value = item.getAttribute("data-value");
           console.log("selected", value);
-          if (value !== '' && value !== 'none') {
-            parent.classList.add('hasSelected');
+          if (value !== "" && value !== "none") {
+            parent.classList.add("hasSelected");
           } else {
-            parent.classList.remove('hasSelected');
+            parent.classList.remove("hasSelected");
           }
           // old selected
           const oldSelected = parent.querySelector("li.selected");
@@ -433,6 +453,7 @@ window.addEventListener("load", loadImagesOnScroll);
 
 (function () {
   handleSearch();
+  handleMiniCart();
 
   navClick();
   menuAnim();
@@ -441,7 +462,6 @@ window.addEventListener("load", loadImagesOnScroll);
   menuAccordion();
 
   filterEvents();
-
 
   toggleSelect();
 

@@ -1568,7 +1568,7 @@
                         </svg>
                     </div>
                 </div>
-                <div class="mini-cart action-icon">
+                <div class="mini-cart action-icon" id="icon-open-minicart">
                     <svg class="symbol">
                         <use xlink:href="#icon-cart"></use>
                     </svg>
@@ -1771,6 +1771,131 @@
         </div>
     </div>
 </header>
+
+<div class="mini-cart-popup" id="mini-cart">
+    <div class="mini-cart_content">
+        <div class="mini-cart_head">
+            <div class="title">
+                <svg class="symbol">
+                    <use xlink:href="#icon-cart"></use>
+                </svg>
+                Giỏ hàng của tôi
+            </div>
+            <button class="mini-cart--close" id="mini-cart--close">
+                <svg class="symbol">
+                    <use xlink:href="#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="mini-cart_body">
+            <div class="mini-cart_list">
+                <div class="product" data-product="1200000454">
+                    <div class="product-img">
+                        <img width="72" height="73" loading="lazy" fetchpriority="low" src="images/minicart-img-1.png"
+                            alt="Ghế đẩu inox kiềng - Đặt riêng">
+                    </div>
+                    <div class="product-txt">
+                        <div class="model">Model: 1200000454</div>
+                        <h3 class="name">Ghế đẩu inox kiềng - Đặt riêng</h3>
+                        <div class="price">
+                            <span class="sale">1.249.000 đ</span>
+                            <span class="old">1.249.000 đ</span>
+                            <div class="tag">
+                                <span class="tag-item">
+                                    <svg>
+                                        <use xlink:href="#icon-thunder"></use>
+                                    </svg>
+                                    -20%
+                                </span>
+                            </div>
+                        </div>
+                        <div class="action">
+                            <div class="action-control">
+                                <div class="action--minus">
+                                    <svg>
+                                        <use xlink:href="#icon-decrease"></use>
+                                    </svg>
+                                </div>
+                                <input class="action--quantity mini-cart-quantity" type="number" value="1">
+                                <div class="action--plus">
+                                    <svg>
+                                        <use xlink:href="#icon-increase"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="action-delete">
+                                <button class="action-detele-btn">
+                                    <svg>
+                                        <use xlink:href="#icon-trash"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product" data-product="1200000453">
+                    <div class="product-img">
+                        <img width="72" height="73" loading="lazy" fetchpriority="low" src="images/minicart-img-2.png"
+                            alt="Ghế đẩu inox kiềng - Đặt riêng">
+                    </div>
+                    <div class="product-txt">
+                        <div class="model">Model: 1200000453</div>
+                        <h3 class="name">Ghế đẩu inox kiềng - Đặt riêng</h3>
+                        <div class="price">
+                            <span class="sale">1.249.000 đ</span>
+                            <span class="old">1.249.000 đ</span>
+                            <div class="tag">
+                                <span class="tag-item">
+                                    <svg>
+                                        <use xlink:href="#icon-thunder"></use>
+                                    </svg>
+                                    -20%
+                                </span>
+                            </div>
+                        </div>
+                        <div class="action">
+                            <div class="action-control">
+                                <div class="action--minus">
+                                    <svg>
+                                        <use xlink:href="#icon-decrease"></use>
+                                    </svg>
+                                </div>
+                                <input class="action--quantity mini-cart-quantity" type="number" value="1">
+                                <div class="action--plus">
+                                    <svg>
+                                        <use xlink:href="#icon-increase"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="action-delete">
+                                <button class="action-detele-btn">
+                                    <svg>
+                                        <use xlink:href="#icon-trash"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mini-cart_footer">
+            <div class="mini-cart_total">
+                <h5 class="title">
+                    Tổng cộng
+                </h5>
+                <span class="value">
+                    3.450.000 đ
+                </span>
+            </div>
+            <div class="mini-cart_checkout">
+                <a href="#" class="mini-cart_checkout--link">
+                    Check out
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
         <div class="main">
           <section class="section login-form">
   <div class="login-form_wrap">
