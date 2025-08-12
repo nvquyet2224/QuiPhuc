@@ -77,7 +77,7 @@ function handleSearch() {
     iconOpenRef.addEventListener("click", () => {
       if (searchPopupRef.classList.contains("show")) {
         searchPopupRef.classList.remove("show");
-        document.querySelector("body").classList.add("no-scroll");
+        document.querySelector("body").classList.remove("no-scroll");
       } else {
         searchPopupRef.classList.add("show");
         document.querySelector("body").classList.add("no-scroll");

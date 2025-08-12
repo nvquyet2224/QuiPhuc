@@ -1189,6 +1189,21 @@ input[type=number] {
   width: 100%;
   height: auto;
 }
+.footer-widget {
+  position: fixed;
+  z-index: 10;
+  bottom: 2.8125rem;
+  right: 1.0625rem;
+}
+.footer-widget .widget-icon {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.3125rem;
+}
+.footer-widget .widget-icon svg {
+  width: 100%;
+  height: 100%;
+}
 
 @media screen and (max-width: 1023px) {
   .footer {
@@ -1226,6 +1241,18 @@ input[type=number] {
     font-size: 0.75rem;
     text-align: center;
     line-height: 1.666666667;
+  }
+  .footer-widget {
+    bottom: 2.5rem;
+    right: 0.9375rem;
+  }
+  .footer-widget .widget-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .footer-widget .widget-icon svg {
+    width: 1.875rem;
+    height: 1.875rem;
   }
 }
 body {
