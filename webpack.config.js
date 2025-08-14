@@ -17,12 +17,12 @@ const footerComponent = fs.readFileSync(__dirname + "/src/_component-footer.html
 const componentPartner = fs.readFileSync(__dirname + "/src/_component-partner.html");
 
 const homeBanner = fs.readFileSync(__dirname + "/src/_home-banner.html");
-const productCategoryComponent = fs.readFileSync(__dirname + "/src/_product-category.html");
+const productCategory = fs.readFileSync(__dirname + "/src/_product-category.html");
 const kitchenComponent = fs.readFileSync(__dirname + "/src/_kitchen.html");
-const productNewComponent = fs.readFileSync(__dirname + "/src/_product-new.html");
+const productNew = fs.readFileSync(__dirname + "/src/_product-new.html");
 const whatnowComponent = fs.readFileSync(__dirname + "/src/_whatnow.html");
 const productPromotion = fs.readFileSync(__dirname + "/src/_product-promotion.html");
-const inspirationComponent = fs.readFileSync(__dirname + "/src/_inspiration.html");
+const inspirationComponent = fs.readFileSync(__dirname + "/src/_inspiration.html"); 
 const supportComponent = fs.readFileSync(__dirname + "/src/_support.html");
 const commitComponent = fs.readFileSync(__dirname + "/src/_commit.html");
 const promotionComponent = fs.readFileSync(__dirname + "/src/_promotion.html");
@@ -46,28 +46,29 @@ const detailBigimgComponent = fs.readFileSync(__dirname + "/src/_product-detail-
 const detailAdditionalComponent = fs.readFileSync(__dirname + "/src/_product-detail-additional.html");
 
 
-const listBannerComponent = fs.readFileSync(__dirname + "/src/_list-banner.html");
-const listProductComponent = fs.readFileSync(__dirname + "/src/_list-product.html");
+const banners = fs.readFileSync(__dirname + "/src/_list-banner.html");
+const products = fs.readFileSync(__dirname + "/src/_list-product.html");
 
-const newListComponent = fs.readFileSync(__dirname + "/src/_new-list.html");
-const newDetailComponent = fs.readFileSync(__dirname + "/src/_new-detail.html");
+const news = fs.readFileSync(__dirname + "/src/_new-list.html");
+const newDetail = fs.readFileSync(__dirname + "/src/_new-detail.html");
+  
+const about = fs.readFileSync(__dirname + "/src/_about.html");
+const aboutVision = fs.readFileSync(__dirname + "/src/_about-vision.html");
+const aboutHistory = fs.readFileSync(__dirname + "/src/_about-history.html");
 
-const aboutComponent = fs.readFileSync(__dirname + "/src/_about.html");
-const aboutVisionComponent = fs.readFileSync(__dirname + "/src/_about-vision.html");
-const aboutHistoryComponent = fs.readFileSync(__dirname + "/src/_about-history.html");
+const lookbooks = fs.readFileSync(__dirname + "/src/_lookbooks.html"); 
+const lookbook = fs.readFileSync(__dirname + "/src/_lookbook.html");
+const lookbookRelated = fs.readFileSync(__dirname + "/src/_lookbook-related.html");
 
-const roomsComponent = fs.readFileSync(__dirname + "/src/_rooms.html");
-const lookbooksDetailComponent = fs.readFileSync(__dirname + "/src/_lookbooks-chi-tiet.html");
+const login = fs.readFileSync(__dirname + "/src/_login-form.html");
+const profile = fs.readFileSync(__dirname + "/src/_profile-detail.html");
 
-const profileDetailComponent = fs.readFileSync(__dirname + "/src/_profile-detail.html");
+const stores = fs.readFileSync(__dirname + "/src/_list-store.html");
 
-const listStoreComponent = fs.readFileSync(__dirname + "/src/_list-store.html");
-const searchResultComponent = fs.readFileSync(__dirname + "/src/_search-result.html");
+const searchResult = fs.readFileSync(__dirname + "/src/_search-result.html");
 
-const loginFormComponent = fs.readFileSync(__dirname + "/src/_login-form.html");
-
-const recruitmentComponent = fs.readFileSync(__dirname + "/src/_recruitment-block.html");
-const recruitmentDetailComponent = fs.readFileSync(__dirname + "/src/_recruitment-detail.html");
+const recruitments = fs.readFileSync(__dirname + "/src/_recruitment-block.html");
+const recruitment = fs.readFileSync(__dirname + "/src/_recruitment-detail.html");
 //noErrorOnMissing: true
 
 const minifyRules = {
@@ -91,17 +92,17 @@ module.exports = {
     main: ["./src/js/main.js"],
     index: ["./src/js/index.js"],
     business: ["./src/js/business.js"],
-    san_pham_chi_tiet: ["./src/js/san_pham_chi_tiet.js"],
     news: ["./src/js/news.js"],
     new_detail: ["./src/js/new-detail.js"],
-    product_list: ["./src/js/product_list.js"],
+    products: ["./src/js/products.js"],
+    product: ["./src/js/product.js"],
     lookbooks: ["./src/js/lookbooks.js"],
+    lookbook: ["./src/js/lookbook.js"],
     profile: ["./src/js/profile.js"],
     login: ["./src/js/login.js"],
-    lookbooks_chi_tiet: ["./src/js/lookbooks_chi_tiet.js"],
     about: ["./src/js/about.js"],
+    recruitments: ["./src/js/recruitments.js"],
     recruitment: ["./src/js/recruitment.js"],
-    recruitment_detail: ["./src/js/recruitment-detail.js"],
     cart: ["./src/js/cart.js"],
     support_client: ["./src/js/support-client.js"],
     store: ["./src/js/store.js"],
@@ -220,14 +221,14 @@ module.exports = {
           noErrorOnMissing: true,
         },
         {
-          from: "src/js/product_list_main.js",
-          to: "js/product_list_main.js",
+          from: "src/js/products_main.js",
+          to: "js/products_main.js",
           info: { minimized: !minimized },
           noErrorOnMissing: true,
         },
         {
-          from: "src/js/product_detail_main.js",
-          to: "js/product_detail_main.js",
+          from: "src/js/product_main.js",
+          to: "js/product_main.js",
           info: { minimized: !minimized },
           noErrorOnMissing: true,
         },
@@ -238,20 +239,20 @@ module.exports = {
           noErrorOnMissing: true,
         },
         {
+          from: "src/js/lookbook_main.js",
+          to: "js/lookbook_main.js",
+          info: { minimized: !minimized },
+          noErrorOnMissing: true,
+        },
+        {
+          from: "src/js/recruitments_main.js",
+          to: "js/recruitments_main.js",
+          info: { minimized: !minimized },
+          noErrorOnMissing: true,
+        },
+        {
           from: "src/js/recruitment_main.js",
           to: "js/recruitment_main.js",
-          info: { minimized: !minimized },
-          noErrorOnMissing: true,
-        },
-        {
-          from: "src/js/recruitment_detail_main.js",
-          to: "js/recruitment_detail_main.js",
-          info: { minimized: !minimized },
-          noErrorOnMissing: true,
-        },
-        {
-          from: "src/js/lookbooks_chi_tiet_main.js",
-          to: "js/lookbooks_chi_tiet_main.js",
           info: { minimized: !minimized },
           noErrorOnMissing: true,
         },
@@ -317,9 +318,9 @@ module.exports = {
       svg: svg,
       header: headerComponent,
       home_banner: homeBanner,
-      productCategoryComponent: productCategoryComponent,
+      productCategory: productCategory,
       kitchen: kitchenComponent,
-      productNewComponent: productNewComponent,
+      productNew: productNew,
       whatnowComponent: whatnowComponent,
       productPromotion: productPromotion,
       inspiration: inspirationComponent,
@@ -338,10 +339,10 @@ module.exports = {
       svg: svg,
       header: headerComponent,
       businessBannerComponent: businessBannerComponent,
-      productCategoryComponent: productCategoryComponent,
+      productCategory: productCategory,
       kitchen: kitchenComponent,
       collection: collectionComponent,
-      productNewComponent: productNewComponent,
+      productNew: productNew,
       brandComponent: brandComponent,
       project: projectComponent,
       commit: commitComponent,
@@ -385,7 +386,7 @@ module.exports = {
       preload: preload,
       svg: svg,
       header: headerNoramComponent,
-      newListComponent: newListComponent,
+      news: news,
       registerPromotion: registerPromotion,
       footer: footerComponent,
       template: "src/tin-tuc.html",
@@ -397,7 +398,7 @@ module.exports = {
       preload: preload,
       svg: svg,
       header: headerNoramComponent,
-      newDetailComponent: newDetailComponent,
+      newDetail: newDetail,
       registerPromotion: registerPromotion,
       footer: footerComponent,
       template: "src/tin-chi-tiet.html",
@@ -412,8 +413,8 @@ module.exports = {
       productRelatedComponent: productRelatedComponent,
       home_banner: homeBanner,
       breadcrumb: breadcrumb,
-      listBannerComponent,
-      listProductComponent,
+      banners,
+      products,
       commit: commitComponent,
       support: supportComponent,
       promotionComponent: promotionComponent,
@@ -425,26 +426,27 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       inject: false,
-      filename: "lookbooks.html",
+      filename: "khong-gian.html",
       preload: preload,
       svg: svg,
       header: headerNoramComponent,
-      rooms: roomsComponent,
+      rooms: lookbooks,
       registerPromotion: registerPromotion,
       footer: footerComponent,
-      template: "src/lookbooks.html",
+      template: "src/khong-gian.html",
       minify: minify,
     }),
     new HtmlWebpackPlugin({
       inject: false,
-      filename: "lookbooks-chi-tiet.html",
+      filename: "khong-gian-chi-tiet.html",
       preload: preload,
       svg: svg,
       header: headerNoramComponent,
-      detail: lookbooksDetailComponent,
+      lookbook: lookbook,
+      lookbookRelated: lookbookRelated,
       registerPromotion: registerPromotion,
       footer: footerComponent,
-      template: "src/lookbooks-chi-tiet.html",
+      template: "src/khong-gian-chi-tiet.html",
       minify: minify,
     }),
     new HtmlWebpackPlugin({
@@ -453,7 +455,7 @@ module.exports = {
       preload: preload,
       svg: svg,
       header: headerNoramComponent,
-      detail: profileDetailComponent,
+      detail: profile,
       registerPromotion: registerPromotion,
       footer: footerComponent,
       template: "src/profile.html",
@@ -465,7 +467,7 @@ module.exports = {
       preload: preload,
       svg: svg,
       header: headerNoramComponent,
-      form: loginFormComponent,
+      form: login,
       registerPromotion: registerPromotion,
       footer: footerComponent,
       template: "src/login.html",
@@ -477,11 +479,11 @@ module.exports = {
       preload: preload,
       svg: svg,
       header: headerNoramComponent,
-      aboutComponent: aboutComponent,
+      about: about,
       commit: commitComponent,
       componentPartner: componentPartner,
-      aboutHistoryComponent: aboutHistoryComponent,
-      aboutVisionComponent: aboutVisionComponent,
+      aboutHistory: aboutHistory,
+      aboutVision: aboutVision,
       registerPromotion: registerPromotion,
       footer: footerComponent,
       template: "src/ve-qui-phuc.html",
@@ -493,7 +495,7 @@ module.exports = {
       preload: preload,
       svg: svg,
       header: headerNoramComponent,
-      recruitmentComponent: recruitmentComponent,
+      recruitments: recruitments,
       registerPromotion: registerPromotion,
       footer: footerComponent,
       template: "src/tuyen-dung.html",
@@ -505,7 +507,7 @@ module.exports = {
       preload: preload,
       svg: svg,
       header: headerNoramComponent,
-      recruitmentDetailComponent: recruitmentDetailComponent,
+      recruitment: recruitment,
       registerPromotion: registerPromotion,
       footer: footerComponent,
       template: "src/tuyen-dung-chi-tiet.html",
@@ -528,7 +530,7 @@ module.exports = {
       preload: preload,
       svg: svg,
       header: headerNoramComponent,
-      stores: listStoreComponent,
+      stores: stores,
       registerPromotion: registerPromotion,
       footer: footerComponent,
       template: "src/cua-hang.html",
@@ -540,8 +542,8 @@ module.exports = {
       preload: preload,
       svg: svg,
       header: headerNoramComponent,
-      searchResult:searchResultComponent,
-      listProductComponent,
+      searchResult:searchResult,
+      products,
       registerPromotion: registerPromotion,
       service: serviceComponent,
       footer: footerComponent,
@@ -576,7 +578,7 @@ module.exports = {
       preload: preload,
       svg: svg,
       header: headerNoramComponent,
-      productCategoryComponent: productCategoryComponent,
+      productCategory: productCategory,
       registerPromotion: registerPromotion,
       footer: footerComponent,
       template: "src/khuyen-mai.html",

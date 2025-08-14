@@ -6,28 +6,28 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-var lookbooks_chi_tiet;
+var products;
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/js/lookbooks_chi_tiet.js":
-/*!**************************************!*\
-  !*** ./src/js/lookbooks_chi_tiet.js ***!
-  \**************************************/
+/***/ "./src/js/products.js":
+/*!****************************!*\
+  !*** ./src/js/products.js ***!
+  \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_lookbooks_chi_tiet_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/lookbooks-chi-tiet.scss */ \"./src/sass/lookbooks-chi-tiet.scss\");\n\n\n//# sourceURL=webpack://modules/./src/js/lookbooks_chi_tiet.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_products_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/products.scss */ \"./src/sass/products.scss\");\n\n\n//# sourceURL=webpack://modules/./src/js/products.js?");
 
 /***/ }),
 
-/***/ "./src/sass/lookbooks-chi-tiet.scss":
-/*!******************************************!*\
-  !*** ./src/sass/lookbooks-chi-tiet.scss ***!
-  \******************************************/
+/***/ "./src/sass/products.scss":
+/*!********************************!*\
+  !*** ./src/sass/products.scss ***!
+  \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://modules/./src/sass/lookbooks-chi-tiet.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://modules/./src/sass/products.scss?");
 
 /***/ })
 
@@ -74,8 +74,8 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/js/lookbooks_chi_tiet.js");
-/******/ 	(lookbooks_chi_tiet = typeof lookbooks_chi_tiet === "undefined" ? {} : lookbooks_chi_tiet).modules = __webpack_exports__;
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/js/products.js");
+/******/ 	(products = typeof products === "undefined" ? {} : products).modules = __webpack_exports__;
 /******/ 	
 /******/ })()
 ;

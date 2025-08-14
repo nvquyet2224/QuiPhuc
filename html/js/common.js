@@ -73,6 +73,7 @@ function handleSearch() {
 
   if (iconOpenRef) {
     iconOpenRef.addEventListener("click", () => {
+      lazyEvent();
       if (searchPopupRef.classList.contains("show")) {
         searchPopupRef.classList.remove("show");
         document.querySelector("body").classList.remove("no-scroll");
@@ -117,6 +118,7 @@ function handleSearch() {
       }
     });
   }
+
   if (iconClearRef) {
     iconClearRef.addEventListener("click", () => {
       iconClearRef.classList.remove("show");
@@ -145,6 +147,7 @@ function handleMiniCart() {
   const buttonCloseRef = document.getElementById("mini-cart--close");
   if (buttonCartRef) {
     buttonCartRef.addEventListener("click", () => {
+      lazyEvent();
       if (miniCartRef) {
         miniCartRef.classList.add("show");
          document.querySelector("body").classList.add("no-scroll");
@@ -396,7 +399,7 @@ function loadImagesOnScroll() {
   document.querySelectorAll(".lazy:not(.loaded)").forEach((img) => {
     if (window.innerWidth >= 1024) {
       if (!img.classList.contains("sp")) {
-        if (isInViewport(img, 50)) {
+        if (isInViewport(img, 200)) {
           const src = img.getAttribute("data-src");
           if (src) {
             img.setAttribute("src", src);

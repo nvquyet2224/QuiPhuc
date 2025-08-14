@@ -44,6 +44,17 @@
               width: f.rem(24);
               height: f.rem(24);
             }
+
+
+            a {
+              color: inherit;
+              display: flex;
+              gap: f.rem(12);
+              text-decoration: none;
+              font-weight: inherit;
+            }
+
+
           }
         }
       }
@@ -561,7 +572,6 @@
           .tab-list {
             flex-direction: row;
             gap: f.rem(20);
-            //border-bottom: 1px solid #d9d9d9;
 
             .tab-item {
               gap: f.rem(8);
@@ -726,6 +736,7 @@
 
     .select {
       width: 100%;
+
       &-box {
         width: 100%;
         min-width: initial;

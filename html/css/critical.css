@@ -816,6 +816,7 @@ strong {
   color: #000;
   gap: 0.5rem;
   cursor: pointer;
+  text-decoration: none;
 }
 .header-action .user-avatar svg {
   width: 1.125rem;

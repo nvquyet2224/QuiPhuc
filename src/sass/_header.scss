@@ -271,6 +271,7 @@
             color: #000;
             gap: f.rem(8);
             cursor: pointer;
+            text-decoration: none;
 
             &-avatar {
                 svg {
@@ -862,7 +863,8 @@
                                 padding-left: f.rem(18);
                             }
                         }
-                        .dropdown-menu--title.current + .container-list {
+
+                        .dropdown-menu--title.current+.container-list {
                             opacity: 1;
                         }
 

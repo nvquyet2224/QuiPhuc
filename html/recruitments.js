@@ -6,28 +6,28 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-var recruitment_detail;
+var recruitments;
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/js/recruitment-detail.js":
-/*!**************************************!*\
-  !*** ./src/js/recruitment-detail.js ***!
-  \**************************************/
+/***/ "./src/js/recruitments.js":
+/*!********************************!*\
+  !*** ./src/js/recruitments.js ***!
+  \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_recruitment_detail_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/recruitment-detail.scss */ \"./src/sass/recruitment-detail.scss\");\n\n\n//# sourceURL=webpack://modules/./src/js/recruitment-detail.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_recruitments_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/recruitments.scss */ \"./src/sass/recruitments.scss\");\n\n\n//# sourceURL=webpack://modules/./src/js/recruitments.js?");
 
 /***/ }),
 
-/***/ "./src/sass/recruitment-detail.scss":
-/*!******************************************!*\
-  !*** ./src/sass/recruitment-detail.scss ***!
-  \******************************************/
+/***/ "./src/sass/recruitments.scss":
+/*!************************************!*\
+  !*** ./src/sass/recruitments.scss ***!
+  \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://modules/./src/sass/recruitment-detail.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://modules/./src/sass/recruitments.scss?");
 
 /***/ })
 
@@ -74,8 +74,8 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/js/recruitment-detail.js");
-/******/ 	(recruitment_detail = typeof recruitment_detail === "undefined" ? {} : recruitment_detail).modules = __webpack_exports__;
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/js/recruitments.js");
+/******/ 	(recruitments = typeof recruitments === "undefined" ? {} : recruitments).modules = __webpack_exports__;
 /******/ 	
 /******/ })()
 ;

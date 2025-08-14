@@ -118,6 +118,11 @@ input[type=number] {
   font-size: 1rem;
   margin-top: 0.8125rem;
 }
+.product-txt .name a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
+}
 .product-txt .model {
   color: #475467;
   font-weight: 500;
@@ -197,6 +202,11 @@ input[type=number] {
 .article-banner--txt .btn-arrow svg {
   width: 0.75rem;
   height: 0.5625rem;
+}
+.article-banner a {
+  text-decoration: none;
+  font-weight: inherit;
+  color: inherit;
 }
 
 .project {

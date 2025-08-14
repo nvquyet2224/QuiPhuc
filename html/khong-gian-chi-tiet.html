@@ -22,12 +22,12 @@
   <meta name="apple-mobile-web-app-title" content="Qui Phúc" />
   <link rel="icon" href="images/favicon.png" />
   <link href="css/critical.css" rel="preload stylesheet" as="style">
-  <link rel="stylesheet" href="css/lookbooks_chi_tiet.css">
+  <link rel="stylesheet" href="css/lookbook.css">
 </head>
 
 <body data-page="home">
   <div class="page">
-      <svg style="display: none">
+    <svg style="display: none">
   <symbol
     id="icon-widget-tel"
     viewBox="0 0 38 38"
@@ -867,8 +867,8 @@
                     </div>
                     <div class="select-box">
                         <ul>
-                            <li class="selected"><a href="index.html">VI</a></li>
-                            <li data-value="en"><a href="index.html">EN</a></li>
+                            <li class="selected"><a href="./">VI</a></li>
+                            <li data-value="en"><a href="./">EN</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1552,8 +1552,8 @@
                             </div>
                             <div class="select-box">
                                 <ul>
-                                    <li class="selected"><a href="index.html">VI</a></li>
-                                    <li data-value="en"><a href="index.html">EN</a></li>
+                                    <li class="selected"><a href="./">VI</a></li>
+                                    <li data-value="en"><a href="./">EN</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -1573,7 +1573,7 @@
                         <use xlink:href="#icon-cart"></use>
                     </svg>
                 </div>
-                <div class="user">
+                <a class="user" href="profile.html">
                     <div class="user-avatar action-icon">
                         <svg class="symbol">
                             <use xlink:href="#icon-user"></use>
@@ -1585,13 +1585,13 @@
                             <use xlink:href="#icon-arrow-down"></use>
                         </svg>
                     </span>
-                </div>
+                </a>
             </div>
             <div class="search_popup">
                 <div class="search_head sp">
-                    <h3 class="search_head-title">
+                    <h2 class="search_head-title">
                         Tìm kiếm
-                    </h3>
+                    </h2>
                     <div class="search-but action-icon search-but--close" id="icon-close-search">
                         <svg class="symbol">
                             <use xlink:href="#icon-close"></use>
@@ -1599,7 +1599,7 @@
                     </div>
                 </div>
                 <div class="search_content">
-                    <div class="search_top">                      
+                    <div class="search_top">
                         <div class="search_form">
                             <div class="form_group">
                                 <input id="input-search" type="text" placeholder="Qui Phúc có thể giúp bạn tìm gì ?">
@@ -1618,10 +1618,10 @@
                     </div>
                     <div class="search_bottom">
                         <div class="search_popular">
-                            <h3 class="search_popular-title">
+                            <div class="search_popular-title">
                                 Tìm kiếm thông dụng
-                            </h3>
-                            
+                            </div>
+
                             <div class="search_popular-list">
                                 <div class="search_popular-item" data-value="Ghế Inox">
                                     <svg class="symbol">
@@ -1660,7 +1660,9 @@
                                 <div class="new-item">
                                     <a class="new" href="lookbooks-chi-tiet.html">
                                         <div class="new-img">
-                                            <img width="432" height="276" loading="lazy" fetchpriority="low" src="images/room-1.png" alt="Phòng bếp" />
+                                            <img width="432" height="276" class="lazy-event"
+                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                            data-src="images/room-1.png" alt="Phòng bếp" />
                                         </div>
                                         <div class="new-txt">
                                             <h3>Phòng bếp</h3>
@@ -1670,7 +1672,9 @@
                                 <div class="new-item">
                                     <a class="new" href="lookbooks-chi-tiet.html">
                                         <div class="new-img">
-                                            <img width="432" height="276" loading="lazy" fetchpriority="low" src="images/room-6.png" alt="Phòng ngủ" />
+                                            <img width="432" height="276" class="lazy-event"
+                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                            data-src="images/room-6.png" alt="Phòng ngủ" />
                                         </div>
                                         <div class="new-txt">
                                             <h3>Phòng khách</h3>
@@ -1680,7 +1684,9 @@
                                 <div class="new-item">
                                     <a class="new" href="lookbooks-chi-tiet.html">
                                         <div class="new-img">
-                                            <img width="432" height="276" loading="lazy" fetchpriority="low" src="images/room-2.png" alt="Phòng ngủ" />
+                                            <img width="432" height="276" class="lazy-event"
+                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                            data-src="images/room-2.png" alt="Phòng ngủ" />
                                         </div>
                                         <div class="new-txt">
                                             <h3>Phòng ngủ</h3>
@@ -1690,8 +1696,9 @@
                                 <div class="new-item">
                                     <a class="new" href="lookbooks-chi-tiet.html">
                                         <div class="new-img">
-                                            <img width="432" height="276" loading="lazy" fetchpriority="low" src="images/room-3.png"
-                                            alt="Phòng làm việc" />
+                                            <img width="432" height="276" class="lazy-event"
+                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                            data-src="images/room-3.png" alt="Phòng làm việc" />
                                         </div>
                                         <div class="new-txt">
                                             <h3>Phòng làm việc</h3>
@@ -1701,7 +1708,9 @@
                                 <div class="new-item">
                                     <a class="new" href="lookbooks-chi-tiet.html">
                                         <div class="new-img">
-                                            <img width="432" height="276" loading="lazy" fetchpriority="low" src="images/room-4.png" alt="Phòng tắm" />
+                                            <img width="432" height="276" class="lazy-event"
+                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                            data-src="images/room-4.png" alt="Phòng tắm" />
                                         </div>
                                         <div class="new-txt">
                                             <h3>Phòng tắm</h3>
@@ -1711,7 +1720,9 @@
                                 <div class="new-item">
                                     <a class="new" href="lookbooks-chi-tiet.html">
                                         <div class="new-img">
-                                            <img width="432" height="276" loading="lazy" fetchpriority="low" src="images/room-5.png" alt="Ngoài trời" />
+                                            <img width="432" height="276" class="lazy-event"
+                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                            data-src="images/room-5.png" alt="Ngoài trời" />
                                         </div>
                                         <div class="new-txt">
                                             <h3>Ngoài trời</h3>
@@ -1722,7 +1733,9 @@
                             <div class="result-product hide" id="result-product">
                                 <div class="product">
                                     <div class="product-img">
-                                        <img width="72" height="72" loading="lazy" fetchpriority="low" src="images/search-product.png" alt="Ghế đẩu inox kiềng - Đặt riêng">
+                                        <img width="72" height="72" class="lazy-event"
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                        data-src="images/search-product.png" alt="Ghế đẩu inox kiềng - Đặt riêng">
                                     </div>
                                     <div class="product-txt">
                                         <h3 class="name">Ghế đẩu inox kiềng - Đặt riêng</h3>
@@ -1736,7 +1749,9 @@
                                 </div>
                                 <div class="product">
                                     <div class="product-img">
-                                        <img width="72" height="72" loading="lazy" fetchpriority="low" src="images/search-product.png" alt="Ghế đẩu inox kiềng - Đặt riêng">
+                                        <img width="72" height="72" class="lazy-event"
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                        data-src="images/search-product.png" alt="Ghế đẩu inox kiềng - Đặt riêng">
                                     </div>
                                     <div class="product-txt">
                                         <h3 class="name">Ghế đẩu inox kiềng - Đặt riêng</h3>
@@ -1750,7 +1765,9 @@
                                 </div>
                                 <div class="product">
                                     <div class="product-img">
-                                        <img width="72" height="72" loading="lazy" fetchpriority="low" src="images/search-product.png" alt="Ghế đẩu inox kiềng - Đặt riêng">
+                                        <img width="72" height="72" class="lazy-event"
+                                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                                        data-src="images/search-product.png" alt="Ghế đẩu inox kiềng - Đặt riêng">
                                     </div>
                                     <div class="product-txt">
                                         <h3 class="name">Ghế đẩu inox kiềng - Đặt riêng</h3>
@@ -1764,157 +1781,161 @@
                                 </div>
                             </div>
                         </div>
-    
+
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mini-cart-popup" id="mini-cart">
+        <div class="mini-cart_content">
+            <div class="mini-cart_head">
+                <h2 class="title">
+                    <svg class="symbol">
+                        <use xlink:href="#icon-cart"></use>
+                    </svg>
+                    Giỏ hàng của tôi
+                </h2>
+                <div class="mini-cart--close" id="mini-cart--close">
+                    <svg class="symbol">
+                        <use xlink:href="#icon-close"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="mini-cart_body">
+                <div class="mini-cart_list">
+                    <div class="product">
+                        <div class="product-img">
+                            <img width="72" height="73" class="lazy-event"
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                            data-src="images/minicart-img-1.png" alt="Ghế đẩu inox kiềng - Đặt riêng">
+                        </div>
+                        <div class="product-txt">
+                            <div class="model">Model: 1200000454</div>
+                            <h3 class="name">Ghế đẩu inox kiềng - Đặt riêng</h3>
+                            <div class="price">
+                                <span class="sale">1.249.000 đ</span>
+                                <span class="old">1.249.000 đ</span>
+                                <div class="tag">
+                                    <span class="tag-item">
+                                        <svg>
+                                            <use xlink:href="#icon-thunder"></use>
+                                        </svg>
+                                        -20%
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="action">
+                                <div class="action-control">
+                                    <div class="action--minus">
+                                        <svg>
+                                            <use xlink:href="#icon-decrease"></use>
+                                        </svg>
+                                    </div>
+                                    <input class="action--quantity mini-cart-quantity" type="number" value="1">
+                                    <div class="action--plus">
+                                        <svg>
+                                            <use xlink:href="#icon-increase"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="action-delete">
+                                    <div class="action-detele-btn">
+                                        <svg>
+                                            <use xlink:href="#icon-trash"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-img">
+                            <img width="72" height="73" class="lazy-event"
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                            data-src="images/minicart-img-2.png" alt="Ghế đẩu inox kiềng - Đặt riêng">
+                        </div>
+                        <div class="product-txt">
+                            <div class="model">Model: 1200000453</div>
+                            <h3 class="name">Ghế đẩu inox kiềng - Đặt riêng</h3>
+                            <div class="price">
+                                <span class="sale">1.249.000 đ</span>
+                                <span class="old">1.249.000 đ</span>
+                                <div class="tag">
+                                    <span class="tag-item">
+                                        <svg>
+                                            <use xlink:href="#icon-thunder"></use>
+                                        </svg>
+                                        -20%
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="action">
+                                <div class="action-control">
+                                    <div class="action--minus">
+                                        <svg>
+                                            <use xlink:href="#icon-decrease"></use>
+                                        </svg>
+                                    </div>
+                                    <input class="action--quantity mini-cart-quantity" type="number" value="1">
+                                    <div class="action--plus">
+                                        <svg>
+                                            <use xlink:href="#icon-increase"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="action-delete">
+                                    <button class="action-detele-btn">
+                                        <svg>
+                                            <use xlink:href="#icon-trash"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mini-cart_footer">
+                <div class="mini-cart_total">
+                    <span class="title">
+                        Tổng cộng
+                    </span>
+                    <span class="value">
+                        3.450.000 đ
+                    </span>
+                </div>
+                <div class="mini-cart_checkout">
+                    <a href="cart.html" class="mini-cart_checkout--link">
+                        Check out
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </header>
-
-<div class="mini-cart-popup" id="mini-cart">
-    <div class="mini-cart_content">
-        <div class="mini-cart_head">
-            <div class="title">
-                <svg class="symbol">
-                    <use xlink:href="#icon-cart"></use>
-                </svg>
-                Giỏ hàng của tôi
-            </div>
-            <button class="mini-cart--close" id="mini-cart--close">
-                <svg class="symbol">
-                    <use xlink:href="#icon-close"></use>
-                </svg>
-            </button>
-        </div>
-        <div class="mini-cart_body">
-            <div class="mini-cart_list">
-                <div class="product" data-product="1200000454">
-                    <div class="product-img">
-                        <img width="72" height="73" loading="lazy" fetchpriority="low" src="images/minicart-img-1.png"
-                            alt="Ghế đẩu inox kiềng - Đặt riêng">
-                    </div>
-                    <div class="product-txt">
-                        <div class="model">Model: 1200000454</div>
-                        <h3 class="name">Ghế đẩu inox kiềng - Đặt riêng</h3>
-                        <div class="price">
-                            <span class="sale">1.249.000 đ</span>
-                            <span class="old">1.249.000 đ</span>
-                            <div class="tag">
-                                <span class="tag-item">
-                                    <svg>
-                                        <use xlink:href="#icon-thunder"></use>
-                                    </svg>
-                                    -20%
-                                </span>
-                            </div>
-                        </div>
-                        <div class="action">
-                            <div class="action-control">
-                                <div class="action--minus">
-                                    <svg>
-                                        <use xlink:href="#icon-decrease"></use>
-                                    </svg>
-                                </div>
-                                <input class="action--quantity mini-cart-quantity" type="number" value="1">
-                                <div class="action--plus">
-                                    <svg>
-                                        <use xlink:href="#icon-increase"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="action-delete">
-                                <button class="action-detele-btn">
-                                    <svg>
-                                        <use xlink:href="#icon-trash"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="product" data-product="1200000453">
-                    <div class="product-img">
-                        <img width="72" height="73" loading="lazy" fetchpriority="low" src="images/minicart-img-2.png"
-                            alt="Ghế đẩu inox kiềng - Đặt riêng">
-                    </div>
-                    <div class="product-txt">
-                        <div class="model">Model: 1200000453</div>
-                        <h3 class="name">Ghế đẩu inox kiềng - Đặt riêng</h3>
-                        <div class="price">
-                            <span class="sale">1.249.000 đ</span>
-                            <span class="old">1.249.000 đ</span>
-                            <div class="tag">
-                                <span class="tag-item">
-                                    <svg>
-                                        <use xlink:href="#icon-thunder"></use>
-                                    </svg>
-                                    -20%
-                                </span>
-                            </div>
-                        </div>
-                        <div class="action">
-                            <div class="action-control">
-                                <div class="action--minus">
-                                    <svg>
-                                        <use xlink:href="#icon-decrease"></use>
-                                    </svg>
-                                </div>
-                                <input class="action--quantity mini-cart-quantity" type="number" value="1">
-                                <div class="action--plus">
-                                    <svg>
-                                        <use xlink:href="#icon-increase"></use>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="action-delete">
-                                <button class="action-detele-btn">
-                                    <svg>
-                                        <use xlink:href="#icon-trash"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="mini-cart_footer">
-            <div class="mini-cart_total">
-                <h5 class="title">
-                    Tổng cộng
-                </h5>
-                <span class="value">
-                    3.450.000 đ
-                </span>
-            </div>
-            <div class="mini-cart_checkout">
-                <a href="#" class="mini-cart_checkout--link">
-                    Check out
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
         <div class="main">
           <section class="section lookbook">
 
   <div class="lookbook_wrap">
+
     <div class="lookbook_viewmore sp">
       <span>Mở</span>
       <span>Đóng</span>
     </div>
+
     <div class="lookbook_product">
-      <div class="title">
+      <h2 class="title">
         <svg>
           <use xlink:href="#icon-lookbooks"></use>
         </svg>
         Lookbook 2025
-      </div>
+      </h2>
+
       <div class="content">
         <div class="product">
           <div class="product-img">
-            <img width="131" height="129" loading="lazy" fetchpriority="low" src="images/product-ghe.png"
+            <img width="131" height="129" fetchpriority="high" src="images/product-ghe.png"
               alt="Ghế đẩu inox kiềng - Đặt riêng" />
           </div>
           <div class="product-txt">
@@ -1948,7 +1969,7 @@
         </div>
         <div class="product">
           <div class="product-img">
-            <img width="131" height="129" loading="lazy" fetchpriority="low" src="images/product-ghe.png"
+            <img width="131" height="129" fetchpriority="high" src="images/product-ghe.png"
               alt="Ghế đẩu inox kiềng - Đặt riêng" />
           </div>
           <div class="product-txt">
@@ -1982,7 +2003,7 @@
         </div>
         <div class="product">
           <div class="product-img">
-            <img width="131" height="129" loading="lazy" fetchpriority="low" src="images/product-ghe.png"
+            <img width="131" height="129" fetchpriority="high" src="images/product-ghe.png"
               alt="Ghế đẩu inox kiềng - Đặt riêng" />
           </div>
           <div class="product-txt">
@@ -2016,7 +2037,7 @@
         </div>
         <div class="product">
           <div class="product-img">
-            <img width="131" height="129" loading="lazy" fetchpriority="low" src="images/product-ghe.png"
+            <img width="131" height="129" fetchpriority="high" src="images/product-ghe.png"
               alt="Ghế đẩu inox kiềng - Đặt riêng" />
           </div>
           <div class="product-txt">
@@ -2050,7 +2071,7 @@
         </div>
         <div class="product">
           <div class="product-img">
-            <img width="131" height="129" loading="lazy" fetchpriority="low" src="images/product-ghe.png"
+            <img width="131" height="129" fetchpriority="high" src="images/product-ghe.png"
               alt="Ghế đẩu inox kiềng - Đặt riêng" />
           </div>
           <div class="product-txt">
@@ -2083,10 +2104,12 @@
           </div>
         </div>
       </div>
+
     </div>
 
-    <div class="lookbook_room">
+    <div class="lookbook_experience">
       <div class="kitchen_wrap">
+
         <div class="kitchen_banner">
           <div class="kitchen_banner--item current" data-target="1">
             <img width="1039" height="676" class="lazy"
@@ -2099,6 +2122,7 @@
               data-src="images/goc-bep-banner2.jpg" alt="goc bep" />
           </div>
         </div>
+
         <div class="kitchen_pots">
           <div class="kitchen_pot current" data-target="1">
             <div class="kitchen_pot--item down" style="--left: 17.348377997%; --top: 27.180783818%">
@@ -2224,205 +2248,114 @@
               </div>
             </div>
           </div>
-          <div class="kitchen_pot" data-target="3">
-            <div class="kitchen_pot--item down" style="--left: 17.348377997%; --top: 27.180783818%">
-              <div class="pot-but">
-                <svg>
-                  <use xlink:href="#icon-plus"></use>
-                </svg>
-              </div>
-              <div class="pot-card">
-                <div class="card">
-                  <div class="card-img">
-                    <img width="131" height="129" class="lazy"
-                      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                      data-src="images/card-table.png" alt="Bàn tròn inox FELIX Otis" />
-                  </div>
-                  <div class="card-txt">
-                    <h3>Bàn tròn inox FELIX Otis</h3>
-                    <div class="price">1.249.000 đ</div>
-                  </div>
+        </div>
+
+        <div class="experience-list">
+          <div class="experience-item">
+            <div class="collectionNavSlider swiper">
+              <div class="swiper-wrapper">
+                <div class="current swiper-slide" data-target="1">
+                  <span class="experience-name">Phòng bếp</span>
+                  <span class="experience-amount">5 ps</span>
+                </div>
+                <div class="swiper-slide" data-target="2">
+                  <span class="experience-name">Nhà khách</span>
+                  <span class="experience-amount">3 ps</span>
                 </div>
               </div>
             </div>
-            <div class="kitchen_pot--item down" style="--left: 60.084626234%; --top: 18.584070796%">
-              <div class="pot-but">
+            <div class="block-action">
+              <div class="nav-prev">
                 <svg>
-                  <use xlink:href="#icon-plus"></use>
+                  <use xlink:href="#icon-arrow-next"></use>
                 </svg>
               </div>
-              <div class="pot-card">
-                <div class="card">
-                  <div class="card-img">
-                    <img width="131" height="129" class="lazy"
-                      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                      data-src="images/card-table.png" alt="Bàn tròn inox FELIX Otis" />
-                  </div>
-                  <div class="card-txt">
-                    <h3>Bàn tròn inox FELIX Otis</h3>
-                    <div class="price">1.249.000 đ</div>
-                  </div>
-                </div>
+              <div class="nav-next">
+                <svg>
+                  <use xlink:href="#icon-arrow-next"></use>
+                </svg>
               </div>
             </div>
-            <div class="kitchen_pot--item down" style="--left: 48.377997179%; --top: 41.845764855%">
-              <div class="pot-but">
-                <svg>
-                  <use xlink:href="#icon-plus"></use>
-                </svg>
-              </div>
-              <div class="pot-card">
-                <div class="card">
-                  <div class="card-img">
-                    <img width="131" height="129" class="lazy"
-                      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                      data-src="images/card-table.png" alt="Bàn tròn inox FELIX Otis" />
-                  </div>
-                  <div class="card-txt">
-                    <h3>Bàn tròn inox FELIX Otis</h3>
-                    <div class="price">1.249.000 đ</div>
-                  </div>
-                </div>
-              </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="loolbook-other">
+        <div class="other-header">Chọn mẫu khác</div>
+        <div class="other-product">
+          <div class="product">
+            <div class="product-img">
+              <img width="131" height="129" class="lazy-event"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                data-src="images/product-ghe.png" alt="Ghế đẩu inox kiềng - Đặt riêng" />
             </div>
-            <div class="kitchen_pot--item up" style="--left: 72.073342736%; --top: 55.246523388%">
-              <div class="pot-but">
-                <svg>
-                  <use xlink:href="#icon-plus"></use>
-                </svg>
+            <div class="product-txt">
+              <div class="model">Model: 1200000454</div>
+              <h3 class="name">Ghế đẩu inox kiềng - Đặt riêng</h3>
+              <div class="price">
+                <span class="sale">1.249.000 đ</span>
               </div>
-              <div class="pot-card">
-                <div class="card">
-                  <div class="card-img">
-                    <img width="131" height="129" class="lazy"
-                      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                      data-src="images/card-table.png" alt="Bàn tròn inox FELIX Otis" />
-                  </div>
-                  <div class="card-txt">
-                    <h3>Bàn tròn inox FELIX Otis</h3>
-                    <div class="price">1.249.000 đ</div>
-                  </div>
+              <div class="meta">
+                <div class="meta-but">
+                  <svg>
+                    <use xlink:href="#icon-increase"></use>
+                  </svg>
                 </div>
               </div>
             </div>
           </div>
-          <div class="kitchen_pot" data-target="4">
-            <div class="kitchen_pot--item down" style="--left: 17.348377997%; --top: 27.180783818%">
-              <div class="pot-but">
-                <svg>
-                  <use xlink:href="#icon-plus"></use>
-                </svg>
+          <div class="product">
+            <div class="product-img">
+              <img width="131" height="129" class="lazy-event"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                data-src="images/product-ghe.png" alt="Ghế đẩu inox kiềng - Đặt riêng" />
+            </div>
+            <div class="product-txt">
+              <div class="model">Model: 1200000454</div>
+              <h3 class="name">Ghế đẩu inox kiềng - Đặt riêng</h3>
+              <div class="price">
+                <span class="sale">1.249.000 đ</span>
               </div>
-              <div class="pot-card">
-                <div class="card">
-                  <div class="card-img">
-                    <img width="131" height="129" class="lazy"
-                      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                      data-src="images/card-table.png" alt="Bàn tròn inox FELIX Otis" />
-                  </div>
-                  <div class="card-txt">
-                    <h3>Bàn tròn inox FELIX Otis</h3>
-                    <div class="price">1.249.000 đ</div>
-                  </div>
+              <div class="meta">
+                <div class="meta-but">
+                  <svg>
+                    <use xlink:href="#icon-increase"></use>
+                  </svg>
                 </div>
               </div>
             </div>
-            <div class="kitchen_pot--item down" style="--left: 60.084626234%; --top: 18.584070796%">
-              <div class="pot-but">
-                <svg>
-                  <use xlink:href="#icon-plus"></use>
-                </svg>
-              </div>
-              <div class="pot-card">
-                <div class="card">
-                  <div class="card-img">
-                    <img width="131" height="129" class="lazy"
-                      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                      data-src="images/card-table.png" alt="Bàn tròn inox FELIX Otis" />
-                  </div>
-                  <div class="card-txt">
-                    <h3>Bàn tròn inox FELIX Otis</h3>
-                    <div class="price">1.249.000 đ</div>
-                  </div>
-                </div>
-              </div>
+          </div>
+          <div class="product">
+            <div class="product-img">
+              <img width="131" height="129" class="lazy-event"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                data-src="images/product-ghe.png" alt="Ghế đẩu inox kiềng - Đặt riêng" />
             </div>
-            <div class="kitchen_pot--item down" style="--left: 48.377997179%; --top: 41.845764855%">
-              <div class="pot-but">
-                <svg>
-                  <use xlink:href="#icon-plus"></use>
-                </svg>
+            <div class="product-txt">
+              <div class="model">Model: 1200000454</div>
+              <h3 class="name">Ghế đẩu inox kiềng - Đặt riêng</h3>
+              <div class="price">
+                <span class="sale">1.249.000 đ</span>
               </div>
-              <div class="pot-card">
-                <div class="card">
-                  <div class="card-img">
-                    <img width="131" height="129" class="lazy"
-                      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                      data-src="images/card-table.png" alt="Bàn tròn inox FELIX Otis" />
-                  </div>
-                  <div class="card-txt">
-                    <h3>Bàn tròn inox FELIX Otis</h3>
-                    <div class="price">1.249.000 đ</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="kitchen_pot--item up" style="--left: 72.073342736%; --top: 55.246523388%">
-              <div class="pot-but">
-                <svg>
-                  <use xlink:href="#icon-plus"></use>
-                </svg>
-              </div>
-              <div class="pot-card">
-                <div class="card">
-                  <div class="card-img">
-                    <img width="131" height="129" class="lazy"
-                      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                      data-src="images/card-table.png" alt="Bàn tròn inox FELIX Otis" />
-                  </div>
-                  <div class="card-txt">
-                    <h3>Bàn tròn inox FELIX Otis</h3>
-                    <div class="price">1.249.000 đ</div>
-                  </div>
+              <div class="meta">
+                <div class="meta-but">
+                  <svg>
+                    <use xlink:href="#icon-increase"></use>
+                  </svg>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- <div class="rooms-nav" id="slider-nav">
-          <div class="nav-prev">
-            <svg>
-              <use xlink:href="#icon-arrow-next"></use>
-            </svg>
-          </div>
-          <div class="collectionNavSlider swiper">
-            <div class="swiper-wrapper">
-              <div class="current swiper-slide" data-target="1">
-                <span>Phòng bếp</span>
-                <span class="amount">5 ps</span>
-              </div>
-              <div class="swiper-slide" data-target="2">
-                <span>Nhà khách</span>
-                <span class="amount">3 ps</span>
-              </div>
-            </div>
-          </div>
-          <div class="nav-next">
-            <svg>
-              <use xlink:href="#icon-arrow-next"></use>
-            </svg>
-          </div>
-        </div> -->
       </div>
     </div>
 
   </div>
 
-  <div class="detail-bottom">
-    <div class="detail-bottom--content current" data-target="1">
-      <h3 class="title">
-        Mang sự ấm cúng vào căn bếp – nơi gắn kết cả gia đình
-      </h3>
+  <div class="lookbook_introduce">
+    <div class="lookbook_introduce--item">
+      <h3>Mang sự ấm cúng vào căn bếp – nơi gắn kết cả gia đình</h3>
       <p>
         Đặt mục tiêu tạo nên không gian bếp vừa tiện dụng vừa thân thiện, Qui
         Phúc mong muốn mỗi sản phẩm trong căn bếp không chỉ làm đẹp không gian
@@ -2436,11 +2369,379 @@
         hay cả những dịp sum họp đặc biệt.
       </p>
     </div>
-    <div class="detail-bottom--content" data-target="2"></div>
   </div>
 
 </section>
-          <section class="section subscribe">
+            <section class="section products product-related">
+              <div class="products_wrap">
+                <div class="title_block flex ali-e jus-b">
+                  <div class="block-title">
+                    <div class="sub-title">Sản phẩm</div>
+                    <h2>Liên quan</h2>
+                  </div>
+                  <div class="block-action">
+                    <div class="nav-prev sp">
+                      <svg>
+                        <use xlink:href="#icon-arrow-next"></use>
+                      </svg>
+                    </div>
+                    <div class="nav-next sp">
+                      <svg>
+                        <use xlink:href="#icon-arrow-next"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="products-list">
+                  <div class="productsSlider swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="product">
+                          <a class="product-img" href="san-pham-chi-tiet.html">
+                            <img width="131" height="129" loading="lazy" fetchpriority="low"
+                              src="images/product-ghe.png" alt="Ghế đẩu inox kiềng - Đặt riêng" />
+                          </a>
+                          <div class="product-txt">
+                            <div class="model">Model: 1200000454</div>
+                            <h3 class="name"><a href="san-pham-chi-tiet.html">Ghế đẩu inox kiềng - Đặt riêng</a></h3>
+                            <ul class="color">
+                              <li style="--color-pro: #ff5959"></li>
+                              <li style="--color-pro: #525252"></li>
+                            </ul>
+                            <div class="price">
+                              <span class="sale">1.249.000 đ</span>
+                              <span class="old">1.249.000 đ</span>
+                            </div>
+                          </div>
+                          <div class="tag">
+                            <span class="tag-item">
+                              <svg>
+                                <use xlink:href="#icon-thunder"></use>
+                              </svg>
+                              20%
+                            </span>
+                          </div>
+                          <div class="compare">
+                            <span class="compare-item">
+                              So sánh
+                              <svg>
+                                <use xlink:href="#icon-plus"></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="product">
+                          <a class="product-img" href="san-pham-chi-tiet.html">
+                            <img width="131" height="129" loading="lazy" fetchpriority="low"
+                              src="images/product-sale-1.png" alt="Ghế đẩu inox kiềng - Đặt riêng" />
+                          </a>
+                          <div class="product-txt">
+                            <div class="model">Model: 1200000454</div>
+                            <h3 class="name"><a href="san-pham-chi-tiet.html">Ghế đẩu inox kiềng - Đặt riêng</a></h3>
+                            <ul class="color">
+                              <li style="--color-pro: #ff5959"></li>
+                              <li style="--color-pro: #525252"></li>
+                            </ul>
+                            <div class="price">
+                              <span class="sale">1.249.000 đ</span>
+                              <span class="old">1.249.000 đ</span>
+                            </div>
+                          </div>
+                          <div class="tag">
+                            <span class="tag-item">New</span>
+                          </div>
+                          <div class="compare">
+                            <span class="compare-item">
+                              So sánh
+                              <svg>
+                                <use xlink:href="#icon-plus"></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="product">
+                          <a class="product-img" href="san-pham-chi-tiet.html">
+                            <img width="131" height="129" loading="lazy" fetchpriority="low"
+                              src="images/product-sale-2.png" alt="Ghế đẩu inox kiềng - Đặt riêng" />
+                          </a>
+                          <div class="product-txt">
+                            <div class="model">Model: 1200000454</div>
+                            <h3 class="name"><a href="san-pham-chi-tiet.html">Ghế đẩu inox kiềng - Đặt riêng</a></h3>
+                            <div class="price">
+                              <span class="sale">1.249.000 đ</span>
+                              <span class="old">1.249.000 đ</span>
+                            </div>
+                          </div>
+                          <div class="tag">
+                            <span class="tag-item" style="--color-tag: #fff; --bg-tag: #eb5757">New</span>
+                          </div>
+                          <div class="compare">
+                            <span class="compare-item">
+                              So sánh
+                              <svg>
+                                <use xlink:href="#icon-plus"></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="product">
+                          <a class="product-img" href="san-pham-chi-tiet.html">
+                            <img width="131" height="129" loading="lazy" fetchpriority="low"
+                              src="images/product-sale-3.png" alt="Ghế đẩu inox kiềng - Đặt riêng" />
+                          </a>
+                          <div class="product-txt">
+                            <div class="model">Model: 1200000454</div>
+                            <h3 class="name"><a href="san-pham-chi-tiet.html">Ghế đẩu inox kiềng - Đặt riêng</a></h3>
+                            <ul class="color">
+                              <li style="--color-pro: #ff5959"></li>
+                              <li style="--color-pro: #525252"></li>
+                            </ul>
+                            <div class="price">
+                              <span class="sale">1.249.000 đ</span>
+                              <span class="old">1.249.000 đ</span>
+                            </div>
+                          </div>
+                          <div class="tag">
+                            <span class="tag-item" style="--color-tag: #fff; --bg-tag: #eb5757">New</span>
+                          </div>
+                          <div class="compare">
+                            <span class="compare-item">
+                              So sánh
+                              <svg>
+                                <use xlink:href="#icon-plus"></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="product">
+                          <a class="product-img" href="san-pham-chi-tiet.html">
+                            <img width="131" height="129" loading="lazy" fetchpriority="low"
+                              src="images/product-ghe.png" alt="Ghế đẩu inox kiềng - Đặt riêng" />
+                          </a>
+                          <div class="product-txt">
+                            <div class="model">Model: 1200000454</div>
+                            <h3 class="name"><a href="san-pham-chi-tiet.html">Ghế đẩu inox kiềng - Đặt riêng</a></h3>
+                            <ul class="color">
+                              <li style="--color-pro: #ff5959"></li>
+                              <li style="--color-pro: #525252"></li>
+                            </ul>
+                            <div class="price">
+                              <span class="sale">1.249.000 đ</span>
+                              <span class="old">1.249.000 đ</span>
+                            </div>
+                          </div>
+                          <div class="tag">
+                            <span class="tag-item">
+                              <svg>
+                                <use xlink:href="#icon-thunder"></use>
+                              </svg>
+                              20%
+                            </span>
+                          </div>
+                          <div class="compare">
+                            <span class="compare-item">
+                              So sánh
+                              <svg>
+                                <use xlink:href="#icon-plus"></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="product">
+                          <a class="product-img" href="san-pham-chi-tiet.html">
+                            <img width="131" height="129" loading="lazy" fetchpriority="low"
+                              src="images/product-sale-1.png" alt="Ghế đẩu inox kiềng - Đặt riêng" />
+                          </a>
+                          <div class="product-txt">
+                            <div class="model">Model: 1200000454</div>
+                            <h3 class="name"><a href="san-pham-chi-tiet.html">Ghế đẩu inox kiềng - Đặt riêng</a></h3>
+                            <ul class="color">
+                              <li style="--color-pro: #ff5959"></li>
+                              <li style="--color-pro: #525252"></li>
+                            </ul>
+                            <div class="price">
+                              <span class="sale">1.249.000 đ</span>
+                              <span class="old">1.249.000 đ</span>
+                            </div>
+                          </div>
+                          <div class="tag">
+                            <span class="tag-item">New</span>
+                          </div>
+                          <div class="compare">
+                            <span class="compare-item">
+                              So sánh
+                              <svg>
+                                <use xlink:href="#icon-plus"></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="product">
+                          <a class="product-img" href="san-pham-chi-tiet.html">
+                            <img width="131" height="129" loading="lazy" fetchpriority="low"
+                              src="images/product-sale-2.png" alt="Ghế đẩu inox kiềng - Đặt riêng" />
+                          </a>
+                          <div class="product-txt">
+                            <div class="model">Model: 1200000454</div>
+                            <h3 class="name"><a href="san-pham-chi-tiet.html">Ghế đẩu inox kiềng - Đặt riêng</a></h3>
+                            <div class="price">
+                              <span class="sale">1.249.000 đ</span>
+                              <span class="old">1.249.000 đ</span>
+                            </div>
+                          </div>
+                          <div class="tag">
+                            <span class="tag-item" style="--color-tag: #fff; --bg-tag: #eb5757">New</span>
+                          </div>
+                          <div class="compare">
+                            <span class="compare-item">
+                              So sánh
+                              <svg>
+                                <use xlink:href="#icon-plus"></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="product">
+                          <a class="product-img" href="san-pham-chi-tiet.html">
+                            <img width="131" height="129" loading="lazy" fetchpriority="low"
+                              src="images/product-sale-3.png" alt="Ghế đẩu inox kiềng - Đặt riêng" />
+                          </a>
+                          <div class="product-txt">
+                            <div class="model">Model: 1200000454</div>
+                            <h3 class="name"><a href="san-pham-chi-tiet.html">Ghế đẩu inox kiềng - Đặt riêng</a></h3>
+                            <ul class="color">
+                              <li style="--color-pro: #ff5959"></li>
+                              <li style="--color-pro: #525252"></li>
+                            </ul>
+                            <div class="price">
+                              <span class="sale">1.249.000 đ</span>
+                              <span class="old">1.249.000 đ</span>
+                            </div>
+                          </div>
+                          <div class="tag">
+                            <span class="tag-item" style="--color-tag: #fff; --bg-tag: #eb5757">New</span>
+                          </div>
+                          <div class="compare">
+                            <span class="compare-item">
+                              So sánh
+                              <svg>
+                                <use xlink:href="#icon-plus"></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section lookbook-related">
+  <div class="products_wrap">
+    <div class="title_block flex ali-e jus-b">
+      <div class="block-title">
+        <div class="sub-title">Khám phá</div>
+        <h2>Không gian khác</h2>
+      </div>
+      <div class="block-action">
+        <div class="nav-prev sp">
+          <svg>
+            <use xlink:href="#icon-arrow-next"></use>
+          </svg>
+        </div>
+        <div class="nav-next sp">
+          <svg>
+            <use xlink:href="#icon-arrow-next"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="lookbook-list">
+      <div class="lookbookSlider swiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="new-item">
+              <a class="new" href="khong-gian-chi-tiet.html">
+                <div class="new-img">
+                  <img width="432" height="276" class="lazy"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                    data-src="images/room-2.png" alt="Phòng ngủ" />
+                </div>
+                <div class="new-txt">
+                  <h3>Phòng ngủ</h3>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="new-item">
+              <a class="new" href="khong-gian-chi-tiet.html">
+                <div class="new-img">
+                  <img width="432" height="276" class="lazy"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                    data-src="images/room-3.png" alt="Phòng làm việc" />
+                </div>
+                <div class="new-txt">
+                  <h3>Phòng làm việc</h3>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="new-item">
+              <a class="new" href="khong-gian-chi-tiet.html">
+                <div class="new-img">
+                  <img width="432" height="276" class="lazy"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                    data-src="images/room-4.png" alt="Phòng tắm" />
+                </div>
+                <div class="new-txt">
+                  <h3>Phòng tắm</h3>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="new-item">
+              <a class="new" href="khong-gian-chi-tiet.html">
+                <div class="new-img">
+                  <img width="432" height="276" class="lazy"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                    data-src="images/room-5.png" alt="Ngoài trời" />
+                </div>
+                <div class="new-txt">
+                  <h3>Ngoài trời</h3>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
+  </div>
+</section>
+            <section class="section subscribe">
     <div class="subscribe_wrap">
         <div class="subscribe_block">
             <h2>Có khuyến mãi mới?</h2>
@@ -2463,7 +2764,7 @@
 
 </section>
         </div>
-      <footer class="footer">
+        <footer class="footer">
   <div class="footer-top">
     <div class="footer-col">
       <a class="footer-logo" href="./">
@@ -2647,7 +2948,8 @@
   </div>
   <!--Script-->
   <script defer src="js/common.js"></script>
-  <script defer src="js/lookbooks_chi_tiet_main.js"></script>
+  <script defer src="js/swiper-bundle.js"></script>
+  <script defer src="js/lookbook_main.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
