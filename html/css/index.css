@@ -397,8 +397,8 @@ input[type=number] {
 }
 .nav-prev svg,
 .nav-next svg {
-  width: 0.25rem;
-  height: 0.5rem;
+  width: 0.5rem;
+  height: 1rem;
 }
 
 .nav-prev svg {
@@ -2128,8 +2128,8 @@ button.swiper-pagination-bullet {
 }
 .whatnow .nav-prev svg,
 .whatnow .nav-next svg {
-  width: 0.375rem;
-  height: 0.75rem;
+  width: 0.5rem;
+  height: 1rem;
 }
 
 @media screen and (max-width: 1023px) {

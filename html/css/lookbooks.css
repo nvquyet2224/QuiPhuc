@@ -397,8 +397,8 @@ input[type=number] {
 }
 .nav-prev svg,
 .nav-next svg {
-  width: 0.25rem;
-  height: 0.5rem;
+  width: 0.5rem;
+  height: 1rem;
 }
 
 .nav-prev svg {

@@ -1,37 +1,79 @@
 
-function detailSilder() {
-  if (document.querySelector(".productsLookbooksSlider")) {
-    document.querySelectorAll(".products_content--item").forEach((elm) => {
-      const slide = elm.querySelector(".productsLookbooksSlider");
-      new Swiper(slide, {
-        //modules: [Navigation],
-        direction: "vertical",
-        effect: "slide",
-        loop: false,
-        speed: 1000,
-        preloadImages: false,
-        lazy: true,
-        // disableOnInteraction: true,
-        // pauseOnMouseEnter: true,
-        slidesPerView: 4,
-        spaceBetween: 0,
-        // allowTouchMove: true,
-        // watchOverflow: true,
-        // initialSlide: 0,
-        // autoHeight: false,
-        // breakpoints: {
-        //   1024: {
-        //     slidesPerView: 4,
-        //     spaceBetween: 0,
-        //   },
-        // },
-        on: {
-          init: function (swiper) { },
-          transitionStart: function (swiper) { },
-          transitionEnd: function () { },
-          click(swiper) { },
-        },
+function experienceSilder() {
+  if (document.querySelector(".experienceSlider")) {
+
+    let byClick = false;
+
+    const setCurrent = (clickedSlide) => {
+      console.log(clickedSlide);
+      const target = clickedSlide.getAttribute("data-target");
+
+      // // Banner
+      document.querySelectorAll(".kitchen_banner--item").forEach((elm) => {
+        const _target = elm.getAttribute("data-target");
+        if (_target === target) {
+          elm.classList.add("current");
+        } else {
+          elm.classList.remove("current");
+        }
       });
+
+      // // Hot pot
+      document.querySelectorAll(".kitchen_pot").forEach((elm) => {
+        const _target = elm.getAttribute("data-target");
+        if (_target === target) {
+          elm.classList.add("current");
+        } else {
+          elm.classList.remove("current");
+        }
+      });
+
+    };
+
+    new Swiper(".experienceSlider", {
+      effect: "slide",
+      loop: false,
+      speed: 1000,
+      preloadImages: false,
+      lazy: true,
+      disableOnInteraction: true,
+      pauseOnMouseEnter: true,
+      slidesPerView: 1,
+      spaceBetween: 10,
+      allowTouchMove: true,
+      watchOverflow: true,
+      initialSlide: 0,
+      autoHeight: false,
+      navigation: {
+        nextEl: ".experience-item .nav-next",
+        prevEl: ".experience-item .nav-prev",
+      },
+      on: {
+        init: function (swiper) { },
+        transitionStart: function (swiper) {
+          if (byClick) {
+            console.log('___byClick', byClick);
+            byClick = false;
+          } else {
+            const currentIndex = swiper.activeIndex;
+            const currentSlide = swiper.slides[currentIndex];
+            if (currentSlide) {
+              setCurrent(currentSlide);
+            }
+          }
+        },
+        transitionEnd: function () { },
+        click(swiper) {
+          byClick = true;
+          const clickedSlide = swiper.clickedSlide;
+          const clickedIndex = swiper.clickedIndex;
+          if (clickedSlide) {
+            setCurrent(clickedSlide);
+            console.log('____clickedSlide', clickedSlide);
+            swiper.slideTo(clickedIndex);
+          }
+        },
+      },
     });
   }
 }
@@ -82,6 +124,6 @@ function productRelatedSlider() {
 
 
 (function () {
-  detailSilder();
+  experienceSilder();
   productRelatedSlider();
 })();
