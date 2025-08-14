@@ -78,7 +78,6 @@ function experienceSilder() {
   }
 }
 
-
 function productRelatedSlider() {
   if (document.querySelector(".product-related .productsSlider")) {
     new Swiper(".product-related .productsSlider", {
@@ -98,6 +97,16 @@ function productRelatedSlider() {
       watchOverflow: true,
       initialSlide: 0,
       autoHeight: false,
+      scrollbar: {
+        el: '.product-related .swiper-scrollbar',
+        hide: false,
+        draggable: true
+      },
+      mousewheel: {
+        sensitivity: 1,
+        forceToAxis: true,
+        releaseOnEdges: true,
+      },
       breakpoints: {
         320: {
           slidesPerView: 1.5,
@@ -122,8 +131,51 @@ function productRelatedSlider() {
   }
 }
 
+function lookbookSlider() {
+  if (document.querySelector(".lookbookSlider")) {
+    new Swiper(".lookbookSlider", {
+      //modules: [Navigation, Scrollbar, FreeMode, Mousewheel],
+      effect: "slide",
+      loop: false,
+      speed: 1000,
+      preloadImages: false,
+      lazy: true,
+      disableOnInteraction: true,
+      pauseOnMouseEnter: true,
+      slidesPerView: 3,
+      spaceBetween: 30,
+      freeMode: true,
+      grabCursor: true,
+      allowTouchMove: true,
+      watchOverflow: true,
+      initialSlide: 0,
+      autoHeight: false,
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 12,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+      navigation: {
+        nextEl: ".lookbook-related .nav-next",
+        prevEl: ".lookbook-related .nav-prev",
+      },
+      on: {
+        init: function (swiper) { },
+        transitionStart: function (swiper) { },
+        transitionEnd: function () { },
+        click(swiper) { },
+      },
+    });
+  }
+}
 
 (function () {
   experienceSilder();
   productRelatedSlider();
+  lookbookSlider();
 })();

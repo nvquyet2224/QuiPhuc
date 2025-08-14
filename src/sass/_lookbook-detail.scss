@@ -170,11 +170,28 @@
       font-size: f.rem(30);
       font-weight: 600;
     }
+
     * {
       &:not(:last-child) {
         margin-bottom: f.rem(20);
       }
     }
+  }
+
+  &-related {
+    background-color: #F2F2F2;
+    padding: f.rem(70) f.rem(40) f.rem(120) f.rem(40);
+
+
+    .new-txt {
+      padding-top: f.rem(25);
+
+      h3 {
+        text-align: center;
+        margin-bottom: 0;
+      }
+    }
+
   }
 
 }
@@ -347,4 +364,17 @@
   }
 
 
+}
+
+
+@media screen and (max-width: 1023px) {
+  .lookbook {
+    &_introduce {
+      padding: f.rem(60) f.rem(16);
+    }
+
+    &-related {
+      padding: f.rem(60) f.rem(16);
+    }
+  }
 }

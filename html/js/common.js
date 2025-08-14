@@ -87,7 +87,7 @@ function handleSearch() {
   if (iconCloseRef) {
     iconCloseRef.addEventListener("click", () => {
       searchPopupRef.classList.remove("show");
-      document.querySelector("body").classList.add("no-scroll");
+      document.querySelector("body").classList.remove("no-scroll");
     });
   }
 

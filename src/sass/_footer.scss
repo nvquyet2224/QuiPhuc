@@ -138,16 +138,21 @@
       }
     }
   }
+
   &-widget {
     position: fixed;
     z-index: 10;
     bottom: f.rem(45);
     right: f.rem(17);
+
     .widget {
       &-icon {
-        width: f.rem(48);
-        height: f.rem(48);
-        padding: f.rem(5);
+        width: 38px;
+        height: 38px;
+        //padding: f.rem(5);
+        margin-bottom: 12px;
+
+
         svg {
           width: 100%;
           height: 100%;
@@ -157,11 +162,9 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
-}
+@media screen and (min-width: 1024px) {}
 
-@media screen and (min-width: 1024px) and (max-width: 1200px) {
-}
+@media screen and (min-width: 1024px) and (max-width: 1200px) {}
 
 @media screen and (max-width: 1023px) {
   .footer {
@@ -213,10 +216,12 @@
     &-widget {
       bottom: f.rem(40);
       right: f.rem(15);
+
       .widget {
         &-icon {
           width: f.rem(40);
           height: f.rem(40);
+
           svg {
             width: f.rem(30);
             height: f.rem(30);

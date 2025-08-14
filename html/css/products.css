@@ -4587,9 +4587,9 @@ a.ui-button:active,
   right: 1.0625rem;
 }
 .footer-widget .widget-icon {
-  width: 3rem;
-  height: 3rem;
-  padding: 0.3125rem;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 12px;
 }
 .footer-widget .widget-icon svg {
   width: 100%;
