@@ -79,7 +79,7 @@ const minifyRules = {
   removeStyleLinkTypeAttributes: true,
 };
 
-const devMode = true;
+const devMode = false;
 const isBack = false;
 const minify = false;
 const minimized = false;
@@ -205,7 +205,7 @@ module.exports = {
         {
           from: "src/js/common.js",
           to: "js/common.js",
-          info: { minimized: minimized },
+          info: { minimized: !minimized },
           noErrorOnMissing: true,
         },
         {
