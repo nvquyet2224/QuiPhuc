@@ -378,3 +378,82 @@
     }
   }
 }
+
+@media (orientation: landscape) and (max-width:1023px) {
+  .header {
+    display: none;
+  }
+
+  .lookbook {
+    &_wrap {
+      width: 100%;
+      height: var(--winH, 100vh);
+    }
+
+    .kitchen_pot--item {
+      width: 24px;
+      height: 24px;
+    }
+
+    &_product {
+      .content {
+        display: none;
+      }
+    }
+
+    &_experience {
+      flex: 0 0 calc(100% - 56px);
+      max-width: calc(100% - 56px);
+
+      .kitchen_banner--item {
+        aspect-ratio: 756/375;
+      }
+    }
+  }
+
+
+
+  .experience {
+    &-list {
+      padding-bottom: 7px;
+      padding-right: 5px;
+    }
+
+    &-item {
+      margin-left: auto;
+      width: 185px;
+      height: auto;
+      padding: 0 10px;
+      height: 40px;
+      align-items: center;
+      margin: 0;
+      margin-left: auto;
+
+      .nav-next,
+      .nav-prev {
+        border: none;
+        flex: 0 0 24px;
+        max-width: 24px;
+        height: 24px;
+      }
+
+    }
+
+    &-name,
+    &-amount {
+      text-align: center;
+    }
+
+    &-name {
+      font-size: 12px;
+    }
+
+    &-amount {
+      display: none;
+    }
+
+
+  }
+
+
+}

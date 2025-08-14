@@ -1683,6 +1683,14 @@ button.swiper-pagination-bullet {
   bottom: 100%;
   padding-bottom: 5px;
 }
+.kitchen_pot--item.right .pot-card {
+  -webkit-transform: translateX(-94%);
+  transform: translateX(-94%);
+}
+.kitchen_pot--item.left .pot-card {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
 .kitchen_pot--item:hover .pot-card {
   opacity: 1;
   visibility: visible;
@@ -2262,6 +2270,59 @@ button.swiper-pagination-bullet {
     padding: 3.75rem 1rem;
   }
 }
+@media (orientation: landscape) and (max-width: 1023px) {
+  .header {
+    display: none;
+  }
+  .lookbook_wrap {
+    width: 100%;
+    height: var(--winH, 100vh);
+  }
+  .lookbook .kitchen_pot--item {
+    width: 24px;
+    height: 24px;
+  }
+  .lookbook_product .content {
+    display: none;
+  }
+  .lookbook_experience {
+    flex: 0 0 calc(100% - 56px);
+    max-width: calc(100% - 56px);
+  }
+  .lookbook_experience .kitchen_banner--item {
+    aspect-ratio: 756/375;
+  }
+  .experience-list {
+    padding-bottom: 7px;
+    padding-right: 5px;
+  }
+  .experience-item {
+    margin-left: auto;
+    width: 185px;
+    height: auto;
+    padding: 0 10px;
+    height: 40px;
+    align-items: center;
+    margin: 0;
+    margin-left: auto;
+  }
+  .experience-item .nav-next,
+  .experience-item .nav-prev {
+    border: none;
+    flex: 0 0 24px;
+    max-width: 24px;
+    height: 24px;
+  }
+  .experience-name, .experience-amount {
+    text-align: center;
+  }
+  .experience-name {
+    font-size: 12px;
+  }
+  .experience-amount {
+    display: none;
+  }
+}
 .products {
   background: #ffffff;
   padding: 7.5rem 0;
@@ -2595,16 +2656,11 @@ button.swiper-pagination-bullet {
     line-height: 1.666666667;
   }
   .footer-widget {
-    bottom: 2.5rem;
-    right: 0.9375rem;
+    bottom: 70px;
+    right: 10px;
   }
   .footer-widget .widget-icon {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-  .footer-widget .widget-icon svg {
-    width: 1.875rem;
-    height: 1.875rem;
+    margin-bottom: 5px;
   }
 }
 body {

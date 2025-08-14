@@ -214,18 +214,12 @@
     }
 
     &-widget {
-      bottom: f.rem(40);
-      right: f.rem(15);
+      bottom: 70px;
+      right: 10px;
 
       .widget {
         &-icon {
-          width: f.rem(40);
-          height: f.rem(40);
-
-          svg {
-            width: f.rem(30);
-            height: f.rem(30);
-          }
+          margin-bottom: 5px;
         }
       }
     }

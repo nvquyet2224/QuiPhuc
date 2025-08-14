@@ -195,6 +195,20 @@
                 }
             }
 
+            &.right {
+                .pot-card {
+                    -webkit-transform: translateX(-94%);
+                    transform: translateX(-94%);
+                }
+            }
+
+            &.left {
+                .pot-card {
+                    -webkit-transform: translateX(0);
+                    transform: translateX(0);
+                }
+            }
+
             &:hover {
                 .pot-card {
                     opacity: 1;

@@ -2211,16 +2211,11 @@ button.swiper-pagination-bullet {
     line-height: 1.666666667;
   }
   .footer-widget {
-    bottom: 2.5rem;
-    right: 0.9375rem;
+    bottom: 70px;
+    right: 10px;
   }
   .footer-widget .widget-icon {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-  .footer-widget .widget-icon svg {
-    width: 1.875rem;
-    height: 1.875rem;
+    margin-bottom: 5px;
   }
 }
 body {
