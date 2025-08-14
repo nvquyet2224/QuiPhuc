@@ -2011,7 +2011,7 @@ button.swiper-pagination-bullet {
   -webkit-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
-.lookbook_product .product:hover {
+.lookbook_product .product:hover, .lookbook_product .product.current {
   background-color: #F2F4F7;
 }
 .lookbook_product .product-img {
@@ -2133,8 +2133,20 @@ button.swiper-pagination-bullet {
   z-index: 10;
   display: flex;
   flex-direction: column;
-  visibility: hidden;
   opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.loolbook-other.show {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s;
 }
 .loolbook-other .other-header {
   display: flex;
@@ -2262,6 +2274,10 @@ button.swiper-pagination-bullet {
   font-size: 0.875rem;
 }
 
+.lookbook-port {
+  display: none;
+}
+
 @media screen and (max-width: 1023px) {
   .lookbook_introduce {
     padding: 3.75rem 1rem;
@@ -2271,19 +2287,129 @@ button.swiper-pagination-bullet {
   }
 }
 @media (orientation: landscape) and (max-width: 1023px) {
-  .header {
-    display: none;
-  }
   .lookbook_wrap {
     width: 100%;
-    height: var(--winH, 100vh);
+    height: auto;
+    overflow: hidden;
+  }
+  .lookbook_viewmore {
+    position: absolute;
+    width: 56px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    cursor: pointer;
+    border-right: 1px solid #D9D9D9;
+    border-top: 1px solid #D9D9D9;
+    z-index: 11;
+  }
+  .lookbook_viewmore .title {
+    width: 56px;
+    height: 56px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #D9D9D9;
+  }
+  .lookbook_viewmore .title svg {
+    width: 20px;
+    height: 20px;
+  }
+  .lookbook_viewmore span {
+    position: absolute;
+    left: 0;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 12px;
+    gap: 4px;
+  }
+  .lookbook_viewmore span.view {
+    left: -20px;
+  }
+  .lookbook_viewmore span.close {
+    left: 0;
+    opacity: 0;
+  }
+  .lookbook_viewmore span.close svg {
+    -webkit-transform: scale(-1);
+    transform: scale(-1);
+  }
+  .lookbook_viewmore span svg {
+    display: block;
+    width: 12px;
+    height: 6px;
+  }
+  .lookbook_viewmore.show span.view {
+    opacity: 0;
+  }
+  .lookbook_viewmore.show span.close {
+    opacity: 1;
   }
   .lookbook .kitchen_pot--item {
     width: 24px;
     height: 24px;
   }
-  .lookbook_product .content {
+  .lookbook_product {
+    z-index: 10;
+    width: 400px;
+    max-width: 400px;
+    left: 56px;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+  }
+  .lookbook_product .title {
     display: none;
+  }
+  .lookbook_product.show {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  .lookbook_product .content .product {
+    padding: 10px;
+  }
+  .lookbook_product .content .product-img {
+    flex: 0 0 86px;
+    max-width: 86px;
+    height: 86px;
+    padding: 5px;
+  }
+  .lookbook_product .content .product-txt {
+    flex: 0 0 calc(100% - 86px);
+    max-width: calc(100% - 86px);
+    padding-left: 15px;
+  }
+  .lookbook_product .content .product-txt .model {
+    font-size: 12px;
+  }
+  .lookbook_product .content .product-txt .price,
+  .lookbook_product .content .product-txt .name {
+    font-size: 14px;
+  }
+  .lookbook_product .content .product-txt .tag-item {
+    font-size: 10px;
+  }
+  .lookbook_product .content .product-txt .meta .link-but {
+    font-size: 14px;
+  }
+  .lookbook_product .content .product-txt .meta-but {
+    width: 32px;
+    height: 32px;
+  }
+  .lookbook_product .content .product-txt .meta-but svg {
+    width: 12px;
+    height: 12px;
   }
   .lookbook_experience {
     flex: 0 0 calc(100% - 56px);
@@ -2321,6 +2447,97 @@ button.swiper-pagination-bullet {
   }
   .experience-amount {
     display: none;
+  }
+  .loolbook-other {
+    left: 410px;
+    top: 10px;
+  }
+  .loolbook-other .other-header {
+    height: 44px;
+  }
+  .loolbook-other .product {
+    padding: 5px 10px;
+  }
+  .loolbook-other .product-img {
+    flex: 0 0 86px;
+    max-width: 86px;
+    height: 86px;
+    padding: 5px;
+  }
+  .loolbook-other .product-txt {
+    flex: 0 0 calc(100% - 86px);
+    max-width: calc(100% - 86px);
+    padding-left: 15px;
+    padding-top: 10px;
+  }
+  .loolbook-other .product-txt .model {
+    font-size: 12px;
+  }
+  .loolbook-other .product-txt .price,
+  .loolbook-other .product-txt .name {
+    font-size: 14px;
+  }
+  .loolbook-other .product-txt .tag-item {
+    font-size: 10px;
+  }
+  .loolbook-other .product-txt .meta .link-but {
+    font-size: 14px;
+  }
+  .loolbook-other .product-txt .meta-but {
+    width: 32px;
+    height: 32px;
+  }
+  .loolbook-other .product-txt .meta-but svg {
+    width: 12px;
+    height: 12px;
+  }
+}
+@media (orientation: portrait) and (max-width: 1023px) {
+  .lookbook_wrap {
+    display: none;
+  }
+  .lookbook-port {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .lookbook-port .port-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    line-height: 0;
+  }
+  .lookbook-port .port-img img {
+    width: 100%;
+    height: auto;
+  }
+  .lookbook-port .port-txt {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 0;
+    bottom: 9.375rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2.9375rem;
+  }
+  .lookbook-port .port-txt p {
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.428571429;
+  }
+  .lookbook-port .port-icon {
+    width: 3rem;
+    height: auto;
+    line-height: 0;
+    margin-bottom: 1.875rem;
+  }
+  .lookbook-port .port-icon img {
+    width: 100%;
+    height: auto;
   }
 }
 .products {

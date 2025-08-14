@@ -174,8 +174,58 @@ function lookbookSlider() {
   }
 }
 
+
+//lookbook_viewmore
+
+function lookbookClick() {
+  // Open sub menu
+  const lookbook = document.querySelector(".lookbook");
+
+  if (lookbook) {
+    lookbook.addEventListener("click", (e) => {
+      // view more
+      const item = e.target.closest(".lookbook_viewmore");
+      if (item) {
+        if (item.classList.contains('show')) {
+          item.classList.remove('show');
+          document.querySelector('.lookbook_product').classList.remove('show');
+        } else {
+          item.classList.add('show');
+          document.querySelector('.lookbook_product').classList.add('show');
+        }
+      }
+
+      // show other
+      const openOther = e.target.closest(".by-other");
+      const otherBlock = document.querySelector('.loolbook-other');
+      if (openOther) {
+        if (!openOther.classList.contains('current')) {
+          const oldOther = document.querySelector(".by-other.current");
+          if (oldOther) {
+            oldOther.classList.remove('current');
+          }
+          openOther.classList.add('current');
+          otherBlock.classList.add('show');
+          lazyEvent();
+        }
+      }
+      // close other
+      const closeOther = e.target.closest(".other-header");
+      if (closeOther) {
+        otherBlock.classList.remove('show');
+      }
+
+
+    });
+  }
+
+
+
+}
+
 (function () {
   experienceSilder();
   productRelatedSlider();
   lookbookSlider();
+  lookbookClick();
 })();

@@ -53,7 +53,8 @@
       -webkit-transition: background-color 0.3s ease-in-out;
       transition: background-color 0.3s ease-in-out;
 
-      &:hover {
+      &:hover,
+      &.current {
         background-color: #F2F4F7;
       }
 
@@ -208,8 +209,22 @@
   z-index: 10;
   display: flex;
   flex-direction: column;
-  visibility: hidden;
+
   opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -webkit-transition-delay: 0.25s;
+    transition-delay: 0.25s;
+  }
 
   .other-header {
     display: flex;
@@ -366,6 +381,9 @@
 
 }
 
+.lookbook-port {
+  display: none;
+}
 
 @media screen and (max-width: 1023px) {
   .lookbook {
@@ -380,14 +398,91 @@
 }
 
 @media (orientation: landscape) and (max-width:1023px) {
-  .header {
-    display: none;
-  }
 
   .lookbook {
     &_wrap {
       width: 100%;
-      height: var(--winH, 100vh);
+      height: auto;
+      overflow: hidden;
+    }
+
+    &_viewmore {
+      position: absolute;
+      width: 56px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #fff;
+      cursor: pointer;
+
+      .title {
+        width: 56px;
+        height: 56px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid #D9D9D9;
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      border-right: 1px solid #D9D9D9;
+      border-top: 1px solid #D9D9D9;
+
+      z-index: 11;
+
+      span {
+        position: absolute;
+        left: 0;
+        transform: rotate(-90deg);
+        white-space: nowrap;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 12px;
+        gap: 4px;
+
+        &.view {
+          left: -20px;
+        }
+
+        &.close {
+          left: 0;
+          opacity: 0;
+
+          svg {
+            -webkit-transform: scale(-1);
+            transform: scale(-1);
+          }
+        }
+
+        svg {
+          display: block;
+          width: 12px;
+          height: 6px;
+        }
+      }
+
+      &.show {
+        span {
+          &.view {
+            opacity: 0;
+          }
+
+          &.close {
+            opacity: 1;
+          }
+        }
+      }
     }
 
     .kitchen_pot--item {
@@ -396,8 +491,72 @@
     }
 
     &_product {
-      .content {
+      z-index: 10;
+      width: 400px;
+      max-width: 400px;
+      left: 56px;
+
+      .title {
         display: none;
+      }
+
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+      -webkit-transition: transform 0.3s ease-in-out;
+      transition: transform 0.3s ease-in-out;
+
+      &.show {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+      }
+
+      .content {
+        .product {
+          padding: 10px;
+
+          &-img {
+            flex: 0 0 86px;
+            max-width: 86px;
+            height: 86px;
+            padding: 5px;
+          }
+
+          &-txt {
+            flex: 0 0 calc(100% - 86px);
+            max-width: calc(100% - 86px);
+            padding-left: 15px;
+
+            .model {
+              font-size: 12px;
+            }
+
+            .price,
+            .name {
+              font-size: 14px;
+            }
+
+            .tag-item {
+              font-size: 10px;
+            }
+
+            .meta {
+              .link-but {
+                font-size: 14px;
+              }
+
+              &-but {
+                width: 32px;
+                height: 32px;
+
+                svg {
+                  width: 12px;
+                  height: 12px;
+                }
+              }
+            }
+          }
+
+        }
       }
     }
 
@@ -410,8 +569,6 @@
       }
     }
   }
-
-
 
   .experience {
     &-list {
@@ -455,5 +612,118 @@
 
   }
 
+  .loolbook-other {
+    left: 410px;
+    top: 10px;
 
+    .other-header {
+      height: 44px;
+    }
+
+    .product {
+      padding: 5px 10px;
+
+      &-img {
+        flex: 0 0 86px;
+        max-width: 86px;
+        height: 86px;
+        padding: 5px;
+      }
+
+      &-txt {
+        flex: 0 0 calc(100% - 86px);
+        max-width: calc(100% - 86px);
+        padding-left: 15px;
+        padding-top: 10px;
+
+        .model {
+          font-size: 12px;
+        }
+
+        .price,
+        .name {
+          font-size: 14px;
+        }
+
+        .tag-item {
+          font-size: 10px;
+        }
+
+        .meta {
+          .link-but {
+            font-size: 14px;
+          }
+
+          &-but {
+            width: 32px;
+            height: 32px;
+
+            svg {
+              width: 12px;
+              height: 12px;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+}
+
+@media (orientation: portrait) and (max-width:1023px) {
+  .lookbook_wrap {
+    display: none;
+  }
+
+  .lookbook-port {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+
+    .port-img {
+      display: block;
+      width: 100%;
+      height: auto;
+      line-height: 0;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .port-txt {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      left: 0;
+      bottom: f.rem(150);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 f.rem(47);
+
+
+      p {
+        text-align: center;
+        font-size: f.rem(14);
+        line-height: 1.428571429;
+      }
+    }
+
+    .port-icon {
+      width: f.rem(48);
+      height: auto;
+      line-height: 0;
+      margin-bottom: f.rem(30);
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
 }
