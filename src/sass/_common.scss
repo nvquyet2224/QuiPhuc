@@ -29,7 +29,7 @@ input[type="number"] {
   width: 100%;
   height: f.rem(48);
   padding: 0 f.rem(10);
-  border: 1px solid #D0D5DD;
+  border: 1px solid #d0d5dd;
   -webkit-border-radius: f.rem(4);
   border-radius: f.rem(4);
 }
@@ -37,7 +37,7 @@ input[type="number"] {
 .area-txt {
   width: 100%;
   background-color: #fff;
-  border: 1px solid #D0D5DD;
+  border: 1px solid #d0d5dd;
   -webkit-border-radius: f.rem(4);
   border-radius: f.rem(4);
   padding: f.rem(10);
@@ -46,14 +46,14 @@ input[type="number"] {
 
 .input-txt--upload {
   line-height: f.rem(48);
-  background: url(../images/icon-link.svg) no-repeat calc(100% - f.rem(16)) center;
+  background: url(../images/icon-link.svg) no-repeat calc(100% - f.rem(16))
+    center;
   background-size: f.rem(16) auto;
 
   &::-webkit-file-upload-button {
     display: none;
   }
 }
-
 
 .product {
   position: relative;
@@ -293,7 +293,7 @@ input[type="number"] {
     -webkit-border-radius: 2px;
     border-radius: 2px;
     color: var(--color-tag, #fff);
-    background-color: var(--bg-tag, #FF0000);
+    background-color: var(--bg-tag, #ff0000);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -357,7 +357,7 @@ input[type="number"] {
 .card {
   width: 100%;
   height: auto;
-  background-color: #fff;
+  background: #fff;
   border-radius: f.rem(12);
   -webkit-border-radius: f.rem(12);
   margin: 0 auto;
@@ -434,7 +434,6 @@ input[type="number"] {
     margin-bottom: f.rem(20);
 
     &.current {
-
       a,
       span {
         font-weight: 700;
@@ -678,7 +677,13 @@ input[type="number"] {
 .marquee {
   overflow: hidden;
   position: relative;
-  mask-image: linear-gradient(var(--mask-direction, to right), hsla(0, 0%, 0%, 0), hsl(0, 0%, 0%) 10%, hsl(0, 0%, 0%) 90%, hsla(0, 0%, 0%, 0));
+  mask-image: linear-gradient(
+    var(--mask-direction, to right),
+    hsla(0, 0%, 0%, 0),
+    hsl(0, 0%, 0%) 10%,
+    hsl(0, 0%, 0%) 90%,
+    hsla(0, 0%, 0%, 0)
+  );
   padding: f.rem(15) 0;
 
   &__ctn {
@@ -707,6 +712,21 @@ input[type="number"] {
     }
   }
 }
+.parent-sticky {
+  position: relative;
+
+  .has-sticky {
+    transition: transform 0.2s ease;
+
+    &.is-sticky {
+      position: fixed;
+      top: f.rem(80);
+      left: 0;
+      right: 0;
+      z-index: 150;
+    }
+  }
+}
 
 @supports (-webkit-touch-callout: none) {
   .marquee__ctn {
@@ -715,8 +735,39 @@ input[type="number"] {
   }
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .product {
+    img {
+      transition: all 0.2s ease;
+    }
+    &-img {
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  .new {
+    &-img {
+      overflow: hidden;
+      img {
+        transition: all 0.2s ease;
+      }
+    }
 
-@supports (-webkit-text-stroke: #fcd535) {}
+    &-img {
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+@supports (-webkit-text-stroke: #fcd535) {
+}
 
 @media screen and (min-width: 1025px) {
   .paging {
@@ -741,7 +792,6 @@ input[type="number"] {
   }
 }
 
-
 .empty-block {
   display: flex;
   flex-direction: column;
@@ -759,10 +809,17 @@ input[type="number"] {
   }
 }
 
-@media screen and (min-width: 1024px) {}
-
+@media screen and (min-width: 1024px) {
+}
 
 @media screen and (max-width: 1023px) {
+  .parent-sticky {
+    .has-sticky {
+      &.is-sticky {
+        top: f.rem(40);
+      }
+    }
+  }
   .empty-block {
     padding: f.rem(66) f.rem(16);
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
@@ -927,7 +984,6 @@ input[type="number"] {
 
   .img_txt,
   .txt_img {
-
     .txt,
     .img {
       flex: 0 0 100%;
@@ -947,7 +1003,6 @@ input[type="number"] {
   .img_txt {
     flex-direction: column-reverse;
   }
-
 }
 
 .loading__box {
