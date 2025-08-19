@@ -84,7 +84,7 @@
         font-weight: 500;
 
         &:not(:last-child) {
-          margin-bottom: f.rem(18);
+          padding-bottom: f.rem(18);
         }
       }
 
@@ -152,7 +152,6 @@
         //padding: f.rem(5);
         margin-bottom: 12px;
 
-
         svg {
           width: 100%;
           height: 100%;
@@ -162,9 +161,11 @@
   }
 }
 
-@media screen and (min-width: 1024px) {}
+@media screen and (min-width: 1024px) {
+}
 
-@media screen and (min-width: 1024px) and (max-width: 1200px) {}
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+}
 
 @media screen and (max-width: 1023px) {
   .footer {
@@ -191,8 +192,45 @@
     }
 
     .company {
+      &.current {
+        .company-name {
+          .arrow {
+            transform: rotate(0deg);
+          }
+        }
+        .company-contact {
+          opacity: 1;
+          margin-top: f.rem(30);
+        }
+      }
       &-name {
-        margin-bottom: f.rem(30);
+        margin-bottom: f.rem(0);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: f.rem(24);
+        .arrow {
+          width: f.rem(16);
+          height: f.rem(16);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transform: rotate(90deg);
+          transition: rotate 0.3s ease;
+          svg {
+            width: f.rem(4);
+            height: f.rem(8);
+          }
+        }
+      }
+      &-contact {
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        -webkit-transition: height 0.6s cubic-bezier(0.165, 0.84, 0.44, 1),
+          opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: height 0.6s cubic-bezier(0.165, 0.84, 0.44, 1),
+          opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
       }
     }
 
