@@ -42,7 +42,7 @@ function profileCommon() {
   const editAccount = document.getElementById("account-edit");
   const backAccountBtn = document.getElementById("btn-back-account");
   [backAccount, editAccount, backAccountBtn].forEach((item) => {
-    console.log('backAccountBtn', item)
+    // console.log('backAccountBtn', item)
     if (item) {
       item.addEventListener("click", function () {
         const _target = this.getAttribute("data-account");
