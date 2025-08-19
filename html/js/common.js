@@ -54,60 +54,6 @@ class LogosMarquee {
   }
 }
 
-<<<<<<< HEAD
-function initSticky() {
-  const parents = document.querySelectorAll(".parent-sticky");
-
-  window.addEventListener("scroll", () => {
-    const scrollY = window.scrollY;
-
-    parents.forEach((parent) => {
-      const stickyEl = parent.querySelector(".has-sticky");
-      if (!stickyEl) return;
-
-      const parentTop = parent.offsetTop;
-      const parentBottom =
-        parent.offsetTop + parent.offsetHeight - stickyEl.offsetHeight;
-
-      if (scrollY >= parentTop && scrollY < parentBottom) {
-        stickyEl.classList.add("is-sticky");
-      } else {
-        stickyEl.classList.remove("is-sticky");
-      }
-    });
-  });
-}
-
-function showCTAAddToCart() {
-  const cart = document.querySelector(".sctiky_cart");
-  const button = document.querySelector(".metadata_cart-add");
-
-  if (cart && button) {
-    function isBottom() {
-      return window.innerHeight + window.scrollY >= document.body.offsetHeight;
-    }
-
-    function checkCart() {
-      const rect = button.getBoundingClientRect();
-
-      if (isBottom()) {
-        // tới cuối trang -> ẩn
-        cart.classList.remove("show");
-      } else if (rect.top < 0) {
-        // button đã đi qua khỏi phía trên -> hiện
-        cart.classList.add("show");
-      } else {
-        // button còn trong viewport -> ẩn
-        cart.classList.remove("show");
-      }
-    }
-
-    window.addEventListener("scroll", checkCart);
-  }
-}
-
-=======
->>>>>>> ec048c7 (add: style)
 function handleSearch() {
   const iconOpenRef = document.getElementById("icon-open-search");
   const iconCloseRef = document.getElementById("icon-close-search");
@@ -534,12 +480,6 @@ window.addEventListener("scroll", loadImagesOnScroll);
 window.addEventListener("load", loadImagesOnScroll);
 
 (function () {
-<<<<<<< HEAD
-  footerAccordion();
-  showCTAAddToCart();
-  initSticky();
-=======
->>>>>>> ec048c7 (add: style)
   handleSearch();
   handleMiniCart();
 

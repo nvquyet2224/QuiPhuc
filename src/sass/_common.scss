@@ -752,18 +752,12 @@ input[type="number"] {
 }
 
 .parent-sticky {
-  position: relative;
-
+  overflow: visible;
   .has-sticky {
-    transition: transform 0.2s ease;
-
-    &.is-sticky {
-      position: fixed;
-      top: f.rem(80);
-      left: 0;
-      right: 0;
-      z-index: 150;
-    }
+    position: sticky;
+    position: -webkit-sticky;
+    top:5rem;
+    z-index: 1;
   }
 }
 
@@ -851,11 +845,9 @@ input[type="number"] {
 
 @media screen and (max-width: 1023px) {
   .parent-sticky {
-    .has-sticky {
-      &.is-sticky {
-        top: f.rem(40);
-      }
-    }
+   .has-sticky {
+    top:2.8125rem;
+   }
   }
 
   .empty-block {

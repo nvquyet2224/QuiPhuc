@@ -675,17 +675,13 @@ input[type=number] {
 }
 
 .parent-sticky {
-  position: relative;
+  overflow: visible;
 }
 .parent-sticky .has-sticky {
-  transition: transform 0.2s ease;
-}
-.parent-sticky .has-sticky.is-sticky {
-  position: fixed;
+  position: sticky;
+  position: -webkit-sticky;
   top: 5rem;
-  left: 0;
-  right: 0;
-  z-index: 150;
+  z-index: 1;
 }
 
 @supports (-webkit-touch-callout: none) {
@@ -723,8 +719,8 @@ input[type=number] {
 }
 
 @media screen and (max-width: 1023px) {
-  .parent-sticky .has-sticky.is-sticky {
-    top: 2.5rem;
+  .parent-sticky .has-sticky {
+    top: 2.8125rem;
   }
   .empty-block {
     padding: 4.125rem 1rem;
