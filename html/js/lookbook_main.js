@@ -189,9 +189,13 @@ function lookbookClick() {
         if (item.classList.contains('show')) {
           item.classList.remove('show');
           document.querySelector('.lookbook_product').classList.remove('show');
+          if(document.querySelector('.loolbook-other')) {
+            document.querySelector('.loolbook-other').classList.remove('show');
+          }
         } else {
           item.classList.add('show');
           document.querySelector('.lookbook_product').classList.add('show');
+          
         }
       }
 
@@ -199,20 +203,19 @@ function lookbookClick() {
       const openOther = e.target.closest(".meta-link");
       const otherBlock = document.querySelector('.loolbook-other');
       if (openOther) {
-        //if (!openOther.classList.contains('current')) {
-          //const oldOther = document.querySelector(".by-other.current");
-          //if (oldOther) {
-            //oldOther.classList.remove('current');
-          //}
-          //openOther.classList.add('current');
           otherBlock.classList.add('show');
+          if(document.querySelector('.lookbook_product')) {
+            document.querySelector('.lookbook_product').classList.remove('show');
+          }
           lazyEvent();
-        //}
       }
       // close other
       const closeOther = e.target.closest(".other-header");
       if (closeOther) {
         otherBlock.classList.remove('show');
+        if(document.querySelector('.lookbook_viewmore')) {
+          document.querySelector('.lookbook_viewmore').classList.remove('show');
+        }
       }
 
       // open cart
