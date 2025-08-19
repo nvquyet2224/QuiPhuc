@@ -1732,6 +1732,22 @@ strong {
   .header .nav-menu .push-content[data-item="2"] {
     grid-template-columns: repeat(3, 1fr);
   }
+  body.land-mb {
+    position: fixed;
+  }
+  body.land-mb .header {
+    display: none;
+  }
+  body.land-mb .header + .main {
+    padding-top: 0 !important;
+  }
+  body.land-mb .lookbook_introduce,
+  body.land-mb .product-related,
+  body.land-mb .lookbook-related,
+  body.land-mb .subscribe,
+  body.land-mb .footer {
+    display: none;
+  }
 }
 .banner {
   width: 100%;

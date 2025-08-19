@@ -1344,4 +1344,21 @@
 
 
     }
+
+    body.land-mb {
+        position: fixed;
+        .header {
+            display: none;
+            + .main {
+                padding-top: 0 !important;
+            }
+        }
+        .lookbook_introduce,
+        .product-related,
+        .lookbook-related,
+        .subscribe,
+        .footer{
+            display: none;
+        }
+    }
 }

@@ -196,18 +196,18 @@ function lookbookClick() {
       }
 
       // show other
-      const openOther = e.target.closest(".by-other");
+      const openOther = e.target.closest(".meta-link");
       const otherBlock = document.querySelector('.loolbook-other');
       if (openOther) {
-        if (!openOther.classList.contains('current')) {
-          const oldOther = document.querySelector(".by-other.current");
-          if (oldOther) {
-            oldOther.classList.remove('current');
-          }
-          openOther.classList.add('current');
+        //if (!openOther.classList.contains('current')) {
+          //const oldOther = document.querySelector(".by-other.current");
+          //if (oldOther) {
+            //oldOther.classList.remove('current');
+          //}
+          //openOther.classList.add('current');
           otherBlock.classList.add('show');
           lazyEvent();
-        }
+        //}
       }
       // close other
       const closeOther = e.target.closest(".other-header");
@@ -228,4 +228,9 @@ function lookbookClick() {
   productRelatedSlider();
   lookbookSlider();
   lookbookClick();
+
+  // close mobile landscape
+  if(document.querySelector('.lookbook_experience')) {
+    document.querySelector('body').classList.add('land-mb');
+  }
 })();
