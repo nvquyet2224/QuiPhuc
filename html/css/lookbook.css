@@ -2495,14 +2495,21 @@ button.swiper-pagination-bullet {
     display: none;
   }
   .loolbook-other {
-    left: 410px;
-    top: 10px;
+    left: 0;
+    top: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    height: 100%;
+    overflow: hidden;
   }
   .loolbook-other .other-header {
-    height: 44px;
+    min-height: 56px;
   }
-  .loolbook-other .product {
-    padding: 5px 10px;
+  .loolbook-other .other-product {
+    flex-grow: 1;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .loolbook-other .product-img {
     flex: 0 0 86px;
