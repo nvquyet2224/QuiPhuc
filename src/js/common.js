@@ -54,6 +54,32 @@ class LogosMarquee {
   }
 }
 
+function showCTAAddToCart() {
+  const cart = document.querySelector(".sctiky_cart");
+  const button = document.querySelector(".metadata_cart-add");
+
+  function isBottom() {
+    return window.innerHeight + window.scrollY >= document.body.offsetHeight;
+  }
+
+  function checkCart() {
+    const rect = button.getBoundingClientRect();
+
+    if (isBottom()) {
+      // tới cuối trang -> ẩn
+      cart.classList.remove("show");
+    } else if (rect.top < 0) {
+      // button đã đi qua khỏi phía trên -> hiện
+      cart.classList.add("show");
+    } else {
+      // button còn trong viewport -> ẩn
+      cart.classList.remove("show");
+    }
+  }
+
+  window.addEventListener("scroll", checkCart);
+}
+
 function handleSearch() {
   const iconOpenRef = document.getElementById("icon-open-search");
   const iconCloseRef = document.getElementById("icon-close-search");
@@ -339,7 +365,7 @@ function footerAccordion() {
       height += li.offsetHeight;
     });
   }
-  console.log('height', height)
+  // console.log('height', height)
   if (companyArrow && company && companyContact) {
     companyArrow.addEventListener("click", () => {
       if (company.classList.contains("current")) {
@@ -481,6 +507,8 @@ window.addEventListener("load", loadImagesOnScroll);
 
 (function () {
   handleSearch();
+  showCTAAddToCart();
+  footerAccordion();
   handleMiniCart();
 
   navClick();
