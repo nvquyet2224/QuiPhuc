@@ -72,6 +72,13 @@ function profileCommon() {
       setAddress(_target);
     });
   });
+
+  const params = new URLSearchParams(window.location.search);
+  const _current = params.get("current");
+  // console.log('_current', _current);
+  if (_current) {
+    setCurrent(_current);
+  }
 }
 
 (function () {
