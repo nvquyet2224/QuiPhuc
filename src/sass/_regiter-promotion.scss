@@ -40,8 +40,10 @@
             color: #4D4A4F;
             font-weight: 400;
             padding: 0 f.rem(16);
+            font-family: "Montserrat", sans-serif;
 
             border: 1px solid #D1D1D1;
+            font-size: f.rem(14);
 
             &::placeholder {
                 color: #4D4A4F;

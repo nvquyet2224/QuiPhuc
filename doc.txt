@@ -25,6 +25,41 @@ https://nvquyet2224.github.io/QuiPhuc/html/ve-qui-phuc.html
 
 
 
+- Lookbook:
+--> màn hình điện thoại ngang --> off scroll 
+- Trên DT --> click Sản phâm khác --> nó ra cái gì ?
+
+
+
+Product
+--> Thêm hover zoom img 
+
+Profile --> check font
+
+- Giỏ hàng --> rename VN
+Checkout --> Thanh Toán
+Cart Summary --> Tóm tắt đơn hàng
+
+- Phần tab --> fixed top khi scroll tới
+
+--> Hỏi [ Tab mở page hay tab mở block tương ứng]
+
+Product detail [May be desktop]
+- Mobile --> scroll qua CTN --> fixed thông tin [Add to Cart ở bottom]
+
+
+
+Compare
+- Mobile --> sticky mấy cục màu xanh
+
+
+Category --> effeck hover gradient-bg
+
+Menu --> sẽ có thay đổi [Sau]
+
+Footer --> toggle thu gọn thông tin
+
+
 
 
 

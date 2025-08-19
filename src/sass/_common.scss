@@ -32,6 +32,8 @@ input[type="number"] {
   border: 1px solid #d0d5dd;
   -webkit-border-radius: f.rem(4);
   border-radius: f.rem(4);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
 
 .area-txt {
@@ -46,8 +48,7 @@ input[type="number"] {
 
 .input-txt--upload {
   line-height: f.rem(48);
-  background: url(../images/icon-link.svg) no-repeat calc(100% - f.rem(16))
-    center;
+  background: url(../images/icon-link.svg) no-repeat calc(100% - f.rem(16)) center;
   background-size: f.rem(16) auto;
 
   &::-webkit-file-upload-button {
@@ -79,6 +80,8 @@ input[type="number"] {
       height: auto;
       max-width: 100%;
       max-height: 100%;
+      -webkit-transition: transform 0.3s ease-in-out;
+      transition: transform 0.3s ease-in-out;
     }
   }
 
@@ -148,6 +151,16 @@ input[type="number"] {
     margin-top: f.rem(14);
     margin-bottom: f.rem(20);
   }
+
+  &:hover {
+    .product-img {
+      img {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+    }
+  }
+
 }
 
 .article-banner {
@@ -372,12 +385,15 @@ input[type="number"] {
     margin-bottom: f.rem(20);
     align-items: center;
     justify-content: center;
+    
 
     img {
       width: auto;
       height: auto;
       max-width: 100%;
       max-height: 100%;
+      -webkit-transition: transform 0.3s ease-in-out;
+      transition: transform 0.3s ease-in-out;
     }
   }
 
@@ -397,6 +413,16 @@ input[type="number"] {
       margin-top: f.rem(14);
     }
   }
+
+  &:hover {
+    .card-img {
+      img {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+      }
+    }
+  }
+
 }
 
 .block-nav {
@@ -434,6 +460,7 @@ input[type="number"] {
     margin-bottom: f.rem(20);
 
     &.current {
+
       a,
       span {
         font-weight: 700;
@@ -489,10 +516,13 @@ input[type="number"] {
     width: 100%;
     height: auto;
     line-height: 0;
+    overflow: hidden;
 
     img {
       width: 100%;
       height: auto;
+      -webkit-transition: transform 0.3s ease-in-out;
+      transition: transform 0.3s ease-in-out;
     }
   }
 
@@ -531,6 +561,16 @@ input[type="number"] {
       width: 100%;
       height: 100%;
       background: var(--g-blue);
+      z-index: 1;
+    }
+  }
+
+  &:hover {
+    .article-img {
+      img {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+      }
     }
   }
 }
@@ -677,13 +717,11 @@ input[type="number"] {
 .marquee {
   overflow: hidden;
   position: relative;
-  mask-image: linear-gradient(
-    var(--mask-direction, to right),
-    hsla(0, 0%, 0%, 0),
-    hsl(0, 0%, 0%) 10%,
-    hsl(0, 0%, 0%) 90%,
-    hsla(0, 0%, 0%, 0)
-  );
+  mask-image: linear-gradient(var(--mask-direction, to right),
+      hsla(0, 0%, 0%, 0),
+      hsl(0, 0%, 0%) 10%,
+      hsl(0, 0%, 0%) 90%,
+      hsla(0, 0%, 0%, 0));
   padding: f.rem(15) 0;
 
   &__ctn {
@@ -712,6 +750,7 @@ input[type="number"] {
     }
   }
 }
+
 .parent-sticky {
   position: relative;
 
@@ -735,39 +774,38 @@ input[type="number"] {
   }
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .product {
-    img {
-      transition: all 0.2s ease;
-    }
-    &-img {
-      &:hover {
-        img {
-          transform: scale(1.1);
-        }
-      }
-    }
-  }
-  .new {
-    &-img {
-      overflow: hidden;
-      img {
-        transition: all 0.2s ease;
-      }
-    }
+// @media (hover: hover) and (pointer: fine) {
+//   .product {
+//     img {
+//       transition: all 0.2s ease;
+//     }
+//     &-img {
+//       &:hover {
+//         img {
+//           transform: scale(1.1);
+//         }
+//       }
+//     }
+//   }
+//   .new {
+//     &-img {
+//       overflow: hidden;
+//       img {
+//         transition: all 0.2s ease;
+//       }
+//     }
 
-    &-img {
-      &:hover {
-        img {
-          transform: scale(1.1);
-        }
-      }
-    }
-  }
-}
+//     &-img {
+//       &:hover {
+//         img {
+//           transform: scale(1.1);
+//         }
+//       }
+//     }
+//   }
+// }
 
-@supports (-webkit-text-stroke: #fcd535) {
-}
+@supports (-webkit-text-stroke: #fcd535) {}
 
 @media screen and (min-width: 1025px) {
   .paging {
@@ -809,8 +847,7 @@ input[type="number"] {
   }
 }
 
-@media screen and (min-width: 1024px) {
-}
+@media screen and (min-width: 1024px) {}
 
 @media screen and (max-width: 1023px) {
   .parent-sticky {
@@ -820,6 +857,7 @@ input[type="number"] {
       }
     }
   }
+
   .empty-block {
     padding: f.rem(66) f.rem(16);
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
@@ -984,6 +1022,7 @@ input[type="number"] {
 
   .img_txt,
   .txt_img {
+
     .txt,
     .img {
       flex: 0 0 100%;

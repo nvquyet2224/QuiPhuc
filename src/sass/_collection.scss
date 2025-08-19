@@ -19,7 +19,7 @@
       top: 0;
       width: 100%;
       height: auto;
-
+      pointer-events: none;
       opacity: 0;
       -webkit-transition: opacity 0.3s linear;
       transition: opacity 0.3s linear;
@@ -29,6 +29,7 @@
         left: auto;
         top: auto;
         opacity: 1;
+        pointer-events: all;
       }
 
       line-height: 0;
@@ -60,7 +61,7 @@
       top: 0;
       width: 100%;
       height: auto;
-
+      pointer-events: none;
       opacity: 0;
       -webkit-transition: opacity 0.3s linear;
       transition: opacity 0.3s linear;
@@ -70,6 +71,7 @@
         left: auto;
         top: auto;
         opacity: 1;
+        pointer-events: all;
       }
 
       .products {
@@ -79,8 +81,6 @@
           .product {
             flex: 0 0 50%;
             border-top: 1px solid rgba(0, 0, 0, 0.15);
-
-            //border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 
             &:not(:first-child) {
               border-left: 1px solid rgba(0, 0, 0, 0.15);

@@ -54,6 +54,7 @@ class LogosMarquee {
   }
 }
 
+<<<<<<< HEAD
 function initSticky() {
   const parents = document.querySelectorAll(".parent-sticky");
 
@@ -105,6 +106,8 @@ function showCTAAddToCart() {
   }
 }
 
+=======
+>>>>>>> ec048c7 (add: style)
 function handleSearch() {
   const iconOpenRef = document.getElementById("icon-open-search");
   const iconCloseRef = document.getElementById("icon-close-search");
@@ -201,7 +204,7 @@ function handleMiniCart() {
       lazyEvent();
       if (miniCartRef) {
         miniCartRef.classList.add("show");
-        document.querySelector("body").classList.add("no-scroll");
+         document.querySelector("body").classList.add("no-scroll");
       }
     });
   }
@@ -209,7 +212,7 @@ function handleMiniCart() {
     buttonCloseRef.addEventListener("click", () => {
       if (miniCartRef) {
         miniCartRef.classList.remove("show");
-        document.querySelector("body").classList.remove("no-scroll");
+         document.querySelector("body").classList.remove("no-scroll");
       }
     });
   }
@@ -531,9 +534,12 @@ window.addEventListener("scroll", loadImagesOnScroll);
 window.addEventListener("load", loadImagesOnScroll);
 
 (function () {
+<<<<<<< HEAD
   footerAccordion();
   showCTAAddToCart();
   initSticky();
+=======
+>>>>>>> ec048c7 (add: style)
   handleSearch();
   handleMiniCart();
 
