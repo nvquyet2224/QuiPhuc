@@ -558,6 +558,10 @@
             font-weight: 600;
             padding: 0;
             position: relative;
+            position: sticky;
+            position: -webkit-sticky;
+            left: 0;
+            z-index: 2;
 
             &::before {
                 content: '';
