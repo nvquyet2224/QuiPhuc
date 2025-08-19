@@ -124,6 +124,7 @@
             border: 1px solid #C0C0C0;
             -webkit-border-radius: 50%;
             border-radius: 50%;
+            cursor: pointer;
 
             svg {
               width: f.rem(16);
@@ -657,6 +658,7 @@
           &-but {
             width: 32px;
             height: 32px;
+            cursor: pointer;
 
             svg {
               width: 12px;

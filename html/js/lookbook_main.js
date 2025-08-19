@@ -215,6 +215,15 @@ function lookbookClick() {
         otherBlock.classList.remove('show');
       }
 
+      // open cart
+      
+      const opencart = e.target.closest(".meta-but");
+      if(opencart) {
+        if(document.querySelector('.mini-cart-popup')) {
+          document.querySelector('.mini-cart-popup').classList.add('show');
+        }
+      }
+
 
     });
   }

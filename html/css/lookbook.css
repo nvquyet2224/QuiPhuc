@@ -2116,6 +2116,7 @@ button.swiper-pagination-bullet {
   border: 1px solid #C0C0C0;
   -webkit-border-radius: 50%;
   border-radius: 50%;
+  cursor: pointer;
 }
 .lookbook_product .product-txt .meta-but svg {
   width: 1rem;
@@ -2531,6 +2532,7 @@ button.swiper-pagination-bullet {
   .loolbook-other .product-txt .meta-but {
     width: 32px;
     height: 32px;
+    cursor: pointer;
   }
   .loolbook-other .product-txt .meta-but svg {
     width: 12px;
