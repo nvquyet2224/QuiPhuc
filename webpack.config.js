@@ -79,7 +79,7 @@ const minifyRules = {
   removeStyleLinkTypeAttributes: true,
 };
 
-const devMode = true;
+const devMode = false;
 const isBack = false;
 const minify = false;
 const minimized = false;
