@@ -1,0 +1,1 @@
+import "../sass/_not-found-block.scss";

@@ -1,1 +1,0 @@
-var support_client;(()=>{"use strict";var e={};(e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})})(e),(support_client=void 0===support_client?{}:support_client).modules=e})();

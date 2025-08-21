@@ -1,1 +1,0 @@
-var promotion;(()=>{"use strict";var o={};(o=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(o,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(o,"__esModule",{value:!0})})(o),(promotion=void 0===promotion?{}:promotion).modules=o})();

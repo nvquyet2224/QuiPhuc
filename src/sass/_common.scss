@@ -290,6 +290,7 @@ input[type="number"] {
       font-size: f.rem(16);
       line-height: 1.5;
       margin-top: f.rem(20);
+      font-family: "Montserrat", sans-serif;
 
       svg {
         width: f.rem(13);
@@ -305,8 +306,8 @@ input[type="number"] {
     font-weight: 500;
     -webkit-border-radius: 2px;
     border-radius: 2px;
-    color: var(--color-tag, #fff);
-    background-color: var(--bg-tag, #ff0000);
+    color: #fff;
+    background-color: #FF0000;
     display: inline-flex;
     align-items: center;
     justify-content: center;

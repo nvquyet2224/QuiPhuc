@@ -1,0 +1,1 @@
+import "../sass/_lookbook-detail.scss";

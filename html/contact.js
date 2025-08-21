@@ -1,1 +1,0 @@
-var contact;(()=>{"use strict";var t={};(t=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})})(t),(contact=void 0===contact?{}:contact).modules=t})();

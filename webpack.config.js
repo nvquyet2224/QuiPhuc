@@ -79,7 +79,7 @@ const minifyRules = {
   removeStyleLinkTypeAttributes: true,
 };
 
-const devMode = false;
+const devMode = true;
 const isBack = false;
 const minify = false;
 const minimized = false;
@@ -89,6 +89,57 @@ module.exports = {
   watch: true,
   entry: {
     critical: ["./src/js/critical.js"],
+    cmp_critical: ["./src/js/critical.js"],
+    cmp_about_block: ["./src/js/about-block.js"],
+    cmp_animation: ["./src/js/animation.js"],
+    cmp_banner_business: ["./src/js/banner-business.js"],
+    cmp_banner_list: ["./src/js/banner-list.js"],
+    cmp_banner: ["./src/js/banner.js"],
+    cmp_brand: ["./src/js/brand.js"],
+    cmp_breadcrumb: ["./src/js/breadcrumb.js"],
+    cmp_cart_block: ["./src/js/cart-block.js"],
+    cmp_categories: ["./src/js/categories.js"],
+    cmp_category: ["./src/js/category.js"],
+    cmp_collection: ["./src/js/collection.js"],
+    cmp_commit: ["./src/js/commit.js"],
+    cmp_common: ["./src/js/common-ui.js"],
+    cmp_contact_block: ["./src/js/contact-block.js"],
+    cmp_detail_info: ["./src/js/detail-info.js"],
+    cmp_detail_video: ["./src/js/detail-video.js"],
+    cmp_filter: ["./src/js/filter.js"],
+    cmp_footer: ["./src/js/footer.js"],
+    cmp_form: ["./src/js/form.js"],
+    cmp_header: ["./src/js/header.js"],
+    cmp_inspiration: ["./src/js/inspiration.js"],
+    cmp_jquery_ui: ["./src/js/jquery-ui-ui.js"],
+    cmp_kitchen: ["./src/js/kitchen.js"],
+    cmp_list_store: ["./src/js/list-store.js"],
+    cmp_login_form: ["./src/js/login-form.js"],
+    cmp_lookbook_detail: ["./src/js/lookbook-detail.js"],
+    cmp_main_product: ["./src/js/main-product.js"],
+    cmp_mini_cart: ["./src/js/mini-cart.js"],
+    cmp_new_detail: ["./src/js/new_detail.js"],
+    cmp_new_list: ["./src/js/new-list.js"],
+    cmp_notfound: ["./src/js/not-found-block.js"],
+    cmp_pagination: ["./src/js/pagination.js"],
+    cmp_popup: ["./src/js/popup.js"],
+    cmp_product_detail_common: ["./src/js/product-detail-common.js"],
+    cmp_product_list: ["./src/js/product-list.js"],
+    cmp_profile_detail: ["./src/js/profile-detail.js"],
+    cmp_project: ["./src/js/project.js"],
+    cmp_promotion_block: ["./src/js/promotion-block.js"],
+    cmp_promotion: ["./src/js/promotion-ui.js"],
+    cmp_recruitment_block: ["./src/js/recruitment-block.js"],
+    cmp_regiter_promotion: ["./src/js/regiter-promotion.js"],
+    cmp_reset: ["./src/js/reset.js"],
+    cmp_rooms: ["./src/js/rooms.js"],
+    cmp_search_popup: ["./src/js/search-popup.js"],
+    cmp_search_result: ["./src/js/search-result.js"],
+    cmp_service: ["./src/js/service.js"],
+    cmp_swiper: ["./src/js/swiper-ui.js"],
+    cmp_whatnow: ["./src/js/whatnow.js"],
+
+
     main: ["./src/js/main.js"],
     index: ["./src/js/index.js"],
     business: ["./src/js/business.js"],
@@ -114,6 +165,7 @@ module.exports = {
   output: {
     publicPath: "../",
     path: path.resolve(__dirname, "html"),
+    filename: isBack ? "../../source/plugins/Web/webroot/js/[name].js" : "none/[name].js",
     //filename: isBack ? "../../source/plugins/Web/webroot/js/[name].js" : "js/[name].js", // copy to backend
     library: ["[name]", "modules"],
     clean: true,

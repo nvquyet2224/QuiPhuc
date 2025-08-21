@@ -57,7 +57,7 @@ class LogosMarquee {
 function showCTAAddToCart() {
   const cart = document.querySelector(".sctiky_cart");
   const button = document.querySelector(".metadata_cart-add");
-
+  if (!cart || !button) return;
   function isBottom() {
     return window.innerHeight + window.scrollY >= document.body.offsetHeight;
   }

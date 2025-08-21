@@ -1,0 +1,1 @@
+import "../sass/_inspiration.scss";

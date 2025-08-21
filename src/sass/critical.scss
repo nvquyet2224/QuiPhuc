@@ -1,7 +1,7 @@
-@use "reset";
+//@use "reset";
 @use "function" as f;
-@use "header";
-@use "banner";
+//@use "header";
+//@use "banner";
 
 :root {
   --global-color: #015aab;
@@ -190,6 +190,7 @@ lottie-player {
   padding: 0 f.rem(18);
   -webkit-border-radius: f.rem(4);
   border-radius: f.rem(4);
+  font-family: "Montserrat", sans-serif;
 
   &.transparent {
     background-color: transparent;

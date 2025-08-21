@@ -1,0 +1,1 @@
+import "../sass/_about-block.scss";
