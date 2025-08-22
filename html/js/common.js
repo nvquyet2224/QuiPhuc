@@ -191,7 +191,7 @@ function handleMiniCart() {
 }
 
 function menuAnim() {
-  // Mouse event
+   /*
   document.querySelectorAll(".nav-item").forEach(function (item) {
     item.addEventListener("mouseenter", function () {
       const container = item.querySelector(".dropdown-menu > .container");
@@ -212,7 +212,7 @@ function menuAnim() {
       item.classList.remove("active");
       document.querySelector(".header").classList.remove("header-in");
     });
-  });
+  });*/
 }
 
 function resize() {
@@ -225,38 +225,93 @@ function resize() {
 }
 
 function navClick() {
+
   // Toggle menu
   document.querySelector(".toggle-menu").addEventListener("click", () => {
     const menu = document.querySelector(".header");
+    lazyEvent();
     if (menu && menu.classList.contains("open-menu")) {
       menu.classList.remove("open-menu");
-      document.querySelector("html, body").classList.remove("no-scroll");
+      document.querySelector("body").classList.remove("no-scroll");
       if (document.querySelector(".nav-item.current")) {
         document.querySelector(".nav-item.current").classList.remove("current");
       }
+      if (document.querySelector(".side-item.active")) {
+        document.querySelector(".side-item.active").classList.remove("active");
+      }
+      if (document.querySelector(".item-lv2.active")) {
+        document.querySelector(".item-lv2.active").classList.remove("active");
+      }
     } else {
-      document.querySelector("html, body").classList.add("no-scroll");
+      document.querySelector("body").classList.add("no-scroll");
       menu.classList.add("open-menu");
     }
   });
 
   // Open sub menu
   const nav = document.querySelector(".nav");
-
   if (nav) {
     nav.addEventListener("click", (e) => {
+
+      lazyEvent();
+
+      const menu = document.querySelector(".header"); 
       const item = e.target.closest(".nav-item");
+      const body = document.querySelector("body");
+      
       if (item) {
         item.classList.add("current");
+        const dataPage = item.getAttribute('data-page') || '';
+        body.classList.add("no-scroll");
+        menu.classList.add("open-menu");
+        // Open sub menu if match
+        if(dataPage) {
+          document.querySelector('.side .side-item[data-page='+ dataPage +']').classList.add('active');
+        }
       }
 
-      //close
-      const target = e.target.closest(".back-menu");
-      if (target) {
-        if (document.querySelector(".nav-item.current")) {
-          document
-            .querySelector(".nav-item.current")
-            .classList.remove("current");
+    });
+  }
+
+  const side = document.querySelector(".side");
+  if(side) {
+    side.addEventListener("click", (e) => {
+      const sideItem = e.target.closest(".side-item");
+
+      if(sideItem) {
+        const oldSideItem = document.querySelector('.side .side-item.active');
+        if(oldSideItem) {
+          oldSideItem.classList.remove('active');
+        }
+        sideItem.classList.add('active');
+      }
+
+      const dropdownMenu = e.target.closest(".dropdown-menu--title");
+      if(dropdownMenu) {
+        const itemLv2 = document.querySelector('.side-menu .item-lv2.active');
+        if(itemLv2) {
+          itemLv2.classList.remove('active');
+        }
+        dropdownMenu.parentNode.classList.add('active');
+      }
+
+      //back menu LV1
+      const backLv1 = e.target.closest(".back-lv1");
+      if(backLv1) {
+        if(document.querySelector('.side-item.active')) {
+          document.querySelector('.side-item.active').classList.remove('active');
+        }
+        if(document.querySelector('.item-lv2.active')) {
+          document.querySelector('.item-lv2.active').classList.remove('active');
+        }
+      }
+
+      //back menu LV2
+      const backLv2 = e.target.closest(".back-lv2");
+      if(backLv2) {
+        console.log('__aaad');
+        if(document.querySelector('.item-lv2.active')) {
+          document.querySelector('.item-lv2.active').classList.remove('active');
         }
       }
 
@@ -265,8 +320,10 @@ function navClick() {
       if (closeMenu) {
         document.querySelector(".toggle-menu").click();
       }
+
     });
   }
+
 }
 
 function menuAccordion() {

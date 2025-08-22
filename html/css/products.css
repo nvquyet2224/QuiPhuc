@@ -3988,7 +3988,7 @@ a.ui-button:active,
     font-weight: 500;
   }
   .sort .select {
-    width: 8.625rem;
+    width: 100%;
   }
 }
 .categories {

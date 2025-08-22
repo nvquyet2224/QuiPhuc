@@ -8,7 +8,7 @@
   <meta name="author" content="Qui Phúc" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no" />
-  <title>Qui Phúc | Tìm Kiếm</title>
+  <title>Qui Phúc | Sản phẩm</title>
   <meta name="description" content="Qui Phúc" />
   <meta name="keywords" content="Qui Phúc" />
   <meta name="theme-color" content="#fff" />
@@ -21,22 +21,22 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="Qui Phúc" />
   <link rel="icon" href="images/favicon.png" />
+  <!-- <link href="css/critical.css" rel="preload stylesheet" as="style">
+  <link rel="stylesheet" href="css/products.css"> -->
 
   <link href="css/cmp_reset.css" rel="preload stylesheet" as="style">
-  <link href="css/cmp_critical.css" rel="preload stylesheet" as="style">
-  <link href="css/cmp_header.css" rel="preload stylesheet" as="style">
-  <link href="css/cmp_common.css" rel="preload stylesheet" as="style">
-  <link href="css/cmp_jquery_ui.css" rel="preload stylesheet" as="style">
-  <link href="css/cmp_search_result.css" rel="preload stylesheet" as="style">
-  <link href="css/cmp_categories.css" rel="preload stylesheet" as="style">
-  <link href="css/cmp_promotion.css" rel="preload stylesheet" as="style">
-  <link href="css/cmp_service.css" rel="preload stylesheet" as="style">
-  <link href="css/cmp_regiter_promotion.css" rel="preload stylesheet" as="style">
-  <link href="css/cmp_footer.css" rel="preload stylesheet" as="style">
-
-  <!-- <link href="css/critical.css" rel="preload stylesheet" as="style">
-  <link rel="stylesheet" href="css/search.css"> -->
-  
+    <link href="css/cmp_critical.css" rel="preload stylesheet" as="style">
+    <link href="css/cmp_header.css" rel="preload stylesheet" as="style">
+    <link href="css/cmp_common.css" rel="preload stylesheet" as="style">
+    <link href="css/cmp_banner.css" rel="preload stylesheet" as="style">
+    <link href="css/cmp_swiper.css" rel="preload stylesheet" as="style">
+    <link href="css/cmp_categories.css" rel="preload stylesheet" as="style">
+    <link href="css/cmp_promotion.css" rel="preload stylesheet" as="style">
+    <link href="css/cmp_service.css" rel="preload stylesheet" as="style">
+    <link href="css/cmp_jquery_ui.css" rel="preload stylesheet" as="style">
+    <link href="css/cmp_regiter_promotion.css" rel="preload stylesheet" as="style">
+    <link href="css/cmp_footer.css" rel="preload stylesheet" as="style">
+    <link href="css/cmp_popup.css" rel="preload stylesheet" as="style">
 </head>
 
 <body data-page="products">
@@ -51,14 +51,15 @@
               </li>
               <li><span>/</span></li>
               <li>
-                <span>Tìm kiếm</span>
+                <a href="#"><span>Dành cho doanh nghiệp</span></a>
               </li>
+              <li><span>/</span></li>
+              <li><span>Ghế</span></li>
             </ul>
           </div>
-          
-          <%= htmlWebpackPlugin.options.searchResult %>
-          <%= htmlWebpackPlugin.options.products %>
-          <%= htmlWebpackPlugin.options.registerPromotion %>
+          <%= htmlWebpackPlugin.options.banners %>
+            <%= htmlWebpackPlugin.options.products %>
+              <%= htmlWebpackPlugin.options.registerPromotion %>
         </div>
         <%= htmlWebpackPlugin.options.footer %>
   </div>
@@ -66,8 +67,7 @@
   <script defer src="js/common.js"></script>
   <script defer src="js/jquery.js"></script>
   <script defer src="js/jquery-ui.js"></script>
-  <script defer src="js/product_list_main.js"></script>
-  <script defer src="js/search_main.js"></script>
+  <script defer src="js/products_main.js"></script>
   <%= htmlWebpackPlugin.options.preload %>
     <!--popup-->
     <div class="popup" id="comparePop">
