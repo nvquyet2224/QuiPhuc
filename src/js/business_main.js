@@ -226,7 +226,7 @@ function collectionSlider() {
             lazy: true,
             disableOnInteraction: true,
             pauseOnMouseEnter: true,
-            slidesPerView: 'auto',
+            slidesPerView: 1,
             spaceBetween: 10,
             allowTouchMove: true,
             watchOverflow: true,
