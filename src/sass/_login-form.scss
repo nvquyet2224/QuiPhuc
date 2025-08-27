@@ -101,6 +101,9 @@
         margin-top: 0;
       }
     }
+    .login-form-btn {
+        margin-top: f.rem(24);
+      }
   }
   &-btn {
     height: f.rem(48);
@@ -184,6 +187,7 @@
       .form--item {
         max-width: 100%;
       }
+      
     }
     &-btn {
       margin-top: f.rem(0);

@@ -42,6 +42,15 @@
   margin-bottom: 5.3125rem;
   padding-left: 2.5rem;
 }
+.collection_content .swiper-slide {
+  overflow: hidden;
+}
+.collection_content .swiper-slide span {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .collection_product {
   position: relative;
 }

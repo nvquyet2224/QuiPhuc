@@ -38,9 +38,11 @@
       }
     }
 
-    &.spr2 {}
+    &.spr2 {
+    }
 
-    &.spr3 {}
+    &.spr3 {
+    }
 
     &.form_normal {
       .form_caption {
@@ -199,14 +201,13 @@
         color: #828282;
 
         &.hasSelected {
-          +.form_caption {
+          + .form_caption {
             background-color: transparent;
             text-shadow: -1px 4px 8px #fff;
           }
         }
       }
     }
-
   }
 
   &_caption {
@@ -217,6 +218,9 @@
     top: f.rem(14);
     -webkit-transition: transform 0.3s linear;
     transition: transform 0.3s linear;
+    sup {
+      color: #FF0000;
+    }
   }
 
   .field_error {
@@ -240,7 +244,7 @@
   }
 
   .input-txt:not(:placeholder-shown) {
-    +.form_caption {
+    + .form_caption {
       font-size: f.rem(12);
       -webkit-transform: translateY(f.rem(-22));
       transform: translateY(f.rem(-22));
@@ -249,11 +253,10 @@
   }
 
   .input-txt:disabled:not(:placeholder-shown) {
-    +.form_caption {
+    + .form_caption {
       background-color: transparent;
       text-shadow: -1px 4px 8px #fff;
     }
-
   }
 
   .select {
@@ -262,7 +265,7 @@
     &-header {
       height: 100%;
       padding: 0 f.rem(16);
-      border: 1px solid #D0D5DD;
+      border: 1px solid #d0d5dd;
       -webkit-border-radius: f.rem(4);
       border-radius: f.rem(4);
     }
@@ -272,7 +275,7 @@
     }
 
     &.hasSelected {
-      +.form_caption {
+      + .form_caption {
         font-size: f.rem(12);
         -webkit-transform: translateY(f.rem(-22));
         transform: translateY(f.rem(-22));
@@ -280,10 +283,10 @@
       }
     }
   }
-
 }
 
-@media screen and (min-width: 1024px) {}
+@media screen and (min-width: 1024px) {
+}
 
 @media screen and (max-width: 1023px) {
   .form {
