@@ -52,11 +52,17 @@
     }
     .swiper-slide {
       overflow: hidden;
+      height: auto;
       span {
-        width: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        // width: 100%;
+        // white-space: nowrap;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        display: inline-flex;
+        height: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
       }
     }
   }
@@ -115,8 +121,7 @@
     align-items: center;
 
     .collectionNavSlider {
-      width: f.rem(120);
-
+      width: f.rem(200);
       .swiper-slide {
         text-align: center;
       }
