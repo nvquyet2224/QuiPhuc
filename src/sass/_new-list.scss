@@ -100,6 +100,18 @@
     column-gap: f.rem(30);
     row-gap: f.rem(60);
     margin-bottom: f.rem(40);
+    &.zooms {
+      gap: f.rem(32);
+      .new {
+        &-txt {
+          padding-top: f.rem(20);
+          h3 {
+            margin-bottom: 0;
+            text-align: center;
+          }
+        }
+      }
+    }
   }
 
   &:hover {
@@ -157,6 +169,14 @@
       grid-template-columns: repeat(1, 1fr);
       padding: 0 f.rem(16);
       row-gap: f.rem(30);
+      &.zooms {
+        gap: f.rem(24);
+        .new {
+          &-txt {
+            padding-top: f.rem(12);
+          }
+        }
+      }
     }
   }
 }
