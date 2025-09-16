@@ -18,6 +18,8 @@ const componentPartner = fs.readFileSync(__dirname + "/src/_component-partner.ht
 
 const homeBanner = fs.readFileSync(__dirname + "/src/_home-banner.html");
 const productCategory = fs.readFileSync(__dirname + "/src/_product-category.html");
+const productCategory2b2 = fs.readFileSync(__dirname + "/src/_product-category-b2b.html");
+
 const kitchenComponent = fs.readFileSync(__dirname + "/src/_kitchen.html");
 const productNew = fs.readFileSync(__dirname + "/src/_product-new.html");
 const whatnowComponent = fs.readFileSync(__dirname + "/src/_whatnow.html");
@@ -391,7 +393,7 @@ module.exports = {
       svg: svg,
       header: headerComponent,
       businessBannerComponent: businessBannerComponent,
-      productCategory: productCategory,
+      productCategory: productCategory2b2,
       kitchen: kitchenComponent,
       collection: collectionComponent,
       productNew: productNew,
