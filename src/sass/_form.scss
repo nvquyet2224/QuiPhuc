@@ -202,7 +202,9 @@
 
         &.hasSelected {
           + .form_caption {
-            background-color: transparent;
+            background-color: #fff;
+            padding: 0 f.rem(6);
+            border-radius: f.rem(10);
             text-shadow: -1px 4px 8px #fff;
           }
         }
@@ -219,7 +221,7 @@
     -webkit-transition: transform 0.3s linear;
     transition: transform 0.3s linear;
     sup {
-      color: #FF0000;
+      color: #ff0000;
     }
   }
 
@@ -249,12 +251,16 @@
       -webkit-transform: translateY(f.rem(-22));
       transform: translateY(f.rem(-22));
       background-color: #fff;
+      padding: 0 f.rem(6);
+      border-radius: f.rem(10);
     }
   }
 
   .input-txt:disabled:not(:placeholder-shown) {
     + .form_caption {
-      background-color: transparent;
+      background-color: #fff;
+      padding: 0 f.rem(6);
+      border-radius: f.rem(10);
       text-shadow: -1px 4px 8px #fff;
     }
   }
@@ -280,6 +286,8 @@
         -webkit-transform: translateY(f.rem(-22));
         transform: translateY(f.rem(-22));
         background-color: #fff;
+        padding: 0 f.rem(6);
+        border-radius: f.rem(10);
       }
     }
   }
