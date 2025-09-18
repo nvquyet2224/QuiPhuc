@@ -86,8 +86,12 @@
         right: 3px;
         bottom: f.rem(58);
         z-index: 3;
+        .swiper-slide {
+            height: auto;
+        }
 
         .card {
+            height: 100%;
             padding: f.rem(25);
             position: relative;
             border: 2px solid var(--global-color);
