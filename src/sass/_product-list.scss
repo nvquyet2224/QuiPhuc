@@ -75,6 +75,11 @@
       }
     }
   }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 @media screen and (min-width: 1024px) {}
@@ -109,6 +114,10 @@
           width: 100%;
         }
       }
+    }
+
+    &-grid {
+      grid-template-columns: repeat(2, 1fr);
     }
 
     .product {
