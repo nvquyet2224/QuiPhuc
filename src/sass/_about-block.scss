@@ -21,6 +21,22 @@
             .nav-overlay span::before {
                 display: none;
             }
+            .nav-overlay {
+                span {
+                    color: #7BC4FE;
+                    -webkit-transition: all 0.3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+                li.current {
+                    span {
+                        color: #fff;
+                        font-size: f.rem(24);
+                    }
+                }
+            }
         }
 
         .year-detail {
@@ -46,6 +62,7 @@
                     padding: 0 f.rem(30) 0 0;
                 }
             }
+            
 
             .detail {
                 position: absolute;
@@ -102,6 +119,14 @@
                         font-size: f.rem(16);
                         padding: f.rem(14) 0;
                         display: inline-flex;
+                    }
+                }
+
+                .nav-overlay {
+                    li.current {
+                        span {
+                            font-size: f.rem(20);
+                        }
                     }
                 }
             }
