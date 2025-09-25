@@ -118,12 +118,26 @@
 
     &-grid {
       grid-template-columns: repeat(2, 1fr);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+      &--item {
+        .product {
+          border-bottom: none;
+        }
+        &:nth-child(2n + 1) {
+            .product {
+              border-left: none;
+            }
+        }
+      }
     }
 
     .product {
       &-img {
+        width: f.rem(119);
+        height: f.rem(117);
         margin-bottom: f.rem(20);
       }
     }
+  
   }
 }

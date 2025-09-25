@@ -792,6 +792,9 @@
                 flex: 0 0 f.rem(88);
                 max-width: f.rem(88);
                 height: auto;
+                line-height: 0;
+                -webkit-border-radius: 6px;
+                border-radius: 6px;
 
                 img {
                     width: 100%;

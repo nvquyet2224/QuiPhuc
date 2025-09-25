@@ -257,7 +257,7 @@
 
       &-products {
         width: 100%;
-        border-right: 1px solid rgba(0, 0, 0, 0.15);
+        //border-right: 1px solid rgba(0, 0, 0, 0.15);
         border-bottom: none;
 
         .products {
@@ -267,6 +267,7 @@
             .product {
               padding: f.rem(8) f.rem(8) f.rem(12) f.rem(8);
               border-left: none;
+              border-right: 1px solid rgba(0, 0, 0, 0.15);
 
               &-img {
                 width: f.rem(119);
